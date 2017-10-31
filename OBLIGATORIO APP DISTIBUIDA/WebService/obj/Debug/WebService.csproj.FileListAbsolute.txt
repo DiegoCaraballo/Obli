@@ -1,0 +1,11 @@
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\WebService\bin\WebService.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\WebService\bin\WebService.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\WebService\obj\Debug\WebService.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\WebService\obj\Debug\WebService.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\WebService\obj\Debug\WebService.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\WebService\bin\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\WebService\bin\Logica.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\WebService\bin\Persistencia.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\WebService\bin\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\WebService\bin\Logica.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\WebService\bin\Persistencia.pdb

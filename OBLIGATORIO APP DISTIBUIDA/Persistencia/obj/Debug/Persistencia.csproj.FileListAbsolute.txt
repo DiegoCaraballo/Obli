@@ -1,0 +1,224 @@
+C:\Users\Admin\Downloads\BiosRealState 14_06_2017\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Admin\Downloads\BiosRealState 14_06_2017\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Admin\Downloads\BiosRealState 14_06_2017\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\BiosRealState 14_06_2017\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\BiosRealState 14_06_2017\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\BiosRealState 14_06_2017\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Admin\Downloads\BiosRealState 14_06_2017\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Admin\Desktop\BiosRealState 02_07_2017Nadia\BiosRealState 02_07_2017Nadia\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Admin\Desktop\BiosRealState 02_07_2017Nadia\BiosRealState 02_07_2017Nadia\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Admin\Desktop\BiosRealState 02_07_2017Nadia\BiosRealState 02_07_2017Nadia\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Desktop\BiosRealState 02_07_2017Nadia\BiosRealState 02_07_2017Nadia\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Desktop\BiosRealState 02_07_2017Nadia\BiosRealState 02_07_2017Nadia\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\BiosRealState 02_07_2017Nadia\BiosRealState 02_07_2017Nadia\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Admin\Desktop\BiosRealState 02_07_2017Nadia\BiosRealState 02_07_2017Nadia\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Admin\Downloads\BiosRealState 03_07_2017Diego\BiosRealState 02_07_2017Nadia\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Admin\Downloads\BiosRealState 03_07_2017Diego\BiosRealState 02_07_2017Nadia\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Admin\Downloads\BiosRealState 03_07_2017Diego\BiosRealState 02_07_2017Nadia\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\BiosRealState 03_07_2017Diego\BiosRealState 02_07_2017Nadia\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\BiosRealState 03_07_2017Diego\BiosRealState 02_07_2017Nadia\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\BiosRealState 03_07_2017Diego\BiosRealState 02_07_2017Nadia\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Admin\Downloads\BiosRealState 03_07_2017Diego\BiosRealState 02_07_2017Nadia\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017Nadia\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017Nadia\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017Nadia\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017Nadia\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017Nadia\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017Nadia\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017Nadia\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 09_07_2017NadiaFusion\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 09_07_2017NadiaFusion\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 09_07_2017NadiaFusion\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 09_07_2017NadiaFusion\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 09_07_2017NadiaFusion\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\BiosRealState 09_07_2017NadiaFusion\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 09_07_2017NadiaFusion\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Admin\Downloads\BiosRealState 09_07_2017NadiaFusion\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Admin\Downloads\BiosRealState 09_07_2017NadiaFusion\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Admin\Downloads\BiosRealState 09_07_2017NadiaFusion\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\BiosRealState 09_07_2017NadiaFusion\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\BiosRealState 09_07_2017NadiaFusion\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\BiosRealState 09_07_2017NadiaFusion\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Admin\Downloads\BiosRealState 09_07_2017NadiaFusion\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 10_07_2017 Fusion\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 10_07_2017 Fusion\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 10_07_2017 Fusion\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 10_07_2017 Fusion\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 10_07_2017 Fusion\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\BiosRealState 10_07_2017 Fusion\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 10_07_2017 Fusion\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017 Fusion\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017 Fusion\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017 Fusion\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017 Fusion\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017 Fusion\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017 Fusion\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017 Fusion\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 14_07_17 CON LO DE NICO\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 14_07_17 CON LO DE NICO\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 14_07_17 CON LO DE NICO\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 14_07_17 CON LO DE NICO\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 14_07_17 CON LO DE NICO\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\BiosRealState 14_07_17 CON LO DE NICO\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 14_07_17 CON LO DE NICO\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Admin\Desktop\BiosRealState 18-7\BiosRealState 18-7\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\BiosRealState 18-7\BiosRealState 18-7\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Admin\Desktop\BiosRealState 18-7\BiosRealState 18-7\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Admin\Desktop\BiosRealState 18-7\BiosRealState 18-7\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Admin\Desktop\BiosRealState 18-7\BiosRealState 18-7\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Desktop\BiosRealState 18-7\BiosRealState 18-7\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Desktop\BiosRealState 18-7\BiosRealState 18-7\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 19-7\BiosRealState 18-7\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 19-7\BiosRealState 18-7\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 19-7\BiosRealState 18-7\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 19-7\BiosRealState 18-7\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 19-7\BiosRealState 18-7\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\BiosRealState 19-7\BiosRealState 18-7\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 19-7\BiosRealState 18-7\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\24-07\24-07\BiosRealState 18-7\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\24-07\24-07\BiosRealState 18-7\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\24-07\24-07\BiosRealState 18-7\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\24-07\24-07\BiosRealState 18-7\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\24-07\24-07\BiosRealState 18-7\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\24-07\24-07\BiosRealState 18-7\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\24-07\24-07\BiosRealState 18-7\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\31-07\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\31-07\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\31-07\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\31-07\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\31-07\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\31-07\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\31-07\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\31-07\31-07\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\31-07\31-07\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\31-07\31-07\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\31-07\31-07\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\31-07\31-07\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\31-07\31-07\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\31-07\31-07\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\02-08\31-07\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\02-08\31-07\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\02-08\31-07\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\02-08\31-07\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\02-08\31-07\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\02-08\31-07\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\02-08\31-07\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\03-08\03-08\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\03-08\03-08\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\03-08\03-08\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\03-08\03-08\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\03-08\03-08\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\03-08\03-08\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\03-08\03-08\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\04-08\04-08\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\04-08\04-08\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\04-08\04-08\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\04-08\04-08\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\04-08\04-08\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\04-08\04-08\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\04-08\04-08\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\05-08\05-08\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\05-08\05-08\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\05-08\05-08\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\05-08\05-08\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\05-08\05-08\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\05-08\05-08\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\05-08\05-08\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\06-08\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\06-08\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\06-08\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\06-08\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\06-08\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\06-08\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\06-08\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Persistencia\obj\Debug\Persistencia.pdb

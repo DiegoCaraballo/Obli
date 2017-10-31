@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E805A575-D859-4A5A-BBD8-F5FB4D63CF85}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Administracion</RootNamespace>
+    <AssemblyName>Administracion</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABMApto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMApto.Designer.cs">
+      <DependentUpon>ABMApto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABMCasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMCasa.Designer.cs">
+      <DependentUpon>ABMCasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABMComercio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMComercio.Designer.cs">
+      <DependentUpon>ABMComercio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABMEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMEmpleado.Designer.cs">
+      <DependentUpon>ABMEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABMZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMZona.Designer.cs">
+      <DependentUpon>ABMZona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaVisita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaVisita.Designer.cs">
+      <DependentUpon>ConsultaVisita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion.Designer.cs">
+      <DependentUpon>Presentacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ABMApto.resx">
+      <DependentUpon>ABMApto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABMCasa.resx">
+      <DependentUpon>ABMCasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABMComercio.resx">
+      <DependentUpon>ABMComercio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABMEmpleado.resx">
+      <DependentUpon>ABMEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABMZona.resx">
+      <DependentUpon>ABMZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaVisita.resx">
+      <DependentUpon>ConsultaVisita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion.resx">
+      <DependentUpon>Presentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controles\Controles.csproj">
+      <Project>{A53C9BD9-8E0F-480A-883F-A31D862782CD}</Project>
+      <Name>Controles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades Compartidas\Entidades Compartidas.csproj">
+      <Project>{FC82E514-A3FD-4E8D-BD43-30FCF04CCA1B}</Project>
+      <Name>Entidades Compartidas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{CBD5D2FC-DE0A-4631-8845-4F1B334888B3}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\Ayuda.png" />
+    <Content Include="Imagenes\Buscar.png" />
+    <Content Include="Imagenes\Cancelar.png" />
+    <Content Include="Imagenes\Icono.ico" />
+    <Content Include="Imagenes\Logo.png" />
+    <Content Include="Imagenes\Mas.png" />
+    <Content Include="Imagenes\Modificar.bmp" />
+    <Content Include="Imagenes\Nuevo.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

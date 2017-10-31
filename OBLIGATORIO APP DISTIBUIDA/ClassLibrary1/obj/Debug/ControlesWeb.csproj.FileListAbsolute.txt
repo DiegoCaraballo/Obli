@@ -1,0 +1,202 @@
+C:\Users\Diego\Desktop\24-07\24-07\BiosRealState 18-7\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\Diego\Desktop\24-07\24-07\BiosRealState 18-7\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Diego\Desktop\24-07\24-07\BiosRealState 18-7\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\Diego\Desktop\24-07\24-07\BiosRealState 18-7\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\31-07\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\31-07\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\31-07\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\31-07\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\PC-Nico\Desktop\31-07\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\31-07\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\31-07\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\PC-Nico\Desktop\31-07\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\31-07\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\31-07\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\31-07\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\Diego\Desktop\31-07\31-07\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\Diego\Desktop\31-07\31-07\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\Diego\Desktop\31-07\31-07\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\31-07\31-07\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\Diego\Desktop\31-07\31-07\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\31-07\31-07\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\31-07\31-07\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\Diego\Desktop\31-07\31-07\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\31-07\31-07\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\31-07\31-07\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\Diego\Desktop\31-07\31-07\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\02-08\31-07\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\02-08\31-07\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\02-08\31-07\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\02-08\31-07\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\02-08\31-07\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\02-08\31-07\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\PC-Nico\Desktop\02-08\31-07\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\02-08\31-07\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\02-08\31-07\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\PC-Nico\Desktop\02-08\31-07\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\02-08\31-07\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\Diego\Desktop\03-08\03-08\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\Diego\Desktop\03-08\03-08\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\Diego\Desktop\03-08\03-08\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\03-08\03-08\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\Diego\Desktop\03-08\03-08\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\03-08\03-08\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\03-08\03-08\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\Diego\Desktop\03-08\03-08\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\03-08\03-08\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\03-08\03-08\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\Diego\Desktop\03-08\03-08\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\Diego\Desktop\04-08\04-08\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\Diego\Desktop\04-08\04-08\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\Diego\Desktop\04-08\04-08\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\04-08\04-08\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\Diego\Desktop\04-08\04-08\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\04-08\04-08\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\04-08\04-08\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\Diego\Desktop\04-08\04-08\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\04-08\04-08\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\04-08\04-08\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\Diego\Desktop\04-08\04-08\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\Diego\Desktop\05-08\05-08\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\Diego\Desktop\05-08\05-08\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\Diego\Desktop\05-08\05-08\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\05-08\05-08\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\Diego\Desktop\05-08\05-08\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\Diego\Desktop\05-08\05-08\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\05-08\05-08\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\Diego\Desktop\05-08\05-08\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\Diego\Desktop\05-08\05-08\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\05-08\05-08\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\Diego\Desktop\05-08\05-08\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\06-08\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\06-08\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\06-08\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\06-08\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\PC-Nico\Desktop\06-08\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\06-08\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\06-08\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\PC-Nico\Desktop\06-08\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\06-08\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\06-08\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\06-08\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\Logica.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\obj\Debug\ControlesWeb.pdb

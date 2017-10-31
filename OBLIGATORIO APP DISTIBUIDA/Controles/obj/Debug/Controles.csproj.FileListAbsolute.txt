@@ -1,0 +1,7 @@
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Controles.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Controles.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.pdb

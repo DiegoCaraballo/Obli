@@ -1,0 +1,51 @@
+﻿div.container {
+    display: table; 
+    width: 100%;
+    height: 100%;
+    border: 1px solid grey;   
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #2F64A0;
+    clear: left;
+    text-align: center;
+}
+
+/* PARA EL USUARIO LOGUEAD */
+log
+{
+    padding: 1em;
+    color: white;
+    background-color: grey;
+    clear: left;
+    float:right;
+    margin-top: 25px;
+}
+
+/* LA PARTE LATERAL */
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+/* LA PARTE CENTRAL */
+article {
+    margin-left: 170px;
+    border-left: 3px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}

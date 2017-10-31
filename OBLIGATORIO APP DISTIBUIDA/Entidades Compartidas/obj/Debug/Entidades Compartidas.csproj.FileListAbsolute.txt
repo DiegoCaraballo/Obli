@@ -1,0 +1,150 @@
+C:\Users\Admin\Desktop\BIOS\2do año\Obligatorio Inmobiliaria\Obligatorio Inmobiliaria proceso correccion\BiosRealState\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\BIOS\2do año\Obligatorio Inmobiliaria\Obligatorio Inmobiliaria proceso correccion\BiosRealState\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Desktop\BIOS\2do año\Obligatorio Inmobiliaria\Obligatorio Inmobiliaria proceso correccion\BiosRealState\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Desktop\BIOS\2do año\Obligatorio Inmobiliaria\Obligatorio Inmobiliaria proceso correccion\BiosRealState\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Desktop\BIOS\2do año\Obligatorio Inmobiliaria\Obligatorio Inmobiliaria proceso correccion\BiosRealState\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\BiosRealState 14_06_2017\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\BiosRealState 14_06_2017\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\BiosRealState 14_06_2017\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\BiosRealState 14_06_2017\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\BiosRealState 14_06_2017\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Desktop\BiosRealState 02_07_2017Nadia\BiosRealState 02_07_2017Nadia\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Desktop\BiosRealState 02_07_2017Nadia\BiosRealState 02_07_2017Nadia\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Desktop\BiosRealState 02_07_2017Nadia\BiosRealState 02_07_2017Nadia\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\BiosRealState 02_07_2017Nadia\BiosRealState 02_07_2017Nadia\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Desktop\BiosRealState 02_07_2017Nadia\BiosRealState 02_07_2017Nadia\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\BiosRealState 03_07_2017Diego\BiosRealState 02_07_2017Nadia\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\BiosRealState 03_07_2017Diego\BiosRealState 02_07_2017Nadia\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\BiosRealState 03_07_2017Diego\BiosRealState 02_07_2017Nadia\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\BiosRealState 03_07_2017Diego\BiosRealState 02_07_2017Nadia\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\BiosRealState 03_07_2017Diego\BiosRealState 02_07_2017Nadia\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017Nadia\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017Nadia\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017Nadia\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017Nadia\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\obligatorio bios real state a fusionar\BiosRealState 09_07_2017Nadia\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 09_07_2017NadiaFusion\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 09_07_2017NadiaFusion\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 09_07_2017NadiaFusion\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 09_07_2017NadiaFusion\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 09_07_2017NadiaFusion\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\BiosRealState 09_07_2017NadiaFusion\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\BiosRealState 09_07_2017NadiaFusion\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\BiosRealState 09_07_2017NadiaFusion\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\BiosRealState 09_07_2017NadiaFusion\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\BiosRealState 09_07_2017NadiaFusion\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Downloads\BiosRealState 10_07_2017\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 10_07_2017 Fusion\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 10_07_2017 Fusion\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 10_07_2017 Fusion\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\BiosRealState 10_07_2017 Fusion\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 10_07_2017 Fusion\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 14_07_17 CON LO DE NICO\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 14_07_17 CON LO DE NICO\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 14_07_17 CON LO DE NICO\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\BiosRealState 14_07_17 CON LO DE NICO\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 14_07_17 CON LO DE NICO\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Desktop\BiosRealState 18-7\BiosRealState 18-7\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Desktop\BiosRealState 18-7\BiosRealState 18-7\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Admin\Desktop\BiosRealState 18-7\BiosRealState 18-7\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\BiosRealState 18-7\BiosRealState 18-7\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\Admin\Desktop\BiosRealState 18-7\BiosRealState 18-7\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 19-7\BiosRealState 18-7\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 19-7\BiosRealState 18-7\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\BiosRealState 19-7\BiosRealState 18-7\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\BiosRealState 19-7\BiosRealState 18-7\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\BiosRealState 19-7\BiosRealState 18-7\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\26-07\24-07\BiosRealState 18-7\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\29-07 Arreglar css\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\29-07 Tarde\29-07 Tarde\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\29-07 Noche\29-07 Tarde\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\29-07 Final\29-07 Final\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Downloads\30-07\29-07 Final\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\30-07\29-07 Final\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\31-07\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\31-07\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\31-07\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\31-07\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\31-07\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\31-07\31-07\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\31-07\31-07\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\31-07\31-07\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\31-07\31-07\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\31-07\31-07\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\02-08\31-07\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\02-08\31-07\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\02-08\31-07\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\02-08\31-07\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\02-08\31-07\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\03-08- En la noche\03-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\04-08\04-08\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\04-08\04-08\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\04-08\04-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\04-08\04-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\04-08\04-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\04-08-Noche\04-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\05-08\05-08\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\05-08\05-08\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\Diego\Desktop\05-08\05-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\05-08\05-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\Diego\Desktop\05-08\05-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\05-08-DeTarde\05-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\06-08\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\06-08\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\06-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\06-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\06-08\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb

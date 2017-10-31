@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head id="Head1" runat ="Server" >
+<link href="css/Estilos.css" rel="stylesheet" type="text/css" />
+<title>BiosRealState</title>
+    <style type="text/css">
+        .style1
+        {
+            width: 1198px;
+            height: 842px;
+        }
+    </style>
+</head>
+
+<body>
+<form id="form1" runat="server">
+
+            
+
+<div class="container">
+
+<header>
+   <h1>BiosRealState</h1>
+   <log>
+       <asp:Label ID="lblUsuario" runat="server"></asp:Label>
+       <asp:Button ID="lblLogout" runat="server" OnClick="lblLogout_Click" Text="Logout" />
+   </log>
+</header>
+  
+<nav>
+  <ul>
+  <p>
+      <img alt="BiosRealState"  src="Imagenes/Logo.png" 
+          style="height: 93px; width: 111px" /></p>
+  <h3>Opciones</h3>
+    <asp:Menu ID="Menu1" runat="server">
+        <Items>
+            <asp:MenuItem NavigateUrl="~/ABMEmpleado.aspx" Text="ABM Empleado" 
+                Value="ABM Empleado"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/ABMApto.aspx" Text="ABM Apto" Value="ABM Apto">
+            </asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/ABMCasa.aspx" Text="ABM Casa" Value="ABM Casa">
+            </asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/ABMComercio.aspx" Text="ABM Comercio" 
+                Value="ABM Comercio"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/ABMZona.aspx" Text="ABM Zona" Value="ABM Zona">
+            </asp:MenuItem>
+        </Items>
+      </asp:Menu>
+  </ul>
+</nav>
+
+<article>
+  <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</article>
+</div>
+
+</form>
+</body>
+
+</html>

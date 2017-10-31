@@ -1,0 +1,23 @@
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.Default.resources
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.Presentacion.resources
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.Properties.Resources.resources
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.csproj.GenerateResource.Cache
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Administracion.exe
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Administracion.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.exe
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.ABMApto.resources
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.ABMCasa.resources
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.ABMComercio.resources
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.ABMEmpleado.resources
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.ABMZona.resources
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.csprojResolveAssemblyReference.cache
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Entidades Compartidas.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Logica.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Persistencia.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Entidades Compartidas.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Logica.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Persistencia.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Controles.dll
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Controles.pdb
+C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.ConsultaVisita.resources
