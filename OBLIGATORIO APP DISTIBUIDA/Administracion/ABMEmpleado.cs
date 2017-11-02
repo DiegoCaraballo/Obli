@@ -69,6 +69,7 @@ namespace Administracion
             MenuItemIngresar.Enabled = false;
             MenuItemEliminar.Enabled = false;
             MenuItemModificar.Enabled = false;
+            txtPassword.Enabled = false;
         }
 
         private void LimpioControles()

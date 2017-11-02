@@ -59,6 +59,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Enabled = false;
             this.txtPassword.Location = new System.Drawing.Point(106, 101);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
