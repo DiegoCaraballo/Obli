@@ -5,3 +5,10 @@ C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Entidade
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Entidades Compartidas.pdb
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.dll
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.pdb
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Controles.dll
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Controles.pdb
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Entidades Compartidas.dll
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Entidades Compartidas.pdb
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.dll
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.pdb

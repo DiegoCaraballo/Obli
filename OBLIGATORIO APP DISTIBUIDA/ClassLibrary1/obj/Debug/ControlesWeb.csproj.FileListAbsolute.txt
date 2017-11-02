@@ -200,3 +200,14 @@ C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\Pers
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\obj\Debug\ControlesWeb.dll
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\obj\Debug\ControlesWeb.pdb
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\ControlesWeb.dll
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\ControlesWeb.pdb
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\Entidades Compartidas.dll
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\Logica.dll
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\Persistencia.dll
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\Entidades Compartidas.pdb
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\Logica.pdb
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\bin\Debug\Persistencia.pdb
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\obj\Debug\ControlesWeb.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\obj\Debug\ControlesWeb.dll
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\ClassLibrary1\obj\Debug\ControlesWeb.pdb

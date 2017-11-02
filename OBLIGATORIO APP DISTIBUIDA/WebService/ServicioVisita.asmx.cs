@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Services;
 
-
 using Logica;
 using Entidades_Compartidas;
 using System.Xml;
@@ -20,9 +19,9 @@ namespace WebService
     [System.ComponentModel.ToolboxItem(false)]
     // Para permitir que se llame a este servicio Web desde un script, usando ASP.NET AJAX, quite la marca de comentario de la línea siguiente. 
     // [System.Web.Script.Services.ScriptService]
-   
-        
-        public class ServicioVisita : System.Web.Services.WebService
+
+
+    public class ServicioVisita : System.Web.Services.WebService
     {
         [WebMethod]
         public List<Visita> ListarVisitas()
@@ -45,6 +44,6 @@ namespace WebService
                 throw _MiEx;
             }
         }
-       
+
     }
 }

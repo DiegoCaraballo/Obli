@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ABMEmpleado));
+            this.MenuItemEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,16 +38,24 @@
             this.MenuItemBuscar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemIngresar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemModificar = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuItemEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemCancelar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemOtros = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMZonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aBMEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMCASAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMAptoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemAyuda = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // MenuItemEliminar
+            // 
+            this.MenuItemEliminar.Enabled = false;
+            this.MenuItemEliminar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemEliminar.Image")));
+            this.MenuItemEliminar.Name = "MenuItemEliminar";
+            this.MenuItemEliminar.Size = new System.Drawing.Size(71, 20);
+            this.MenuItemEliminar.Text = "Eliminar";
+            this.MenuItemEliminar.Click += new System.EventHandler(this.MenuItemEliminar_Click);
             // 
             // txtPassword
             // 
@@ -101,36 +110,35 @@
             // 
             this.MenuItemBuscar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemBuscar.Image")));
             this.MenuItemBuscar.Name = "MenuItemBuscar";
-            this.MenuItemBuscar.Size = new System.Drawing.Size(70, 20);
+            this.MenuItemBuscar.Size = new System.Drawing.Size(67, 20);
             this.MenuItemBuscar.Text = "Buscar";
+            this.MenuItemBuscar.Click += new System.EventHandler(this.MenuItemBuscar_Click);
             // 
             // MenuItemIngresar
             // 
+            this.MenuItemIngresar.Enabled = false;
             this.MenuItemIngresar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemIngresar.Image")));
             this.MenuItemIngresar.Name = "MenuItemIngresar";
-            this.MenuItemIngresar.Size = new System.Drawing.Size(77, 20);
+            this.MenuItemIngresar.Size = new System.Drawing.Size(76, 20);
             this.MenuItemIngresar.Text = "Ingresar";
+            this.MenuItemIngresar.Click += new System.EventHandler(this.MenuItemIngresar_Click);
             // 
             // MenuItemModificar
             // 
+            this.MenuItemModificar.Enabled = false;
             this.MenuItemModificar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemModificar.Image")));
             this.MenuItemModificar.Name = "MenuItemModificar";
-            this.MenuItemModificar.Size = new System.Drawing.Size(86, 20);
+            this.MenuItemModificar.Size = new System.Drawing.Size(78, 20);
             this.MenuItemModificar.Text = "Modificar";
-            // 
-            // MenuItemEliminar
-            // 
-            this.MenuItemEliminar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemEliminar.Image")));
-            this.MenuItemEliminar.Name = "MenuItemEliminar";
-            this.MenuItemEliminar.Size = new System.Drawing.Size(78, 20);
-            this.MenuItemEliminar.Text = "Eliminar";
+            this.MenuItemModificar.Click += new System.EventHandler(this.MenuItemModificar_Click);
             // 
             // MenuItemCancelar
             // 
             this.MenuItemCancelar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemCancelar.Image")));
             this.MenuItemCancelar.Name = "MenuItemCancelar";
-            this.MenuItemCancelar.Size = new System.Drawing.Size(81, 20);
+            this.MenuItemCancelar.Size = new System.Drawing.Size(77, 20);
             this.MenuItemCancelar.Text = "Cancelar";
+            this.MenuItemCancelar.Click += new System.EventHandler(this.MenuItemCancelar_Click);
             // 
             // MenuItemOtros
             // 
@@ -141,38 +149,42 @@
             this.aBMAptoToolStripMenuItem});
             this.MenuItemOtros.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemOtros.Image")));
             this.MenuItemOtros.Name = "MenuItemOtros";
-            this.MenuItemOtros.Size = new System.Drawing.Size(64, 20);
+            this.MenuItemOtros.Size = new System.Drawing.Size(62, 20);
             this.MenuItemOtros.Text = "Otros";
-            // 
-            // aBMEmpleadoToolStripMenuItem
-            // 
-            this.aBMEmpleadoToolStripMenuItem.Name = "aBMEmpleadoToolStripMenuItem";
-            this.aBMEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.aBMEmpleadoToolStripMenuItem.Text = "ABM Apto";
             // 
             // aBMZonaToolStripMenuItem
             // 
             this.aBMZonaToolStripMenuItem.Name = "aBMZonaToolStripMenuItem";
-            this.aBMZonaToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.aBMZonaToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.aBMZonaToolStripMenuItem.Text = "ABM Zona";
+            this.aBMZonaToolStripMenuItem.Click += new System.EventHandler(this.aBMZonaToolStripMenuItem_Click);
+            // 
+            // aBMEmpleadoToolStripMenuItem
+            // 
+            this.aBMEmpleadoToolStripMenuItem.Name = "aBMEmpleadoToolStripMenuItem";
+            this.aBMEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aBMEmpleadoToolStripMenuItem.Text = "ABM Apto";
+            this.aBMEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.aBMEmpleadoToolStripMenuItem_Click);
             // 
             // aBMCASAToolStripMenuItem
             // 
             this.aBMCASAToolStripMenuItem.Name = "aBMCASAToolStripMenuItem";
-            this.aBMCASAToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.aBMCASAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aBMCASAToolStripMenuItem.Text = "ABM Casa";
+            this.aBMCASAToolStripMenuItem.Click += new System.EventHandler(this.aBMCASAToolStripMenuItem_Click);
             // 
             // aBMAptoToolStripMenuItem
             // 
             this.aBMAptoToolStripMenuItem.Name = "aBMAptoToolStripMenuItem";
-            this.aBMAptoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.aBMAptoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aBMAptoToolStripMenuItem.Text = "ABM Comercio";
+            this.aBMAptoToolStripMenuItem.Click += new System.EventHandler(this.aBMAptoToolStripMenuItem_Click);
             // 
             // MenuItemAyuda
             // 
             this.MenuItemAyuda.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemAyuda.Image")));
             this.MenuItemAyuda.Name = "MenuItemAyuda";
-            this.MenuItemAyuda.Size = new System.Drawing.Size(69, 20);
+            this.MenuItemAyuda.Size = new System.Drawing.Size(66, 20);
             this.MenuItemAyuda.Text = "Ayuda";
             // 
             // ABMEmpleado
@@ -204,7 +216,6 @@
         private System.Windows.Forms.ToolStripMenuItem MenuItemBuscar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemIngresar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemModificar;
-        private System.Windows.Forms.ToolStripMenuItem MenuItemEliminar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemCancelar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemOtros;
         private System.Windows.Forms.ToolStripMenuItem aBMEmpleadoToolStripMenuItem;
@@ -212,5 +223,6 @@
         private System.Windows.Forms.ToolStripMenuItem aBMCASAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aBMAptoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuItemAyuda;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemEliminar;
     }
 }
