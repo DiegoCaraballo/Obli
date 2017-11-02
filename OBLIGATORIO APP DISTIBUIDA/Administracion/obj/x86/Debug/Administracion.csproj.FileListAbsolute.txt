@@ -39,7 +39,6 @@ C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Admin
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.ABMZona.resources
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.ConsultaVisita.resources
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.Default.resources
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.Presentacion.resources
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.Properties.Resources.resources
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.csproj.GenerateResource.Cache
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.exe

@@ -294,10 +294,6 @@ namespace WebService
 
         #endregion
 
-    
-
-     
-
 
         #region SoapException
         private void GeneroSoapException(Exception ex)
