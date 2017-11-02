@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Entidades_Compartidas
 {
+    [Serializable]
     public class Apto:Propiedad 
     {
         //Atributos
@@ -45,5 +46,6 @@ namespace Entidades_Compartidas
             Piso = pPiso;
             Ascensor = pAscensor;
         }
+        public Apto() { }
     }
 }

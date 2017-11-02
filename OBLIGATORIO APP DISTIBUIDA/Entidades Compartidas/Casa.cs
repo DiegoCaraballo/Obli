@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Entidades_Compartidas
 {
+    [Serializable]
     public class Casa: Propiedad 
     {
         //Atributos
@@ -44,5 +45,7 @@ namespace Entidades_Compartidas
             Mt2Terreno = pMt2;
             Fondo = pFondo;
         }
+        public Casa()
+        { }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Entidades_Compartidas
 {
+    [Serializable]
     public class Comercio:Propiedad 
     {
         //Atributos
@@ -29,5 +30,6 @@ namespace Entidades_Compartidas
         {
             Habilitado = pHabilitado;
         }
+        public Comercio() { }
     }
 }
