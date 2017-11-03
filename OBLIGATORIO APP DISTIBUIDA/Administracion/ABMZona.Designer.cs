@@ -257,6 +257,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.label1);
             this.Name = "ABMZona";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMZona";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

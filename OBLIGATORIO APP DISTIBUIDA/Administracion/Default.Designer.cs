@@ -146,6 +146,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Default";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Default";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

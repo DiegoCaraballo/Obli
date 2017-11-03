@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Administracion.ServicioWeb;
 
 namespace Administracion
 {
@@ -61,7 +62,36 @@ namespace Administracion
         //Buscar empleado
         private void MenuItemBuscar_Click(object sender, EventArgs e)
         {
-
+            ServicioWeb.Empleado _unEmpleado = null;
+            try
+            {
+                //creo un objeto que me permita trabajar con el WS
+                MiServicio LEmpleado = new MiServicio();
+                //utilizo la operacion del WebService
+                _unEmpleado = LEmpleado.BuscarEmpleado(txtUsuario.Text.Trim());
+                //determino acción
+                if (_unEmpleado == null)
+                //no existe empleado, es un alta, limpio campos y habilito para ingresar
+                {
+                    MenuItemIngresar.Enabled = true;
+                    MenuItemEliminar.Enabled = false;
+                    MenuItemModificar.Enabled = false;
+                    txtPassword.Enabled = true;
+                }
+                else
+                {
+                    //existe, cargo y permito eliminar o modificar
+                    txtPassword.Text = _unEmpleado.Pass;
+                    MenuItemIngresar.Enabled = false;
+                    MenuItemModificar.Enabled = true;
+                    MenuItemEliminar.Enabled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblError.Text = "ERROR" + ex.Message;
+            }
+            
         }
 
         private void DesActivoBotones()

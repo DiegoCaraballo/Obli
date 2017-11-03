@@ -23,6 +23,7 @@ namespace WebService
 
     public class MiServicio : System.Web.Services.WebService
     { 
+
         #region Propiedad
         [WebMethod]
         public void ParaPoderSerializar(Casa unaCasa, Apto unApto, Comercio unComercio)
@@ -208,8 +209,8 @@ namespace WebService
         #endregion
         //servicio de zonas listo
 
-
         #region Empleado
+
         [WebMethod]
         public void AgregarEmpleado(Empleado E)
         {
@@ -266,7 +267,6 @@ namespace WebService
 
         #endregion
         //servicio de empleados listo
-        //cokemntario de pruba por error de git
 
         #region Visita
 

@@ -367,6 +367,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ABMComercio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMComercio";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

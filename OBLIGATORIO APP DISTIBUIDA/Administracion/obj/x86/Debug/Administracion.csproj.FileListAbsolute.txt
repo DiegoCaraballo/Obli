@@ -43,3 +43,4 @@ C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Admin
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.csproj.GenerateResource.Cache
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.exe
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.pdb
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Administracion.exe.config
