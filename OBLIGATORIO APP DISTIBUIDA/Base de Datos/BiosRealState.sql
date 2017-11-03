@@ -762,6 +762,24 @@ end
 
 
 go
+
+
+--creacion de usuario IIS para que el webservice pueda acceder a la bd------------------------
+USE master
+GO
+
+CREATE LOGIN [IIS APPPOOL\DefaultAppPool] FROM WINDOWS WITH DEFAULT_DATABASE = master
+GO
+
+USE BiosRealState
+GO
+
+CREATE USER [IIS APPPOOL\DefaultAppPool] FOR LOGIN [IIS APPPOOL\DefaultAppPool]
+GO
+
+GRANT Execute to [IIS APPPOOL\DefaultAppPool]
+go
+
 -------Datos de prueba----
 
 

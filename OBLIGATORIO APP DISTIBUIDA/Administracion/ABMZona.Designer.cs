@@ -166,6 +166,7 @@
             this.MenuItemBuscar.Name = "MenuItemBuscar";
             this.MenuItemBuscar.Size = new System.Drawing.Size(70, 20);
             this.MenuItemBuscar.Text = "Buscar";
+            this.MenuItemBuscar.Click += new System.EventHandler(this.MenuItemBuscar_Click);
             // 
             // MenuItemIngresar
             // 

@@ -51,61 +51,9 @@ namespace Administracion
         {
             try
             {
-                if (txtPadron.Text.Trim() == "")
-                    throw new Exception("Debe ingresar un padrón");
-
-
-               Propiedad p = FabricaLogica.getPropiedadesLogica().BuscarPropiedad(Convert.ToInt32(txtPadron.Text));
-               ABMApto a = new ABMApto(p);
-                if (p == null)
-                {
-             
-                    txtDireccion.Enabled = true;
-                    txtPrecio.Enabled = true;
-                    cboAccion.Enabled = true;
-                    txtBanio.Enabled = true;
-                   
-                    txtHabitaciones.Enabled = true;
-                   txtMt2Const.Enabled = true;
-                    txtAbrev.Enabled = true;
-                    txtLetraDpto.Enabled = true;
-                    txtPiso.Enabled = true;
-                   cboAscensor.Enabled = true;
-                }
-                else
-                {
-
-                    if (p is Apto)
-                    {
+           
                  
-                        txtPadron.Text = p.Padron.ToString();
-                        txtDireccion.Text = p.Direccion.Trim().ToUpper();
-                        txtPrecio.Text = p.Precio.ToString();
-                        txtBanio.Text = p.Baño.ToString();
-                        txtHabitaciones.Text = p.Habitaciones.ToString();
-                        txtMt2Const.Text = p.Mt2Const.ToString();
-                        txtLetraDpto.Text = p.Zona.LetraDpto.ToString().Trim().ToUpper();
-                        txtAbrev.Text = p.Zona.Abreviacion.Trim().ToUpper();
-                      //  txtUsuario.Text = p.UltimoEmp.NomUsu.Trim().ToUpper();
-                        txtPiso.Text = ((Apto)p).Piso.ToString();
-
-                       cboAccion.SelectedValue = p.Accion.Trim().ToUpper();
-
-                        string ascensor;
-                        if (((Apto)p).Ascensor == true)
-                        {
-                            ascensor = "SI";
-                        }
-                        else
-                        {
-                            ascensor = "NO";
-                        }
-                        cboAscensor.SelectedValue = ascensor.ToString().Trim().ToUpper();
-                    }
-                    else
-                    {MessageBox.Show("El padrón " + txtPadron.Text + " : no pertenece a un Apartamento");
-                    }
-                }
+           
             }
             catch (FormatException)
             {

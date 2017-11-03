@@ -31,5 +31,10 @@ namespace Administracion
         {
             MessageBox.Show("Puede utilizar las siguientes teclas para facil acceso a los Items del Menu:\nF1= Ayuda\nF2= Buscar\nF3= Ingresar\nF4= Modificar\nF5= Eliminar\nF6= Cancelar");
         }
+
+        private void MenuItemBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
