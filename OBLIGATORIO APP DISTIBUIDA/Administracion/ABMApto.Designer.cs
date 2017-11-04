@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ABMApto));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.MenuItemBuscar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemIngresar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemEliminar = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,14 +65,17 @@
             this.txtPiso = new System.Windows.Forms.TextBox();
             this.cboAccion = new System.Windows.Forms.ComboBox();
             this.cboAscensor = new System.Windows.Forms.ComboBox();
-            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.EPPadron = new System.Windows.Forms.ErrorProvider(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblMensajes = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EPPadron)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuItemBuscar,
             this.MenuItemIngresar,
             this.MenuItemModificar,
             this.MenuItemEliminar,
@@ -84,14 +87,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(635, 24);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // MenuItemBuscar
-            // 
-            this.MenuItemBuscar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemBuscar.Image")));
-            this.MenuItemBuscar.Name = "MenuItemBuscar";
-            this.MenuItemBuscar.Size = new System.Drawing.Size(70, 20);
-            this.MenuItemBuscar.Text = "Buscar";
-            this.MenuItemBuscar.Click += new System.EventHandler(this.MenuItemBuscar_Click);
             // 
             // MenuItemIngresar
             // 
@@ -107,6 +102,7 @@
             this.MenuItemModificar.Name = "MenuItemModificar";
             this.MenuItemModificar.Size = new System.Drawing.Size(86, 20);
             this.MenuItemModificar.Text = "Modificar";
+            this.MenuItemModificar.Click += new System.EventHandler(this.MenuItemModificar_Click);
             // 
             // MenuItemEliminar
             // 
@@ -114,6 +110,7 @@
             this.MenuItemEliminar.Name = "MenuItemEliminar";
             this.MenuItemEliminar.Size = new System.Drawing.Size(78, 20);
             this.MenuItemEliminar.Text = "Eliminar";
+            this.MenuItemEliminar.Click += new System.EventHandler(this.MenuItemEliminar_Click);
             // 
             // MenuItemCancelar
             // 
@@ -121,6 +118,7 @@
             this.MenuItemCancelar.Name = "MenuItemCancelar";
             this.MenuItemCancelar.Size = new System.Drawing.Size(81, 20);
             this.MenuItemCancelar.Text = "Cancelar";
+            this.MenuItemCancelar.Click += new System.EventHandler(this.MenuItemCancelar_Click);
             // 
             // MenuItemOtros
             // 
@@ -174,7 +172,6 @@
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Padron";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -281,6 +278,7 @@
             this.txtPadron.Name = "txtPadron";
             this.txtPadron.Size = new System.Drawing.Size(100, 20);
             this.txtPadron.TabIndex = 13;
+            this.txtPadron.Validating += new System.ComponentModel.CancelEventHandler(this.txtPadron_Validating);
             // 
             // txtDireccion
             // 
@@ -348,6 +346,10 @@
             // cboAccion
             // 
             this.cboAccion.FormattingEnabled = true;
+            this.cboAccion.Items.AddRange(new object[] {
+            "ALQUILER",
+            "VENTA",
+            "PERMUTA"});
             this.cboAccion.Location = new System.Drawing.Point(99, 132);
             this.cboAccion.Name = "cboAccion";
             this.cboAccion.Size = new System.Drawing.Size(100, 21);
@@ -356,16 +358,39 @@
             // cboAscensor
             // 
             this.cboAscensor.FormattingEnabled = true;
+            this.cboAscensor.Items.AddRange(new object[] {
+            "SI",
+            "NO"});
             this.cboAscensor.Location = new System.Drawing.Point(99, 350);
             this.cboAscensor.Name = "cboAscensor";
             this.cboAscensor.Size = new System.Drawing.Size(100, 21);
             this.cboAscensor.TabIndex = 25;
+            // 
+            // EPPadron
+            // 
+            this.EPPadron.ContainerControl = this;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblMensajes});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 495);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(635, 22);
+            this.statusStrip1.TabIndex = 26;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblMensajes
+            // 
+            this.lblMensajes.Name = "lblMensajes";
+            this.lblMensajes.Size = new System.Drawing.Size(0, 17);
             // 
             // ABMApto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 517);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.cboAscensor);
             this.Controls.Add(this.cboAccion);
             this.Controls.Add(this.txtPiso);
@@ -397,6 +422,9 @@
             this.Text = "ABMApto";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EPPadron)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,7 +433,6 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem MenuItemBuscar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemIngresar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemModificar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemEliminar;
@@ -440,6 +467,8 @@
         private System.Windows.Forms.TextBox txtPiso;
         private System.Windows.Forms.ComboBox cboAccion;
         private System.Windows.Forms.ComboBox cboAscensor;
-        private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.ErrorProvider EPPadron;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblMensajes;
     }
 }
