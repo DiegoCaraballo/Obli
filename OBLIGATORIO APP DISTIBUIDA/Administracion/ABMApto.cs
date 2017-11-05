@@ -239,7 +239,7 @@ namespace Administracion
                     lblMensajes.Text = ex.Message;
             }
         }
-
+        //prueba git
         private void MenuItemModificar_Click(object sender, EventArgs e)
         {
 
