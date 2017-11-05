@@ -13,6 +13,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -193,14 +193,6 @@
     <ProjectReference Include="..\Controles\Controles.csproj">
       <Project>{A53C9BD9-8E0F-480A-883F-A31D862782CD}</Project>
       <Name>Controles</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Entidades Compartidas\Entidades Compartidas.csproj">
-      <Project>{FC82E514-A3FD-4E8D-BD43-30FCF04CCA1B}</Project>
-      <Name>Entidades Compartidas</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Logica\Logica.csproj">
-      <Project>{CBD5D2FC-DE0A-4631-8845-4F1B334888B3}</Project>
-      <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
