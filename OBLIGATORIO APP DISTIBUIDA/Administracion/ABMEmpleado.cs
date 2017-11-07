@@ -37,19 +37,81 @@ namespace Administracion
         //Ingresar Empleado
         private void MenuItemIngresar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                //creo el objeto que me permita trabajar con el ws
+                MiServicio LEmpleado = new MiServicio();
 
+                //utilizo la operacion del ws
+                string nombre = txtUsuario.Text.Trim().ToUpper();
+                string pass = txtPassword.Text;
+
+                Empleado unEmpleado = new Empleado();
+                unEmpleado.NomUsu = nombre;
+                unEmpleado.Pass = pass;
+                LEmpleado.AgregarEmpleado(unEmpleado);
+                //Si llego hasta acá todo esta bien
+                lblError.Text = "Alta con éxito";
+                LimpioControles();
+                DesActivoBotones();
+            }
+            catch(Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
         }
 
         //Modificar Empleado
         private void MenuItemModificar_Click(object sender, EventArgs e)
         {
+            ServicioWeb.Empleado _unEmpleado = null;
+            try
+            {
+                //creo el objeto que me permita trabajar con el WS
+                MiServicio LEmpleado = new MiServicio();
 
+                //Utilizo la operación del WS
+                string nombre = txtUsuario.Text.Trim().ToUpper();
+                _unEmpleado = LEmpleado.BuscarEmpleado(nombre);
+                string pass = txtPassword.Text;
+                Empleado unEmpleado = new Empleado();
+                unEmpleado.NomUsu = nombre;
+                unEmpleado.Pass = pass;
+                LEmpleado.ModificarEmpleado(unEmpleado);
+
+                //si llego acá se modificó el empleado
+                lblError.Text = "Modificación Exitosa";
+                LimpioControles();
+                DesActivoBotones();
+            }
+            catch (Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
         }
 
         //Eliminar Empleado
         private void MenuItemEliminar_Click(object sender, EventArgs e)
         {
+            ServicioWeb.Empleado _unEmpleado = null;
+            try
+            {
+                //creo el objeto que me permita trabajar con el WS
+                MiServicio LEmpleado = new MiServicio();
+                //Utilizo la operación del WS
+                string nombre = txtUsuario.Text.Trim().ToUpper();
+                _unEmpleado = LEmpleado.BuscarEmpleado(nombre);
+                LEmpleado.EliminarEmpleado(_unEmpleado);
 
+                //si llego aca elimine el empleado
+                lblError.Text = "Se eliminó correctamente";
+                LimpioControles();
+                DesActivoBotones();
+            }
+            catch (Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
         }
 
         //Cancelar valores actuales
@@ -65,26 +127,35 @@ namespace Administracion
             ServicioWeb.Empleado _unEmpleado = null;
             try
             {
-                //creo un objeto que me permita trabajar con el WS
-                MiServicio LEmpleado = new MiServicio();
-                //utilizo la operacion del WebService
-                _unEmpleado = LEmpleado.BuscarEmpleado(txtUsuario.Text.Trim());
-                //determino acción
-                if (_unEmpleado == null)
-                //no existe empleado, es un alta, limpio campos y habilito para ingresar
+                lblError.Text = "";
+
+                if (txtUsuario.Text.Trim() == "" || txtUsuario.Text.Trim().Length > 20 || txtUsuario.Text.Trim().Length < 4)
                 {
-                    MenuItemIngresar.Enabled = true;
-                    MenuItemEliminar.Enabled = false;
-                    MenuItemModificar.Enabled = false;
-                    txtPassword.Enabled = true;
+                    throw new Exception("El usuario debe tener entre 4 y 20 caracteres");
                 }
                 else
                 {
-                    //existe, cargo y permito eliminar o modificar
-                    txtPassword.Text = _unEmpleado.Pass;
-                    MenuItemIngresar.Enabled = false;
-                    MenuItemModificar.Enabled = true;
-                    MenuItemEliminar.Enabled = true;
+                    //creo un objeto que me permita trabajar con el WS
+                    MiServicio LEmpleado = new MiServicio();
+                    //utilizo la operacion del WebService
+                    _unEmpleado = LEmpleado.BuscarEmpleado(txtUsuario.Text.Trim());
+                    //determino acción
+                    if (_unEmpleado == null)
+                    //no existe empleado, es un alta, limpio campos y habilito para ingresar
+                    {
+                        MenuItemIngresar.Enabled = true;
+                        MenuItemEliminar.Enabled = false;
+                        MenuItemModificar.Enabled = false;
+                        txtPassword.Enabled = true;
+                    }
+                    else
+                    {
+                        //existe, cargo y permito eliminar o modificar
+                        txtPassword.Text = _unEmpleado.Pass;
+                        MenuItemIngresar.Enabled = false;
+                        MenuItemModificar.Enabled = true;
+                        MenuItemEliminar.Enabled = true;
+                    }
                 }
             }
             catch (Exception ex)
