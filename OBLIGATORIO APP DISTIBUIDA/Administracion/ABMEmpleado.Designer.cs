@@ -51,7 +51,6 @@
             // 
             // MenuItemEliminar
             // 
-            this.MenuItemEliminar.Enabled = false;
             this.MenuItemEliminar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemEliminar.Image")));
             this.MenuItemEliminar.Name = "MenuItemEliminar";
             this.MenuItemEliminar.Size = new System.Drawing.Size(78, 20);
@@ -60,7 +59,6 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Enabled = false;
             this.txtPassword.Location = new System.Drawing.Point(106, 101);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -118,7 +116,6 @@
             // 
             // MenuItemIngresar
             // 
-            this.MenuItemIngresar.Enabled = false;
             this.MenuItemIngresar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemIngresar.Image")));
             this.MenuItemIngresar.Name = "MenuItemIngresar";
             this.MenuItemIngresar.Size = new System.Drawing.Size(77, 20);
@@ -127,7 +124,6 @@
             // 
             // MenuItemModificar
             // 
-            this.MenuItemModificar.Enabled = false;
             this.MenuItemModificar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemModificar.Image")));
             this.MenuItemModificar.Name = "MenuItemModificar";
             this.MenuItemModificar.Size = new System.Drawing.Size(86, 20);

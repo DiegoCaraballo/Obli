@@ -16,6 +16,8 @@ namespace Administracion
         {
             InitializeComponent();
             Accesos();
+            LimpioControles();
+            DesActivoBotones();
         }
 
         public void Accesos()
@@ -119,6 +121,7 @@ namespace Administracion
         {
             this.LimpioControles();
             this.DesActivoBotones();
+            lblError.Text = "";
         }
 
         //Buscar empleado
