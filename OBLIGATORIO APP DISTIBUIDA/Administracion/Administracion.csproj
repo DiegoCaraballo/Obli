@@ -109,11 +109,11 @@
     <Compile Include="Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio.Designer.cs">
-      <DependentUpon>Inicio.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -142,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -193,6 +196,14 @@
     <ProjectReference Include="..\Controles\Controles.csproj">
       <Project>{A53C9BD9-8E0F-480A-883F-A31D862782CD}</Project>
       <Name>Controles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades Compartidas\Entidades Compartidas.csproj">
+      <Project>{FC82E514-A3FD-4E8D-BD43-30FCF04CCA1B}</Project>
+      <Name>Entidades Compartidas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{CBD5D2FC-DE0A-4631-8845-4F1B334888B3}</Project>
+      <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
