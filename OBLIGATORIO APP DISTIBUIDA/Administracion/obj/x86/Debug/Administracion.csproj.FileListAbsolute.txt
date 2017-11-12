@@ -24,13 +24,7 @@ C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Administracion.exe
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Administracion.pdb
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Controles.dll
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Entidades Compartidas.dll
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Logica.dll
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Persistencia.dll
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Controles.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Entidades Compartidas.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Logica.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Persistencia.pdb
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.csprojResolveAssemblyReference.cache
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.ABMApto.resources
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.ABMCasa.resources
@@ -44,3 +38,10 @@ C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Admin
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.exe
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.pdb
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Administracion.exe.config
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\obj\x86\Debug\Administracion.Login.resources
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Entidades Compartidas.dll
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Logica.dll
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Persistencia.dll
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Entidades Compartidas.pdb
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Logica.pdb
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Administracion\bin\Debug\Persistencia.pdb

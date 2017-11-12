@@ -2,41 +2,94 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Entidades_Compartidas;
-
 using System.Windows.Forms;
 using System.Drawing;
+
+
 namespace Controles
 {
-   public partial class Logueo : ContainerControl
+    public partial class Logueo : ContainerControl
     {
+        //Atributos
         private TextBox txtUsu;
         private TextBox txtPass;
+
+        private Label lblUsu;
+        private Label lblPass;
+
         private Button btnIngresar;
-        private Button btnCancelar;
 
-
+        //Constructor
         public Logueo()
         {
-     
+            //Usuario
+            txtUsu = new TextBox();
+            txtUsu.Width = 140;
+            txtUsu.Height = 20;
+            txtUsu.TabIndex = 0;
+            this.Controls.Add(txtUsu);
+
+            lblUsu = new Label();
+            lblUsu.Text = "Usuario:";
+            this.Controls.Add(lblUsu);
+
+            //Contraseña
+            txtPass = new TextBox();
+            txtPass.UseSystemPasswordChar = true;
+            txtPass.Width = 140;
+            txtPass.Height = 20;
+            txtPass.TabIndex = 1;
+            txtPass.MaxLength = 10;
+            this.Controls.Add(txtPass);
+
+            lblPass = new Label();
+            lblPass.Text = "Contraseña:";
+            this.Controls.Add(lblPass);
+
+            //Botón de Login
+            btnIngresar = new Button();
+            btnIngresar.Width = 120;
+            btnIngresar.Height = 25;
+            btnIngresar.Text = "Inicio de Sesión";
+            btnIngresar.TabIndex = 2;
+            btnIngresar.Click += new EventHandler(btnIngresar_Click);
+            this.Controls.Add(btnIngresar);         
         }
 
+        //Para hacer uso de la propiedad AcceptButton
+        public Button botonLogin
+        {
+            get { return btnIngresar; }
+        }
+
+        //sobreescribo el metodo CreateChilCntrols
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
+            //determino despliegue de los controles en pantalla
+            txtPass.Location = new Point(80, 35);
+            txtUsu.Location = new Point(80, 0);
+            lblUsu.Location = new Point(0, 0);
+            txtPass.Location = new Point(0, 35);
+            btnIngresar.Location = new Point(50, 75);
+        }
 
-            txtUsu = new TextBox();
-            txtUsu.Width = 130;
-            txtUsu.Height = 30;
-            txtUsu.Location = new Point(10, 40);
+        public string Usuario
+        {
+            get { return txtUsu.Text.Trim(); }
+        }
 
-            txtPass = new TextBox();
-            txtPass.Width = 130;
-            txtPass.Height = 30;
-            txtPass.Location = new Point(10, 10);
-         
-  
+        public string Pass
+        {
+            get { return txtPass.Text.Trim(); }
+        }
+
+        public event EventHandler IniciarSession;
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            IniciarSession(this, new EventArgs());
         }
     }
 }

@@ -8,9 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 
 
-//using Entidades_Compartidas;
-//using Logica;
-
 using Administracion.ServicioWeb;
 
 namespace Administracion
@@ -239,7 +236,7 @@ namespace Administracion
                     lblMensajes.Text = ex.Message;
             }
         }
-
+        //prueba git
         private void MenuItemModificar_Click(object sender, EventArgs e)
         {
 
@@ -285,8 +282,60 @@ namespace Administracion
 
         }
 
-     
+        private void txtPrecio_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                Convert.ToInt32(txtPrecio.Text);
+                EPPadron.Clear();
+            }
+            catch
+            {
+                EPPadron.SetError(txtPrecio, "Solo se pueden ingresar numeros");
+                e.Cancel = true;
+            }
+        }
 
+
+        private void txtBanio_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                Convert.ToInt32(txtBanio.Text);
+                EPPadron.Clear();
+            }
+            catch
+            {
+                EPPadron.SetError(txtBanio, "Solo se pueden ingresar numeros");
+                e.Cancel = true;
+            }
+        }
+        private void txtHabitaciones_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                Convert.ToInt32(txtHabitaciones.Text);
+                EPPadron.Clear();
+            }
+            catch
+            {
+                EPPadron.SetError(txtHabitaciones, "Solo se pueden ingresar numeros");
+                e.Cancel = true;
+            }
+        }
+        private void txtMt2Const_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                Convert.ToInt32(txtMt2Const.Text);
+                EPPadron.Clear();
+            }
+            catch
+            {
+                EPPadron.SetError(txtMt2Const, "Solo se pueden ingresar numeros");
+                e.Cancel = true;
+            }
+        }
 
     }
 }

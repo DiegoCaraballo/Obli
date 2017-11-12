@@ -52,12 +52,18 @@
             this.aBMCASAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMAptoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemAyuda = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.lblMensaje = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cboDepartamento
             // 
             this.cboDepartamento.FormattingEnabled = true;
+            this.cboDepartamento.Items.AddRange(new object[] {
+            "Artigas",
+            "Canelones"});
             this.cboDepartamento.Location = new System.Drawing.Point(110, 64);
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(100, 21);
@@ -174,6 +180,7 @@
             this.MenuItemIngresar.Name = "MenuItemIngresar";
             this.MenuItemIngresar.Size = new System.Drawing.Size(77, 20);
             this.MenuItemIngresar.Text = "Ingresar";
+            this.MenuItemIngresar.Click += new System.EventHandler(this.MenuItemIngresar_Click);
             // 
             // MenuItemModificar
             // 
@@ -195,6 +202,7 @@
             this.MenuItemCancelar.Name = "MenuItemCancelar";
             this.MenuItemCancelar.Size = new System.Drawing.Size(81, 20);
             this.MenuItemCancelar.Text = "Cancelar";
+            this.MenuItemCancelar.Click += new System.EventHandler(this.MenuItemCancelar_Click);
             // 
             // MenuItemOtros
             // 
@@ -239,11 +247,42 @@
             this.MenuItemAyuda.Size = new System.Drawing.Size(69, 20);
             this.MenuItemAyuda.Text = "Ayuda";
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(44, 172);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(60, 23);
+            this.btnAgregar.TabIndex = 51;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Location = new System.Drawing.Point(44, 201);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(60, 23);
+            this.btnBorrar.TabIndex = 52;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Location = new System.Drawing.Point(110, 293);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(0, 13);
+            this.lblMensaje.TabIndex = 53;
+            // 
             // ABMZona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 372);
+            this.Controls.Add(this.lblMensaje);
+            this.Controls.Add(this.btnBorrar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.lbServicios);
             this.Controls.Add(this.cboDepartamento);
@@ -291,5 +330,8 @@
         private System.Windows.Forms.ToolStripMenuItem aBMCASAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aBMAptoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuItemAyuda;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }

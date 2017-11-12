@@ -1,6 +1,6 @@
 ﻿namespace Administracion
 {
-    partial class Inicio
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Login
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Inicio";
+            this.ClientSize = new System.Drawing.Size(446, 219);
+            this.Name = "Login";
+            this.Text = "Bienvenido a Bios Real State";
+            this.Load += new System.EventHandler(this.Login_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Controles.Logueo logueo1;
+
     }
 }
