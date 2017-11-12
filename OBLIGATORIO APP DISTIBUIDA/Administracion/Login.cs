@@ -13,6 +13,7 @@ namespace Administracion
 {
     public partial class Login : Form
     {
+        private ServicioWeb.Empleado emp = null;
         //private Empleado empleado = null;
 
         public Login()
@@ -24,6 +25,20 @@ namespace Administracion
 
         public void IniciarSession(object sender, EventArgs e)
         {
+            try
+            {
+                ServicioWeb.Empleado empleado = null;
+                MiServicio serv = new MiServicio();
+                empleado= serv.BuscarEmpleado(ccLogin.Usuario);
+
+                if (empleado.Pass == ccLogin.Pass)
+                {
+                    ABMApto abm = new ABMApto(empleado);
+                }
+               
+             
+            }
+            catch { }
 
         //    try
         //    {

@@ -68,10 +68,19 @@ namespace Controles
         {
             base.OnPaint(e);
             //determino despliegue de los controles en pantalla
-            txtPass.Location = new Point(80, 35);
-            txtUsu.Location = new Point(80, 0);
-            lblUsu.Location = new Point(0, 0);
-            txtPass.Location = new Point(0, 35);
+           
+            //txtPass.Location = new Point(80, 35);
+            //txtUsu.Location = new Point(80, 0);
+            //lblUsu.Location = new Point(0, 0);
+            //txtPass.Location = new Point(0, 35);
+            //btnIngresar.Location = new Point(50, 75);
+           
+            lblUsu.Location = new Point(0,0);
+            txtUsu.Location = new Point(40, 0);
+
+            lblPass.Location = new Point(0, 35);
+            txtPass.Location = new Point(70,35);
+   
             btnIngresar.Location = new Point(50, 75);
         }
 

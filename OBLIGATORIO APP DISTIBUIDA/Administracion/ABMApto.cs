@@ -16,6 +16,12 @@ namespace Administracion
     {
         private Empleado emp;
         private Propiedad prop;
+
+        public ABMApto(Empleado e)
+        {
+            emp = e;
+        }
+
         public ABMApto()
         {
             InitializeComponent();
@@ -341,6 +347,11 @@ namespace Administracion
                 EPPadron.SetError(txtMt2Const, "Solo se pueden ingresar numeros");
                 e.Cancel = true;
             }
+        }
+
+        private void ABMApto_Load(object sender, EventArgs e)
+        {
+
         }
 
     }
