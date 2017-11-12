@@ -381,7 +381,6 @@
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(635, 22);
             this.statusStrip1.TabIndex = 26;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // lblMensajes
             // 
@@ -391,8 +390,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
             // ABMApto
             // 

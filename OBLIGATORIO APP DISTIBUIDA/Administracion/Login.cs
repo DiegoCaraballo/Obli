@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-using Entidades_Compartidas;
-using Logica;
 using Administracion.ServicioWeb;
 
 namespace Administracion

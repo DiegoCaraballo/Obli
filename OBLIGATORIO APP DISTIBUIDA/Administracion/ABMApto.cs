@@ -42,6 +42,7 @@ namespace Administracion
                 MenuItemIngresar.Enabled = false;
                 MenuItemEliminar.Enabled = false;
                 MenuItemModificar.Enabled = false;
+                txtPadron.Enabled = true;
                 txtDireccion.Enabled = false;
                 txtPrecio.Enabled = false;
                 cboAccion.Enabled = false;
@@ -52,6 +53,8 @@ namespace Administracion
                 txtAbrev.Enabled = false;
                 txtUser.Enabled = false;
                 txtPiso.Enabled = false;
+                lblMensajes.Text = "";
+                cboAscensor.Enabled = false;
         }
         public void HabilitarControles()
         {
@@ -72,6 +75,9 @@ namespace Administracion
             txtLetraDpto.Enabled = true;
             txtUser.Enabled = true;
             txtPiso.Enabled = true;
+            lblMensajes.Text = "";
+            cboAscensor.Enabled = true;
+       
         }
         public void Limpiar()
         {
