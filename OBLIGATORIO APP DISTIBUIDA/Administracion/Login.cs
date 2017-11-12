@@ -19,11 +19,16 @@ namespace Administracion
 
         public Login()
         {
+<<<<<<< HEAD
             //InitializeComponent();
+=======
+            InitializeComponent();
+>>>>>>> 2a11ad0ed29f3bd60cbf59f70e89e416cf7fdcfb
         }
 
         public void IniciarSession(object sender, EventArgs e)
         {
+<<<<<<< HEAD
         //    try
         //    {
         //        empleado = FabricaLogica.getEmpleadoLogica().Log(this.ccLog.Usuario, this.ccLog.Contraseña);
@@ -62,6 +67,41 @@ namespace Administracion
         private void Login_Load(object sender, EventArgs e)
         {
 
+=======
+            try
+            {
+                //empleado = FabricaLogica.getEmpleadoLogica().Log(this.ccLog.Usuario, this.ccLog.Contraseña);
+                //creo el objeto que me permita trabajar con el ws
+                //MiServicio LEmpleado = new MiServicio();
+                //utilizo la operacion del ws
+                //string usuario = Controles.Logueo.
+                //string pass = 
+
+                //Empleado unEmpleado = new Empleado();
+                //unEmpleado.NomUsu = nombre;
+                //unEmpleado.Pass = pass;
+
+                //if (unEmpleado == null)
+                //    lblMensaje.Text = "Usuario o Contraseña incorrectos";
+                //else
+                //{
+                //    this.Hide();
+                //    Form formu = new Default(unEmpleado);
+                //    formu.ShowDialog();
+                //    this.Close();
+                //}
+            }
+            catch (Exception ex)
+            {
+                lblMensaje.Text = ex.Message;
+            }
+        }
+
+        private void Logueo_Load(object sender, EventArgs e)
+        {
+            //ccLog.Logueo += new EventHandler(IniciarSession);
+            //this.AcceptButton = this.Controles.Logueo.botonLogin;
+>>>>>>> 2a11ad0ed29f3bd60cbf59f70e89e416cf7fdcfb
         }
     }
 }

@@ -128,6 +128,7 @@ namespace Administracion
                 lblMensaje.Text = ex.Message;
             }
         }
+<<<<<<< HEAD
 
         private void MenuItemCancelar_Click(object sender, EventArgs e)
         {
@@ -136,7 +137,12 @@ namespace Administracion
 
         private void MenuItemIngresar_Click(object sender, EventArgs e)
         {
+=======
+>>>>>>> 2a11ad0ed29f3bd60cbf59f70e89e416cf7fdcfb
 
+        private void MenuItemCancelar_Click(object sender, EventArgs e)
+        {
+            EstadoInicial();
         }
     }
 }
