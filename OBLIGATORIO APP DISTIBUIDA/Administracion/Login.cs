@@ -19,16 +19,14 @@ namespace Administracion
 
         public Login()
         {
-<<<<<<< HEAD
+
             //InitializeComponent();
-=======
-            InitializeComponent();
->>>>>>> 2a11ad0ed29f3bd60cbf59f70e89e416cf7fdcfb
-        }
+
+            InitializeComponent();  }
 
         public void IniciarSession(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
         //    try
         //    {
         //        empleado = FabricaLogica.getEmpleadoLogica().Log(this.ccLog.Usuario, this.ccLog.Contraseña);
@@ -67,7 +65,7 @@ namespace Administracion
         private void Login_Load(object sender, EventArgs e)
         {
 
-=======
+
             try
             {
                 //empleado = FabricaLogica.getEmpleadoLogica().Log(this.ccLog.Usuario, this.ccLog.Contraseña);
@@ -101,7 +99,7 @@ namespace Administracion
         {
             //ccLog.Logueo += new EventHandler(IniciarSession);
             //this.AcceptButton = this.Controles.Logueo.botonLogin;
->>>>>>> 2a11ad0ed29f3bd60cbf59f70e89e416cf7fdcfb
+
         }
     }
 }
