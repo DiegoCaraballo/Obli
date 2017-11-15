@@ -10,8 +10,12 @@ using Administracion.ServicioWeb;
 
 namespace Administracion
 {
+    namespace Administracion
+{
     public partial class ABMEmpleado : Form
     {
+        private Empleado emp;
+
         public ABMEmpleado()
         {
             InitializeComponent();
@@ -38,14 +42,23 @@ namespace Administracion
         //Validar usuario al buscar
         private void txtUsuario_Validating(object sender, CancelEventArgs e)
         {
-            if(usuarioValido())
+            //Verifico que ingrese un usuario
+            try
             {
-                EPUsuario.SetError(txtUsuario, string.Empty);
+                if (txtUsuario.Text.Trim() != "")
+                {
+                    EPUsuario.Clear();
+                }
+                else
+                {
+                    throw new Exception("El usuario es requerido");                    
+                }
             }
-            else
+            catch (Exception ex)
             {
-                EPUsuario.SetError(txtUsuario, "El usuario es requerido");
+                EPUsuario.SetError(txtUsuario, ex.Message);
                 e.Cancel = true;
+                return;
             }
 
             try
@@ -60,11 +73,11 @@ namespace Administracion
                     MenuItemIngresar.Enabled = true;
                     MenuItemEliminar.Enabled = false;
                     MenuItemModificar.Enabled = false;
-                    txtPassword.Enabled = true;
                 }
                 else
                 {
                     //existe, cargo y permito eliminar o modificar
+                    emp = empleado;
                     txtPassword.Text = empleado.Pass;
                     MenuItemIngresar.Enabled = false;
                     MenuItemModificar.Enabled = true;
@@ -117,20 +130,15 @@ namespace Administracion
         //Modificar Empleado
         private void MenuItemModificar_Click(object sender, EventArgs e)
         {
-            ServicioWeb.Empleado _unEmpleado = null;
             try
             {
                 //creo el objeto que me permita trabajar con el WS
                 MiServicio LEmpleado = new MiServicio();
 
-                //Utilizo la operación del WS
-                string nombre = txtUsuario.Text.Trim().ToUpper();
-                _unEmpleado = LEmpleado.BuscarEmpleado(nombre);
-                string pass = txtPassword.Text;
-                Empleado unEmpleado = new Empleado();
-                unEmpleado.NomUsu = nombre;
-                unEmpleado.Pass = pass;
-                LEmpleado.ModificarEmpleado(unEmpleado);
+                emp.NomUsu = txtUsuario.Text.Trim().ToUpper();
+                emp.Pass = txtPassword.Text;
+
+                LEmpleado.ModificarEmpleado(emp);
 
                 //si llego acá se modificó el empleado
                 lblMensaje.Text = "Modificación Exitosa";
@@ -151,10 +159,8 @@ namespace Administracion
             {
                 //creo el objeto que me permita trabajar con el WS
                 MiServicio LEmpleado = new MiServicio();
-                //Utilizo la operación del WS
-                string nombre = txtUsuario.Text.Trim().ToUpper();
-                _unEmpleado = LEmpleado.BuscarEmpleado(nombre);
-                LEmpleado.EliminarEmpleado(_unEmpleado);
+
+                LEmpleado.EliminarEmpleado(emp);
 
                 //si llego aca elimine el empleado
                 lblMensaje.Text = "Se eliminó correctamente";
@@ -173,58 +179,15 @@ namespace Administracion
             this.LimpioControles();
             this.DesActivoBotones();
             lblMensaje.Text = "";
+            emp = null;
         }
-
-        //Buscar empleado
-        //private void MenuItemBuscar_Click(object sender, EventArgs e)
-        //{
-        //    ServicioWeb.Empleado _unEmpleado = null;
-        //    try
-        //    {
-        //        lblMensaje.Text = "";
-
-        //        if (txtUsuario.Text.Trim() == "" || txtUsuario.Text.Trim().Length > 20 || txtUsuario.Text.Trim().Length < 4)
-        //        {
-        //            throw new Exception("El usuario debe tener entre 4 y 20 caracteres");
-        //        }
-        //        else
-        //        {
-        //            //creo un objeto que me permita trabajar con el WS
-        //            MiServicio LEmpleado = new MiServicio();
-        //            //utilizo la operacion del WebService
-        //            _unEmpleado = LEmpleado.BuscarEmpleado(txtUsuario.Text.Trim());
-        //            //determino acción
-        //            if (_unEmpleado == null)
-        //            //no existe empleado, es un alta, limpio campos y habilito para ingresar
-        //            {
-        //                MenuItemIngresar.Enabled = true;
-        //                MenuItemEliminar.Enabled = false;
-        //                MenuItemModificar.Enabled = false;
-        //                txtPassword.Enabled = true;
-        //            }
-        //            else
-        //            {
-        //                //existe, cargo y permito eliminar o modificar
-        //                txtPassword.Text = _unEmpleado.Pass;
-        //                MenuItemIngresar.Enabled = false;
-        //                MenuItemModificar.Enabled = true;
-        //                MenuItemEliminar.Enabled = true;
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        lblMensaje.Text = "ERROR" + ex.Message;
-        //    }
-            
-        //}
 
         private void DesActivoBotones()
         {
             MenuItemIngresar.Enabled = false;
             MenuItemEliminar.Enabled = false;
             MenuItemModificar.Enabled = false;
-            txtPassword.Enabled = false;
+            //txtPassword.Enabled = false;
         }
 
         private void LimpioControles()
@@ -232,12 +195,7 @@ namespace Administracion
             txtUsuario.Text = "";
             txtPassword.Text = "";
         }
-
-        //Verificar usuario vacío
-        private bool usuarioValido()
-        {
-            return (txtUsuario.Text.Trim().Length > 0);
-        }
         
     }
+}
 }
