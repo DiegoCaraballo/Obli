@@ -7,16 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using Administracion.ServicioWeb;
+
 namespace Administracion
 {
     public partial class ABMZona : Form
     {
+        private Zona zona;
+
         public ABMZona()
         {
             InitializeComponent();
             Accesos();
+            cboDepartamento.DropDownStyle = ComboBoxStyle.DropDownList;
             EstadoInicial();
         }
+
         public void Accesos()
         {
             MenuItemAyuda.ShortcutKeys = Keys.F1;
@@ -24,7 +30,6 @@ namespace Administracion
             MenuItemModificar.ShortcutKeys = Keys.F4;
             MenuItemEliminar.ShortcutKeys = Keys.F5;
             MenuItemCancelar.ShortcutKeys = Keys.F6;
-
         }
 
         private void MenuItemAyuda_Click(object sender, EventArgs e)
@@ -60,21 +65,21 @@ namespace Administracion
         }
 
         //Buscar Zona
-        private void MenuItemBuscar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                lblMensaje.Text = "";
-                if (txtCodigo.Text.Trim() == "")
-                    throw new Exception("Debe ingresar un código");
+        //private void MenuItemBuscar_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        lblMensaje.Text = "";
+        //        if (txtCodigo.Text.Trim() == "")
+        //            throw new Exception("Debe ingresar un código");
 
 
-            }
-            catch (Exception ex)
-            {
-                lblMensaje.Text = ex.Message;
-            }
-        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        lblMensaje.Text = ex.Message;
+        //    }
+        //}
 
         // Agrega servicios
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -131,11 +136,26 @@ namespace Administracion
         private void MenuItemCancelar_Click(object sender, EventArgs e)
         {
             EstadoInicial();
+            zona = null;
         }
 
         private void MenuItemIngresar_Click(object sender, EventArgs e)
-        { }
+        { 
 
+        }
+
+        // Validar el código ingresado
+        private void txtCodigo_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch
+            {
+ 
+            }
+        }
 
 
     }
