@@ -43,6 +43,7 @@
             this.ccLogin.Name = "ccLogin";
             this.ccLogin.Size = new System.Drawing.Size(245, 105);
             this.ccLogin.TabIndex = 1;
+            this.ccLogin.Click += new System.EventHandler(this.ccLogin_Click);
             // 
             // Login
             // 

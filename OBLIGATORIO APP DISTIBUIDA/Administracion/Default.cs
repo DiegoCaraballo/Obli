@@ -18,6 +18,7 @@ namespace Administracion
        {
            InitializeComponent();
            EmpLogueado = pEmp;
+          lblUSU.Text = "Empleado: " + EmpLogueado.NomUsu;
        }
 
         public Default()

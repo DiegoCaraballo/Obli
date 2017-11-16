@@ -20,57 +20,40 @@ namespace Administracion
             InitializeComponent();
         }
 
-        public void IniciarSession(object sender, EventArgs e)
+        public void IniciarSession2(object sender, EventArgs e)
         {
             try
             {
                 ServicioWeb.Empleado empleado = null;
                 MiServicio serv = new MiServicio();
                 empleado = serv.BuscarEmpleado(ccLogin.Usuario);
-
-                if (empleado.Pass == ccLogin.Pass)
+                if (empleado == null)
                 {
-                    Default abm = new Default(empleado);
+                    lblMensaje.Text = "No existe el empleado";
+                }
+                else if (empleado.Pass == ccLogin.Pass.ToString())
+                {
+                    this.Hide();
+                    Form abm = new Default(empleado);
+                    abm.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    lblMensaje.Text = "La Password no es correcta";
                 }
 
 
             }
-            catch { }
+            catch (Exception ex) 
+            { 
+                lblMensaje.Text = ex.Message; 
+            }
 
-            //    try
-            //    {
-            //        empleado = FabricaLogica.getEmpleadoLogica().Log(this.ccLog.Usuario, this.ccLog.Contraseña);
-            //        creo el objeto que me permita trabajar con el ws
-            //        MiServicio LEmpleado = new MiServicio();
-            //        utilizo la operacion del ws
-            //        string usuario = Controles.Logueo.
-            //        string pass = 
 
-            //        Empleado unEmpleado = new Empleado();
-            //        unEmpleado.NomUsu = nombre;
-            //        unEmpleado.Pass = pass;
-
-            //        if (unEmpleado == null)
-            //            lblMensaje.Text = "Usuario o Contraseña incorrectos";
-            //        else
-            //        {
-            //            this.Hide();
-            //            Form formu = new Default(unEmpleado);
-            //            formu.ShowDialog();
-            //            this.Close();
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        lblMensaje.Text = ex.Message;
-            //    }
         }
 
-        //private void Logueo_Load(object sender, EventArgs e)
-        //{
-        //    ccLog.Logueo += new EventHandler(IniciarSession);
-        //    this.AcceptButton = this.Controles.Logueo.botonLogin;
-        //}
+      
 
         private void Login_Load(object sender, EventArgs e)
         {
@@ -78,26 +61,8 @@ namespace Administracion
 
             try
             {
-                //empleado = FabricaLogica.getEmpleadoLogica().Log(this.ccLog.Usuario, this.ccLog.Contraseña);
-                //creo el objeto que me permita trabajar con el ws
-                //MiServicio LEmpleado = new MiServicio();
-                //utilizo la operacion del ws
-                //string usuario = Controles.Logueo.
-                //string pass = 
-
-                //Empleado unEmpleado = new Empleado();
-                //unEmpleado.NomUsu = nombre;
-                //unEmpleado.Pass = pass;
-
-                //if (unEmpleado == null)
-                //    lblMensaje.Text = "Usuario o Contraseña incorrectos";
-                //else
-                //{
-                //    this.Hide();
-                //    Form formu = new Default(unEmpleado);
-                //    formu.ShowDialog();
-                //    this.Close();
-                //}
+                ccLogin.IniciarSession +=  new EventHandler(IniciarSession2);
+                this.AcceptButton = ccLogin.botonLogin;
             }
             catch (Exception ex)
             {
@@ -105,11 +70,11 @@ namespace Administracion
             }
         }
 
-        private void Logueo_Load(object sender, EventArgs e)
+        private void ccLogin_Click(object sender, EventArgs e)
         {
-            //ccLog.Logueo += new EventHandler(IniciarSession);
-            //this.AcceptButton = this.Controles.Logueo.botonLogin;
 
         }
+
+      
     }
 }

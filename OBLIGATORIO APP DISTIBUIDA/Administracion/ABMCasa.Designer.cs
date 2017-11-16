@@ -54,16 +54,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.MenuItemBuscar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemIngresar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemCancelar = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuItemOtros = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMZonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMCASAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMAptoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemAyuda = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -265,25 +259,16 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuItemBuscar,
             this.MenuItemIngresar,
             this.MenuItemModificar,
             this.MenuItemEliminar,
             this.MenuItemCancelar,
-            this.MenuItemOtros,
             this.MenuItemAyuda});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(604, 24);
             this.menuStrip1.TabIndex = 50;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // MenuItemBuscar
-            // 
-            this.MenuItemBuscar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemBuscar.Image")));
-            this.MenuItemBuscar.Name = "MenuItemBuscar";
-            this.MenuItemBuscar.Size = new System.Drawing.Size(70, 20);
-            this.MenuItemBuscar.Text = "Buscar";
             // 
             // MenuItemIngresar
             // 
@@ -312,42 +297,6 @@
             this.MenuItemCancelar.Name = "MenuItemCancelar";
             this.MenuItemCancelar.Size = new System.Drawing.Size(81, 20);
             this.MenuItemCancelar.Text = "Cancelar";
-            // 
-            // MenuItemOtros
-            // 
-            this.MenuItemOtros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aBMEmpleadoToolStripMenuItem,
-            this.aBMZonaToolStripMenuItem,
-            this.aBMCASAToolStripMenuItem,
-            this.aBMAptoToolStripMenuItem});
-            this.MenuItemOtros.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemOtros.Image")));
-            this.MenuItemOtros.Name = "MenuItemOtros";
-            this.MenuItemOtros.Size = new System.Drawing.Size(64, 20);
-            this.MenuItemOtros.Text = "Otros";
-            // 
-            // aBMEmpleadoToolStripMenuItem
-            // 
-            this.aBMEmpleadoToolStripMenuItem.Name = "aBMEmpleadoToolStripMenuItem";
-            this.aBMEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.aBMEmpleadoToolStripMenuItem.Text = "ABM Empleado";
-            // 
-            // aBMZonaToolStripMenuItem
-            // 
-            this.aBMZonaToolStripMenuItem.Name = "aBMZonaToolStripMenuItem";
-            this.aBMZonaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.aBMZonaToolStripMenuItem.Text = "ABM Zona";
-            // 
-            // aBMCASAToolStripMenuItem
-            // 
-            this.aBMCASAToolStripMenuItem.Name = "aBMCASAToolStripMenuItem";
-            this.aBMCASAToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.aBMCASAToolStripMenuItem.Text = "ABM Apto";
-            // 
-            // aBMAptoToolStripMenuItem
-            // 
-            this.aBMAptoToolStripMenuItem.Name = "aBMAptoToolStripMenuItem";
-            this.aBMAptoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.aBMAptoToolStripMenuItem.Text = "ABM Comercio";
             // 
             // MenuItemAyuda
             // 
@@ -423,16 +372,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem MenuItemBuscar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemIngresar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemModificar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemEliminar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemCancelar;
-        private System.Windows.Forms.ToolStripMenuItem MenuItemOtros;
-        private System.Windows.Forms.ToolStripMenuItem aBMEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aBMZonaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aBMCASAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aBMAptoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuItemAyuda;
     }
 }

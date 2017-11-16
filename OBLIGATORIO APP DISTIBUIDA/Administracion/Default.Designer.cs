@@ -40,8 +40,11 @@
             this.visitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaDeVisitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ssmensajes = new System.Windows.Forms.StatusStrip();
+            this.lblUSU = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ssmensajes.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -137,11 +140,26 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // ssmensajes
+            // 
+            this.ssmensajes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblUSU});
+            this.ssmensajes.Location = new System.Drawing.Point(0, 443);
+            this.ssmensajes.Name = "ssmensajes";
+            this.ssmensajes.Size = new System.Drawing.Size(702, 22);
+            this.ssmensajes.TabIndex = 3;
+            // 
+            // lblUSU
+            // 
+            this.lblUSU.Name = "lblUSU";
+            this.lblUSU.Size = new System.Drawing.Size(0, 17);
+            // 
             // Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 465);
+            this.Controls.Add(this.ssmensajes);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.menuStrip1);
@@ -151,6 +169,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ssmensajes.ResumeLayout(false);
+            this.ssmensajes.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,5 +189,7 @@
         private System.Windows.Forms.ToolStripMenuItem visitasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaDeVisitasToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.StatusStrip ssmensajes;
+        private System.Windows.Forms.ToolStripStatusLabel lblUSU;
     }
 }
