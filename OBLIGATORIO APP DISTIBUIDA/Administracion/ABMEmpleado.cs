@@ -10,8 +10,6 @@ using Administracion.ServicioWeb;
 
 namespace Administracion
 {
-    namespace Administracion
-{
     public partial class ABMEmpleado : Form
     {
         private Empleado emp;
@@ -197,5 +195,4 @@ namespace Administracion
         }
         
     }
-}
 }

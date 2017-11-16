@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ABMZona));
             this.cboDepartamento = new System.Windows.Forms.ComboBox();
             this.txtServicio = new System.Windows.Forms.TextBox();
@@ -41,21 +42,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbServicios = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.MenuItemBuscar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemIngresar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemCancelar = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuItemOtros = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMZonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMCASAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMAptoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemAyuda = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.lblMensaje = new System.Windows.Forms.Label();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.EPCodigo = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EPCodigo)).BeginInit();
             this.SuspendLayout();
             // 
             // cboDepartamento
@@ -96,6 +94,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 38;
+            this.txtCodigo.Validating += new System.ComponentModel.CancelEventHandler(this.txtCodigo_Validating);
             // 
             // label5
             // 
@@ -153,26 +152,16 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuItemBuscar,
             this.MenuItemIngresar,
             this.MenuItemModificar,
             this.MenuItemEliminar,
             this.MenuItemCancelar,
-            this.MenuItemOtros,
             this.MenuItemAyuda});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(605, 24);
             this.menuStrip1.TabIndex = 50;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // MenuItemBuscar
-            // 
-            this.MenuItemBuscar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemBuscar.Image")));
-            this.MenuItemBuscar.Name = "MenuItemBuscar";
-            this.MenuItemBuscar.Size = new System.Drawing.Size(70, 20);
-            this.MenuItemBuscar.Text = "Buscar";
-            this.MenuItemBuscar.Click += new System.EventHandler(this.MenuItemBuscar_Click);
             // 
             // MenuItemIngresar
             // 
@@ -203,42 +192,6 @@
             this.MenuItemCancelar.Size = new System.Drawing.Size(81, 20);
             this.MenuItemCancelar.Text = "Cancelar";
             this.MenuItemCancelar.Click += new System.EventHandler(this.MenuItemCancelar_Click);
-            // 
-            // MenuItemOtros
-            // 
-            this.MenuItemOtros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aBMEmpleadoToolStripMenuItem,
-            this.aBMZonaToolStripMenuItem,
-            this.aBMCASAToolStripMenuItem,
-            this.aBMAptoToolStripMenuItem});
-            this.MenuItemOtros.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemOtros.Image")));
-            this.MenuItemOtros.Name = "MenuItemOtros";
-            this.MenuItemOtros.Size = new System.Drawing.Size(64, 20);
-            this.MenuItemOtros.Text = "Otros";
-            // 
-            // aBMEmpleadoToolStripMenuItem
-            // 
-            this.aBMEmpleadoToolStripMenuItem.Name = "aBMEmpleadoToolStripMenuItem";
-            this.aBMEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.aBMEmpleadoToolStripMenuItem.Text = "ABM Empleado";
-            // 
-            // aBMZonaToolStripMenuItem
-            // 
-            this.aBMZonaToolStripMenuItem.Name = "aBMZonaToolStripMenuItem";
-            this.aBMZonaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.aBMZonaToolStripMenuItem.Text = "ABM Apto";
-            // 
-            // aBMCASAToolStripMenuItem
-            // 
-            this.aBMCASAToolStripMenuItem.Name = "aBMCASAToolStripMenuItem";
-            this.aBMCASAToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.aBMCASAToolStripMenuItem.Text = "ABM Casa";
-            // 
-            // aBMAptoToolStripMenuItem
-            // 
-            this.aBMAptoToolStripMenuItem.Name = "aBMAptoToolStripMenuItem";
-            this.aBMAptoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.aBMAptoToolStripMenuItem.Text = "ABM Comercio";
             // 
             // MenuItemAyuda
             // 
@@ -275,11 +228,24 @@
             this.lblMensaje.Size = new System.Drawing.Size(0, 13);
             this.lblMensaje.TabIndex = 53;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 350);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(605, 22);
+            this.statusStrip1.TabIndex = 54;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // EPCodigo
+            // 
+            this.EPCodigo.ContainerControl = this;
+            // 
             // ABMZona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 372);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnAgregar);
@@ -300,6 +266,7 @@
             this.Text = "ABMZona";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EPCodigo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,19 +286,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lbServicios;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem MenuItemBuscar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemIngresar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemModificar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemEliminar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemCancelar;
-        private System.Windows.Forms.ToolStripMenuItem MenuItemOtros;
-        private System.Windows.Forms.ToolStripMenuItem aBMEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aBMZonaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aBMCASAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aBMAptoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuItemAyuda;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ErrorProvider EPCodigo;
     }
 }

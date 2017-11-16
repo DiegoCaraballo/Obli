@@ -20,7 +20,6 @@ namespace Administracion
         public void Accesos()
         {
             MenuItemAyuda.ShortcutKeys = Keys.F1;
-            MenuItemBuscar.ShortcutKeys = Keys.F2;
             MenuItemIngresar.ShortcutKeys = Keys.F3;
             MenuItemModificar.ShortcutKeys = Keys.F4;
             MenuItemEliminar.ShortcutKeys = Keys.F5;
@@ -47,7 +46,6 @@ namespace Administracion
         public void EstadoInicial()
         {
             LimpiarCampos();
-            MenuItemBuscar.Enabled = true;
             txtCodigo.Enabled = true;
             //cboDepartamento.SelectedIndex = 0;
             MenuItemIngresar.Enabled = false;
