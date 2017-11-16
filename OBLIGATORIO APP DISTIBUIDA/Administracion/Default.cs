@@ -7,21 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using Administracion.ServicioWeb;
 namespace Administracion
 {
     public partial class Default : Form
     {
+        private Empleado EmpLogueado;
 
-        //ASI LO TIENE LA PROFE
-        //Luego pasa el _EmpLogueado a cada new, ej: new ABMEmpleado(_EmpLogueado)
-        //atributo de formulario
-        //private Empleado _EmpLogueado;
-
-        //public Default(Empleado pEmp)
-        //{
-        //    InitializeComponent();
-        //    _EmpLogueado = pEmp;
-        //}
+        public Default(Empleado pEmp)
+       {
+           InitializeComponent();
+           EmpLogueado = pEmp;
+       }
 
         public Default()
         {
@@ -45,21 +42,21 @@ namespace Administracion
         // Form de ABM Casas
         private void aBMCasasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ABMCasa _unForm = new ABMCasa();
+            ABMCasa _unForm = new ABMCasa(EmpLogueado);
             _unForm.ShowDialog();
         }
 
         // Form de ABM Apartamento
         private void aBMApartamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ABMApto _unForm = new ABMApto();
+            ABMApto _unForm = new ABMApto(EmpLogueado);
             _unForm.ShowDialog();
         }
 
         // Form de ABM Local Comercial
         private void aBMLocalComercialToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ABMComercio _unForm = new ABMComercio();
+            ABMComercio _unForm = new ABMComercio(EmpLogueado);
             _unForm.ShowDialog();
         }
 

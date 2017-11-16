@@ -7,10 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using Administracion.ServicioWeb;
 namespace Administracion
 {
     public partial class ABMCasa : Form
-    {
+    {  private Empleado emp;
+        public ABMCasa(Empleado e)
+        {
+            emp = e;
+        }
         public ABMCasa()
         {
             InitializeComponent();

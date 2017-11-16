@@ -14,14 +14,11 @@ namespace Administracion
     public partial class Login : Form
     {
         private ServicioWeb.Empleado emp = null;
-        //private Empleado empleado = null;
 
         public Login()
         {
-
-            //InitializeComponent();
-
-            InitializeComponent();  }
+            InitializeComponent();
+        }
 
         public void IniciarSession(object sender, EventArgs e)
         {
@@ -29,44 +26,44 @@ namespace Administracion
             {
                 ServicioWeb.Empleado empleado = null;
                 MiServicio serv = new MiServicio();
-                empleado= serv.BuscarEmpleado(ccLogin.Usuario);
+                empleado = serv.BuscarEmpleado(ccLogin.Usuario);
 
                 if (empleado.Pass == ccLogin.Pass)
                 {
-                    ABMApto abm = new ABMApto(empleado);
+                    Default abm = new Default(empleado);
                 }
-               
-             
+
+
             }
             catch { }
 
-        //    try
-        //    {
-        //        empleado = FabricaLogica.getEmpleadoLogica().Log(this.ccLog.Usuario, this.ccLog.Contraseña);
-        //        creo el objeto que me permita trabajar con el ws
-        //        MiServicio LEmpleado = new MiServicio();
-        //        utilizo la operacion del ws
-        //        string usuario = Controles.Logueo.
-        //        string pass = 
+            //    try
+            //    {
+            //        empleado = FabricaLogica.getEmpleadoLogica().Log(this.ccLog.Usuario, this.ccLog.Contraseña);
+            //        creo el objeto que me permita trabajar con el ws
+            //        MiServicio LEmpleado = new MiServicio();
+            //        utilizo la operacion del ws
+            //        string usuario = Controles.Logueo.
+            //        string pass = 
 
-        //        Empleado unEmpleado = new Empleado();
-        //        unEmpleado.NomUsu = nombre;
-        //        unEmpleado.Pass = pass;
+            //        Empleado unEmpleado = new Empleado();
+            //        unEmpleado.NomUsu = nombre;
+            //        unEmpleado.Pass = pass;
 
-        //        if (unEmpleado == null)
-        //            lblMensaje.Text = "Usuario o Contraseña incorrectos";
-        //        else
-        //        {
-        //            this.Hide();
-        //            Form formu = new Default(unEmpleado);
-        //            formu.ShowDialog();
-        //            this.Close();
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        lblMensaje.Text = ex.Message;
-        //    }
+            //        if (unEmpleado == null)
+            //            lblMensaje.Text = "Usuario o Contraseña incorrectos";
+            //        else
+            //        {
+            //            this.Hide();
+            //            Form formu = new Default(unEmpleado);
+            //            formu.ShowDialog();
+            //            this.Close();
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        lblMensaje.Text = ex.Message;
+            //    }
         }
 
         //private void Logueo_Load(object sender, EventArgs e)

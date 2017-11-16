@@ -14,9 +14,9 @@ namespace Administracion
 {
     public partial class ABMApto : Form
     {
-        private Empleado emp;
+      
         private Propiedad prop;
-
+        private Empleado emp;
         public ABMApto(Empleado e)
         {
             emp = e;
