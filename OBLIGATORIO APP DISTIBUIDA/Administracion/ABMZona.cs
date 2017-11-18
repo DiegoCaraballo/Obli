@@ -19,7 +19,6 @@ namespace Administracion
         {
             InitializeComponent();
             Accesos();
-            cboDepartamento.DropDownStyle = ComboBoxStyle.DropDownList;
             EstadoInicial();
         }
 
@@ -40,7 +39,6 @@ namespace Administracion
         //Limpio campos
         public void LimpiarCampos()
         {
-            txtCodigo.Text = "";
             txtHabitantes.Text = "";
             txtNombre.Text = "";
             txtServicio.Text = "";
@@ -51,7 +49,6 @@ namespace Administracion
         public void EstadoInicial()
         {
             LimpiarCampos();
-            txtCodigo.Enabled = true;
             //cboDepartamento.SelectedIndex = 0;
             MenuItemIngresar.Enabled = false;
             MenuItemModificar.Enabled = false;
@@ -61,25 +58,7 @@ namespace Administracion
             txtNombre.Enabled = false;
             //txtServicio.Enabled = false;
             txtHabitantes.Enabled = false;
-            cboDepartamento.Enabled = true;
         }
-
-        //Buscar Zona
-        //private void MenuItemBuscar_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        lblMensaje.Text = "";
-        //        if (txtCodigo.Text.Trim() == "")
-        //            throw new Exception("Debe ingresar un código");
-
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        lblMensaje.Text = ex.Message;
-        //    }
-        //}
 
         // Agrega servicios
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -104,7 +83,7 @@ namespace Administracion
                     lblMensaje.Text = "El servicio no puede ser vacío";
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 lblMensaje.Text = ex.Message;
             }
@@ -140,22 +119,81 @@ namespace Administracion
         }
 
         private void MenuItemIngresar_Click(object sender, EventArgs e)
-        { 
-
-        }
-
-        // Validar el código ingresado
-        private void txtCodigo_Validating(object sender, CancelEventArgs e)
         {
             try
             {
-
+                // Obtengo los datos del UserControl - CodigoDpto
+                string letraDpto = codigoDpto1.LetraDepto;
+                string codigo = codigoDpto1.Codigo;
             }
-            catch
+            catch(Exception ex)
             {
- 
+                lblMensaje.Text = ex.Message;
             }
         }
+
+        // Valido todo el UserControl para buscar la zona
+        private void codigoDpto1_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                if (codigoDpto1.Codigo != "" && codigoDpto1.LetraDepto != "")
+                {
+                    EPBuscar.Clear();
+                }
+                else
+                {
+                    throw new Exception("Error al validar Código + Departamento");
+                }
+            }
+            catch(Exception ex)
+            {
+                EPBuscar.SetError(codigoDpto1, ex.Message);
+                e.Cancel = true;
+                return;
+            }
+
+            try
+            {
+                ServicioWeb.Zona z = null;
+                MiServicio serv = new MiServicio();
+                zona = serv.BuscarZona(codigoDpto1.LetraDepto, codigoDpto1.Codigo);
+
+                if (zona == null)
+                {
+                    // no existe la zona, es un alta, limpio campos y habilito para ingresar
+                    MenuItemIngresar.Enabled = true;
+                    MenuItemEliminar.Enabled = false;
+                    MenuItemModificar.Enabled = false;
+                }
+                else
+                {
+                    //existe, cargo y permito eliminar o modificar
+                    zona = z;
+                    txtHabitantes.Text = zona.CantHabitantes.ToString();
+                    txtNombre.Text = zona.Nombre;
+                    foreach (Servicio servicio in zona.LosServicios)
+                    {
+                        lbServicios.Items.Add(servicio.Servicios.ToString());
+                    }
+                }
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Length > 40)
+                    lblMensaje.Text = ex.Message.Substring(0, 40);
+                else
+                    lblMensaje.Text = ex.Message;
+            }
+        }
+
 
 
     }

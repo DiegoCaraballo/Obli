@@ -12,3 +12,5 @@ C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Entidades Comp
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.csprojResolveAssemblyReference.cache
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.dll
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.pdb
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.CodigoDpto.resources
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.csproj.GenerateResource.Cache
