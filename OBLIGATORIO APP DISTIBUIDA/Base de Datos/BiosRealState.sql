@@ -738,6 +738,8 @@ go
 
 --AGREGAR VISITA
 
+
+
 go
 CREATE PROC AltaVisita @Tel varchar(20), @Nombre varchar(20), @Fecha DateTime, @Padron int AS
 begin	
@@ -755,14 +757,22 @@ INSERT INTO Visita(tel, nombre, fecha, padron)VALUES(@Tel, @Nombre, @Fecha, @Pad
 			RETURN -3
 	END
 GO
-create proc ListarVisitas as
-begin
-select * from Visita
-end
+
 
 
 go
 
+create proc ListadoVisitas as
+
+
+begin
+
+select p.accion,v.padron,p.precio,v.fecha from Visita v join Propiedad p on v.padron= p.padron where v.fecha >= GETDATE();
+end
+
+go
+
+ 
 
 --creacion de usuario IIS para que el webservice pueda acceder a la bd------------------------
 USE master

@@ -289,6 +289,7 @@ public class MiServicio : System.Web.Services.WebService {
 
     #endregion
 
+    
 
     #region SoapException
     private void GeneroSoapException(Exception ex)
@@ -308,6 +309,9 @@ public class MiServicio : System.Web.Services.WebService {
         SoapException _MiEx = new SoapException("Error WS", SoapException.ClientFaultCode, Context.Request.Url.AbsoluteUri, _NodoError);
         throw _MiEx;
     }
+
+
+
     #endregion
     
 }

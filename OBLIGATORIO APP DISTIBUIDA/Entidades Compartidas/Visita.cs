@@ -89,7 +89,13 @@ namespace Entidades_Compartidas
             Nombre = pNombre;
             AVisitar = pAVisitar;
         }
-      
+        public Visita(string pAccion, int pPadron, int pPrecio, DateTime pFecha)
+        {
+            AVisitar.Accion = pAccion;
+            AVisitar.Padron = pPadron;
+            AVisitar.Precio = pPrecio;
+            Fecha = pFecha;
+        }
         public Visita()
         { }
     }

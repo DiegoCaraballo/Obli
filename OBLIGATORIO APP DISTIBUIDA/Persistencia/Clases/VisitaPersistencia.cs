@@ -73,18 +73,60 @@ namespace Persistencia
 
 
 
+        //public List<Visita> ListaVisitas()
+        //{
+        //    List<Visita> lista = new List<Visita>();
+          
+        //    DateTime fecha;
+        //    string accion;
+        //    int precio;
+        //    int padron;
+
+        //    SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
+        //    SqlCommand oComando = new SqlCommand("ListadoVisitas", oConexion);
+        //    SqlDataReader oReader;
+
+        //    try
+        //    {
+        //        oConexion.Open();
+        //        oReader = oComando.ExecuteReader();
+
+        //        while (oReader.Read())
+        //        {
+        //            accion = (string)oReader["accion"];
+        //            padron = (int)oReader["padron"];
+        //            precio = (int)oReader["precio"];
+        //            fecha = (DateTime)oReader["fecha"];
+                                  
+                                      
+        //            Visita v = new Visita(accion,padron,precio,fecha);
+        //            lista.Add(v);
+        //        }
+        //        oReader.Close();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new Exception("Problemas con la base de datos: " + ex.Message);
+        //    }
+        //    finally
+        //    {
+        //        oConexion.Close();
+        //    }
+
+        //    return lista;
+        //}
+
         public List<Visita> ListaVisitas()
         {
             List<Visita> lista = new List<Visita>();
-            int id;
+
             DateTime fecha;
-            string telefono;
-            string nombre;
-            Propiedad aVisitar = null;
+            string accion;
+            int precio;
             int padron;
 
             SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
-            SqlCommand oComando = new SqlCommand("ListarVisitas", oConexion);
+            SqlCommand oComando = new SqlCommand("ListadoVisitas", oConexion);
             SqlDataReader oReader;
 
             try
@@ -94,14 +136,13 @@ namespace Persistencia
 
                 while (oReader.Read())
                 {
-                    id = (int)oReader["id"];
+                    accion = (string)oReader["accion"];
+                    padron = (int)oReader["padron"];
+                    precio = (int)oReader["precio"];
                     fecha = (DateTime)oReader["fecha"];
 
-                    telefono = (string)oReader["tel"];
-                    padron = (int)oReader["padron"];
 
-                    nombre = (string)oReader["nombre"];
-                    Visita v = new Visita(fecha, telefono, nombre, aVisitar);
+                    Visita v = new Visita(accion, padron, precio, fecha);
                     lista.Add(v);
                 }
                 oReader.Close();
@@ -117,7 +158,6 @@ namespace Persistencia
 
             return lista;
         }
-
         #endregion
     }
 }
