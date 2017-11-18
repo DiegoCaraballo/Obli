@@ -739,7 +739,6 @@ go
 --AGREGAR VISITA
 
 
-
 go
 CREATE PROC AltaVisita @Tel varchar(20), @Nombre varchar(20), @Fecha DateTime, @Padron int AS
 begin	
@@ -761,13 +760,14 @@ GO
 
 
 go
-
+--exec AltaVisita 35151,'nicolas','2017-11-19',111111
+go
 create proc ListadoVisitas as
-
-
 begin
 
-select p.accion,v.padron,p.precio,v.fecha from Visita v join Propiedad p on v.padron= p.padron where v.fecha >= GETDATE();
+--select p.accion,v.padron,p.precio,v.fecha from Visita v join Propiedad p on v.padron= p.padron where v.fecha >= GETDATE();
+select * from Visita v where v.fecha >= getdate();
+
 end
 
 go
@@ -884,6 +884,3 @@ exec AltaComercio 987987, 'S','MVD',2,'DR.PENA 7458',9500,'ALQUILER',1,200,'NICO
 
 GO
 
-
-
-select * from Visita

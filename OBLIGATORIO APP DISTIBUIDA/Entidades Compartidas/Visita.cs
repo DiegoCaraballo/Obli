@@ -55,7 +55,7 @@ namespace Entidades_Compartidas
 
         public DateTime Fecha
         {
-            get { return fecha; }
+            get { return fecha;  }
             set {
                 if (value.Date !=null )
                     fecha = value;
@@ -81,7 +81,15 @@ namespace Entidades_Compartidas
         //    Nombre = pNombre;
         //    AVisitar = pAVisitar;
         //}
-
+        
+        
+        public Visita(Propiedad pAVisitar,DateTime pFecha )
+        {
+            Fecha = pFecha;
+           
+           
+           
+        }
         public Visita( DateTime pFecha, string pTelefono, string pNombre, Propiedad pAVisitar)
         {
             Fecha = pFecha;
@@ -89,13 +97,7 @@ namespace Entidades_Compartidas
             Nombre = pNombre;
             AVisitar = pAVisitar;
         }
-        public Visita(string pAccion, int pPadron, int pPrecio, DateTime pFecha)
-        {
-            AVisitar.Accion = pAccion;
-            AVisitar.Padron = pPadron;
-            AVisitar.Precio = pPrecio;
-            Fecha = pFecha;
-        }
+       
         public Visita()
         { }
     }

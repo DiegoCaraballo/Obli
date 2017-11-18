@@ -119,11 +119,11 @@ namespace Persistencia
         public List<Visita> ListaVisitas()
         {
             List<Visita> lista = new List<Visita>();
-
-            DateTime fecha;
-            string accion;
-            int precio;
-            int padron;
+            Propiedad propiedad=null;
+           DateTime fecha;
+            string nombre ;
+           string tel;
+           int padron;
 
             SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
             SqlCommand oComando = new SqlCommand("ListadoVisitas", oConexion);
@@ -136,13 +136,23 @@ namespace Persistencia
 
                 while (oReader.Read())
                 {
-                    accion = (string)oReader["accion"];
-                    padron = (int)oReader["padron"];
-                    precio = (int)oReader["precio"];
+                    //nombre = (string)oReader["nombre"];
+                   padron = (int)oReader["padron"];
+                   // tel = (string)oReader["tel"];
                     fecha = (DateTime)oReader["fecha"];
 
+                    propiedad = FabricaPersistencia.getPersistenciaApto().BuscarApto(padron);
+                    if (propiedad == null)
+                    {
+                        propiedad = FabricaPersistencia.getPersistenciaCasa().BuscarCasa(padron);
+                        if (propiedad == null)
+                        {
+                            propiedad = FabricaPersistencia.getPersistenciaComercio().BuscarComercio(padron);
+                        }
+                    }
 
-                    Visita v = new Visita(accion, padron, precio, fecha);
+                   // Visita v = new Visita(fecha,tel,nombre,propiedad);
+                    Visita v = new Visita(propiedad, fecha);
                     lista.Add(v);
                 }
                 oReader.Close();

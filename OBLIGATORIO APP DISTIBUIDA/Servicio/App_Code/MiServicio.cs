@@ -271,6 +271,10 @@ public class MiServicio : System.Web.Services.WebService {
         try
         {
             IVisitaLogica Lista = FabricaLogica.getVisitaLogica();
+            
+
+            
+            
             return Lista.ListaVisitas();
         }
         catch (Exception ex)
