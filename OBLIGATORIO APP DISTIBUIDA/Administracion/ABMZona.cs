@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Controles;
 
 using Administracion.ServicioWeb;
 
@@ -41,8 +42,9 @@ namespace Administracion
         {
             txtHabitantes.Text = "";
             txtNombre.Text = "";
-            txtServicio.Text = "";
-            lbServicios.Items.Clear();
+            //TODO - Ver como limpiar los servicios del UserControl
+            //txtServicio.Text = "";
+            //lbServicios.Items.Clear();
         }
 
         //Deja todo en estado Inicial
@@ -60,73 +62,36 @@ namespace Administracion
             txtHabitantes.Enabled = false;
         }
 
-        // Agrega servicios
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (txtServicio.Text.Trim().ToUpper() != "")
-                {
-                    lblMensaje.Text = "";
-                    foreach (var servicio in lbServicios.Items)
-                    {
-                        if (servicio.ToString().Trim().ToUpper() == txtServicio.Text.Trim().ToUpper())
-                        {
-                            throw new Exception("El servicio ya fue ingresado");
-                        }
-                    }
-                    lbServicios.Items.Add(txtServicio.Text.Trim().ToUpper());
-                    txtServicio.Text = "";
-                }
-                else
-                {
-                    lblMensaje.Text = "El servicio no puede ser vacío";
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMensaje.Text = ex.Message;
-            }
-        }
-
-        // Botón que borra servicios del LIstBox
-        private void btnBorrar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //determino si hay una linea de la lista seleccionada
-                if (lbServicios.SelectedIndex >= 0)
-                {
-                    lbServicios.Items.RemoveAt(lbServicios.SelectedIndex);
-                    lblMensaje.Text = "";
-                }
-                else
-                {
-                    lblMensaje.Text = "Debe seleccionar un Servicio de la lista para eliminar";
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMensaje.Text = ex.Message;
-            }
-        }
-
-
+        // Botón que cancela y deja en estado inicial
         private void MenuItemCancelar_Click(object sender, EventArgs e)
         {
             EstadoInicial();
             zona = null;
         }
 
+        // Ingreso de una zona
         private void MenuItemIngresar_Click(object sender, EventArgs e)
         {
             try
             {
-                // Obtengo los datos del UserControl - CodigoDpto
-                string letraDpto = codigoDpto1.LetraDepto;
-                string codigo = codigoDpto1.Codigo;
+                // Creo el objeto que me permita trabajar con el WebService
+                MiServicio LZona = new MiServicio();
+
+                // Utilizo la operación del WS
+                string codigo = codigoDpto1.Codigo.ToString().ToUpper();
+                string letraDpto = codigoDpto1.LetraDepto.ToString();
+                string nombre = txtNombre.Text.Trim().ToUpper();
+                int cantHabitantes = Convert.ToInt32(txtHabitantes.Text);
+
+                Zona unaZona = new Zona();
+                unaZona.Abreviacion = codigo;
+                unaZona.LetraDpto = letraDpto;
+                unaZona.Nombre = nombre;
+                unaZona.CantHabitantes = cantHabitantes;
+                //unaZona.LosServicios = lbServicios
+                //TODO - Ver como paso los servicios (creo un UserControl)
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 lblMensaje.Text = ex.Message;
             }
@@ -146,7 +111,7 @@ namespace Administracion
                     throw new Exception("Error al validar Código + Departamento");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 EPBuscar.SetError(codigoDpto1, ex.Message);
                 e.Cancel = true;
@@ -155,11 +120,12 @@ namespace Administracion
 
             try
             {
+                // Si la validación es correcta, busco la Zona
                 ServicioWeb.Zona z = null;
                 MiServicio serv = new MiServicio();
-                zona = serv.BuscarZona(codigoDpto1.LetraDepto, codigoDpto1.Codigo);
+                z = serv.BuscarZona(codigoDpto1.LetraDepto, codigoDpto1.Codigo);
 
-                if (zona == null)
+                if (z == null)
                 {
                     // no existe la zona, es un alta, limpio campos y habilito para ingresar
                     MenuItemIngresar.Enabled = true;
@@ -174,7 +140,8 @@ namespace Administracion
                     txtNombre.Text = zona.Nombre;
                     foreach (Servicio servicio in zona.LosServicios)
                     {
-                        lbServicios.Items.Add(servicio.Servicios.ToString());
+                        //TODO - Ver como pasar los servicios del UserControl
+                        //lbServicios.Items.Add(servicio.Servicios.ToString());
                     }
                 }
             }

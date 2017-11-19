@@ -17,7 +17,8 @@ using System.Web.Services.Protocols;
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
 // Para permitir que se llame a este servicio Web desde un script, usando ASP.NET AJAX, quite la marca de comentario de la línea siguiente. 
 // [System.Web.Script.Services.ScriptService]
-public class MiServicio : System.Web.Services.WebService {
+public class MiServicio : System.Web.Services.WebService
+{
 
     #region Propiedad
     [WebMethod]
@@ -171,7 +172,6 @@ public class MiServicio : System.Web.Services.WebService {
         return unaZona;
     }
 
-
     [WebMethod]
     public List<Zona> Listo()
     {
@@ -271,10 +271,7 @@ public class MiServicio : System.Web.Services.WebService {
         try
         {
             IVisitaLogica Lista = FabricaLogica.getVisitaLogica();
-            
 
-            
-            
             return Lista.ListaVisitas();
         }
         catch (Exception ex)
@@ -293,7 +290,6 @@ public class MiServicio : System.Web.Services.WebService {
 
     #endregion
 
-    
 
     #region SoapException
     private void GeneroSoapException(Exception ex)
@@ -317,5 +313,5 @@ public class MiServicio : System.Web.Services.WebService {
 
 
     #endregion
-    
+
 }

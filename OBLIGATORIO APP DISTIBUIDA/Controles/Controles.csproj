@@ -51,6 +51,12 @@
     <Compile Include="Logueo.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="MenejoServicios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenejoServicios.Designer.cs">
+      <DependentUpon>MenejoServicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +68,9 @@
   <ItemGroup>
     <EmbeddedResource Include="CodigoDpto.resx">
       <DependentUpon>CodigoDpto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenejoServicios.resx">
+      <DependentUpon>MenejoServicios.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

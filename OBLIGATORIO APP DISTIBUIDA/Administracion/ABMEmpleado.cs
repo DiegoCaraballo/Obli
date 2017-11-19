@@ -180,6 +180,7 @@ namespace Administracion
             emp = null;
         }
 
+        //Desactiva los botones
         private void DesActivoBotones()
         {
             MenuItemIngresar.Enabled = false;
@@ -188,6 +189,7 @@ namespace Administracion
             //txtPassword.Enabled = false;
         }
 
+        //Limpia los controles
         private void LimpioControles()
         {
             txtUsuario.Text = "";
