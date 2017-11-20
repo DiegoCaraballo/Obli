@@ -14,4 +14,4 @@ C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.dll
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.pdb
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.CodigoDpto.resources
 C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.csproj.GenerateResource.Cache
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.MenejoServicios.resources
+C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.ManejoServicios.resources

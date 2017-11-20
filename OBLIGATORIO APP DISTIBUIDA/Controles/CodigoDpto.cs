@@ -92,13 +92,11 @@ namespace Controles
             }
         }
 
-        // Devuelvo el código
+        // Código
         public string Codigo
         {
-            get
-            {
-                return txtCodigo.Text.Trim();
-            }
+            get {return txtCodigo.Text.Trim();}
+            set { txtCodigo.Text = value; }
         }
 
         // Cargo los items del combo

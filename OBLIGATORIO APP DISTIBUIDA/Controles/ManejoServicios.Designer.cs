@@ -1,6 +1,6 @@
 ﻿namespace Controles
 {
-    partial class MenejoServicios
+    partial class ManejoServicios
     {
         /// <summary> 
         /// Variable del diseñador requerida.

@@ -42,9 +42,11 @@ namespace Administracion
         {
             txtHabitantes.Text = "";
             txtNombre.Text = "";
-            //TODO - Ver como limpiar los servicios del UserControl
-            //txtServicio.Text = "";
-            //lbServicios.Items.Clear();
+            //Limpio los campos del userControl de servicios
+            manejoServicios1.Servicio = "";
+            manejoServicios1.LimpiarTodo();
+            //Limpio los campos del userControl de letra de Dpto y Abreviación
+            codigoDpto1.Codigo = "";
         }
 
         //Deja todo en estado Inicial
@@ -88,8 +90,9 @@ namespace Administracion
                 unaZona.LetraDpto = letraDpto;
                 unaZona.Nombre = nombre;
                 unaZona.CantHabitantes = cantHabitantes;
-                //unaZona.LosServicios = lbServicios
-                //TODO - Ver como paso los servicios (creo un UserControl)
+
+                //unaZona.LosServicios = manejoServicios1.ListaServicios;
+                //TODO - Ver como paso los servicios con el userControl
             }
             catch (Exception ex)
             {
@@ -139,9 +142,9 @@ namespace Administracion
                     txtHabitantes.Text = zona.CantHabitantes.ToString();
                     txtNombre.Text = zona.Nombre;
                     foreach (Servicio servicio in zona.LosServicios)
-                    {
-                        //TODO - Ver como pasar los servicios del UserControl
-                        //lbServicios.Items.Add(servicio.Servicios.ToString());
+                    {                      
+                        //TODO - Revisar bien
+                        manejoServicios1.ListaServicios.Add(servicio.Servicios.ToString());
                     }
                 }
             }

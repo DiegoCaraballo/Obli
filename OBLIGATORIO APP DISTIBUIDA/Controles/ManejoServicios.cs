@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Controles
 {
-    public partial class MenejoServicios : UserControl
+    public partial class ManejoServicios : UserControl
     {
-        public MenejoServicios()
+        public ManejoServicios()
         {
             InitializeComponent();
         }
@@ -73,6 +73,12 @@ namespace Controles
             {
                 lblServicio.Text = "Debe seleccionar un servicio";
             }
+        }
+
+        // Borrar todo
+        public void LimpiarTodo()
+        {
+            lbServicios.Items.Clear();
         }
 
     }

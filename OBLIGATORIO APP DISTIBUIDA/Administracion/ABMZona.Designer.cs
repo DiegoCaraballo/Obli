@@ -45,7 +45,7 @@
             this.EPCodigo = new System.Windows.Forms.ErrorProvider(this.components);
             this.EPBuscar = new System.Windows.Forms.ErrorProvider(this.components);
             this.codigoDpto1 = new Controles.CodigoDpto();
-            this.menejoServicios1 = new Controles.MenejoServicios();
+            this.manejoServicios1 = new Controles.ManejoServicios();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EPCodigo)).BeginInit();
@@ -168,18 +168,18 @@
             // 
             // menejoServicios1
             // 
-            this.menejoServicios1.ListaServicios = ((System.Collections.Generic.List<string>)(resources.GetObject("menejoServicios1.ListaServicios")));
-            this.menejoServicios1.Location = new System.Drawing.Point(16, 150);
-            this.menejoServicios1.Name = "menejoServicios1";
-            this.menejoServicios1.Size = new System.Drawing.Size(300, 164);
-            this.menejoServicios1.TabIndex = 55;
+            this.manejoServicios1.ListaServicios = ((System.Collections.Generic.List<string>)(resources.GetObject("manejoServicios1.ListaServicios")));
+            this.manejoServicios1.Location = new System.Drawing.Point(16, 150);
+            this.manejoServicios1.Name = "manejoServicios1";
+            this.manejoServicios1.Size = new System.Drawing.Size(300, 164);
+            this.manejoServicios1.TabIndex = 55;
             // 
             // ABMZona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 372);
-            this.Controls.Add(this.menejoServicios1);
+            this.Controls.Add(this.manejoServicios1);
             this.Controls.Add(this.codigoDpto1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -218,6 +218,6 @@
         private Controles.CodigoDpto codigoDpto1;
         private System.Windows.Forms.ToolStripStatusLabel lblMensaje;
         private System.Windows.Forms.ErrorProvider EPBuscar;
-        private Controles.MenejoServicios menejoServicios1;
+        private Controles.ManejoServicios manejoServicios1;
     }
 }
