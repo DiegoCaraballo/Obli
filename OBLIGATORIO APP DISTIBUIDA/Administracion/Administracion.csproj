@@ -187,9 +187,6 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\ServicioWeb\Visita.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
     <None Include="Web References\ServicioWeb\Zona.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>

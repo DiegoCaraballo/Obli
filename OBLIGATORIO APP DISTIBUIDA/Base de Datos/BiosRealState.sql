@@ -884,3 +884,11 @@ exec AltaComercio 987987, 'S','MVD',2,'DR.PENA 7458',9500,'ALQUILER',1,200,'NICO
 
 GO
 
+select * from Visita
+exec ListadoVisitas
+go
+exec AltaVisita 321321,'nico', '2017-11-20', 111111;
+exec AltaVisita 312321,'dilan', '2017-11-21', 123123;
+exec AltaVisita 312321,'nadia', '2017-11-22', 321321;
+exec AltaVisita 325721,'diego', '2017-11-23', 111160;
+exec AltaVisita 321721,'nicolas', '2017-11-24', 111150;

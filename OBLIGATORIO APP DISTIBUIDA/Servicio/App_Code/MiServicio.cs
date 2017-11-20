@@ -9,7 +9,6 @@ using Entidades_Compartidas;
 using System.Xml;
 using System.Web.Services.Protocols;
 
-
 /// <summary>
 /// Descripción breve de MiServicio
 /// </summary>
@@ -262,17 +261,20 @@ public class MiServicio : System.Web.Services.WebService
 
     #endregion
     //servicio de empleados listo
-
+   
     #region Visita
 
     [WebMethod]
-    public List<Visita> ListarVisitas()
+    public XmlDocument ListarVisitas()
     {
         try
         {
             IVisitaLogica Lista = FabricaLogica.getVisitaLogica();
 
-            return Lista.ListaVisitas();
+            XmlDocument exportar = ListarVisitasXML(Lista.ListaVisitas());
+            
+
+            return exportar;
         }
         catch (Exception ex)
         {
@@ -290,6 +292,43 @@ public class MiServicio : System.Web.Services.WebService
 
     #endregion
 
+
+    #region Operaciones
+
+    private XmlDocument ListarVisitasXML(List<Visita> lista)
+    {
+        List<Visita> listado = new List<Visita>();
+        XmlDocument exportar = new XmlDocument();
+
+        XmlNode Visitas = exportar.CreateNode(XmlNodeType.Element, "Visitas", "");
+        exportar.AppendChild(Visitas);
+        foreach (Visita v in lista)
+        {
+            XmlNode nodoVisita = exportar.CreateNode(XmlNodeType.Element, "Visita", "");
+
+            XmlNode nodoAccion = exportar.CreateNode(XmlNodeType.Element, "Accion", "");
+            nodoAccion.InnerXml = v.AVisitar.Accion;
+            nodoVisita.AppendChild(nodoAccion);
+
+            XmlNode nodoPadron = exportar.CreateNode(XmlNodeType.Element, "Padron", "");
+            nodoPadron.InnerXml = v.AVisitar.Padron.ToString();
+            nodoVisita.AppendChild(nodoPadron);
+
+            XmlNode nodoPrecio = exportar.CreateNode(XmlNodeType.Element, "Precio", "");
+            nodoPrecio.InnerXml = v.AVisitar.Precio.ToString();
+            nodoVisita.AppendChild(nodoPrecio);
+
+            XmlNode nodoFecha = exportar.CreateNode(XmlNodeType.Element, "Fecha", "");
+            nodoFecha.InnerXml = v.Fecha.ToShortDateString();
+            nodoVisita.AppendChild(nodoFecha);
+
+            Visitas.AppendChild(nodoVisita);
+         
+            
+        }
+        return exportar;
+    }
+    #endregion
 
     #region SoapException
     private void GeneroSoapException(Exception ex)

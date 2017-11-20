@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using System.Xml.Linq;
+using Administracion.ServicioWeb;
+
+
 namespace Administracion
 {
     public partial class ConsultaVisita : Form
@@ -14,6 +18,11 @@ namespace Administracion
         public ConsultaVisita()
         {
             InitializeComponent();
+
+                        MiServicio serv = new MiServicio();
+
+                
+                
         }
     }
 }

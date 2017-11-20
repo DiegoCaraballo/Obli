@@ -86,6 +86,7 @@ namespace Entidades_Compartidas
         public Visita(Propiedad pAVisitar,DateTime pFecha )
         {
             Fecha = pFecha;
+            AVisitar = pAVisitar;
            
            
            
