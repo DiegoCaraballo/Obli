@@ -99,7 +99,7 @@ create table Visita
 	id int identity(1,1) not null primary key,
 	tel varchar(20) not null,
 	nombre varchar(20) not null,
-	fecha datetime not null , --se controla la fecha?
+	fecha datetime not null check(fecha >getdate()),
 	padron int not null foreign key references propiedad(padron)
 )
  
@@ -552,21 +552,6 @@ BEGIN
 END			
 GO
 
---LISTO EMPLEADOS ACTIVOS
-CREATE PROCEDURE ListaEmpleadosActivos as
-BEGIN
-SELECT * FROM Empleado  WHERE activo =1
-END
-go
-
---LISTO TODOS LOS EMPLEADOS
-CREATE PROCEDURE ListaEmpleados as
-BEGIN
-SELECT * FROM Empleado 
-END
-go
-
-
 
 ----------------------------------------------------------------------------
 --------------------------- ABM ZONAS --------------------------------------
@@ -885,10 +870,11 @@ exec AltaComercio 987987, 'S','MVD',2,'DR.PENA 7458',9500,'ALQUILER',1,200,'NICO
 GO
 
 select * from Visita
+go
 exec ListadoVisitas
 go
-exec AltaVisita 321321,'nico', '2017-11-20', 111111;
-exec AltaVisita 312321,'dilan', '2017-11-21', 123123;
-exec AltaVisita 312321,'nadia', '2017-11-22', 321321;
+exec AltaVisita 321321,'nico', '2017-11-23', 111111;
+exec AltaVisita 312321,'dilan', '2017-12-2', 123123;
+exec AltaVisita 312321,'nadia', '2017-12-22', 321321;
 exec AltaVisita 325721,'diego', '2017-11-23', 111160;
-exec AltaVisita 321721,'nicolas', '2017-11-24', 111150;
+exec AltaVisita 321721,'nicolas', '2017-10-24', 111150;

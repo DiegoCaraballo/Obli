@@ -304,25 +304,25 @@ public class MiServicio : System.Web.Services.WebService
         exportar.AppendChild(Visitas);
         foreach (Visita v in lista)
         {
-            XmlNode nodoVisita = exportar.CreateNode(XmlNodeType.Element, "Visita", "");
+            XmlNode nodoPropiedad = exportar.CreateNode(XmlNodeType.Element, "Propiedad", "");
 
             XmlNode nodoAccion = exportar.CreateNode(XmlNodeType.Element, "Accion", "");
             nodoAccion.InnerXml = v.AVisitar.Accion;
-            nodoVisita.AppendChild(nodoAccion);
+            nodoPropiedad.AppendChild(nodoAccion);
 
             XmlNode nodoPadron = exportar.CreateNode(XmlNodeType.Element, "Padron", "");
             nodoPadron.InnerXml = v.AVisitar.Padron.ToString();
-            nodoVisita.AppendChild(nodoPadron);
+            nodoPropiedad.AppendChild(nodoPadron);
 
             XmlNode nodoPrecio = exportar.CreateNode(XmlNodeType.Element, "Precio", "");
             nodoPrecio.InnerXml = v.AVisitar.Precio.ToString();
-            nodoVisita.AppendChild(nodoPrecio);
+            nodoPropiedad.AppendChild(nodoPrecio);
 
             XmlNode nodoFecha = exportar.CreateNode(XmlNodeType.Element, "Fecha", "");
             nodoFecha.InnerXml = v.Fecha.ToShortDateString();
-            nodoVisita.AppendChild(nodoFecha);
+            nodoPropiedad.AppendChild(nodoFecha);
 
-            Visitas.AppendChild(nodoVisita);
+            Visitas.AppendChild(nodoPropiedad);
          
             
         }

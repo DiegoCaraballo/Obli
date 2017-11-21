@@ -47,17 +47,19 @@ namespace Entidades_Compartidas
             }
         }
 
-
+        //TODO - Revisar que funcione
         public string Abreviacion
         {
             get { return abreviacion; }
             set
             {
-                if (value.Trim().Length != 3)
-                    throw new Exception("La abreviación debe tener 3 caracteres");
-                else
-                    abreviacion = value;
+                for (int i = 0; i < value.Trim().Length; i++)
+                {
+                    if (!char.IsLetter(value[i]))
+                        throw new Exception("La abreviación debe tener 3 caracteres");
+                }
 
+                abreviacion = value;
             }
         }
 

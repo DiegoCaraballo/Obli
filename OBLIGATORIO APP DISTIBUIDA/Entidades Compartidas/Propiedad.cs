@@ -24,10 +24,10 @@ namespace Entidades_Compartidas
         {
             get { return ultimoEmp; }
             set {
-             //   if (value != null)
+             if (value != null)
                    ultimoEmp = value;
-             //   else
-               //     throw new Exception("El usuaio no puede ser nulo");
+               else
+                 throw new Exception("El usuaio no puede ser nulo");
                  }
         }
 
@@ -35,10 +35,10 @@ namespace Entidades_Compartidas
         {
             get { return zona; }
             set {
-             //   if (value != null)
+                if (value != null)
                     zona = value;
-              //  else
-              //      throw new Exception("La zona no puede ser vacia");
+               else
+                   throw new Exception("La zona no puede ser vacia");
                 }
         }
 

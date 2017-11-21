@@ -102,7 +102,7 @@
             // 
             this.MenuItemIngresar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemIngresar.Image")));
             this.MenuItemIngresar.Name = "MenuItemIngresar";
-            this.MenuItemIngresar.Size = new System.Drawing.Size(76, 20);
+            this.MenuItemIngresar.Size = new System.Drawing.Size(77, 20);
             this.MenuItemIngresar.Text = "Ingresar";
             this.MenuItemIngresar.Click += new System.EventHandler(this.MenuItemIngresar_Click);
             // 
@@ -110,21 +110,21 @@
             // 
             this.MenuItemModificar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemModificar.Image")));
             this.MenuItemModificar.Name = "MenuItemModificar";
-            this.MenuItemModificar.Size = new System.Drawing.Size(78, 20);
+            this.MenuItemModificar.Size = new System.Drawing.Size(86, 20);
             this.MenuItemModificar.Text = "Modificar";
             // 
             // MenuItemEliminar
             // 
             this.MenuItemEliminar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemEliminar.Image")));
             this.MenuItemEliminar.Name = "MenuItemEliminar";
-            this.MenuItemEliminar.Size = new System.Drawing.Size(71, 20);
+            this.MenuItemEliminar.Size = new System.Drawing.Size(78, 20);
             this.MenuItemEliminar.Text = "Eliminar";
             // 
             // MenuItemCancelar
             // 
             this.MenuItemCancelar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemCancelar.Image")));
             this.MenuItemCancelar.Name = "MenuItemCancelar";
-            this.MenuItemCancelar.Size = new System.Drawing.Size(77, 20);
+            this.MenuItemCancelar.Size = new System.Drawing.Size(81, 20);
             this.MenuItemCancelar.Text = "Cancelar";
             this.MenuItemCancelar.Click += new System.EventHandler(this.MenuItemCancelar_Click);
             // 
@@ -132,7 +132,7 @@
             // 
             this.MenuItemAyuda.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemAyuda.Image")));
             this.MenuItemAyuda.Name = "MenuItemAyuda";
-            this.MenuItemAyuda.Size = new System.Drawing.Size(66, 20);
+            this.MenuItemAyuda.Size = new System.Drawing.Size(69, 20);
             this.MenuItemAyuda.Text = "Ayuda";
             // 
             // statusStrip1
@@ -160,17 +160,18 @@
             // 
             // codigoDpto1
             // 
-            this.codigoDpto1.Location = new System.Drawing.Point(3, 30);
+            this.codigoDpto1.Location = new System.Drawing.Point(0, 28);
             this.codigoDpto1.Name = "codigoDpto1";
             this.codigoDpto1.Size = new System.Drawing.Size(271, 67);
             this.codigoDpto1.TabIndex = 0;
             this.codigoDpto1.Validating += new System.ComponentModel.CancelEventHandler(this.codigoDpto1_Validating);
             // 
-            // menejoServicios1
+            // manejoServicios1
             // 
             this.manejoServicios1.ListaServicios = ((System.Collections.Generic.List<string>)(resources.GetObject("manejoServicios1.ListaServicios")));
-            this.manejoServicios1.Location = new System.Drawing.Point(16, 150);
+            this.manejoServicios1.Location = new System.Drawing.Point(12, 150);
             this.manejoServicios1.Name = "manejoServicios1";
+            this.manejoServicios1.Servicio = "";
             this.manejoServicios1.Size = new System.Drawing.Size(300, 164);
             this.manejoServicios1.TabIndex = 55;
             // 

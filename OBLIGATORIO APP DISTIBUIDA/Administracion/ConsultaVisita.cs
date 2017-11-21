@@ -21,7 +21,16 @@ namespace Administracion
 
                         MiServicio serv = new MiServicio();
 
-                
+                        gvVisitas.DataSource = serv.ListarVisitas();
+
+           
+                        //XmlDataDocument xmlDatadoc = new XmlDataDocument();
+                        //xmlDatadoc.DataSet.ReadXml("C:\\books.xml");
+
+                        //DataSet ds = new DataSet("Books DataSet");
+                        //ds = xmlDatadoc.DataSet;
+
+                        //dataGrid1.DataSource = ds.DefaultViewManager; 
                 
         }
     }

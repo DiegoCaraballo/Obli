@@ -22,11 +22,11 @@ namespace Entidades_Compartidas
         {
             get { return aVisitar; }
             set {
-             //   if (value != null)
+               if (value != null)
                     aVisitar = value;
-               // else
-                 //   throw new Exception("Debe seleccionar una propiedad");
-            //comentado para probar el WS
+             else
+               throw new Exception("Debe seleccionar una propiedad");
+            
             }
         }
 
@@ -72,24 +72,13 @@ namespace Entidades_Compartidas
         }
         #endregion
 
-        //Constructor
-        //public Visita(int pId, DateTime pFecha,string pTelefono, string pNombre,Propiedad pAVisitar)
-        //{
-        //    Id = pId;
-        //    Fecha = pFecha;
-        //    Telefono = pTelefono;
-        //    Nombre = pNombre;
-        //    AVisitar = pAVisitar;
-        //}
-        
+
         
         public Visita(Propiedad pAVisitar,DateTime pFecha )
         {
             Fecha = pFecha;
             AVisitar = pAVisitar;
-           
-           
-           
+ 
         }
         public Visita( DateTime pFecha, string pTelefono, string pNombre, Propiedad pAVisitar)
         {

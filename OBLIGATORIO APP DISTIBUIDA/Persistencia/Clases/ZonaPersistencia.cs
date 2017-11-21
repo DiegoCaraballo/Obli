@@ -332,6 +332,7 @@ namespace Persistencia
                     int cantHabitantes = (int)_lector["habitantes"];
                     unaZona = new Zona(letraDpto, abreviacion, nombre, cantHabitantes);
                     ServicioPersistencia.CargoServicio(unaZona);
+                    //TODO 
                 }
                 _lector.Close();
             }

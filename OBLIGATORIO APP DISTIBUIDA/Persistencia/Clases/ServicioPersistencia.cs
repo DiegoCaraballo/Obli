@@ -42,32 +42,33 @@ namespace Persistencia
                 throw ex;
             }
         }
+        //TODO - revisar si no se usa, eliminarla
+        //internal static void EliminarServicio(Entidades_Compartidas.Zona unaZona, SqlTransaction _pTransaction)
+        //{
+        //    SqlCommand comando = new SqlCommand("EliminarServicio", _pTransaction.Connection);
+        //    comando.CommandType = CommandType.StoredProcedure;
+        //    comando.Parameters.AddWithValue("@LetraDpto", SqlDbType.Char);
+        //    comando.Parameters.AddWithValue("@Abreviacion", SqlDbType.VarChar);
+        //    comando.Parameters.AddWithValue("@Servicio", SqlDbType.VarChar);
+        //    SqlParameter _ParamRetorno = new SqlParameter("@Retorno", SqlDbType.Int);
+        //    _ParamRetorno.Direction = ParameterDirection.ReturnValue;
+        //    comando.Parameters.Add(_ParamRetorno);
 
-        internal static void EliminarServicio(Entidades_Compartidas.Zona unaZona, SqlTransaction _pTransaction)
-        {
-            SqlCommand comando = new SqlCommand("EliminarServicio", _pTransaction.Connection);
-            comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@LetraDpto", SqlDbType.Char);
-            comando.Parameters.AddWithValue("@Abreviacion", SqlDbType.VarChar);
-            comando.Parameters.AddWithValue("@Servicio", SqlDbType.VarChar);
-            SqlParameter _ParamRetorno = new SqlParameter("@Retorno", SqlDbType.Int);
-            _ParamRetorno.Direction = ParameterDirection.ReturnValue;
-            comando.Parameters.Add(_ParamRetorno);
+        //    try
+        //    {
+        //        Determino que debo trabajar con la misma transaccion
+        //        comando.Transaction = _pTransaction;
 
-            try
-            {
-                //Determino que debo trabajar con la misma transaccion
-                comando.Transaction = _pTransaction;
+        //        ejecuto comando
+        //        comando.ExecuteNonQuery();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
 
-                //ejecuto comando
-                comando.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+        //}
 
-        }
 
         internal static void CargoServicio(Entidades_Compartidas.Zona unaZona)
         {
