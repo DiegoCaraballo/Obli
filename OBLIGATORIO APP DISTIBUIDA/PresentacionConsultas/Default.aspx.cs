@@ -4,9 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Entidades_Compartidas;
-using Logica;
 
+using ServicioWeb;
 
 
 public partial class _Default : System.Web.UI.Page
@@ -57,8 +56,11 @@ public partial class _Default : System.Web.UI.Page
             {
                 try
                 {
+                    
+                    MiServicio serv = new MiServicio();
+               
                     int padron = Convert.ToInt32(((Label)e.Item.FindControl("lblPadron")).Text);
-                    Propiedad p = FabricaLogica.getPropiedadesLogica().BuscarPropiedad(padron);
+                    Propiedad p = serv.BuscarPropiedad(padron); //FabricaLogica.getPropiedadesLogica().BuscarPropiedad(padron);
                     Session["Propiedad"] = p;
                     Response.Redirect("ConsultaPropiedades.aspx", false);
 
@@ -101,8 +103,9 @@ public partial class _Default : System.Web.UI.Page
                 {
 
                     List<Propiedad> listaFiltroPropiedad = (from p in listaFiltrada
-                                                            where
-                                                            p.TipoPropiedad == ddlProp.SelectedItem.Value.ToString()
+                                                        //    where
+                                                            
+                                                           // p.TipoPropiedad == ddlProp.SelectedItem.Value.ToString()
                                                             select p).ToList<Propiedad>();
 
                     listaFiltrada = listaFiltroPropiedad.ToList();
@@ -195,7 +198,10 @@ public partial class _Default : System.Web.UI.Page
     {
         try
         {
-            Session["ListaPropiedades"] = FabricaLogica.getPropiedadesLogica().ListarPropiedades();
+            
+            MiServicio serv = new MiServicio();
+
+            Session["ListaPropiedades"] = serv.ListarPropiedades();//FabricaLogica.getPropiedadesLogica().ListarPropiedades();
             rpPropiedades.DataSource = Session["ListaPropiedades"];
             rpPropiedades.DataBind();
             if (rpPropiedades.Items.Count == 0)
@@ -221,9 +227,10 @@ public partial class _Default : System.Web.UI.Page
             //borro ddl NombreZonas
             ddlZona.Items.Clear();
 
-
+            MiServicio serv = new MiServicio();
+            
             string _letraDpto = ddlDepartamento.SelectedItem.Value;
-            List<Zona> zonas = FabricaLogica.getZonaLogica().ListoPorDpto(_letraDpto);
+            List<Zona> zonas = serv.ListoPorDpto(_letraDpto).ToList(); //FabricaLogica.getZonaLogica().ListoPorDpto(_letraDpto);
             int c = 0;
             foreach (Zona z in zonas)
             {

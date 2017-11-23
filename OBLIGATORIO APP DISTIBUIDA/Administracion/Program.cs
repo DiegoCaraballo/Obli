@@ -15,8 +15,8 @@ namespace Administracion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Default());
-            Application.Run(new ConsultaVisita());
+            Application.Run(new Login());
+            //Application.Run(new ConsultaVisita());
         
         }
     }

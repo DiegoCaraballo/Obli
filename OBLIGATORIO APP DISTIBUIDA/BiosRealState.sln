@@ -10,7 +10,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PresentacionConsultas", "PresentacionConsultas\", "{C492523A-A903-4070-91B5-D554BAC9C15B}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		ProjectReferences = "{FC82E514-A3FD-4E8D-BD43-30FCF04CCA1B}|Entidades Compartidas.dll;{CBD5D2FC-DE0A-4631-8845-4F1B334888B3}|Logica.dll;{C959FE36-0E96-4B10-94C8-EED07CB4186F}|Persistencia.dll;{CA690754-B8D5-4315-B59E-B3934579BF9B}|ClassLibrary1.dll;"
+		ProjectReferences = "{CA690754-B8D5-4315-B59E-B3934579BF9B}|ControlesWeb.dll;{FC82E514-A3FD-4E8D-BD43-30FCF04CCA1B}|Entidades Compartidas.dll;{CBD5D2FC-DE0A-4631-8845-4F1B334888B3}|Logica.dll;{C959FE36-0E96-4B10-94C8-EED07CB4186F}|Persistencia.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/PresentacionConsultas"
 		Debug.AspNetCompiler.PhysicalPath = "PresentacionConsultas\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PresentacionConsultas\"

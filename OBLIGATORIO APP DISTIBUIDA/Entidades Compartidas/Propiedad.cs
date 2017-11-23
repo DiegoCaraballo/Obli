@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Entidades_Compartidas
 {
+    [Serializable]
     public abstract class Propiedad
     {
         //Atributos

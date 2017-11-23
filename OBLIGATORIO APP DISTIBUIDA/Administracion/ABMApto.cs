@@ -19,6 +19,7 @@ namespace Administracion
         private Empleado emp;
         public ABMApto(Empleado e)
         {
+            InitializeComponent();
             emp = e;
         }
 

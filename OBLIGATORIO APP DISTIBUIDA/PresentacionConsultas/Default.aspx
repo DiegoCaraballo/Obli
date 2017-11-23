@@ -1,10 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" Theme="Tema"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+    .style1
+    {
+        height: 2.2em;
+    }
+</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
    
-<div class="container">
+    <div class="container">
     <center style="height: 42px"><h1>Consulta de Propiedades</h1>
     <p><asp:Label ID="lblCount" runat="server"></asp:Label></p>
     <asp:Label ID="lblError" runat="server" Text=""></asp:Label>&nbsp; </center>
@@ -88,19 +94,19 @@ Precio:
     <article>
     <table>
                          <tr bgcolor ="#8C8D88">
-                        <td>
+                        <td class="style1">
                             PADRON                                                                   
                         </td>
-                        <td>
+                        <td class="style1">
                             DIRECCION
                         </td>
-                        <td>
+                        <td class="style1">
                             ZONA
                         </td>
-                        <td>
+                        <td class="style1">
                             ACCION
                         </td>
-                        <td>                        
+                        <td class="style1">                        
                             MOSTRAR
                         </td>
                     </tr>
