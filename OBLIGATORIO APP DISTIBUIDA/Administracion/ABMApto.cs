@@ -14,13 +14,18 @@ namespace Administracion
 {
     public partial class ABMApto : Form
     {
-      
+
         private Propiedad prop;
-        private Empleado emp;
-        private Zona zona;
+        private Empleado emp = null;
+        private Zona zona = null;
         public ABMApto(Empleado e)
         {
             InitializeComponent();
+
+            Accesos();
+            cboAccion.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboAscensor.DropDownStyle = ComboBoxStyle.DropDownList;
+            EstadoInicial();
             emp = e;
         }
 
@@ -33,7 +38,7 @@ namespace Administracion
             EstadoInicial();
         }
 
-     
+
 
         public void Accesos()
         {
@@ -46,21 +51,21 @@ namespace Administracion
         }
         public void EstadoInicial()
         {
-            
-                MenuItemIngresar.Enabled = false;
-                MenuItemEliminar.Enabled = false;
-                MenuItemModificar.Enabled = false;
-                txtPadron.Enabled = true;
-                txtDireccion.Enabled = false;
-                txtPrecio.Enabled = false;
-                cboAccion.Enabled = false;
-                txtBanio.Enabled = false;
-                txtHabitaciones.Enabled = false;
-                txtMt2Const.Enabled = false;
-      
-                       txtPiso.Enabled = false;
-                lblMensajes.Text = "";
-                cboAscensor.Enabled = false;
+
+            MenuItemIngresar.Enabled = false;
+            MenuItemEliminar.Enabled = false;
+            MenuItemModificar.Enabled = false;
+            txtPadron.Enabled = true;
+            txtDireccion.Enabled = false;
+            txtPrecio.Enabled = false;
+            cboAccion.Enabled = false;
+            txtBanio.Enabled = false;
+            txtHabitaciones.Enabled = false;
+            txtMt2Const.Enabled = false;
+            txtUser.Enabled = false;
+            txtPiso.Enabled = false;
+            lblMensajes.Text = "";
+            cboAscensor.Enabled = false;
         }
         public void HabilitarControles()
         {
@@ -77,12 +82,10 @@ namespace Administracion
             txtBanio.Enabled = true;
             txtHabitaciones.Enabled = true;
             txtMt2Const.Enabled = true;
-           
-            txtUser.Enabled = true;
             txtPiso.Enabled = true;
             lblMensajes.Text = "";
             cboAscensor.Enabled = true;
-       
+
         }
         public void Limpiar()
         {
@@ -93,10 +96,11 @@ namespace Administracion
             txtBanio.Text = "";
             txtHabitaciones.Text = "";
             txtMt2Const.Text = "";
-         
+            ccZona.Codigo = "";
+            ccZona.LetraDepto = "";
             txtUser.Text = "";
             txtPiso.Text = "";
-            lblMensajes.Text="";
+            lblMensajes.Text = "";
         }
 
         private void MenuItemAyuda_Click(object sender, EventArgs e)
@@ -110,7 +114,7 @@ namespace Administracion
             p = pPropiedad;
 
         }
-    
+
         private void MenuItemIngresar_Click(object sender, EventArgs e)
         {
             try
@@ -118,26 +122,25 @@ namespace Administracion
                 MiServicio serv = new MiServicio();
                 bool ascensor;
                 ServicioWeb.Apto apto = new ServicioWeb.Apto();
-                
+
 
                 apto.Padron = Convert.ToInt32(txtPadron.Text);
                 apto.Direccion = txtDireccion.Text.Trim();
                 apto.Precio = Convert.ToInt32(txtPrecio.Text);
-                apto.Accion = cboAccion.SelectedValue.ToString().ToUpper().Trim();
+                apto.Accion = cboAccion.SelectedItem.ToString().ToUpper().Trim();
                 apto.Baño = Convert.ToInt32(txtBanio.Text);
                 apto.Habitaciones = Convert.ToInt32(txtHabitaciones.Text);
                 apto.Mt2Const = Convert.ToInt32(txtMt2Const.Text);
-                
-                apto.Zona = serv.BuscarZona(ccZona.LetraDepto,ccZona.Codigo);
+                apto.Zona = serv.BuscarZona(ccZona.LetraDepto, ccZona.Codigo);
                 apto.UltimoEmp = emp;
-                
+
                 apto.Piso = Convert.ToInt32(txtPiso.Text);
 
                 if (cboAscensor.SelectedItem.ToString() == "SI")
                     ascensor = true;
                 else
                     ascensor = false;
-                
+
                 apto.Ascensor = ascensor;
 
                 serv.AltaPropiedad(apto);
@@ -162,6 +165,7 @@ namespace Administracion
         {
             try
             {
+
                 Convert.ToInt32(txtPadron.Text);
                 EPPadron.Clear();
             }
@@ -172,40 +176,51 @@ namespace Administracion
             }
             try
             {
-                ServicioWeb.Propiedad propiedad = null;
-                MiServicio serv = new MiServicio();
-                propiedad = serv.BuscarPropiedad(Convert.ToInt32(txtPadron.Text));
-                if (propiedad is Apto)
+                if (Convert.ToInt32(txtPadron.Text) == 0)
                 {
-                    prop = propiedad;
-                    txtDireccion.Text = propiedad.Direccion;
-                    txtPrecio.Text = propiedad.Precio.ToString();
-                    cboAccion.SelectedItem = propiedad.Accion.ToString();
-                    txtBanio.Text = propiedad.Baño.ToString();
-                    txtHabitaciones.Text = propiedad.Habitaciones.ToString();
-                        txtMt2Const.Text = propiedad.Mt2Const.ToString();
-                    ccZona.LetraDepto = propiedad.Zona.LetraDpto.ToString();
-                    ccZona.Codigo = propiedad.Zona.Abreviacion;
-                    //  txtAbrev.Text = propiedad.Zona.Abreviacion;
-                   // txtLetraDpto.Text = propiedad.Zona.LetraDpto;
-                    txtUser.Text = propiedad.UltimoEmp.NomUsu;
-                    txtPiso.Text = ((ServicioWeb.Apto)propiedad).Piso.ToString();
-                    if (((ServicioWeb.Apto)propiedad).Ascensor == true)
-                    {
-                        cboAscensor.SelectedItem = "SI";
-                    }
-                    else
-                    {
-                        cboAscensor.SelectedItem = "NO";
-                    }
-
-                    txtPadron.Enabled = false;
                     HabilitarControles();
-                   
                 }
                 else
                 {
-                    lblMensajes.Text = "El padron ingresado no pertence a una propiedad de tipo Aparatamento"; 
+                    ServicioWeb.Propiedad propiedad = null;
+
+                    MiServicio serv = new MiServicio();
+
+                    propiedad = serv.BuscarPropiedad(Convert.ToInt32(txtPadron.Text));
+                    if (propiedad is Apto)
+                    {
+                        prop = propiedad;
+                        txtDireccion.Text = propiedad.Direccion;
+                        txtPrecio.Text = propiedad.Precio.ToString();
+                        cboAccion.SelectedItem = propiedad.Accion.ToString();
+                        txtBanio.Text = propiedad.Baño.ToString();
+                        txtHabitaciones.Text = propiedad.Habitaciones.ToString();
+                        txtMt2Const.Text = propiedad.Mt2Const.ToString();
+
+                        ccZona.LetraDepto = propiedad.Zona.LetraDpto.ToString();
+                        ccZona.Codigo = propiedad.Zona.Abreviacion;
+                        zona = propiedad.Zona;
+
+
+                        txtUser.Text = propiedad.UltimoEmp.NomUsu;
+                        txtPiso.Text = ((ServicioWeb.Apto)propiedad).Piso.ToString();
+                        if (((ServicioWeb.Apto)propiedad).Ascensor == true)
+                        {
+                            cboAscensor.SelectedItem = "SI";
+                        }
+                        else
+                        {
+                            cboAscensor.SelectedItem = "NO";
+                        }
+
+                        txtPadron.Enabled = false;
+                        HabilitarControles();
+
+                    }
+                    else
+                    {
+                        lblMensajes.Text = "El padron ingresado no pertence a una propiedad de tipo Aparatamento";
+                    }
                 }
 
             }
@@ -238,7 +253,7 @@ namespace Administracion
             try
             {
                 new Administracion.ServicioWeb.MiServicio().BajaPropiedad(prop);
-                
+
                 lblMensajes.Text = "Baja con Exito";
             }
             catch (System.Web.Services.Protocols.SoapException ex)
@@ -268,11 +283,11 @@ namespace Administracion
                 prop.Baño = Convert.ToInt32(txtBanio.Text);
                 prop.Habitaciones = Convert.ToInt32(txtHabitaciones.Text);
                 prop.Mt2Const = Convert.ToInt32(txtMt2Const.Text);
-                prop.Zona.Abreviacion = ccZona.Codigo;
-                prop.Zona.LetraDpto = ccZona.LetraDepto;
+                prop.Zona.Abreviacion = zona.Abreviacion;
+                prop.Zona.LetraDpto = zona.LetraDpto;
                 prop.UltimoEmp.NomUsu = txtUser.Text;
                 ((ServicioWeb.Apto)prop).Piso = Convert.ToInt32(txtPiso.Text);
-                
+
                 if (cboAscensor.SelectedItem.ToString() == "SI")
                 {
                     ((ServicioWeb.Apto)prop).Ascensor = true;

@@ -894,7 +894,10 @@ select * from Visita order by padron asc
 
 
 use BiosRealState;
-select * from Propiedad where padron = 1235321
+select * from Propiedad where padron = 135321
+
+select * from Apto where padron = 135321
+
 
 
 
