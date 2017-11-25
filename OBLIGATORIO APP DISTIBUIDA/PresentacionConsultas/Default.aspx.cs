@@ -60,7 +60,7 @@ public partial class _Default : System.Web.UI.Page
                     MiServicio serv = new MiServicio();
                
                     int padron = Convert.ToInt32(((Label)e.Item.FindControl("lblPadron")).Text);
-                    Propiedad p = serv.BuscarPropiedad(padron); //FabricaLogica.getPropiedadesLogica().BuscarPropiedad(padron);
+                    Propiedad p = serv.BuscarPropiedad(padron); 
                     Session["Propiedad"] = p;
                     Response.Redirect("ConsultaPropiedades.aspx", false);
 
@@ -199,8 +199,8 @@ public partial class _Default : System.Web.UI.Page
         {
             
             MiServicio serv = new MiServicio();
-
-            Session["ListaPropiedades"] = serv.ListarPropiedades();//FabricaLogica.getPropiedadesLogica().ListarPropiedades();
+          
+            Session["ListaPropiedades"] = (List<Propiedad>)serv.ListarPropiedades().ToList();
             rpPropiedades.DataSource = Session["ListaPropiedades"];
             rpPropiedades.DataBind();
             if (rpPropiedades.Items.Count == 0)

@@ -29,17 +29,14 @@ namespace Administracion
             emp = e;
         }
 
-        public ABMApto()
-        {
-            InitializeComponent();
-            Accesos();
-            cboAccion.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboAscensor.DropDownStyle = ComboBoxStyle.DropDownList;
-            EstadoInicial();
-        }
+        //public ABMApto()
+        //{
+        //    InitializeComponent();
+
+        //}
 
 
-
+        //TODO - Definir si dejamos estos accesos o no
         public void Accesos()
         {
             MenuItemAyuda.ShortcutKeys = Keys.F1;

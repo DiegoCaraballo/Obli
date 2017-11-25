@@ -42,9 +42,9 @@
             // gvVisitas
             // 
             this.gvVisitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvVisitas.Location = new System.Drawing.Point(23, 159);
+            this.gvVisitas.Location = new System.Drawing.Point(12, 114);
             this.gvVisitas.Name = "gvVisitas";
-            this.gvVisitas.Size = new System.Drawing.Size(545, 150);
+            this.gvVisitas.Size = new System.Drawing.Size(559, 367);
             this.gvVisitas.TabIndex = 0;
             // 
             // cboAccion
@@ -96,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 520);
+            this.ClientSize = new System.Drawing.Size(587, 520);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnContarVisitas);
             this.Controls.Add(this.txtPadron);
