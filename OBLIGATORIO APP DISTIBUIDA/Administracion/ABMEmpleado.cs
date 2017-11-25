@@ -104,7 +104,7 @@ namespace Administracion
             try
             {
                 //creo el objeto que me permita trabajar con el ws
-                MiServicio LEmpleado = new MiServicio();
+                MiServicio serv = new MiServicio();
 
                 //utilizo la operacion del ws
                 string nombre = txtUsuario.Text.Trim().ToUpper();
@@ -113,15 +113,25 @@ namespace Administracion
                 Empleado unEmpleado = new Empleado();
                 unEmpleado.NomUsu = nombre;
                 unEmpleado.Pass = pass;
-                LEmpleado.AgregarEmpleado(unEmpleado);
+                serv.AgregarEmpleado(unEmpleado);
                 //Si llego hasta acá todo esta bien
                 lblMensaje.Text = "Alta con éxito";
                 LimpioControles();
                 DesActivoBotones();
             }
-            catch(Exception ex)
+            catch(System.Web.Services.Protocols.SoapException ex)
             {
-                lblMensaje.Text = ex.Message;
+                if (ex.Detail.InnerText.Length > 40)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Length > 40)
+                    lblMensaje.Text = ex.Message.Substring(0, 40);
+                else
+                    lblMensaje.Text = ex.Message;
             }
         }
 
@@ -143,9 +153,19 @@ namespace Administracion
                 LimpioControles();
                 DesActivoBotones();
             }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
+            }
             catch (Exception ex)
             {
-                lblMensaje.Text = ex.Message;
+                if (ex.Message.Length > 40)
+                    lblMensaje.Text = ex.Message.Substring(0, 40);
+                else
+                    lblMensaje.Text = ex.Message;
             }
         }
 
@@ -165,9 +185,19 @@ namespace Administracion
                 LimpioControles();
                 DesActivoBotones();
             }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
+            }
             catch (Exception ex)
             {
-                lblMensaje.Text = ex.Message;
+                if (ex.Message.Length > 40)
+                    lblMensaje.Text = ex.Message.Substring(0, 40);
+                else
+                    lblMensaje.Text = ex.Message;
             }
         }
 

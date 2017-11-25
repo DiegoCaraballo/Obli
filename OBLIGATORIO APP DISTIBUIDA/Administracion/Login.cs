@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Controles;
 
 using Administracion.ServicioWeb;
 
@@ -43,25 +44,20 @@ namespace Administracion
                     lblMensaje.Text = "La Password no es correcta";
                 }
 
-
             }
-            catch (Exception ex) 
-            { 
-                lblMensaje.Text = ex.Message; 
+            catch (Exception ex)
+            {
+                lblMensaje.Text = ex.Message;
             }
-
 
         }
-
-      
 
         private void Login_Load(object sender, EventArgs e)
         {
 
-
             try
             {
-                ccLogin.IniciarSession +=  new EventHandler(IniciarSession2);
+                ccLogin.IniciarSession += new EventHandler(IniciarSession2);
                 this.AcceptButton = ccLogin.botonLogin;
             }
             catch (Exception ex)
@@ -70,11 +66,5 @@ namespace Administracion
             }
         }
 
-        private void ccLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-      
     }
 }

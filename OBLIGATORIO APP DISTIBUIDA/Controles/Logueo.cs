@@ -5,6 +5,7 @@ using System.Text;
 using Entidades_Compartidas;
 using System.Windows.Forms;
 using System.Drawing;
+using System.ComponentModel;
 
 
 namespace Controles
@@ -17,12 +18,19 @@ namespace Controles
 
         private Label lblUsu;
         private Label lblPass;
+        private Label lblMensaje;
 
         private Button btnIngresar;
 
         //Constructor
         public Logueo()
         {
+            //Mensaje
+            lblMensaje = new Label();
+            lblMensaje.Text = "";
+            this.Controls.Add(lblMensaje);
+            lblMensaje.AutoSize = true;
+
             //Usuario
             txtUsu = new TextBox();
             txtUsu.Width = 140;
@@ -36,7 +44,7 @@ namespace Controles
 
             //Contraseña
             txtPass = new TextBox();
-          txtPass.UseSystemPasswordChar = true;
+            txtPass.UseSystemPasswordChar = true;
             txtPass.Width = 140;
             txtPass.Height = 20;
             txtPass.TabIndex = 1;
@@ -54,7 +62,7 @@ namespace Controles
             btnIngresar.Text = "Inicio de Sesión";
             btnIngresar.TabIndex = 2;
             btnIngresar.Click += new EventHandler(btnIngresar_Click);
-            this.Controls.Add(btnIngresar);         
+            this.Controls.Add(btnIngresar);
         }
 
         //Para hacer uso de la propiedad AcceptButton
@@ -68,14 +76,16 @@ namespace Controles
         {
             base.OnPaint(e);
             //determino despliegue de los controles en pantalla
-           
-            lblUsu.Location = new Point(0,0);
-            txtUsu.Location = new Point(40, 0);
+
+            lblUsu.Location = new Point(0, 0);
+            txtUsu.Location = new Point(70, 0);
 
             lblPass.Location = new Point(0, 35);
-            txtPass.Location = new Point(70,35);
-   
-            btnIngresar.Location = new Point(50, 75);
+            txtPass.Location = new Point(70, 35);
+
+            lblMensaje.Location = new Point(50, 110);
+
+            btnIngresar.Location = new Point(80, 75);
         }
 
         public string Usuario
@@ -92,7 +102,23 @@ namespace Controles
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            IniciarSession(this, new EventArgs());
+            try
+            { //TODO - LO AGREGO PARA CONTROLAR QUE NO INGRESE VACÍO
+                if (txtUsu.Text.Trim() == "" || txtPass.Text.Trim() == "")
+                {
+                    lblMensaje.Text = "Usuario y Contraseña requeridos";
+                }
+                else
+                {
+                    lblMensaje.Text = "";
+                    IniciarSession(this, new EventArgs());
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMensaje.Text = ex.Message;
+            }
         }
+
     }
 }

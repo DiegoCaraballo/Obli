@@ -202,11 +202,12 @@
     <Content Include="Imagenes\Buscar.png" />
     <Content Include="Imagenes\Cancelar.png" />
     <Content Include="Imagenes\Icono.ico" />
+    <None Include="Web References\ServicioWeb\MiServicio.disco" />
+    <None Include="Imagenes\Login.png" />
     <Content Include="Imagenes\Logo.png" />
     <Content Include="Imagenes\Mas.png" />
     <Content Include="Imagenes\Modificar.bmp" />
     <Content Include="Imagenes\Nuevo.bmp" />
-    <None Include="Web References\ServicioWeb\MiServicio.disco" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

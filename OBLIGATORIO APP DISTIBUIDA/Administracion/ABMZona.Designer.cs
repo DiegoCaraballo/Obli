@@ -57,14 +57,14 @@
             this.txtHabitantes.Location = new System.Drawing.Point(102, 124);
             this.txtHabitantes.Name = "txtHabitantes";
             this.txtHabitantes.Size = new System.Drawing.Size(100, 20);
-            this.txtHabitantes.TabIndex = 6;
+            this.txtHabitantes.TabIndex = 3;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(102, 98);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 5;
+            this.txtNombre.TabIndex = 2;
             // 
             // label3
             // 
@@ -160,9 +160,11 @@
             // 
             // codigoDpto1
             // 
-            this.codigoDpto1.Location = new System.Drawing.Point(0, 28);
+            this.codigoDpto1.Codigo = "";
+            this.codigoDpto1.LetraDepto = "";
+            this.codigoDpto1.Location = new System.Drawing.Point(20, 41);
             this.codigoDpto1.Name = "codigoDpto1";
-            this.codigoDpto1.Size = new System.Drawing.Size(271, 67);
+            this.codigoDpto1.Size = new System.Drawing.Size(271, 49);
             this.codigoDpto1.TabIndex = 0;
             this.codigoDpto1.Validating += new System.ComponentModel.CancelEventHandler(this.codigoDpto1_Validating);
             // 
@@ -173,7 +175,7 @@
             this.manejoServicios1.Name = "manejoServicios1";
             this.manejoServicios1.Servicio = "";
             this.manejoServicios1.Size = new System.Drawing.Size(300, 164);
-            this.manejoServicios1.TabIndex = 55;
+            this.manejoServicios1.TabIndex = 5;
             // 
             // ABMZona
             // 

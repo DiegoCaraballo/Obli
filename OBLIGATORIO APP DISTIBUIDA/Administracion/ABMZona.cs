@@ -133,7 +133,9 @@ namespace Administracion
                     // no existe la zona, es un alta, limpio campos y habilito para ingresar
                     MenuItemIngresar.Enabled = true;
                     MenuItemEliminar.Enabled = false;
-                    MenuItemModificar.Enabled = false;
+                    MenuItemModificar.Enabled = false;  
+                    txtHabitantes.Enabled = true;
+                    txtNombre.Enabled = true;
                 }
                 else
                 {

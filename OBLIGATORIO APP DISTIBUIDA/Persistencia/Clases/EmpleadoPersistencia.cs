@@ -170,8 +170,6 @@ namespace Persistencia
             return e;
         }
 
-    
-
         #endregion
     }
 }
