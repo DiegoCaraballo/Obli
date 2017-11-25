@@ -42,7 +42,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 13);
+            this.label1.Location = new System.Drawing.Point(37, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // cboDepartamento
             // 
             this.cboDepartamento.FormattingEnabled = true;
-            this.cboDepartamento.Location = new System.Drawing.Point(99, 39);
+            this.cboDepartamento.Location = new System.Drawing.Point(83, 26);
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(100, 21);
             this.cboDepartamento.TabIndex = 1;
@@ -60,7 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 42);
+            this.label2.Location = new System.Drawing.Point(3, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(99, 13);
+            this.txtCodigo.Location = new System.Drawing.Point(83, 3);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 0;
@@ -91,7 +91,7 @@
             this.Controls.Add(this.cboDepartamento);
             this.Controls.Add(this.label1);
             this.Name = "CodigoDpto";
-            this.Size = new System.Drawing.Size(271, 74);
+            this.Size = new System.Drawing.Size(208, 54);
             this.Load += new System.EventHandler(this.CodigoDpto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.EPCodigo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EPDpto)).EndInit();

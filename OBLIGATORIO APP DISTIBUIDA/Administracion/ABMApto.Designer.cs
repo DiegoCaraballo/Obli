@@ -43,8 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -54,8 +52,6 @@
             this.txtBanio = new System.Windows.Forms.TextBox();
             this.txtHabitaciones = new System.Windows.Forms.TextBox();
             this.txtMt2Const = new System.Windows.Forms.TextBox();
-            this.txtLetraDpto = new System.Windows.Forms.TextBox();
-            this.txtAbrev = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPiso = new System.Windows.Forms.TextBox();
             this.cboAccion = new System.Windows.Forms.ComboBox();
@@ -187,24 +183,6 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Mt2(Construccion)";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(397, 108);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Zona(LetraDpto)";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(392, 135);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Zona(Abreviacion)";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -276,23 +254,9 @@
             this.txtMt2Const.Size = new System.Drawing.Size(100, 20);
             this.txtMt2Const.TabIndex = 19;
             // 
-            // txtLetraDpto
-            // 
-            this.txtLetraDpto.Location = new System.Drawing.Point(492, 108);
-            this.txtLetraDpto.Name = "txtLetraDpto";
-            this.txtLetraDpto.Size = new System.Drawing.Size(100, 20);
-            this.txtLetraDpto.TabIndex = 20;
-            // 
-            // txtAbrev
-            // 
-            this.txtAbrev.Location = new System.Drawing.Point(492, 135);
-            this.txtAbrev.Name = "txtAbrev";
-            this.txtAbrev.Size = new System.Drawing.Size(100, 20);
-            this.txtAbrev.TabIndex = 21;
-            // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(99, 306);
+            this.txtUser.Location = new System.Drawing.Point(99, 297);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(100, 20);
             this.txtUser.TabIndex = 22;
@@ -355,9 +319,9 @@
             // 
             this.ccZona.Codigo = "";
             this.ccZona.LetraDepto = "";
-            this.ccZona.Location = new System.Drawing.Point(0, 236);
+            this.ccZona.Location = new System.Drawing.Point(12, 239);
             this.ccZona.Name = "ccZona";
-            this.ccZona.Size = new System.Drawing.Size(271, 64);
+            this.ccZona.Size = new System.Drawing.Size(189, 52);
             this.ccZona.TabIndex = 27;
             // 
             // ABMApto
@@ -371,8 +335,6 @@
             this.Controls.Add(this.cboAccion);
             this.Controls.Add(this.txtPiso);
             this.Controls.Add(this.txtUser);
-            this.Controls.Add(this.txtAbrev);
-            this.Controls.Add(this.txtLetraDpto);
             this.Controls.Add(this.txtMt2Const);
             this.Controls.Add(this.txtHabitaciones);
             this.Controls.Add(this.txtBanio);
@@ -382,8 +344,6 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -422,8 +382,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -433,8 +391,6 @@
         private System.Windows.Forms.TextBox txtBanio;
         private System.Windows.Forms.TextBox txtHabitaciones;
         private System.Windows.Forms.TextBox txtMt2Const;
-        private System.Windows.Forms.TextBox txtLetraDpto;
-        private System.Windows.Forms.TextBox txtAbrev;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPiso;
         private System.Windows.Forms.ComboBox cboAccion;

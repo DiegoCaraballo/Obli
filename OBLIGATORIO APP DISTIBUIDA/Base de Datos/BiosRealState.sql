@@ -892,3 +892,15 @@ select padron,count(padron) as 'asd' from Visita group by padron
 select * from Visita order by padron asc
 
 
+
+use BiosRealState;
+select * from Propiedad where padron = 1235321
+
+
+
+
+
+
+
+
+

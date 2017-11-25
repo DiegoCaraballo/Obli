@@ -17,6 +17,7 @@ namespace Administracion
       
         private Propiedad prop;
         private Empleado emp;
+        private Zona zona;
         public ABMApto(Empleado e)
         {
             InitializeComponent();
@@ -56,10 +57,8 @@ namespace Administracion
                 txtBanio.Enabled = false;
                 txtHabitaciones.Enabled = false;
                 txtMt2Const.Enabled = false;
-                txtLetraDpto.Enabled = false;
-                txtAbrev.Enabled = false;
-                txtUser.Enabled = false;
-                txtPiso.Enabled = false;
+      
+                       txtPiso.Enabled = false;
                 lblMensajes.Text = "";
                 cboAscensor.Enabled = false;
         }
@@ -78,8 +77,7 @@ namespace Administracion
             txtBanio.Enabled = true;
             txtHabitaciones.Enabled = true;
             txtMt2Const.Enabled = true;
-            txtAbrev.Enabled = true;
-            txtLetraDpto.Enabled = true;
+           
             txtUser.Enabled = true;
             txtPiso.Enabled = true;
             lblMensajes.Text = "";
@@ -95,8 +93,7 @@ namespace Administracion
             txtBanio.Text = "";
             txtHabitaciones.Text = "";
             txtMt2Const.Text = "";
-            txtAbrev.Text = "";
-            txtLetraDpto.Text = "";
+         
             txtUser.Text = "";
             txtPiso.Text = "";
             lblMensajes.Text="";
@@ -118,30 +115,32 @@ namespace Administracion
         {
             try
             {
-
-
-
+                MiServicio serv = new MiServicio();
+                bool ascensor;
+                ServicioWeb.Apto apto = new ServicioWeb.Apto();
                 
 
-
-
-
-
-
-                ServicioWeb.Apto apto = new ServicioWeb.Apto();
                 apto.Padron = Convert.ToInt32(txtPadron.Text);
-                apto.Direccion = txtDireccion.Text;
+                apto.Direccion = txtDireccion.Text.Trim();
                 apto.Precio = Convert.ToInt32(txtPrecio.Text);
-                apto.Accion = "Alquiler";//cboAccion.SelectedValue.ToString();
+                apto.Accion = cboAccion.SelectedValue.ToString().ToUpper().Trim();
                 apto.Baño = Convert.ToInt32(txtBanio.Text);
                 apto.Habitaciones = Convert.ToInt32(txtHabitaciones.Text);
                 apto.Mt2Const = Convert.ToInt32(txtMt2Const.Text);
-                apto.Zona = null;
-                apto.UltimoEmp = null;
+                
+                apto.Zona = serv.BuscarZona(ccZona.LetraDepto,ccZona.Codigo);
+                apto.UltimoEmp = emp;
+                
                 apto.Piso = Convert.ToInt32(txtPiso.Text);
-                apto.Ascensor = true;
 
-                new ServicioWeb.MiServicio().AltaPropiedad(apto);
+                if (cboAscensor.SelectedItem.ToString() == "SI")
+                    ascensor = true;
+                else
+                    ascensor = false;
+                
+                apto.Ascensor = ascensor;
+
+                serv.AltaPropiedad(apto);
 
             }
             catch (OverflowException)
@@ -184,7 +183,7 @@ namespace Administracion
                     cboAccion.SelectedItem = propiedad.Accion.ToString();
                     txtBanio.Text = propiedad.Baño.ToString();
                     txtHabitaciones.Text = propiedad.Habitaciones.ToString();
-                    txtMt2Const.Text = propiedad.Mt2Const.ToString();
+                        txtMt2Const.Text = propiedad.Mt2Const.ToString();
                     ccZona.LetraDepto = propiedad.Zona.LetraDpto.ToString();
                     ccZona.Codigo = propiedad.Zona.Abreviacion;
                     //  txtAbrev.Text = propiedad.Zona.Abreviacion;
@@ -269,8 +268,8 @@ namespace Administracion
                 prop.Baño = Convert.ToInt32(txtBanio.Text);
                 prop.Habitaciones = Convert.ToInt32(txtHabitaciones.Text);
                 prop.Mt2Const = Convert.ToInt32(txtMt2Const.Text);
-                prop.Zona.Abreviacion = txtAbrev.Text;
-                prop.Zona.LetraDpto = txtLetraDpto.Text;
+                prop.Zona.Abreviacion = ccZona.Codigo;
+                prop.Zona.LetraDpto = ccZona.LetraDepto;
                 prop.UltimoEmp.NomUsu = txtUser.Text;
                 ((ServicioWeb.Apto)prop).Piso = Convert.ToInt32(txtPiso.Text);
                 
