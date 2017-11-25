@@ -261,7 +261,7 @@ public class MiServicio : System.Web.Services.WebService
 
     #endregion
     //servicio de empleados listo
-   
+
     #region Visita
 
     [WebMethod]
@@ -272,7 +272,7 @@ public class MiServicio : System.Web.Services.WebService
             IVisitaLogica Lista = FabricaLogica.getVisitaLogica();
 
             XmlDocument exportar = ListarVisitasXML(Lista.ListaVisitas());
-            
+
 
             return exportar;
         }
@@ -289,7 +289,7 @@ public class MiServicio : System.Web.Services.WebService
             throw _MiEx;
         }
     }
-   [WebMethod]
+    [WebMethod]
     public void AltaVisita(Visita v)
     {
         try
@@ -302,7 +302,6 @@ public class MiServicio : System.Web.Services.WebService
         }
     }
     #endregion
-
 
     #region Operaciones
 
@@ -334,8 +333,8 @@ public class MiServicio : System.Web.Services.WebService
             nodoPropiedad.AppendChild(nodoFecha);
 
             Visitas.AppendChild(nodoPropiedad);
-         
-            
+
+
         }
         return exportar;
     }

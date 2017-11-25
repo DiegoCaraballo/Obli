@@ -88,12 +88,74 @@ namespace Controles
                         letraDpto = "";
                         return letraDpto;                     
                 }
-               
-                
+                             
             }
+
+            // TODO - Probar que funcione el set
             set
             {
-               
+                char letraDpto = Convert.ToChar(cboDepartamento.SelectedValue);
+
+                switch (letraDpto)
+                {
+                    case 'G':
+                        cboDepartamento.SelectedIndex = 0;
+                        break;
+                    case 'A':
+                        cboDepartamento.SelectedIndex = 1;
+                        break;
+                    case 'E':
+                        cboDepartamento.SelectedIndex = 2;
+                        break;
+                    case 'L':
+                        cboDepartamento.SelectedIndex = 3;
+                        break;
+                    case 'Q':
+                        cboDepartamento.SelectedIndex = 4;
+                        break;
+                    case 'N':
+                        cboDepartamento.SelectedIndex = 5;
+                        break;
+                    case 'O':
+                        cboDepartamento.SelectedIndex = 6;
+                        break;
+                    case 'P':
+                        cboDepartamento.SelectedIndex = 7;
+                        break;
+                    case 'B':
+                        cboDepartamento.SelectedIndex = 8;
+                        break;
+                    case 'S':
+                        cboDepartamento.SelectedIndex = 9;
+                        break;
+                    case 'I':
+                        cboDepartamento.SelectedIndex = 10;
+                        break;
+                    case 'J':
+                        cboDepartamento.SelectedIndex = 11;
+                        break;
+                    case 'F':
+                        cboDepartamento.SelectedIndex = 12;
+                        break;
+                    case 'C':
+                        cboDepartamento.SelectedIndex = 13;
+                        break;
+                    case 'H':
+                        cboDepartamento.SelectedIndex = 14;
+                        break;
+                    case 'M':
+                        cboDepartamento.SelectedIndex = 15;
+                        break;
+                    case 'K':
+                        cboDepartamento.SelectedIndex = 16;
+                        break;
+                    case 'R':
+                        cboDepartamento.SelectedIndex = 17;
+                        break;
+                    case 'D':
+                        cboDepartamento.SelectedIndex = 18;
+                        break;
+                }
             }
         }
 
