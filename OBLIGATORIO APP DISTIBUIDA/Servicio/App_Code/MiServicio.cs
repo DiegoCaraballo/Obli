@@ -289,6 +289,7 @@ public class MiServicio : System.Web.Services.WebService
             throw _MiEx;
         }
     }
+   [WebMethod]
     public void AltaVisita(Visita v)
     {
         try

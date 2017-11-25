@@ -31,10 +31,31 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
                     {
                  // TODO    DatosPropiedad.DatosCasa = (ServicioWeb.Casa)p;
                       //  DatosPropiedad.DatosCasa = p.Padron;
+               
+                   
+
+
                     }
                     else if (p is ServicioWeb.Comercio)
                     {
+                        //TODO - Aca me mande mas fruta que todo el mercado modelo, si es asi como funciona es una mierda jaja. Ver el TODO en DatosPropiedad.cs
                       // DatosPropiedad.DatosComercio = (Comercio)p;
+                        DatosPropiedad.padron = p.Padron;
+                        DatosPropiedad.direccion = p.Direccion;
+                        DatosPropiedad.baño = p.Baño;
+                        DatosPropiedad.mt2Const = p.Mt2Const;
+                        DatosPropiedad.habitaciones = p.Habitaciones;
+                        DatosPropiedad.letraDpto = p.Zona.LetraDpto;
+                        DatosPropiedad.abreviacion = p.Zona.Abreviacion;
+                        DatosPropiedad.tipoPropiedad = ((Comercio)p).TipoPropiedad.ToString();
+                        DatosPropiedad.cantHabitantes = p.Zona.CantHabitantes;
+                        DatosPropiedad.nombre = p.Zona.Nombre;
+                        DatosPropiedad.accion = p.Accion;
+                        DatosPropiedad.precio = p.Precio;
+                        DatosPropiedad.habilitacion = ((Comercio)p).Habilitado;
+
+                     
+
                     }
                     else
                     {
@@ -151,9 +172,10 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
     {
         try
         {
+            MiServicio serv = new MiServicio();
             // lblError.BackColor = Color.White;
             lblError.Text = "";
-
+         
             int dia = Convert.ToInt32(ddlDia.SelectedItem.Value);
 
             int mes = Convert.ToInt32(ddlMes.SelectedItem.Value);
@@ -170,8 +192,16 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
 
             int telefono = Convert.ToInt32(txtTelefono.Text);
             string nombre = txtNombre.Text;
-    // Visita v = new Visita(fecha, txtTelefono.Text, nombre, p);
-      //      FabricaLogica.getVisitaLogica().AgendaVisita(v);
+
+            //TODO - revisar si funciona el alta visita, ya puede hacer que se vea desde el servicio web
+            Visita v = new Visita();
+            v.Fecha = fecha;
+            v.Telefono =telefono.ToString();
+            v.Nombre = nombre;
+            v.AVisitar = p;
+            serv.AltaVisita(v);
+    
+   
 
             //Si llego acá la visita se agendó
             //  lblError.BackColor = Color.LightGreen;

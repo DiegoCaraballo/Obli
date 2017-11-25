@@ -69,6 +69,8 @@ namespace Administracion.ServicioWeb {
         
         private System.Threading.SendOrPostCallback ListarVisitasOperationCompleted;
         
+        private System.Threading.SendOrPostCallback AltaVisitaOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -166,6 +168,9 @@ namespace Administracion.ServicioWeb {
         
         /// <remarks/>
         public event ListarVisitasCompletedEventHandler ListarVisitasCompleted;
+        
+        /// <remarks/>
+        public event AltaVisitaCompletedEventHandler AltaVisitaCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ParaPoderSerializar", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -732,6 +737,34 @@ namespace Administracion.ServicioWeb {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/AltaVisita", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void AltaVisita(Visita v) {
+            this.Invoke("AltaVisita", new object[] {
+                        v});
+        }
+        
+        /// <remarks/>
+        public void AltaVisitaAsync(Visita v) {
+            this.AltaVisitaAsync(v, null);
+        }
+        
+        /// <remarks/>
+        public void AltaVisitaAsync(Visita v, object userState) {
+            if ((this.AltaVisitaOperationCompleted == null)) {
+                this.AltaVisitaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAltaVisitaOperationCompleted);
+            }
+            this.InvokeAsync("AltaVisita", new object[] {
+                        v}, this.AltaVisitaOperationCompleted, userState);
+        }
+        
+        private void OnAltaVisitaOperationCompleted(object arg) {
+            if ((this.AltaVisitaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AltaVisitaCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -956,6 +989,75 @@ namespace Administracion.ServicioWeb {
             }
             set {
                 this.nomUsuField = value;
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class Visita {
+        
+        private Propiedad aVisitarField;
+        
+        private string nombreField;
+        
+        private string telefonoField;
+        
+        private System.DateTime fechaField;
+        
+        private int idField;
+        
+        /// <comentarios/>
+        public Propiedad AVisitar {
+            get {
+                return this.aVisitarField;
+            }
+            set {
+                this.aVisitarField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string Nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string Telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                this.telefonoField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public System.DateTime Fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
             }
         }
     }
@@ -1403,6 +1505,10 @@ namespace Administracion.ServicioWeb {
             }
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void AltaVisitaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591

@@ -22,7 +22,6 @@ create table Empleado
  
 )
 go
-
 create table Zona
 (
 	--letraDpto char(1)not null check (len(letraDpto) = 1 AND letraDpto LIKE '%[A-S]%'),

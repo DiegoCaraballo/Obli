@@ -20,7 +20,19 @@ namespace ControlesWeb
         private Label lblHabitaciones;
         private Label lblMt2Const;
         private Label lblTipoPropiedad;
-        
+
+        //TODO 1- Agregue los atributos indivduales de propiedad, ZONA y comercio, no lo hice con casa y apto por si no es asi. Ver mas Abajo los cambios
+        public int padron;
+        public string direccion;
+        public int precio;
+        public string accion;
+        public int baño;
+        public int habitaciones;
+        public decimal mt2Const;
+
+        private string habilitado;
+        public string tipoPropiedad;
+
         //Controles para mostrar datos de Propiedades de Tipo Casa
         private Label lblFondo;
         private Label lblMt2Terreno;
@@ -32,6 +44,7 @@ namespace ControlesWeb
         //Controles para mostrar datos de Propiedades de tipo Comercio
         private Label lblHabilitado;
 
+        public bool habilitacion;
         //Controles para mostrar datos de Zona
         private Label lblLetraDpto;
         private Label lblAbreviacion;
@@ -39,6 +52,12 @@ namespace ControlesWeb
         private Label lblCantHabitantes;
         private List<string> listaServicios;
         private ListBox lbServicios;
+
+        public string letraDpto;
+        public string abreviacion;
+        public string nombre;
+        public int cantHabitantes;
+        public List<string> listaServicioszona;
 
         private Panel UnPanel;
 
@@ -147,33 +166,33 @@ namespace ControlesWeb
             {
                 EnsureChildControls();
 
-ServicioWeb.Comercio c = value;
+               // ServicioWeb.Comercio c = value;
 
-                lblPadron.Text = c.Padron.ToString();
-                lblDireccion.Text = c.Direccion;
-                lblPrecio.Text = c.Precio.ToString();
-                lblAccion.Text = c.Accion;
-                lblBaño.Text = c.Baño.ToString();
-                lblMt2Const.Text = c.Mt2Const.ToString();
-                lblHabitaciones.Text = c.Habitaciones.ToString();
-                lblTipoPropiedad.Text = c.TipoPropiedad;
+                lblPadron.Text = padron.ToString();
+                lblDireccion.Text = direccion;
+                lblPrecio.Text = precio.ToString();
+                lblAccion.Text = accion;
+                lblBaño.Text = baño.ToString();
+                lblMt2Const.Text = mt2Const.ToString();
+                lblHabitaciones.Text = habitaciones.ToString();
+                lblTipoPropiedad.Text = tipoPropiedad;
 
 
-                string habilitado;
-                if (c.Habilitado == true)
-                    habilitado = "SI";
-                else
-                    habilitado = "NO";
+                //string habilitado;
+                //if (c.Habilitado == true)
+                //    habilitado = "SI";
+                //else
+                //    habilitado = "NO";
 
-                lblHabilitado.Text = habilitado;
+             //   lblHabilitado.Text = habilitado;
 
-                lblLetraDpto.Text = (c.Zona.LetraDpto).ToUpper();
-                lblAbreviacion.Text = c.Zona.Abreviacion.ToString();
-                lblNombre.Text = c.Zona.Nombre;
-                lblCantHabitantes.Text = c.Zona.CantHabitantes.ToString();
-                ListaServiciosZona(c);
+                lblLetraDpto.Text = letraDpto;
+                lblAbreviacion.Text = abreviacion;
+                lblNombre.Text = nombre;
+                lblCantHabitantes.Text = cantHabitantes.ToString();
 
-                lbServicios.DataSource = listaServicios;
+
+                lbServicios.DataSource = listaServicioszona;
                 lbServicios.DataBind();
 
                 //Datos que no pertenecen a este tipo de propiedad
@@ -203,7 +222,7 @@ ServicioWeb.Comercio c = value;
             UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>PADRON:</b> "));
             lblPadron = new Label();
             UnPanel.Controls.Add(lblPadron);
- 
+
             UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>DIRECCION:</b> "));
             lblDireccion = new Label();
             UnPanel.Controls.Add(lblDireccion);
@@ -219,11 +238,11 @@ ServicioWeb.Comercio c = value;
             UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>BAÑOS:</b> "));
             lblBaño = new Label();
             UnPanel.Controls.Add(lblBaño);
-            
+
             UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>HABITACIONES:</b> "));
             lblHabitaciones = new Label();
             UnPanel.Controls.Add(lblHabitaciones);
-            
+
             UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>MT2(CONST):</b> "));
             lblMt2Const = new Label();
             UnPanel.Controls.Add(lblMt2Const);
@@ -247,7 +266,7 @@ ServicioWeb.Comercio c = value;
             UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>HABILITADO:</b> "));
             lblHabilitado = new Label();
             UnPanel.Controls.Add(lblHabilitado);
-            
+
             UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>DPTO:</b> "));
             lblLetraDpto = new Label();
             UnPanel.Controls.Add(lblLetraDpto);
@@ -261,7 +280,7 @@ ServicioWeb.Comercio c = value;
             UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>NOMBRE ZONA:</b> "));
             lblNombre = new Label();
             UnPanel.Controls.Add(lblNombre);
-      
+
 
             UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>HABITANTES:</b> "));
             lblCantHabitantes = new Label();
@@ -275,6 +294,43 @@ ServicioWeb.Comercio c = value;
 
             UnPanel.Controls.Add(new LiteralControl("</table>"));
 
+           //TOD 2- si se pasa atributo por atributo, y no es por propiedad, la unica forma que se me ocurre de agregarlos es aca. Una vez se crean los controles, le paso los datos por medio de los atributos desde 
+            // la web de consulta propiedades.
+
+
+
+            lblPadron.Text = padron.ToString();
+            lblDireccion.Text = direccion;
+            lblPrecio.Text = precio.ToString();
+            lblAccion.Text = accion;
+            lblBaño.Text = baño.ToString();
+            lblMt2Const.Text = mt2Const.ToString();
+            lblHabitaciones.Text = habitaciones.ToString();
+            lblTipoPropiedad.Text = tipoPropiedad;
+
+
+              if (habilitacion == true)
+                habilitado = "SI";
+            else
+                habilitado = "NO";
+
+            lblHabilitado.Text = habilitado;
+
+            lblLetraDpto.Text = letraDpto;
+            lblAbreviacion.Text = abreviacion;
+            lblNombre.Text = nombre;
+            lblCantHabitantes.Text = cantHabitantes.ToString();
+
+
+            lbServicios.DataSource = listaServicioszona;
+            lbServicios.DataBind();
+
+            //Datos que no pertenecen a este tipo de propiedad
+            lblFondo.Text = "NO CORRESPONDE";
+            lblMt2Terreno.Text = "NO CORRESPONDE";
+
+            lblPiso.Text = "NO CORRESPONDE";
+            lblAscensor.Text = "NO CORRESPONDE";
             //agrego el panel con los controles
             this.Controls.Add(UnPanel);
         }
@@ -283,7 +339,7 @@ ServicioWeb.Comercio c = value;
         private void ListaServiciosZona(Propiedad p)
         {
             // TODO - REVISAR QUE FUNCIONE
-            if ( p.Zona.LosServicios.ToList().Count != 0)
+            if (p.Zona.LosServicios.ToList().Count != 0)
             {
                 foreach (Servicio s in p.Zona.LosServicios)
                 {
