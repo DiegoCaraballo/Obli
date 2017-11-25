@@ -179,7 +179,7 @@
     <None Include="Web References\ServicioWeb\Empleado.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServicioWeb\Miservicio.wsdl" />
+    <None Include="Web References\ServicioWeb\MiServicio.wsdl" />
     <None Include="Web References\ServicioWeb\Propiedad.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -206,7 +206,7 @@
     <Content Include="Imagenes\Mas.png" />
     <Content Include="Imagenes\Modificar.bmp" />
     <Content Include="Imagenes\Nuevo.bmp" />
-    <None Include="Web References\ServicioWeb\Miservicio.disco" />
+    <None Include="Web References\ServicioWeb\MiServicio.disco" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -237,10 +237,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://bios1-pc/ws/Miservicio.asmx">
+    <WebReferenceUrl Include="http://localhost:49436/Servicio/MiServicio.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\ServicioWeb\</RelPath>
-      <UpdateFromURL>http://bios1-pc/ws/Miservicio.asmx</UpdateFromURL>
+      <UpdateFromURL>http://localhost:49436/Servicio/MiServicio.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

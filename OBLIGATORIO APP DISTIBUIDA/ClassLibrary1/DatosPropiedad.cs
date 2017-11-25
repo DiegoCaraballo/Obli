@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Web.UI.WebControls;
 using System.Web.UI;
-using Entidades_Compartidas;
+
+using ControlesWeb.ServicioWeb;
 
 namespace ControlesWeb
 {
@@ -19,7 +20,7 @@ namespace ControlesWeb
         private Label lblHabitaciones;
         private Label lblMt2Const;
         private Label lblTipoPropiedad;
-
+        
         //Controles para mostrar datos de Propiedades de Tipo Casa
         private Label lblFondo;
         private Label lblMt2Terreno;
@@ -50,8 +51,7 @@ namespace ControlesWeb
             {
                 EnsureChildControls();
 
-                Casa c = value;
-
+                Casa c = null;
                 lblPadron.Text = c.Padron.ToString();
                 lblDireccion.Text = c.Direccion;
                 lblPrecio.Text = c.Precio.ToString();
@@ -147,7 +147,7 @@ namespace ControlesWeb
             {
                 EnsureChildControls();
 
-                Comercio c = value;
+ServicioWeb.Comercio c = value;
 
                 lblPadron.Text = c.Padron.ToString();
                 lblDireccion.Text = c.Direccion;
@@ -186,7 +186,6 @@ namespace ControlesWeb
             }
         }
         #endregion
-
 
         protected override void CreateChildControls()
         {
@@ -283,7 +282,8 @@ namespace ControlesWeb
         //Metodo que carga la lista de servicios de la zona
         private void ListaServiciosZona(Propiedad p)
         {
-            if (p.Zona.LosServicios.Count != 0)
+            // TODO - REVISAR QUE FUNCIONE
+            if ( p.Zona.LosServicios.ToList().Count != 0)
             {
                 foreach (Servicio s in p.Zona.LosServicios)
                 {

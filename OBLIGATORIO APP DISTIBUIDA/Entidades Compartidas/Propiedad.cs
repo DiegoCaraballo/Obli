@@ -126,12 +126,15 @@ namespace Entidades_Compartidas
         public string ZonaNombre
         {
             get { return zona.Abreviacion + " - " + zona.LetraDpto; }
+            set { }
             
         }
 
         public virtual string TipoPropiedad
         {
             get { return ""; }
+            set { }
+         
         }
         #endregion
 

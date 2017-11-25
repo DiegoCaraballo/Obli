@@ -25,8 +25,11 @@ go
 
 create table Zona
 (
-	letraDpto char(1)not null check (len(letraDpto) = 1 AND letraDpto LIKE '%[A-S]%'),
-	abreviacion varchar(3)not null check (len(abreviacion) = 3 and abreviacion LIKE '%[A-Z]%'),
+	--letraDpto char(1)not null check (len(letraDpto) = 1 AND letraDpto LIKE '%[A-S]%'),
+	--abreviacion varchar(3)not null check (len(abreviacion) = 3 and abreviacion LIKE '%[A-Z]%'),
+	letraDpto char(1)not null check (letraDpto Like '[A-S]'),
+	abreviacion varchar(3)not null check (abreviacion LIKE '[A-Z][A-Z][A-Z]'),
+	
 	nombre varchar(30)not null,
 	habitantes int not null check(habitantes >=0),
 	activa bit default (1),
@@ -751,7 +754,7 @@ create proc ListadoVisitas as
 begin
 
 --select p.accion,v.padron,p.precio,v.fecha from Visita v join Propiedad p on v.padron= p.padron where v.fecha >= GETDATE();
-select * from Visita v where v.fecha >= getdate();
+select * from Visita v-- where v.fecha >= getdate();
 
 end
 
@@ -873,8 +876,9 @@ select * from Visita
 go
 exec ListadoVisitas
 go
-exec AltaVisita 321321,'nico', '2017-11-23', 111111;
+--exec AltaVisita 321321,'nico', '2017-11-23', 111111;
 exec AltaVisita 312321,'dilan', '2017-12-2', 123123;
 exec AltaVisita 312321,'nadia', '2017-12-22', 321321;
-exec AltaVisita 325721,'diego', '2017-11-23', 111160;
-exec AltaVisita 321721,'nicolas', '2017-10-24', 111150;
+--exec AltaVisita 325721,'diego', '2017-11-23', 111160;
+--exec AltaVisita 321721,'nicolas', '2017-10-24', 111150;
+

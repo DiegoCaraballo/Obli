@@ -35,6 +35,7 @@ namespace Entidades_Compartidas
         public override string TipoPropiedad
         {
             get { return "CASA"; }
+            set { }
         }
         #endregion
 

@@ -4,8 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Entidades_Compartidas;
-using Logica;
+
+using ServicioWeb;
 using System.Drawing;
 
 public partial class ConsultaPropiedades : System.Web.UI.Page
@@ -14,6 +14,7 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
     {
         try
         {
+            MiServicio serv = new MiServicio();
             Propiedad p = ((Propiedad)Session["Propiedad"]);
 
             if (p == null)
@@ -25,18 +26,19 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
                 if (!IsPostBack)
                 {
                     CargarFecha();
-
+                    
                     if (p is Casa)
                     {
-                        DatosPropiedad.DatosCasa = (Casa)p;
+                 // TODO    DatosPropiedad.DatosCasa = (ServicioWeb.Casa)p;
+                      //  DatosPropiedad.DatosCasa = p.Padron;
                     }
-                    else if (p is Comercio)
+                    else if (p is ServicioWeb.Comercio)
                     {
-                        DatosPropiedad.DatosComercio = (Comercio)p;
+                      // DatosPropiedad.DatosComercio = (Comercio)p;
                     }
                     else
                     {
-                        DatosPropiedad.DatosApto = (Apto)p;
+                        //DatosPropiedad.DatosApto = (Apto)p;
                     }
                 }
             }
@@ -139,7 +141,7 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
 
     //Limpia el formulario de visita
     public void limpiarVisita()
-    {      
+    {
         txtNombre.Text = "";
         txtTelefono.Text = "";
     }
@@ -168,8 +170,8 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
 
             int telefono = Convert.ToInt32(txtTelefono.Text);
             string nombre = txtNombre.Text;
-            Visita v = new Visita(fecha, txtTelefono.Text, nombre, p);
-            FabricaLogica.getVisitaLogica().AgendaVisita(v);
+    // Visita v = new Visita(fecha, txtTelefono.Text, nombre, p);
+      //      FabricaLogica.getVisitaLogica().AgendaVisita(v);
 
             //Si llego acá la visita se agendó
             //  lblError.BackColor = Color.LightGreen;

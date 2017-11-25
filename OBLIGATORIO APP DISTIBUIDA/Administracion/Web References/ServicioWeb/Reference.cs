@@ -812,6 +812,10 @@ namespace Administracion.ServicioWeb {
         
         private int padronField;
         
+        private string zonaNombreField;
+        
+        private string tipoPropiedadField;
+        
         /// <comentarios/>
         public Empleado UltimoEmp {
             get {
@@ -899,6 +903,26 @@ namespace Administracion.ServicioWeb {
             }
             set {
                 this.padronField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string ZonaNombre {
+            get {
+                return this.zonaNombreField;
+            }
+            set {
+                this.zonaNombreField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string TipoPropiedad {
+            get {
+                return this.tipoPropiedadField;
+            }
+            set {
+                this.tipoPropiedadField = value;
             }
         }
     }

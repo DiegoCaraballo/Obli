@@ -101,11 +101,10 @@ public partial class _Default : System.Web.UI.Page
                 //Ingresa si seleccionó una Propiedad
                 if (ddlProp.SelectedIndex != 0)
                 {
-
+                    //TODO
                     List<Propiedad> listaFiltroPropiedad = (from p in listaFiltrada
-                                                        //    where
-                                                            
-                                                           // p.TipoPropiedad == ddlProp.SelectedItem.Value.ToString()
+                                                        where  
+                                                          p.TipoPropiedad == ddlProp.SelectedItem.Value.ToString()
                                                             select p).ToList<Propiedad>();
 
                     listaFiltrada = listaFiltroPropiedad.ToList();

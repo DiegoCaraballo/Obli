@@ -289,7 +289,17 @@ public class MiServicio : System.Web.Services.WebService
             throw _MiEx;
         }
     }
-
+    public void AltaVisita(Visita v)
+    {
+        try
+        {
+            FabricaLogica.getVisitaLogica().AgendaVisita(v);
+        }
+        catch (Exception ex)
+        {
+            this.GeneroSoapException(ex);
+        }
+    }
     #endregion
 
 

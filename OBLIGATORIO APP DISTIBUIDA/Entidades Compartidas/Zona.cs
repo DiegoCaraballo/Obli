@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 namespace Entidades_Compartidas
-{
+{[Serializable]
     public class Zona
     {
         //Atributos
