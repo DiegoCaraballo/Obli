@@ -64,6 +64,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblMensajes = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ccZona = new Controles.CodigoDpto();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EPPadron)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -189,7 +190,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(4, 240);
+            this.label8.Location = new System.Drawing.Point(397, 108);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 13);
             this.label8.TabIndex = 7;
@@ -198,7 +199,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(-1, 267);
+            this.label9.Location = new System.Drawing.Point(392, 135);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(94, 13);
             this.label9.TabIndex = 8;
@@ -207,7 +208,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 293);
+            this.label10.Location = new System.Drawing.Point(15, 306);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 13);
             this.label10.TabIndex = 9;
@@ -216,7 +217,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(59, 319);
+            this.label11.Location = new System.Drawing.Point(59, 332);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(27, 13);
             this.label11.TabIndex = 10;
@@ -225,7 +226,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(38, 350);
+            this.label12.Location = new System.Drawing.Point(38, 363);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 13);
             this.label12.TabIndex = 11;
@@ -277,28 +278,28 @@
             // 
             // txtLetraDpto
             // 
-            this.txtLetraDpto.Location = new System.Drawing.Point(99, 240);
+            this.txtLetraDpto.Location = new System.Drawing.Point(492, 108);
             this.txtLetraDpto.Name = "txtLetraDpto";
             this.txtLetraDpto.Size = new System.Drawing.Size(100, 20);
             this.txtLetraDpto.TabIndex = 20;
             // 
             // txtAbrev
             // 
-            this.txtAbrev.Location = new System.Drawing.Point(99, 267);
+            this.txtAbrev.Location = new System.Drawing.Point(492, 135);
             this.txtAbrev.Name = "txtAbrev";
             this.txtAbrev.Size = new System.Drawing.Size(100, 20);
             this.txtAbrev.TabIndex = 21;
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(99, 293);
+            this.txtUser.Location = new System.Drawing.Point(99, 306);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(100, 20);
             this.txtUser.TabIndex = 22;
             // 
             // txtPiso
             // 
-            this.txtPiso.Location = new System.Drawing.Point(99, 319);
+            this.txtPiso.Location = new System.Drawing.Point(99, 332);
             this.txtPiso.Name = "txtPiso";
             this.txtPiso.Size = new System.Drawing.Size(100, 20);
             this.txtPiso.TabIndex = 23;
@@ -321,7 +322,7 @@
             this.cboAscensor.Items.AddRange(new object[] {
             "SI",
             "NO"});
-            this.cboAscensor.Location = new System.Drawing.Point(99, 350);
+            this.cboAscensor.Location = new System.Drawing.Point(99, 363);
             this.cboAscensor.Name = "cboAscensor";
             this.cboAscensor.Size = new System.Drawing.Size(100, 21);
             this.cboAscensor.TabIndex = 25;
@@ -350,11 +351,21 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
+            // ccZona
+            // 
+            this.ccZona.Codigo = "";
+            this.ccZona.LetraDepto = "";
+            this.ccZona.Location = new System.Drawing.Point(0, 236);
+            this.ccZona.Name = "ccZona";
+            this.ccZona.Size = new System.Drawing.Size(271, 64);
+            this.ccZona.TabIndex = 27;
+            // 
             // ABMApto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 517);
+            this.Controls.Add(this.ccZona);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.cboAscensor);
             this.Controls.Add(this.cboAccion);
@@ -432,5 +443,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblMensajes;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private Controles.CodigoDpto ccZona;
     }
 }

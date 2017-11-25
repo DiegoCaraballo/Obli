@@ -88,7 +88,12 @@ namespace Controles
                         letraDpto = "";
                         return letraDpto;                     
                 }
+               
                 
+            }
+            set
+            {
+               
             }
         }
 
@@ -189,6 +194,12 @@ namespace Controles
                 e.Cancel = true;
                 return;
             }
+        }
+
+        private void CambioValor()
+        {
+         
+
         }
     }
 }

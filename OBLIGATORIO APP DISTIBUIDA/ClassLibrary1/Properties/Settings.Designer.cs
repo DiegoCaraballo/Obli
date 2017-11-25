@@ -26,7 +26,7 @@ namespace ControlesWeb.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49436/Servicio/MiServicio.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:10828/Servicio/MiServicio.asmx")]
         public string ControlesWeb_ServicioWeb_MiServicio {
             get {
                 return ((string)(this["ControlesWeb_ServicioWeb_MiServicio"]));

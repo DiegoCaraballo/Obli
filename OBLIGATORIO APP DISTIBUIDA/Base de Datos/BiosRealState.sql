@@ -876,9 +876,20 @@ select * from Visita
 go
 exec ListadoVisitas
 go
---exec AltaVisita 321321,'nico', '2017-11-23', 111111;
-exec AltaVisita 312321,'dilan', '2017-12-2', 123123;
-exec AltaVisita 312321,'nadia', '2017-12-22', 321321;
---exec AltaVisita 325721,'diego', '2017-11-23', 111160;
---exec AltaVisita 321721,'nicolas', '2017-10-24', 111150;
+
+exec AltaVisita 111119,'nico', '2018-11-29', 123123;
+exec AltaVisita 111119,'dilan', '2018-12-2', 123123;
+exec AltaVisita 312321,'nadia', '2017-12-22', 789789;
+exec AltaVisita 325721,'diego', '2017-12-23', 789789;
+exec AltaVisita 321721,'sergio', '2017-11-26', 789789;
+exec AltaVisita 654654,'pepe', '2017-12-2', 111112;
+exec AltaVisita 654654,'ahri', '2017-12-1', 111112;
+exec AltaVisita 654654,'naty', '2017-12-22', 111112;
+exec AltaVisita 654654,'juan', '2018-11-30', 111130;
+exec AltaVisita 987987,'marcelo', '2017-11-28', 111130;
+
+select padron,count(padron) as 'asd' from Visita group by padron
+
+select * from Visita order by padron asc
+
 

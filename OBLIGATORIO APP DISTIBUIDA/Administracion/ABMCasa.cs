@@ -20,6 +20,7 @@ namespace Administracion
         {
             InitializeComponent();
             Accesos();
+        
         }
 
         private void aBMCASAToolStripMenuItem_Click(object sender, EventArgs e)
@@ -39,7 +40,15 @@ namespace Administracion
 
         private void MenuItemAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Puede utilizar las siguientes teclas para facil acceso a los Items del Menu:\nF1= Ayuda\nF2= Buscar\nF3= Ingresar\nF4= Modificar\nF5= Eliminar\nF6= Cancelar");
+            txtPadron.Text = "";
+          //  MessageBox.Show("Puede utilizar las siguientes teclas para facil acceso a los Items del Menu:\nF1= Ayuda\nF2= Buscar\nF3= Ingresar\nF4= Modificar\nF5= Eliminar\nF6= Cancelar");
         }
+
+        private void MenuItemCancelar_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        
     }
 }

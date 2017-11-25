@@ -25,7 +25,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PresentacionConsultas", "Pr
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "1126"
+		VWDPort = "10825"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -53,7 +53,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Servicio", "Servicio\", "{2
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "49436"
+		VWDPort = "10828"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject

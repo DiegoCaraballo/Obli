@@ -113,15 +113,21 @@ namespace Administracion
             p = pPropiedad;
 
         }
-        private void MenuItemBuscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
+    
         private void MenuItemIngresar_Click(object sender, EventArgs e)
         {
             try
             {
+
+
+
+                
+
+
+
+
+
+
                 ServicioWeb.Apto apto = new ServicioWeb.Apto();
                 apto.Padron = Convert.ToInt32(txtPadron.Text);
                 apto.Direccion = txtDireccion.Text;
@@ -179,8 +185,10 @@ namespace Administracion
                     txtBanio.Text = propiedad.Baño.ToString();
                     txtHabitaciones.Text = propiedad.Habitaciones.ToString();
                     txtMt2Const.Text = propiedad.Mt2Const.ToString();
-                    txtAbrev.Text = propiedad.Zona.Abreviacion;
-                    txtLetraDpto.Text = propiedad.Zona.LetraDpto;
+                    ccZona.LetraDepto = propiedad.Zona.LetraDpto.ToString();
+                    ccZona.Codigo = propiedad.Zona.Abreviacion;
+                    //  txtAbrev.Text = propiedad.Zona.Abreviacion;
+                   // txtLetraDpto.Text = propiedad.Zona.LetraDpto;
                     txtUser.Text = propiedad.UltimoEmp.NomUsu;
                     txtPiso.Text = ((ServicioWeb.Apto)propiedad).Piso.ToString();
                     if (((ServicioWeb.Apto)propiedad).Ascensor == true)

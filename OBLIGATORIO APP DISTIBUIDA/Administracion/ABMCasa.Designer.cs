@@ -297,6 +297,7 @@
             this.MenuItemCancelar.Name = "MenuItemCancelar";
             this.MenuItemCancelar.Size = new System.Drawing.Size(81, 20);
             this.MenuItemCancelar.Text = "Cancelar";
+            this.MenuItemCancelar.Click += new System.EventHandler(this.MenuItemCancelar_Click);
             // 
             // MenuItemAyuda
             // 

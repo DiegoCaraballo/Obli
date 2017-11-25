@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gvVisitas = new System.Windows.Forms.DataGridView();
             this.cboAccion = new System.Windows.Forms.ComboBox();
             this.txtPadron = new System.Windows.Forms.TextBox();
             this.btnContarVisitas = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.EPPadron = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gvVisitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPPadron)).BeginInit();
             this.SuspendLayout();
             // 
             // gvVisitas
@@ -55,6 +58,7 @@
             this.cboAccion.Name = "cboAccion";
             this.cboAccion.Size = new System.Drawing.Size(121, 21);
             this.cboAccion.TabIndex = 1;
+            this.cboAccion.SelectedIndexChanged += new System.EventHandler(this.cboAccion_SelectedIndexChanged);
             // 
             // txtPadron
             // 
@@ -62,6 +66,7 @@
             this.txtPadron.Name = "txtPadron";
             this.txtPadron.Size = new System.Drawing.Size(100, 20);
             this.txtPadron.TabIndex = 2;
+            this.txtPadron.Validating += new System.ComponentModel.CancelEventHandler(this.txtPadron_Validating);
             // 
             // btnContarVisitas
             // 
@@ -83,6 +88,10 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // EPPadron
+            // 
+            this.EPPadron.ContainerControl = this;
+            // 
             // ConsultaVisita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -97,6 +106,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaVisita";
             ((System.ComponentModel.ISupportInitialize)(this.gvVisitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPPadron)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +119,6 @@
         private System.Windows.Forms.TextBox txtPadron;
         private System.Windows.Forms.Button btnContarVisitas;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.ErrorProvider EPPadron;
     }
 }
