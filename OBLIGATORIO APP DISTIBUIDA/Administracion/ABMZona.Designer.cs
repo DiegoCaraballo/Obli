@@ -112,6 +112,7 @@
             this.MenuItemModificar.Name = "MenuItemModificar";
             this.MenuItemModificar.Size = new System.Drawing.Size(86, 20);
             this.MenuItemModificar.Text = "Modificar";
+            this.MenuItemModificar.Click += new System.EventHandler(this.MenuItemModificar_Click);
             // 
             // MenuItemEliminar
             // 
@@ -119,6 +120,7 @@
             this.MenuItemEliminar.Name = "MenuItemEliminar";
             this.MenuItemEliminar.Size = new System.Drawing.Size(78, 20);
             this.MenuItemEliminar.Text = "Eliminar";
+            this.MenuItemEliminar.Click += new System.EventHandler(this.MenuItemEliminar_Click);
             // 
             // MenuItemCancelar
             // 
@@ -134,6 +136,7 @@
             this.MenuItemAyuda.Name = "MenuItemAyuda";
             this.MenuItemAyuda.Size = new System.Drawing.Size(69, 20);
             this.MenuItemAyuda.Text = "Ayuda";
+            this.MenuItemAyuda.Click += new System.EventHandler(this.MenuItemAyuda_Click_1);
             // 
             // statusStrip1
             // 

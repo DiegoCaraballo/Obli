@@ -94,9 +94,19 @@ namespace Administracion
                 //unaZona.LosServicios = manejoServicios1.ListaServicios;
                 //TODO - Ver como paso los servicios con el userControl
             }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
+            }
             catch (Exception ex)
             {
-                lblMensaje.Text = ex.Message;
+                if (ex.Message.Length > 40)
+                    lblMensaje.Text = ex.Message.Substring(0, 40);
+                else
+                    lblMensaje.Text = ex.Message;
             }
         }
 
@@ -166,7 +176,23 @@ namespace Administracion
             }
         }
 
+        // Modificar una Zona
+        private void MenuItemModificar_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        // Eliminar una Zona
+        private void MenuItemEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Mensaje de ayuda
+        private void MenuItemAyuda_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Puede utilizar las siguientes teclas para facil acceso a los Items del Menu:\nF1= Ayuda\nF3= Ingresar\nF4= Modificar\nF5= Eliminar\nF6= Cancelar");
+        }
 
     }
 }
