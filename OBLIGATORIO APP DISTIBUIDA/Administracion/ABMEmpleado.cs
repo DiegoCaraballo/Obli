@@ -49,7 +49,7 @@ namespace Administracion
                 }
                 else
                 {
-                    throw new Exception("El usuario es requerido");                    
+                    throw new Exception("El usuario es requerido");
                 }
             }
             catch (Exception ex)
@@ -119,7 +119,7 @@ namespace Administracion
                 LimpioControles();
                 DesActivoBotones();
             }
-            catch(System.Web.Services.Protocols.SoapException ex)
+            catch (System.Web.Services.Protocols.SoapException ex)
             {
                 if (ex.Detail.InnerText.Length > 40)
                     lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
@@ -225,6 +225,6 @@ namespace Administracion
             txtUsuario.Text = "";
             txtPassword.Text = "";
         }
-        
+
     }
 }

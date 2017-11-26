@@ -91,7 +91,15 @@ namespace Administracion
                 unaZona.Nombre = nombre;
                 unaZona.CantHabitantes = cantHabitantes;
 
-                //unaZona.LosServicios = manejoServicios1.ListaServicios;
+
+            //    foreach (ListItem s in lbServicios.Items)
+            //{
+            //    unaZona.AgregarServicio(s.Text.Trim());
+                //unaZona.LosServicios = 
+                //unaZona.LosServicios = lbServicios.
+
+
+                //unaZona.LosServicios = .ListaServicios;
                 //TODO - Ver como paso los servicios con el userControl
             }
             catch (System.Web.Services.Protocols.SoapException ex)

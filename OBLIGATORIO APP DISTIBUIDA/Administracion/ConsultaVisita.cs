@@ -79,7 +79,17 @@ namespace Administracion
             XmlNode lista = serv.ListarVisitas();
      
             documento = XElement.Parse(lista.OuterXml);
-     
+            var res = (from unNodo in documento.Elements("Propiedad")
+                     
+                       select new
+                       {
+                           Padron = unNodo.Element("Padron").Value,
+                           Fecha = unNodo.Element("Fecha").Value,
+                           Precio = unNodo.Element("Precio").Value,
+                           Accion = unNodo.Element("Accion").Value
+                       }).ToList();
+
+            gvVisitas.DataSource = res;
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)
@@ -157,6 +167,11 @@ namespace Administracion
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void ConsultaVisita_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

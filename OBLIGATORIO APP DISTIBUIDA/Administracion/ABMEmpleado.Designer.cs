@@ -40,13 +40,12 @@
             this.MenuItemModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemCancelar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemAyuda = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblError = new System.Windows.Forms.Label();
+            this.EPUsuario = new System.Windows.Forms.ErrorProvider(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblMensaje = new System.Windows.Forms.ToolStripStatusLabel();
-            this.EPUsuario = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EPUsuario)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuItemEliminar
@@ -136,13 +135,9 @@
             this.MenuItemAyuda.Size = new System.Drawing.Size(69, 20);
             this.MenuItemAyuda.Text = "Ayuda";
             // 
-            // lblError
+            // EPUsuario
             // 
-            this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(143, 128);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 13);
-            this.lblError.TabIndex = 46;
+            this.EPUsuario.ContainerControl = this;
             // 
             // statusStrip1
             // 
@@ -151,17 +146,14 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 408);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(586, 22);
-            this.statusStrip1.TabIndex = 47;
+            this.statusStrip1.TabIndex = 46;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // lblMensaje
             // 
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(0, 17);
-            // 
-            // EPUsuario
-            // 
-            this.EPUsuario.ContainerControl = this;
+            this.lblMensaje.Size = new System.Drawing.Size(118, 17);
+            this.lblMensaje.Text = "toolStripStatusLabel1";
             // 
             // ABMEmpleado
             // 
@@ -169,7 +161,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 430);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.lblError);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsuario);
@@ -180,9 +171,9 @@
             this.Text = "ABMEmpleado";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EPUsuario)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EPUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,9 +191,8 @@
         private System.Windows.Forms.ToolStripMenuItem MenuItemCancelar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemAyuda;
         private System.Windows.Forms.ToolStripMenuItem MenuItemEliminar;
-        private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.ErrorProvider EPUsuario;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblMensaje;
-        private System.Windows.Forms.ErrorProvider EPUsuario;
     }
 }

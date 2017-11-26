@@ -46,6 +46,8 @@
             this.EPBuscar = new System.Windows.Forms.ErrorProvider(this.components);
             this.codigoDpto1 = new Controles.CodigoDpto();
             this.manejoServicios1 = new Controles.ManejoServicios();
+            this.txtServicio = new System.Windows.Forms.TextBox();
+            this.lbServicios = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EPCodigo)).BeginInit();
@@ -180,11 +182,28 @@
             this.manejoServicios1.Size = new System.Drawing.Size(300, 164);
             this.manejoServicios1.TabIndex = 5;
             // 
+            // txtServicio
+            // 
+            this.txtServicio.Location = new System.Drawing.Point(339, 162);
+            this.txtServicio.Name = "txtServicio";
+            this.txtServicio.Size = new System.Drawing.Size(100, 20);
+            this.txtServicio.TabIndex = 55;
+            // 
+            // lbServicios
+            // 
+            this.lbServicios.FormattingEnabled = true;
+            this.lbServicios.Location = new System.Drawing.Point(339, 188);
+            this.lbServicios.Name = "lbServicios";
+            this.lbServicios.Size = new System.Drawing.Size(120, 95);
+            this.lbServicios.TabIndex = 56;
+            // 
             // ABMZona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 372);
+            this.Controls.Add(this.lbServicios);
+            this.Controls.Add(this.txtServicio);
             this.Controls.Add(this.manejoServicios1);
             this.Controls.Add(this.codigoDpto1);
             this.Controls.Add(this.statusStrip1);
@@ -225,5 +244,7 @@
         private System.Windows.Forms.ToolStripStatusLabel lblMensaje;
         private System.Windows.Forms.ErrorProvider EPBuscar;
         private Controles.ManejoServicios manejoServicios1;
+        private System.Windows.Forms.TextBox txtServicio;
+        private System.Windows.Forms.ListBox lbServicios;
     }
 }

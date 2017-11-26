@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 
 namespace Entidades_Compartidas
-{[Serializable]
+{
+    [Serializable]
     public class Zona
     {
         //Atributos
@@ -16,10 +17,10 @@ namespace Entidades_Compartidas
 
         //Propiedades
         #region propiedades
-        public List<Servicio> LosServicios //revisar
+        public List<Servicio> LosServicios 
         {
             get { return _LosServicios; }
-            //set { servicios = value; }
+            set {  }
         }
 
         public int CantHabitantes

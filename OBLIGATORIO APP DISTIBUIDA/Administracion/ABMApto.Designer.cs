@@ -356,7 +356,7 @@
             this.Name = "ABMApto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMApto";
-            this.Load += new System.EventHandler(this.ABMApto_Load);
+           
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EPPadron)).EndInit();

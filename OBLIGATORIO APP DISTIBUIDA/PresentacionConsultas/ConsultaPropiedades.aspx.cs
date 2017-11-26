@@ -54,8 +54,6 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
                         DatosPropiedad.precio = p.Precio;
                         DatosPropiedad.habilitacion = ((Comercio)p).Habilitado;
 
-                     
-
                     }
                     else
                     {

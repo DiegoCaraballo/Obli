@@ -35,7 +35,7 @@ namespace Administracion
 
         //}
 
-
+        // etoy hablando 
         //TODO - Definir si dejamos estos accesos o no
         public void Accesos()
         {
@@ -369,10 +369,7 @@ namespace Administracion
             }
         }
 
-        private void ABMApto_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
     }
 }
