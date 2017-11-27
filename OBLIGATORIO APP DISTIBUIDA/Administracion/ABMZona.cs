@@ -42,9 +42,8 @@ namespace Administracion
         {
             txtHabitantes.Text = "";
             txtNombre.Text = "";
-            //Limpio los campos del userControl de servicios
-            manejoServicios1.Servicio = "";
-            manejoServicios1.LimpiarTodo();
+            txtServicio.Text = "";
+            lbServicios.Items.Clear();
             //Limpio los campos del userControl de letra de Dpto y Abreviación
             codigoDpto1.Codigo = "";
         }
@@ -53,15 +52,14 @@ namespace Administracion
         public void EstadoInicial()
         {
             LimpiarCampos();
-            //cboDepartamento.SelectedIndex = 0;
             MenuItemIngresar.Enabled = false;
             MenuItemModificar.Enabled = false;
             MenuItemEliminar.Enabled = false;
-            //btnAgregar.Enabled = false;
-            //btnBorrar.Enabled = false;
             txtNombre.Enabled = false;
-            //txtServicio.Enabled = false;
+            txtServicio.Enabled = false;
             txtHabitantes.Enabled = false;
+            btnAgregar.Enabled = false;
+            btnEliminar.Enabled = false;        
         }
 
         // Botón que cancela y deja en estado inicial
@@ -77,7 +75,10 @@ namespace Administracion
             try
             {
                 // Creo el objeto que me permita trabajar con el WebService
-                MiServicio LZona = new MiServicio();
+                MiServicio serv = new MiServicio();
+
+                List<Servicio> Servicios = new List<Servicio>();
+                Servicio elServicio = new Servicio();
 
                 // Utilizo la operación del WS
                 string codigo = codigoDpto1.Codigo.ToString().ToUpper();
@@ -85,22 +86,26 @@ namespace Administracion
                 string nombre = txtNombre.Text.Trim().ToUpper();
                 int cantHabitantes = Convert.ToInt32(txtHabitantes.Text);
 
-                Zona unaZona = new Zona();
+                Zona unaZona = new Zona();            
                 unaZona.Abreviacion = codigo;
                 unaZona.LetraDpto = letraDpto;
                 unaZona.Nombre = nombre;
                 unaZona.CantHabitantes = cantHabitantes;
+  
+                foreach (string s in lbServicios.Items)
+                {
+                    elServicio.Servicios = s.ToString();
+                    Servicios.Add(elServicio);
+                }
 
+                unaZona.LosServicios = Servicios.ToArray();
 
-            //    foreach (ListItem s in lbServicios.Items)
-            //{
-            //    unaZona.AgregarServicio(s.Text.Trim());
-                //unaZona.LosServicios = 
-                //unaZona.LosServicios = lbServicios.
+                //Ingreso la zona
+                serv.AgregarZona(unaZona);
+                lblMensaje.Text = "Se agregó la zona";
 
+                EstadoInicial();
 
-                //unaZona.LosServicios = .ListaServicios;
-                //TODO - Ver como paso los servicios con el userControl
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -154,6 +159,10 @@ namespace Administracion
                     MenuItemModificar.Enabled = false;  
                     txtHabitantes.Enabled = true;
                     txtNombre.Enabled = true;
+                    txtServicio.Enabled = true;
+                    lbServicios.Enabled = true;
+                    btnEliminar.Enabled = true;
+                    btnAgregar.Enabled = true;
                 }
                 else
                 {
@@ -163,9 +172,14 @@ namespace Administracion
                     txtNombre.Text = zona.Nombre;
                     foreach (Servicio servicio in zona.LosServicios)
                     {                      
-                        //TODO - Revisar bien
-                        manejoServicios1.ListaServicios.Add(servicio.Servicios.ToString());
+                        lbServicios.Items.Add(servicio.Servicios.ToString());
                     }
+                    MenuItemIngresar.Enabled = false;
+                    MenuItemEliminar.Enabled = true;
+                    MenuItemModificar.Enabled = true;
+                    btnAgregar.Enabled = true;
+                    btnEliminar.Enabled = true;
+                    txtServicio.Enabled = true;
                 }
             }
             catch (System.Web.Services.Protocols.SoapException ex)
@@ -200,6 +214,61 @@ namespace Administracion
         private void MenuItemAyuda_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("Puede utilizar las siguientes teclas para facil acceso a los Items del Menu:\nF1= Ayuda\nF3= Ingresar\nF4= Modificar\nF5= Eliminar\nF6= Cancelar");
+        }
+
+        // Agrega servicios al ListBox
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Verifico que se haya ingresado algo en la caja de texto de servicios
+                if (txtServicio.Text.Trim().ToUpper() != "")
+                {
+                    lblMensaje.Text = "";
+
+                    foreach (var servicio in lbServicios.Items)
+                    {
+                        if (servicio.ToString().Trim().ToUpper() == txtServicio.Text.Trim().ToUpper())
+                        {
+                            throw new Exception("El servicio ya fue ingresado");
+                        }
+                    }
+
+                    lbServicios.Items.Add(txtServicio.Text.Trim());
+                    txtServicio.Text = "";
+                    lblMensaje.Text = "Se agrego el servicio";
+                }
+                else
+                {
+                    lblMensaje.Text = "Debe escribir el nombre del servicio";
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMensaje.Text = ex.Message;
+            }
+        }
+
+        // Borrar servicio del ListBox
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Determino si hay una linea de la lista seleccionada
+                if (lbServicios.SelectedIndex >= 0)
+                {
+                    lbServicios.Items.RemoveAt(lbServicios.SelectedIndex);
+                    lblMensaje.Text = "Se elimino el servicio";
+                }
+                else
+                {
+                    lblMensaje.Text = "Debe seleccionar un servicio";
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMensaje.Text = ex.Message;
+            }
         }
 
     }

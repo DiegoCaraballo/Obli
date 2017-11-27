@@ -45,9 +45,11 @@
             this.EPCodigo = new System.Windows.Forms.ErrorProvider(this.components);
             this.EPBuscar = new System.Windows.Forms.ErrorProvider(this.components);
             this.codigoDpto1 = new Controles.CodigoDpto();
-            this.manejoServicios1 = new Controles.ManejoServicios();
             this.txtServicio = new System.Windows.Forms.TextBox();
             this.lbServicios = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EPCodigo)).BeginInit();
@@ -173,18 +175,9 @@
             this.codigoDpto1.TabIndex = 0;
             this.codigoDpto1.Validating += new System.ComponentModel.CancelEventHandler(this.codigoDpto1_Validating);
             // 
-            // manejoServicios1
-            // 
-            this.manejoServicios1.ListaServicios = ((System.Collections.Generic.List<string>)(resources.GetObject("manejoServicios1.ListaServicios")));
-            this.manejoServicios1.Location = new System.Drawing.Point(12, 150);
-            this.manejoServicios1.Name = "manejoServicios1";
-            this.manejoServicios1.Servicio = "";
-            this.manejoServicios1.Size = new System.Drawing.Size(300, 164);
-            this.manejoServicios1.TabIndex = 5;
-            // 
             // txtServicio
             // 
-            this.txtServicio.Location = new System.Drawing.Point(339, 162);
+            this.txtServicio.Location = new System.Drawing.Point(102, 154);
             this.txtServicio.Name = "txtServicio";
             this.txtServicio.Size = new System.Drawing.Size(100, 20);
             this.txtServicio.TabIndex = 55;
@@ -192,19 +185,50 @@
             // lbServicios
             // 
             this.lbServicios.FormattingEnabled = true;
-            this.lbServicios.Location = new System.Drawing.Point(339, 188);
+            this.lbServicios.Location = new System.Drawing.Point(102, 180);
             this.lbServicios.Name = "lbServicios";
             this.lbServicios.Size = new System.Drawing.Size(120, 95);
             this.lbServicios.TabIndex = 56;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(44, 160);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Servicio";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(21, 209);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 58;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(21, 238);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 59;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // ABMZona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 372);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbServicios);
             this.Controls.Add(this.txtServicio);
-            this.Controls.Add(this.manejoServicios1);
             this.Controls.Add(this.codigoDpto1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -243,8 +267,10 @@
         private Controles.CodigoDpto codigoDpto1;
         private System.Windows.Forms.ToolStripStatusLabel lblMensaje;
         private System.Windows.Forms.ErrorProvider EPBuscar;
-        private Controles.ManejoServicios manejoServicios1;
         private System.Windows.Forms.TextBox txtServicio;
         private System.Windows.Forms.ListBox lbServicios;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Label label1;
     }
 }

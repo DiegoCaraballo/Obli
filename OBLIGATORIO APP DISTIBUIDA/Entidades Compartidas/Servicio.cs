@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Entidades_Compartidas
 {
+    [Serializable]
     public class Servicio
     {
         //Atributos
@@ -57,6 +58,7 @@ namespace Entidades_Compartidas
         {
             Servicios = pServicios;
         }
-          public Servicio() { }
+
+        public Servicio() { }
     }
 }
