@@ -47,6 +47,7 @@ namespace Administracion
             MenuItemCancelar.ShortcutKeys = Keys.F6;
 
         }
+
         public void EstadoInicial()
         {
 
@@ -68,6 +69,7 @@ namespace Administracion
 
             lblMensajes.Text = "";
         }
+
         public void HabilitarControles()
         {
             MenuItemEliminar.Enabled = true;
@@ -105,6 +107,7 @@ namespace Administracion
             lblMensajes.Text = "";
 
         }
+
         public void Limpiar()
         {
             txtPadron.Text = "";
@@ -127,6 +130,7 @@ namespace Administracion
             MessageBox.Show("Puede utilizar las siguientes teclas para facil acceso a los Items del Menu:\nF1= Ayuda\nF3= Ingresar\nF4= Modificar\nF5= Eliminar\nF6= Cancelar");
 
         }
+
         Propiedad p = null;
         public ABMApto(Propiedad pPropiedad)
         {
