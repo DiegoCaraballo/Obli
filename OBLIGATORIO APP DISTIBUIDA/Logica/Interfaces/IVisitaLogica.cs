@@ -10,6 +10,9 @@ namespace Logica
     public interface IVisitaLogica
     {
         void AgendaVisita(Visita V);
+
         List<Visita> ListaVisitas();
+
+
     }
 }

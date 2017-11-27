@@ -24,21 +24,21 @@ namespace Logica
         {
             IVisitaPersistencia visita = FabricaPersistencia.getPersistenciaVisita();
             int numero = visita.VecesVisitado(V);
+
             if (numero < 2)
             {
-
                 FabricaPersistencia.getPersistenciaVisita().AgendaVisita(V);
             }
             else
             {
-                throw new Exception("usted ya visito dos veces esta propiedad");
+                throw new Exception("Usted ya visito dos veces esta propiedad");
             }
         }
+
         public List<Visita> ListaVisitas()
         {
             return FabricaPersistencia.getPersistenciaVisita().ListaVisitas();
         }
-
 
 
     }

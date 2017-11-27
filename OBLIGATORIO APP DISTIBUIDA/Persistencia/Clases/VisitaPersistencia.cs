@@ -71,8 +71,6 @@ namespace Persistencia
 
         }
 
-
-
         public List<Visita> ListaVisitas()
         {
             List<Visita> lista = new List<Visita>();
@@ -90,7 +88,7 @@ namespace Persistencia
             {
                 oConexion.Open();
                 oReader = oComando.ExecuteReader();
-        
+
                 while (oReader.Read())
                 {
                     nombre = (string)oReader["nombre"];
@@ -129,32 +127,25 @@ namespace Persistencia
         public int VecesVisitado(Visita V)
         {
 
-            //TODO - 
-            int numero=0;
+            //TODO - Ver si funciona traer cantidad de visitas
+            int visitas = 0;
 
             SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
             SqlCommand oComando = new SqlCommand("CantidadVisitas", oConexion);
             oComando.CommandType = CommandType.StoredProcedure;
+
             oComando.Parameters.AddWithValue("@tel", V.Telefono);
-             oComando.Parameters.AddWithValue("@padron", V.AVisitar.Padron);
-            
+            oComando.Parameters.AddWithValue("@padron", V.AVisitar.Padron);
 
-
-            SqlDataReader oReader;
+            var retorno = oComando.Parameters.Add("@Retorno", SqlDbType.Int);
+            retorno.Direction = ParameterDirection.ReturnValue;
 
             try
             {
                 oConexion.Open();
-          
-                oReader = oComando.ExecuteReader();
-                if (oReader.HasRows)
-                {
-                    numero = (int)oReader["Visitas"];
-                    
-
-                }
-                
-                oReader.Close();
+                oComando.ExecuteNonQuery();
+                var resultado = retorno.Value;
+                visitas = Convert.ToInt32(resultado);
             }
             catch (Exception ex)
             {
@@ -164,9 +155,8 @@ namespace Persistencia
             {
                 oConexion.Close();
             }
-            return numero;
+            return visitas;
 
- 
         }
         #endregion
     }

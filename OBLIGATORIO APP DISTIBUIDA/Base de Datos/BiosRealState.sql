@@ -749,15 +749,16 @@ create proc ListadoVisitas as
 begin
 
 
-select * from Visita v
+select * from Visita
 
 end
 
 go
 create proc CantidadVisitas @tel varchar(30),@padron int as
 begin
-select count(tel) as 'Visitado' from Visita where tel =@tel and padron = @padron;
-
+	declare @Retorno int
+	set @Retorno = (select COUNT(*) from Visita where tel = @tel and padron = @padron);
+	return @Retorno;
 end 
 go
 
