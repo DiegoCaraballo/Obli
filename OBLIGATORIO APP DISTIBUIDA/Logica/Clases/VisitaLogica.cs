@@ -25,14 +25,23 @@ namespace Logica
             IVisitaPersistencia visita = FabricaPersistencia.getPersistenciaVisita();
             int numero = visita.VecesVisitado(V);
 
-            if (numero < 2)
+            // Se controla que el usuario no pueda visitar + de 2 veces la misma propiedad
+            if (numero >= 2)
             {
-                FabricaPersistencia.getPersistenciaVisita().AgendaVisita(V);
+                throw new Exception("Usted ya visito dos veces esta propiedad");               
             }
-            else
+
+            IVisitaPersistencia visita2 = FabricaPersistencia.getPersistenciaVisita();
+            int num = visita.HoraVisitas(V);
+
+            // Se controla que la propiedad no tenga + de una vista en la misma fecha-hora
+            if (num > 0)
             {
-                throw new Exception("Usted ya visito dos veces esta propiedad");
+                throw new Exception("La propiedad ya tiene una vista agendada para la misma Fecha-Hora");
             }
+
+            FabricaPersistencia.getPersistenciaVisita().AgendaVisita(V);
+
         }
 
         public List<Visita> ListaVisitas()

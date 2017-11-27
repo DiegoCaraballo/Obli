@@ -101,7 +101,7 @@ create table Visita
 	id int identity(1,1) not null primary key,
 	tel varchar(20) not null,
 	nombre varchar(20) not null,
-	fecha datetime not null check(fecha >getdate()),
+	fecha datetime not null check(fecha > getdate()),
 	padron int not null foreign key references propiedad(padron)
 )
  
@@ -764,8 +764,11 @@ go
 
 create proc HoraVisitas @fecha datetime,@padron int as
 begin
-select count(*) as 'Visitas' from Visita where fecha =@fecha and padron = @padron;
-end go
+	declare @Retorno int
+	set @Retorno = (select COUNT(*) from Visita where padron = @padron and fecha = @fecha);
+	return @Retorno
+end 
+go
 
 select * from Visita order by tel
 
@@ -884,21 +887,20 @@ go
 exec ListadoVisitas
 go
 
-exec AltaVisita 111119,'nico', '2018-11-30', 123123;
-exec AltaVisita 111119,'dilan', '2018-12-2', 123123;
-exec AltaVisita 312321,'nadia', '2017-12-22', 789789;
-exec AltaVisita 325721,'diego', '2017-12-23', 789789;
-exec AltaVisita 321721,'sergio', '2017-11-26', 789789;
-exec AltaVisita 654654,'pepe', '2017-12-2', 111112;
-exec AltaVisita 654654,'ahri', '2017-12-1', 111112;
-exec AltaVisita 654654,'naty', '2017-12-22', 111112;
-exec AltaVisita 654654,'juan', '2018-11-30', 111130;
-exec AltaVisita 987987,'marcelo', '2017-11-28', 111130;
+exec AltaVisita 111119,'nico', '30-11-2018 15:00:00.000', 123123;
+exec AltaVisita 312321,'nadia', '01-12-2018 13:00:00.000', 789789;
+exec AltaVisita 325721,'diego', '01-12-2018 18:00:00.000', 789789;
+exec AltaVisita 111119,'sergio', '01-12-2018 14:00:00.000', 123123;
+exec AltaVisita 321721,'pepe', '01-12-2018 13:00:00.000', 123123;
+exec AltaVisita 654654,'ahri', '01-12-2018 16:00:00.000', 111112;
+exec AltaVisita 987987,'naty', '01-12-2018 17:00:00.000', 123123;
+exec AltaVisita 321721,'maria', '01-12-2018 15:00:00.000', 111112;
+exec AltaVisita 325721,'juan', '01-12-2018 14:00:00.000', 123123;
+exec AltaVisita 111119,'jose', '01-12-2018 13:00:00.000', 111130;
 
 select padron,count(padron) as 'asd' from Visita group by padron
 
 select * from Visita order by padron asc
-
 
 
 use BiosRealState;

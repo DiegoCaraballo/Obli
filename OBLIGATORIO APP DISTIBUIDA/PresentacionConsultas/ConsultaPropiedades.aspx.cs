@@ -191,7 +191,6 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
             int telefono = Convert.ToInt32(txtTelefono.Text);
             string nombre = txtNombre.Text;
 
-            //TODO - revisar si funciona el alta visita, ya puede hacer que se vea desde el servicio web
             Visita v = new Visita();
             v.Fecha = fecha;
             v.Telefono =telefono.ToString();
@@ -199,8 +198,6 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
             v.AVisitar = p;
             serv.AltaVisita(v);
     
-   
-
             //Si llego acá la visita se agendó
             //  lblError.BackColor = Color.LightGreen;
             lblError.Text = "Visita agendada con éxito";

@@ -158,6 +158,39 @@ namespace Persistencia
             return visitas;
 
         }
+
+        public int HoraVisitas(Visita V)
+        {
+            int visitas = 0;
+
+            SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
+            SqlCommand oComando = new SqlCommand("HoraVisitas", oConexion);
+            oComando.CommandType = CommandType.StoredProcedure;
+
+            oComando.Parameters.AddWithValue("@fecha", V.Fecha);
+            oComando.Parameters.AddWithValue("@padron", V.AVisitar.Padron);
+
+            var retorno = oComando.Parameters.Add("@Retorno", SqlDbType.Int);
+            retorno.Direction = ParameterDirection.ReturnValue;
+
+            try
+            {
+                oConexion.Open();
+                oComando.ExecuteNonQuery();
+                var resultado = retorno.Value;
+                visitas = Convert.ToInt32(resultado);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Problemas con la base de datos: " + ex.Message);
+            }
+            finally
+            {
+                oConexion.Close();
+            }
+            return visitas;
+        }
+
         #endregion
     }
 }
