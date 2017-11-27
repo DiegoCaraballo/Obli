@@ -76,7 +76,7 @@
             this.MenuItemAyuda});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(512, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(599, 24);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -123,7 +123,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 53);
+            this.label1.Location = new System.Drawing.Point(52, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 0;
@@ -132,7 +132,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 79);
+            this.label2.Location = new System.Drawing.Point(41, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
@@ -141,7 +141,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 105);
+            this.label3.Location = new System.Drawing.Point(56, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 2;
@@ -150,7 +150,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 132);
+            this.label4.Location = new System.Drawing.Point(53, 121);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 3;
@@ -159,7 +159,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 159);
+            this.label5.Location = new System.Drawing.Point(56, 148);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 4;
@@ -168,7 +168,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 186);
+            this.label6.Location = new System.Drawing.Point(28, 178);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 13);
             this.label6.TabIndex = 5;
@@ -177,7 +177,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(0, 213);
+            this.label7.Location = new System.Drawing.Point(4, 204);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 13);
             this.label7.TabIndex = 6;
@@ -186,7 +186,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 306);
+            this.label10.Location = new System.Drawing.Point(19, 223);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 13);
             this.label10.TabIndex = 9;
@@ -195,7 +195,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(59, 332);
+            this.label11.Location = new System.Drawing.Point(66, 249);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(27, 13);
             this.label11.TabIndex = 10;
@@ -204,7 +204,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(38, 363);
+            this.label12.Location = new System.Drawing.Point(42, 275);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 13);
             this.label12.TabIndex = 11;
@@ -212,7 +212,7 @@
             // 
             // txtPadron
             // 
-            this.txtPadron.Location = new System.Drawing.Point(99, 53);
+            this.txtPadron.Location = new System.Drawing.Point(103, 39);
             this.txtPadron.Name = "txtPadron";
             this.txtPadron.Size = new System.Drawing.Size(100, 20);
             this.txtPadron.TabIndex = 13;
@@ -220,50 +220,49 @@
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(99, 79);
+            this.txtDireccion.Location = new System.Drawing.Point(103, 65);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(100, 20);
             this.txtDireccion.TabIndex = 14;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(99, 105);
+            this.txtPrecio.Location = new System.Drawing.Point(103, 91);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 15;
-            this.txtPrecio.Validating += new System.ComponentModel.CancelEventHandler(this.txtPrecio_Validating);
             // 
             // txtBanio
             // 
-            this.txtBanio.Location = new System.Drawing.Point(99, 159);
+            this.txtBanio.Location = new System.Drawing.Point(103, 145);
             this.txtBanio.Name = "txtBanio";
             this.txtBanio.Size = new System.Drawing.Size(100, 20);
             this.txtBanio.TabIndex = 17;
             // 
             // txtHabitaciones
             // 
-            this.txtHabitaciones.Location = new System.Drawing.Point(99, 186);
+            this.txtHabitaciones.Location = new System.Drawing.Point(103, 171);
             this.txtHabitaciones.Name = "txtHabitaciones";
             this.txtHabitaciones.Size = new System.Drawing.Size(100, 20);
             this.txtHabitaciones.TabIndex = 18;
             // 
             // txtMt2Const
             // 
-            this.txtMt2Const.Location = new System.Drawing.Point(99, 213);
+            this.txtMt2Const.Location = new System.Drawing.Point(103, 197);
             this.txtMt2Const.Name = "txtMt2Const";
             this.txtMt2Const.Size = new System.Drawing.Size(100, 20);
             this.txtMt2Const.TabIndex = 19;
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(99, 297);
+            this.txtUser.Location = new System.Drawing.Point(103, 223);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(100, 20);
             this.txtUser.TabIndex = 22;
             // 
             // txtPiso
             // 
-            this.txtPiso.Location = new System.Drawing.Point(99, 332);
+            this.txtPiso.Location = new System.Drawing.Point(103, 249);
             this.txtPiso.Name = "txtPiso";
             this.txtPiso.Size = new System.Drawing.Size(100, 20);
             this.txtPiso.TabIndex = 23;
@@ -275,7 +274,7 @@
             "ALQUILER",
             "VENTA",
             "PERMUTA"});
-            this.cboAccion.Location = new System.Drawing.Point(99, 132);
+            this.cboAccion.Location = new System.Drawing.Point(103, 118);
             this.cboAccion.Name = "cboAccion";
             this.cboAccion.Size = new System.Drawing.Size(100, 21);
             this.cboAccion.TabIndex = 24;
@@ -286,7 +285,7 @@
             this.cboAscensor.Items.AddRange(new object[] {
             "SI",
             "NO"});
-            this.cboAscensor.Location = new System.Drawing.Point(99, 363);
+            this.cboAscensor.Location = new System.Drawing.Point(103, 275);
             this.cboAscensor.Name = "cboAscensor";
             this.cboAscensor.Size = new System.Drawing.Size(100, 21);
             this.cboAscensor.TabIndex = 25;
@@ -300,9 +299,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblMensajes,
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 421);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 492);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(512, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(599, 22);
             this.statusStrip1.TabIndex = 26;
             // 
             // lblMensajes
@@ -319,7 +318,7 @@
             // 
             this.ccZona.Codigo = "";
             this.ccZona.LetraDepto = "";
-            this.ccZona.Location = new System.Drawing.Point(16, 239);
+            this.ccZona.Location = new System.Drawing.Point(22, 302);
             this.ccZona.Name = "ccZona";
             this.ccZona.Size = new System.Drawing.Size(189, 52);
             this.ccZona.TabIndex = 27;
@@ -328,35 +327,35 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 443);
-            this.Controls.Add(this.ccZona);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.cboAscensor);
-            this.Controls.Add(this.cboAccion);
-            this.Controls.Add(this.txtPiso);
-            this.Controls.Add(this.txtUser);
-            this.Controls.Add(this.txtMt2Const);
-            this.Controls.Add(this.txtHabitaciones);
-            this.Controls.Add(this.txtBanio);
-            this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.txtPadron);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(599, 514);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.ccZona);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.cboAscensor);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtPadron);
+            this.Controls.Add(this.cboAccion);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtPiso);
+            this.Controls.Add(this.txtBanio);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.txtHabitaciones);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtMt2Const);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ABMApto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMApto";
-           
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EPPadron)).EndInit();

@@ -745,21 +745,28 @@ INSERT INTO Visita(tel, nombre, fecha, padron)VALUES(@Tel, @Nombre, @Fecha, @Pad
 GO
 
 
-
-go
---exec AltaVisita 35151,'nicolas','2017-11-19',111111
-go
 create proc ListadoVisitas as
 begin
 
---select p.accion,v.padron,p.precio,v.fecha from Visita v join Propiedad p on v.padron= p.padron where v.fecha >= GETDATE();
-select * from Visita v-- where v.fecha >= getdate();
+
+select * from Visita v
 
 end
 
 go
+create proc CantidadVisitas @tel varchar(30),@padron int as
+begin
+select count(tel) as 'Visitado' from Visita where tel =@tel and padron = @padron;
 
- 
+end 
+go
+
+create proc HoraVisitas @fecha datetime,@padron int as
+begin
+select count(*) as 'Visitas' from Visita where fecha =@fecha and padron = @padron;
+end go
+
+select * from Visita order by tel
 
 --creacion de usuario IIS para que el webservice pueda acceder a la bd------------------------
 USE master
@@ -876,7 +883,7 @@ go
 exec ListadoVisitas
 go
 
-exec AltaVisita 111119,'nico', '2018-11-29', 123123;
+exec AltaVisita 111119,'nico', '2018-11-30', 123123;
 exec AltaVisita 111119,'dilan', '2018-12-2', 123123;
 exec AltaVisita 312321,'nadia', '2017-12-22', 789789;
 exec AltaVisita 325721,'diego', '2017-12-23', 789789;

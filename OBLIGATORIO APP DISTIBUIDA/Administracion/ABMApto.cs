@@ -29,11 +29,12 @@ namespace Administracion
             emp = e;
         }
 
-        //public ABMApto()
-        //{
-        //    InitializeComponent();
+        public ABMApto()
+        {
+            InitializeComponent();
+            EstadoInicial();
 
-        //}
+        }
 
         // etoy hablando 
         //TODO - Definir si dejamos estos accesos o no
@@ -52,6 +53,7 @@ namespace Administracion
             MenuItemIngresar.Enabled = false;
             MenuItemEliminar.Enabled = false;
             MenuItemModificar.Enabled = false;
+            
             txtPadron.Enabled = true;
             txtDireccion.Enabled = false;
             txtPrecio.Enabled = false;
@@ -61,18 +63,17 @@ namespace Administracion
             txtMt2Const.Enabled = false;
             txtUser.Enabled = false;
             txtPiso.Enabled = false;
-            lblMensajes.Text = "";
             cboAscensor.Enabled = false;
+            ccZona.Enabled = false;
+
+            lblMensajes.Text = "";
         }
         public void HabilitarControles()
         {
-            MenuItemIngresar.Enabled = true;
             MenuItemEliminar.Enabled = true;
             MenuItemModificar.Enabled = true;
 
-            MenuItemIngresar.Enabled = true;
-            MenuItemEliminar.Enabled = true;
-            MenuItemModificar.Enabled = true;
+            txtPadron.Enabled = false;
             txtDireccion.Enabled = true;
             txtPrecio.Enabled = true;
             cboAccion.Enabled = true;
@@ -80,8 +81,28 @@ namespace Administracion
             txtHabitaciones.Enabled = true;
             txtMt2Const.Enabled = true;
             txtPiso.Enabled = true;
-            lblMensajes.Text = "";
             cboAscensor.Enabled = true;
+            ccZona.Enabled = true;
+
+            lblMensajes.Text = "";
+  
+        }
+        public void HabilitarIngreso()
+        {
+
+            MenuItemIngresar.Enabled = true;
+            
+            txtDireccion.Enabled = true;
+            txtPrecio.Enabled = true;
+            cboAccion.Enabled = true;
+            txtBanio.Enabled = true;
+            txtHabitaciones.Enabled = true;
+            txtMt2Const.Enabled = true;
+            txtPiso.Enabled = true;
+            cboAscensor.Enabled = true;
+            ccZona.Enabled = true;
+
+            lblMensajes.Text = "";
 
         }
         public void Limpiar()
@@ -89,7 +110,7 @@ namespace Administracion
             txtPadron.Text = "";
             txtDireccion.Text = "";
             txtPrecio.Text = "";
-            cboAccion.Text = "";
+            cboAccion.SelectedIndex =0;
             txtBanio.Text = "";
             txtHabitaciones.Text = "";
             txtMt2Const.Text = "";
@@ -97,6 +118,7 @@ namespace Administracion
             ccZona.LetraDepto = "";
             txtUser.Text = "";
             txtPiso.Text = "";
+            cboAscensor.SelectedIndex = 0;
             lblMensajes.Text = "";
         }
 
@@ -111,7 +133,91 @@ namespace Administracion
             p = pPropiedad;
 
         }
+        private void txtPadron_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
 
+                Convert.ToInt32(txtPadron.Text);
+                EPPadron.Clear();
+            }
+            catch
+            {
+                EPPadron.SetError(txtPadron, "Solo se pueden ingresar numeros");
+                e.Cancel = true;
+            }
+            try
+            {
+                if (Convert.ToInt32(txtPadron.Text) == 0)
+                {
+                    HabilitarIngreso();
+                }
+                else
+                {
+                    ServicioWeb.Propiedad propiedad = null;
+
+                    MiServicio serv = new MiServicio();
+
+                    propiedad = serv.BuscarPropiedad(Convert.ToInt32(txtPadron.Text));
+
+                    if (propiedad == null)
+                    {
+                        HabilitarControles();
+                        return;
+                    }
+                    if (propiedad is Apto)
+                    {
+                        prop = propiedad;
+                        txtDireccion.Text = propiedad.Direccion;
+                        txtPrecio.Text = propiedad.Precio.ToString();
+                        cboAccion.SelectedItem = propiedad.Accion.ToString();
+                        txtBanio.Text = propiedad.Baño.ToString();
+                        txtHabitaciones.Text = propiedad.Habitaciones.ToString();
+                        txtMt2Const.Text = propiedad.Mt2Const.ToString();
+
+                        ccZona.LetraDepto = propiedad.Zona.LetraDpto.ToString();
+                        ccZona.Codigo = propiedad.Zona.Abreviacion;
+                        zona = propiedad.Zona;
+
+
+                        txtUser.Text = propiedad.UltimoEmp.NomUsu;
+                        txtPiso.Text = ((ServicioWeb.Apto)propiedad).Piso.ToString();
+                        if (((ServicioWeb.Apto)propiedad).Ascensor == true)
+                        {
+                            cboAscensor.SelectedItem = "SI";
+                        }
+                        else
+                        {
+                            cboAscensor.SelectedItem = "NO";
+                        }
+
+                        HabilitarControles();
+
+                    }
+                    else
+                    {
+                        lblMensajes.Text = "El padron ingresado no pertence a una propiedad de tipo Aparatamento";
+                    }
+                }
+
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblMensajes.Text = ex.Detail.InnerText;
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Length > 40)
+                    lblMensajes.Text = ex.Message.Substring(0, 40);
+                else
+                    lblMensajes.Text = ex.Message;
+            }
+
+
+        }
         private void MenuItemIngresar_Click(object sender, EventArgs e)
         {
             try
@@ -158,86 +264,7 @@ namespace Administracion
 
         }
 
-        private void txtPadron_Validating(object sender, CancelEventArgs e)
-        {
-            try
-            {
-
-                Convert.ToInt32(txtPadron.Text);
-                EPPadron.Clear();
-            }
-            catch
-            {
-                EPPadron.SetError(txtPadron, "Solo se pueden ingresar numeros");
-                e.Cancel = true;
-            }
-            try
-            {
-                if (Convert.ToInt32(txtPadron.Text) == 0)
-                {
-                    HabilitarControles();
-                }
-                else
-                {
-                    ServicioWeb.Propiedad propiedad = null;
-
-                    MiServicio serv = new MiServicio();
-
-                    propiedad = serv.BuscarPropiedad(Convert.ToInt32(txtPadron.Text));
-                    if (propiedad is Apto)
-                    {
-                        prop = propiedad;
-                        txtDireccion.Text = propiedad.Direccion;
-                        txtPrecio.Text = propiedad.Precio.ToString();
-                        cboAccion.SelectedItem = propiedad.Accion.ToString();
-                        txtBanio.Text = propiedad.Baño.ToString();
-                        txtHabitaciones.Text = propiedad.Habitaciones.ToString();
-                        txtMt2Const.Text = propiedad.Mt2Const.ToString();
-
-                        ccZona.LetraDepto = propiedad.Zona.LetraDpto.ToString();
-                        ccZona.Codigo = propiedad.Zona.Abreviacion;
-                        zona = propiedad.Zona;
-
-
-                        txtUser.Text = propiedad.UltimoEmp.NomUsu;
-                        txtPiso.Text = ((ServicioWeb.Apto)propiedad).Piso.ToString();
-                        if (((ServicioWeb.Apto)propiedad).Ascensor == true)
-                        {
-                            cboAscensor.SelectedItem = "SI";
-                        }
-                        else
-                        {
-                            cboAscensor.SelectedItem = "NO";
-                        }
-
-                        txtPadron.Enabled = false;
-                        HabilitarControles();
-
-                    }
-                    else
-                    {
-                        lblMensajes.Text = "El padron ingresado no pertence a una propiedad de tipo Aparatamento";
-                    }
-                }
-
-            }
-            catch (System.Web.Services.Protocols.SoapException ex)
-            {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 40);
-                else
-                    lblMensajes.Text = ex.Detail.InnerText;
-            }
-            catch (Exception ex)
-            {
-                if (ex.Message.Length > 40)
-                    lblMensajes.Text = ex.Message.Substring(0, 40);
-                else
-                    lblMensajes.Text = ex.Message;
-            }
-
-
-        }
+     
 
         private void MenuItemCancelar_Click(object sender, EventArgs e)
         {
@@ -314,60 +341,13 @@ namespace Administracion
 
         }
 
-        private void txtPrecio_Validating(object sender, CancelEventArgs e)
-        {
-            try
-            {
-                Convert.ToInt32(txtPrecio.Text);
-                EPPadron.Clear();
-            }
-            catch
-            {
-                EPPadron.SetError(txtPrecio, "Solo se pueden ingresar numeros");
-                e.Cancel = true;
-            }
-        }
+  
 
 
-        private void txtBanio_Validating(object sender, CancelEventArgs e)
-        {
-            try
-            {
-                Convert.ToInt32(txtBanio.Text);
-                EPPadron.Clear();
-            }
-            catch
-            {
-                EPPadron.SetError(txtBanio, "Solo se pueden ingresar numeros");
-                e.Cancel = true;
-            }
-        }
-        private void txtHabitaciones_Validating(object sender, CancelEventArgs e)
-        {
-            try
-            {
-                Convert.ToInt32(txtHabitaciones.Text);
-                EPPadron.Clear();
-            }
-            catch
-            {
-                EPPadron.SetError(txtHabitaciones, "Solo se pueden ingresar numeros");
-                e.Cancel = true;
-            }
-        }
-        private void txtMt2Const_Validating(object sender, CancelEventArgs e)
-        {
-            try
-            {
-                Convert.ToInt32(txtMt2Const.Text);
-                EPPadron.Clear();
-            }
-            catch
-            {
-                EPPadron.SetError(txtMt2Const, "Solo se pueden ingresar numeros");
-                e.Cancel = true;
-            }
-        }
+ 
+
+  
+
 
        
 

@@ -11,5 +11,6 @@ namespace Persistencia
     {
         void AgendaVisita(Visita V);
         List<Visita> ListaVisitas();
+        int VecesVisitado(Visita v);
     }
 }

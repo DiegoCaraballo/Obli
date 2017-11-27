@@ -38,15 +38,16 @@ public partial class _Default : System.Web.UI.Page
             ddlProp.SelectedIndex = 0;
             ddlZona.Items.Clear();
             ddlZona.Items.Add("--Seleccione Opción--");
-            CargaLista();
-
+            List<Propiedad> listaCompleta = (List<Propiedad>)Session["ListaPropiedades"];
+            rpPropiedades.DataSource = listaCompleta;
+            rpPropiedades.DataBind();
         }
         catch (Exception)
         {
             throw new Exception();
         }
     }
-
+    
     //Funcionalidad Mostrar dentro del Repeater
     protected void rpPropiedades_ItemCommand(object source, RepeaterCommandEventArgs e)
     {

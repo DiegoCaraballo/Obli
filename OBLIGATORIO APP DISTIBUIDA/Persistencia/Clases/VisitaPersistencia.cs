@@ -73,57 +73,14 @@ namespace Persistencia
 
 
 
-        //public List<Visita> ListaVisitas()
-        //{
-        //    List<Visita> lista = new List<Visita>();
-          
-        //    DateTime fecha;
-        //    string accion;
-        //    int precio;
-        //    int padron;
-
-        //    SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
-        //    SqlCommand oComando = new SqlCommand("ListadoVisitas", oConexion);
-        //    SqlDataReader oReader;
-
-        //    try
-        //    {
-        //        oConexion.Open();
-        //        oReader = oComando.ExecuteReader();
-
-        //        while (oReader.Read())
-        //        {
-        //            accion = (string)oReader["accion"];
-        //            padron = (int)oReader["padron"];
-        //            precio = (int)oReader["precio"];
-        //            fecha = (DateTime)oReader["fecha"];
-                                  
-                                      
-        //            Visita v = new Visita(accion,padron,precio,fecha);
-        //            lista.Add(v);
-        //        }
-        //        oReader.Close();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new Exception("Problemas con la base de datos: " + ex.Message);
-        //    }
-        //    finally
-        //    {
-        //        oConexion.Close();
-        //    }
-
-        //    return lista;
-        //}
-
         public List<Visita> ListaVisitas()
         {
             List<Visita> lista = new List<Visita>();
-            Propiedad propiedad=null;
-           DateTime fecha;
-            string nombre ;
-           string tel;
-           int padron;
+            Propiedad propiedad = null;
+            DateTime fecha;
+            string nombre;
+            string tel;
+            int padron;
 
             SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
             SqlCommand oComando = new SqlCommand("ListadoVisitas", oConexion);
@@ -133,12 +90,12 @@ namespace Persistencia
             {
                 oConexion.Open();
                 oReader = oComando.ExecuteReader();
-
+        
                 while (oReader.Read())
                 {
-                    //nombre = (string)oReader["nombre"];
-                   padron = (int)oReader["padron"];
-                   // tel = (string)oReader["tel"];
+                    nombre = (string)oReader["nombre"];
+                    padron = (int)oReader["padron"];
+                    tel = (string)oReader["tel"];
                     fecha = (DateTime)oReader["fecha"];
 
                     propiedad = FabricaPersistencia.getPersistenciaApto().BuscarApto(padron);
@@ -151,8 +108,8 @@ namespace Persistencia
                         }
                     }
 
-                   // Visita v = new Visita(fecha,tel,nombre,propiedad);
-                    Visita v = new Visita(propiedad, fecha);
+                    Visita v = new Visita(fecha, tel, nombre, propiedad);
+
                     lista.Add(v);
                 }
                 oReader.Close();
@@ -167,6 +124,49 @@ namespace Persistencia
             }
 
             return lista;
+        }
+
+        public int VecesVisitado(Visita V)
+        {
+
+            //TODO - 
+            int numero=0;
+
+            SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
+            SqlCommand oComando = new SqlCommand("CantidadVisitas", oConexion);
+            oComando.CommandType = CommandType.StoredProcedure;
+            oComando.Parameters.AddWithValue("@tel", V.Telefono);
+             oComando.Parameters.AddWithValue("@padron", V.AVisitar.Padron);
+            
+
+
+            SqlDataReader oReader;
+
+            try
+            {
+                oConexion.Open();
+          
+                oReader = oComando.ExecuteReader();
+                if (oReader.HasRows)
+                {
+                    numero = (int)oReader["Visitas"];
+                    
+
+                }
+                
+                oReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Problemas con la base de datos: " + ex.Message);
+            }
+            finally
+            {
+                oConexion.Close();
+            }
+            return numero;
+
+ 
         }
         #endregion
     }

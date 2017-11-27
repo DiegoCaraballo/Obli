@@ -74,12 +74,7 @@ namespace Entidades_Compartidas
 
 
         
-        public Visita(Propiedad pAVisitar,DateTime pFecha )
-        {
-            Fecha = pFecha;
-            AVisitar = pAVisitar;
- 
-        }
+
         public Visita( DateTime pFecha, string pTelefono, string pNombre, Propiedad pAVisitar)
         {
             Fecha = pFecha;
