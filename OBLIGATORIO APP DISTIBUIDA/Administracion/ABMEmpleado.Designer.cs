@@ -152,8 +152,7 @@
             // lblMensaje
             // 
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(118, 17);
-            this.lblMensaje.Text = "toolStripStatusLabel1";
+            this.lblMensaje.Size = new System.Drawing.Size(0, 17);
             // 
             // ABMEmpleado
             // 

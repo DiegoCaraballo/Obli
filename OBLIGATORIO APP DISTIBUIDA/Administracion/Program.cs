@@ -16,7 +16,7 @@ namespace Administracion
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-           Application.Run(new ConsultaVisita());
+           //Application.Run(new ConsultaVisita());
 
             Application.Run(new Default());
 

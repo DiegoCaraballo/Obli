@@ -230,6 +230,7 @@ public class MiServicio : System.Web.Services.WebService
             this.GeneroSoapException(ex);
         }
     }
+
     [WebMethod]
     public void ModificarEmpleado(Empleado E)
     {
@@ -242,6 +243,7 @@ public class MiServicio : System.Web.Services.WebService
             this.GeneroSoapException(ex);
         }
     }
+
     [WebMethod]
     public Empleado BuscarEmpleado(string pNomUsu)
     {
@@ -256,8 +258,6 @@ public class MiServicio : System.Web.Services.WebService
         }
         return unEmpleado;
     }
-
-
 
     #endregion
     //servicio de empleados listo
@@ -289,6 +289,7 @@ public class MiServicio : System.Web.Services.WebService
             throw _MiEx;
         }
     }
+
     [WebMethod]
     public void AltaVisita(Visita v)
     {
@@ -358,8 +359,6 @@ public class MiServicio : System.Web.Services.WebService
         SoapException _MiEx = new SoapException("Error WS", SoapException.ClientFaultCode, Context.Request.Url.AbsoluteUri, _NodoError);
         throw _MiEx;
     }
-
-
 
     #endregion
 
