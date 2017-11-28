@@ -203,6 +203,13 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
             lblError.Text = "Visita agendada con éxito";
             limpiarVisita();
         }
+        catch (System.Web.Services.Protocols.SoapException ex)
+        {
+            if (ex.Detail.InnerText.Length > 40)
+                lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+            else
+                lblError.Text = ex.Detail.InnerText;
+        }
         catch (FormatException)
         {
             lblError.Text = "El telefono debe tener formato numérico";

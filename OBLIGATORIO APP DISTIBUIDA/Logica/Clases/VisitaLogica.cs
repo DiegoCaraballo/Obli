@@ -39,8 +39,9 @@ namespace Logica
             {
                 throw new Exception("La propiedad ya tiene una vista agendada para la misma Fecha-Hora");
             }
-
-            FabricaPersistencia.getPersistenciaVisita().AgendaVisita(V);
+            IVisitaPersistencia visitar = FabricaPersistencia.getPersistenciaVisita();
+ 
+            visitar.AgendaVisita(V);
 
         }
 
