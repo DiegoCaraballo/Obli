@@ -21,7 +21,7 @@
           </s:extension>
         </s:complexContent>
       </s:complexType>
-      <s:complexType name="Propiedad" abstract="true">
+      <s:complexType name="Propiedad">
         <s:sequence>
           <s:element minOccurs="0" maxOccurs="1" name="UltimoEmp" type="tns:Empleado" />
           <s:element minOccurs="0" maxOccurs="1" name="Zona" type="tns:Zona" />

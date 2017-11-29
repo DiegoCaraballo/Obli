@@ -359,7 +359,12 @@ public class MiServicio : System.Web.Services.WebService
         SoapException _MiEx = new SoapException("Error WS", SoapException.ClientFaultCode, Context.Request.Url.AbsoluteUri, _NodoError);
         throw _MiEx;
     }
+    public MiServicio()
+    {
 
+        //Eliminar la marca de comentario de la línea siguiente si utiliza los componentes diseñados 
+        //InitializeComponent(); 
+    } 
     #endregion
 
 }

@@ -643,9 +643,10 @@ BEGIN
 		BEGIN
 			begin tran
 			delete from servicios where letraDpto=@LetraDpto and abreviacion =@Abreviacion 
+			set @error=@@ERROR;
 
 			delete from Zona where letraDpto =@LetraDpto and abreviacion=@Abreviacion 
-			set @error+=@@ERROR;
+			set @error = @@ERROR + @error;
 
 			if(@@ERROR = 0)
 				begin

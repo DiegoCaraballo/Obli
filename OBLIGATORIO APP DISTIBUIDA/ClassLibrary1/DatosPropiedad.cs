@@ -21,18 +21,6 @@ namespace ControlesWeb
         private Label lblMt2Const;
         private Label lblTipoPropiedad;
 
-        //TODO 1- Agregue los atributos indivduales de propiedad, ZONA y comercio, no lo hice con casa y apto por si no es asi. Ver mas Abajo los cambios
-        public int padron;
-        public string direccion;
-        public int precio;
-        public string accion;
-        public int baño;
-        public int habitaciones;
-        public decimal mt2Const;
-
-        private string habilitado;
-        public string tipoPropiedad;
-
         //Controles para mostrar datos de Propiedades de Tipo Casa
         private Label lblFondo;
         private Label lblMt2Terreno;
@@ -53,159 +41,162 @@ namespace ControlesWeb
         private List<string> listaServicios;
         private ListBox lbServicios;
 
-        public string letraDpto;
-        public string abreviacion;
-        public string nombre;
-        public int cantHabitantes;
-        public List<string> listaServicioszona;
+
 
         private Panel UnPanel;
 
-        #region Propiedades
 
-        //Propiedad que recibe una Casa y carga los datos en los controles
-        public Casa DatosCasa
+
+
+        public void DatosCasa(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBanio, int pHabitaciones, decimal pMt2Const, string pTipoPropiedad, string pLetraDpto, string pAbreviacion, string pZonaNombre, int pCantHabitantes, /* TODO agregar lista de servicios ,*/ decimal pMt2Terreno, bool pFondo)
         {
-            set
+            try
             {
                 EnsureChildControls();
+          
+ 
 
-                Casa c = null;
-                lblPadron.Text = c.Padron.ToString();
-                lblDireccion.Text = c.Direccion;
-                lblPrecio.Text = c.Precio.ToString();
-                lblAccion.Text = c.Accion;
-                lblBaño.Text = c.Baño.ToString();
-                lblHabitaciones.Text = c.Habitaciones.ToString();
-                lblMt2Const.Text = c.Mt2Const.ToString();
-                lblTipoPropiedad.Text = c.TipoPropiedad;
+
+                lblPadron.Text = pPadron.ToString();
+                lblDireccion.Text = pDireccion;
+                lblPrecio.Text = pPrecio.ToString();
+                lblAccion.Text = pAccion;
+                lblBaño.Text = pBanio.ToString();
+                lblHabitaciones.Text = pHabitaciones.ToString();
+                lblMt2Const.Text = pMt2Const.ToString();
+                lblTipoPropiedad.Text = pTipoPropiedad;
 
                 string fondo;
-
-                if (c.Fondo == true)
-                {
+                if (pFondo == true)
                     fondo = "SI";
-                }
                 else
-                {
                     fondo = "NO";
-                }
 
                 lblFondo.Text = fondo;
-                lblMt2Terreno.Text = c.Mt2Terreno.ToString();
+                lblMt2Terreno.Text = pMt2Terreno.ToString();
 
-                lblLetraDpto.Text = (c.Zona.LetraDpto).ToUpper();
-                lblAbreviacion.Text = c.Zona.Abreviacion.ToString();
-                lblNombre.Text = c.Zona.Nombre;
-                lblCantHabitantes.Text = c.Zona.CantHabitantes.ToString();
-                ListaServiciosZona(c);
+                lblLetraDpto.Text = pLetraDpto;
+                lblAbreviacion.Text = pAbreviacion;
+                lblNombre.Text = pZonaNombre;
+                lblCantHabitantes.Text = pCantHabitantes.ToString();
 
-                lbServicios.DataSource = listaServicios;
-                lbServicios.DataBind();
+
+             //   lbServicios.DataSource = listaServicioszona;
+               // lbServicios.DataBind();
 
                 //Datos que no pertenecen a este tipo de propiedad
                 lblPiso.Text = "NO CORRESPONDE";
                 lblAscensor.Text = "NO CORRESPONDE";
 
                 lblHabilitado.Text = "NO CORRESPONDE";
-            }
-        }
+                
+              
 
-        //Propiedad que recibe un Apto y carga los datos en los controles
-        public Apto DatosApto
+
+
+
+            }
+            catch { }
+        }
+        public void DatosComercio(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBanio, int pHabitaciones, decimal pMt2Const, string pTipoPropiedad, string pLetraDpto, string pAbreviacion, string pZonaNombre, int pCantHabitantes, /* TODO agregar lista de servicios ,*/  bool pHabilitado)
         {
-            set
+            try
             {
                 EnsureChildControls();
 
-                Apto a = value;
 
-                lblPadron.Text = a.Padron.ToString();
-                lblDireccion.Text = a.Direccion;
-                lblPrecio.Text = a.Precio.ToString();
-                lblAccion.Text = a.Accion;
-                lblBaño.Text = a.Baño.ToString();
-                lblMt2Const.Text = a.Mt2Const.ToString();
-                lblHabitaciones.Text = a.Habitaciones.ToString();
-                lblTipoPropiedad.Text = a.TipoPropiedad;
+
+
+                lblPadron.Text = pPadron.ToString();
+                lblDireccion.Text = pDireccion;
+                lblPrecio.Text = pPrecio.ToString();
+                lblAccion.Text = pAccion;
+                lblBaño.Text = pBanio.ToString();
+                lblHabitaciones.Text = pHabitaciones.ToString();
+                lblMt2Const.Text = pMt2Const.ToString();
+                lblTipoPropiedad.Text = pTipoPropiedad;
+
+                string habilitado;
+                if (pHabilitado == true)
+                    habilitado = "SI";
+                else
+                    habilitado = "NO";
+
+                lblHabilitado.Text = habilitado;
+
+                lblLetraDpto.Text = pLetraDpto;
+                lblAbreviacion.Text = pAbreviacion;
+                lblNombre.Text = pZonaNombre;
+                lblCantHabitantes.Text = pCantHabitantes.ToString();
+
+
+                //   lbServicios.DataSource = listaServicioszona;
+                // lbServicios.DataBind();
+
+                //Datos que no pertenecen a este tipo de propiedad
+                lblPiso.Text = "NO CORRESPONDE";
+                lblAscensor.Text = "NO CORRESPONDE";
+
+                lblMt2Terreno.Text = "NO CORRESPONDE";
+                lblFondo.Text = "NO CORRESPONDE";
+
+
+
+
+
+            }
+            catch { }
+        }
+        public void DatosApto(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBanio, int pHabitaciones, decimal pMt2Const, string pTipoPropiedad, string pLetraDpto, string pAbreviacion, string pZonaNombre, int pCantHabitantes, /* TODO agregar lista de servicios ,*/ int pPiso, bool pAscensor)
+        {
+            try
+            {
+                EnsureChildControls();
+
+
+
+
+                lblPadron.Text = pPadron.ToString();
+                lblDireccion.Text = pDireccion;
+                lblPrecio.Text = pPrecio.ToString();
+                lblAccion.Text = pAccion;
+                lblBaño.Text = pBanio.ToString();
+                lblHabitaciones.Text = pHabitaciones.ToString();
+                lblMt2Const.Text = pMt2Const.ToString();
+                lblTipoPropiedad.Text = pTipoPropiedad;
 
                 string ascensor;
-                if (a.Ascensor == true)
-                {
+                if (pAscensor == true)
                     ascensor = "SI";
-                }
                 else
-                {
                     ascensor = "NO";
-                }
 
-                lblPiso.Text = a.Piso.ToString();
                 lblAscensor.Text = ascensor;
+                lblPiso.Text = pPiso.ToString();
 
-                lblLetraDpto.Text = (a.Zona.LetraDpto).ToUpper();
-                lblAbreviacion.Text = a.Zona.Abreviacion.ToString();
-                lblNombre.Text = a.Zona.Nombre;
-                lblCantHabitantes.Text = a.Zona.CantHabitantes.ToString();
-                ListaServiciosZona(a);
+                lblLetraDpto.Text = pLetraDpto;
+                lblAbreviacion.Text = pAbreviacion;
+                lblNombre.Text = pZonaNombre;
+                lblCantHabitantes.Text = pCantHabitantes.ToString();
 
-                lbServicios.DataSource = listaServicios;
-                lbServicios.DataBind();
+
+                //   lbServicios.DataSource = listaServicioszona;
+                // lbServicios.DataBind();
 
                 //Datos que no pertenecen a este tipo de propiedad
-                lblFondo.Text = "NO CORRESPONDE";
                 lblMt2Terreno.Text = "NO CORRESPONDE";
+                lblFondo.Text = "NO CORRESPONDE";
 
                 lblHabilitado.Text = "NO CORRESPONDE";
-            }
-        }
-
-        //Propiedad que recibe un Comercio y carga los datos en los controles
-        public Comercio DatosComercio
-        {
-            set
-            {
-                EnsureChildControls();
-
-               // ServicioWeb.Comercio c = value;
-
-                lblPadron.Text = padron.ToString();
-                lblDireccion.Text = direccion;
-                lblPrecio.Text = precio.ToString();
-                lblAccion.Text = accion;
-                lblBaño.Text = baño.ToString();
-                lblMt2Const.Text = mt2Const.ToString();
-                lblHabitaciones.Text = habitaciones.ToString();
-                lblTipoPropiedad.Text = tipoPropiedad;
 
 
-                //string habilitado;
-                //if (c.Habilitado == true)
-                //    habilitado = "SI";
-                //else
-                //    habilitado = "NO";
-
-             //   lblHabilitado.Text = habilitado;
-
-                lblLetraDpto.Text = letraDpto;
-                lblAbreviacion.Text = abreviacion;
-                lblNombre.Text = nombre;
-                lblCantHabitantes.Text = cantHabitantes.ToString();
 
 
-                lbServicios.DataSource = listaServicioszona;
-                lbServicios.DataBind();
 
-                //Datos que no pertenecen a este tipo de propiedad
-                lblFondo.Text = "NO CORRESPONDE";
-                lblMt2Terreno.Text = "NO CORRESPONDE";
-
-                lblPiso.Text = "NO CORRESPONDE";
-                lblAscensor.Text = "NO CORRESPONDE";
 
             }
+            catch { }
         }
-        #endregion
-
         protected override void CreateChildControls()
         {
             base.CreateChildControls();
@@ -294,44 +285,8 @@ namespace ControlesWeb
 
             UnPanel.Controls.Add(new LiteralControl("</table>"));
 
-           //TOD 2- si se pasa atributo por atributo, y no es por propiedad, la unica forma que se me ocurre de agregarlos es aca. Una vez se crean los controles, le paso los datos por medio de los atributos desde 
-            // la web de consulta propiedades.
+        
 
-
-
-            lblPadron.Text = padron.ToString();
-            lblDireccion.Text = direccion;
-            lblPrecio.Text = precio.ToString();
-            lblAccion.Text = accion;
-            lblBaño.Text = baño.ToString();
-            lblMt2Const.Text = mt2Const.ToString();
-            lblHabitaciones.Text = habitaciones.ToString();
-            lblTipoPropiedad.Text = tipoPropiedad;
-
-
-              if (habilitacion == true)
-                habilitado = "SI";
-            else
-                habilitado = "NO";
-
-            lblHabilitado.Text = habilitado;
-
-            lblLetraDpto.Text = letraDpto;
-            lblAbreviacion.Text = abreviacion;
-            lblNombre.Text = nombre;
-            lblCantHabitantes.Text = cantHabitantes.ToString();
-
-
-            lbServicios.DataSource = listaServicioszona;
-            lbServicios.DataBind();
-
-            //Datos que no pertenecen a este tipo de propiedad
-            lblFondo.Text = "NO CORRESPONDE";
-            lblMt2Terreno.Text = "NO CORRESPONDE";
-
-            lblPiso.Text = "NO CORRESPONDE";
-            lblAscensor.Text = "NO CORRESPONDE";
-            //agrego el panel con los controles
             this.Controls.Add(UnPanel);
         }
 

@@ -32,7 +32,6 @@ namespace Administracion
             ABMEmpleado _unForm = new ABMEmpleado();
             _unForm.ShowDialog();
         }
-
         // Form de ABM Zonas
         private void aBMZonasToolStripMenuItem_Click_1(object sender, EventArgs e)
         {

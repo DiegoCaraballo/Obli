@@ -15,7 +15,7 @@ namespace Administracion
     public partial class ABMApto : Form
     {
 
-        private Propiedad prop;
+        private Propiedad prop = null;
         private Empleado emp = null;
         private Zona zona = null;
         public ABMApto(Empleado e)
@@ -55,7 +55,7 @@ namespace Administracion
             MenuItemModificar.Enabled = false;
             
             txtPadron.Enabled = true;
-            txtDireccion.Enabled = false;
+            txtDireccion.Enabled = true;
             txtPrecio.Enabled = false;
             cboAccion.Enabled = false;
             txtBanio.Enabled = false;
@@ -252,17 +252,19 @@ namespace Administracion
                 serv.AltaPropiedad(apto);
 
             }
-            catch (OverflowException)
+            catch (System.Web.Services.Protocols.SoapException ex)
             {
-                MessageBox.Show("Los digitos en los campos Baño, Padron, Mt2, Precio y Piso no pueden superar los 9 digitos");
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Revisar datos ingresados");
+                if (ex.Detail.InnerText.Length > 40)
+                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblMensajes.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR EN DAR DE ALTA: " + ex.Message);
+                if (ex.Message.Length > 40)
+                    lblMensajes.Text = ex.Message.Substring(0, 40);
+                else
+                    lblMensajes.Text = ex.Message;
             }
 
         }
@@ -341,6 +343,11 @@ namespace Administracion
                 else
                     lblMensajes.Text = ex.Message;
             }
+
+        }
+
+        private void ABMApto_Load(object sender, EventArgs e)
+        {
 
         }
 

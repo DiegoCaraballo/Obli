@@ -6,7 +6,7 @@ using System.Text;
 namespace Entidades_Compartidas
 {
     [Serializable]
-    public abstract class Propiedad
+    public class Propiedad
     {
         //Atributos
         private int padron;
@@ -28,7 +28,7 @@ namespace Entidades_Compartidas
              if (value != null)
                    ultimoEmp = value;
                else
-                 throw new Exception("El usuaio no puede ser nulo");
+                 throw new Exception("El usuario no puede ser nulo");
                  }
         }
 

@@ -17,6 +17,34 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
             MiServicio serv = new MiServicio();
             Propiedad p = ((Propiedad)Session["Propiedad"]);
 
+
+
+
+
+            //Datos usados por todos los tipos de propiedad
+            int padron = p.Padron;
+            string direccion = p.Direccion;
+            int precio = p.Precio;
+            string accion = p.Accion;
+            int banio = p.Baño;
+            int habitaciones = p.Habitaciones;
+            decimal mt2Const = p.Mt2Const;
+
+            string letraDpto = p.Zona.LetraDpto;
+            string abreviacion = p.Zona.Abreviacion;
+            string nombre = p.Zona.Nombre;
+            int cantHabitantes = p.Zona.CantHabitantes;
+            //   List<Servicio> listaServicioszona = p.Zona.LosServicios;
+
+
+
+
+
+
+
+
+
+
             if (p == null)
             {
                 Response.Redirect("~/Default.aspx", false);
@@ -26,38 +54,32 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
                 if (!IsPostBack)
                 {
                     CargarFecha();
-                    
+
                     if (p is Casa)
                     {
-                 // TODO    DatosPropiedad.DatosCasa = (ServicioWeb.Casa)p;
-                      //  DatosPropiedad.DatosCasa = p.Padron;
-               
-                   
 
+                        decimal mt2Terreno = ((Casa)p).Mt2Terreno;
+                        bool fondo = ((Casa)p).Fondo;
+                        string tipoPropiedad = ((Casa)p).TipoPropiedad;
+                        DatosPropiedad.DatosCasa(padron, direccion, precio, accion, banio, habitaciones, mt2Const, tipoPropiedad, letraDpto, abreviacion, nombre, cantHabitantes, mt2Terreno, fondo);
 
                     }
                     else if (p is ServicioWeb.Comercio)
                     {
-                        //TODO - Aca me mande mas fruta que todo el mercado modelo, si es asi como funciona es una mierda jaja. Ver el TODO en DatosPropiedad.cs
-                      // DatosPropiedad.DatosComercio = (Comercio)p;
-                        DatosPropiedad.padron = p.Padron;
-                        DatosPropiedad.direccion = p.Direccion;
-                        DatosPropiedad.baño = p.Baño;
-                        DatosPropiedad.mt2Const = p.Mt2Const;
-                        DatosPropiedad.habitaciones = p.Habitaciones;
-                        DatosPropiedad.letraDpto = p.Zona.LetraDpto;
-                        DatosPropiedad.abreviacion = p.Zona.Abreviacion;
-                        DatosPropiedad.tipoPropiedad = ((Comercio)p).TipoPropiedad.ToString();
-                        DatosPropiedad.cantHabitantes = p.Zona.CantHabitantes;
-                        DatosPropiedad.nombre = p.Zona.Nombre;
-                        DatosPropiedad.accion = p.Accion;
-                        DatosPropiedad.precio = p.Precio;
-                        DatosPropiedad.habilitacion = ((Comercio)p).Habilitado;
+
+                        bool habilitado = ((Comercio)p).Habilitado;
+                        string tipoPropiedad = ((Comercio)p).TipoPropiedad;
+                        DatosPropiedad.DatosComercio(padron, direccion, precio, accion, banio, habitaciones, mt2Const, tipoPropiedad, letraDpto, abreviacion, nombre, cantHabitantes,habilitado);
+
 
                     }
                     else
                     {
-                        //DatosPropiedad.DatosApto = (Apto)p;
+                        int piso = ((Apto)p).Piso;
+                        bool ascensor = ((Apto)p).Ascensor;
+                        string tipoPropiedad = ((Apto)p).TipoPropiedad;
+                        DatosPropiedad.DatosApto(padron, direccion, precio, accion, banio, habitaciones, mt2Const, tipoPropiedad, letraDpto, abreviacion, nombre, cantHabitantes,piso,ascensor);
+
                     }
                 }
             }
@@ -173,7 +195,7 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
             MiServicio serv = new MiServicio();
             // lblError.BackColor = Color.White;
             lblError.Text = "";
-         
+
             int dia = Convert.ToInt32(ddlDia.SelectedItem.Value);
 
             int mes = Convert.ToInt32(ddlMes.SelectedItem.Value);
@@ -193,11 +215,11 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
 
             Visita v = new Visita();
             v.Fecha = fecha;
-            v.Telefono =telefono.ToString();
+            v.Telefono = telefono.ToString();
             v.Nombre = nombre;
             v.AVisitar = p;
             serv.AltaVisita(v);
-    
+
             //Si llego acá la visita se agendó
             //  lblError.BackColor = Color.LightGreen;
             lblError.Text = "Visita agendada con éxito";

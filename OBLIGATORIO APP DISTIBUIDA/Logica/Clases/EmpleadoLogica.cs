@@ -21,7 +21,15 @@ namespace Logica
 
         public void AgregarEmpleado(Empleado E)
         {
-            FabricaPersistencia.getPersistenciaEmpleado().AgregarEmpleado(E);
+
+            try
+            {
+                FabricaPersistencia.getPersistenciaEmpleado().AgregarEmpleado(E);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public void EliminarEmpleado(Empleado E)
