@@ -13,14 +13,17 @@ namespace Entidades_Compartidas
         private string abreviacion;
         private string nombre;
         private int cantHabitantes;
-        private List<Servicio> _LosServicios;
+        private List<String> _LosServicios;
 
         //Propiedades
         #region propiedades
-        public List<Servicio> LosServicios 
+        public List<String> LosServicios 
         {
             get { return _LosServicios; }
-            set {  }
+            set 
+            {
+                _LosServicios = value;
+            }
         }
 
         public int CantHabitantes
@@ -87,10 +90,10 @@ namespace Entidades_Compartidas
             Abreviacion = pAbrev;
             Nombre = pNombre;
             CantHabitantes = pCantHab;
-            _LosServicios = new List<Servicio>();
+            _LosServicios = new List<String>();
         }
 
-        public Zona(string pLetraDpto, string pAbrev, string pNombre, int pCantHab, List<Servicio> pServicios)
+        public Zona(string pLetraDpto, string pAbrev, string pNombre, int pCantHab, List<string> pServicios)
         {
             LetraDpto = pLetraDpto;
             Abreviacion = pAbrev;
@@ -102,7 +105,7 @@ namespace Entidades_Compartidas
         //Operaciones
         public void AgregarServicio(string pUnServicio)
         {
-            _LosServicios.Add(new Servicio(pUnServicio));
+            _LosServicios.Add(pUnServicio);
         }
 
         public void EliminarTodosLosServicios()

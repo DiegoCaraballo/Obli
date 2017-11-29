@@ -41,22 +41,14 @@ namespace ControlesWeb
         private List<string> listaServicios;
         private ListBox lbServicios;
 
-
-
         private Panel UnPanel;
 
-
-
-
-        public void DatosCasa(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBanio, int pHabitaciones, decimal pMt2Const, string pTipoPropiedad, string pLetraDpto, string pAbreviacion, string pZonaNombre, int pCantHabitantes, /* TODO agregar lista de servicios ,*/ decimal pMt2Terreno, bool pFondo)
+        public void DatosCasa(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBanio, int pHabitaciones, decimal pMt2Const, string pTipoPropiedad, string pLetraDpto, string pAbreviacion, string pZonaNombre, int pCantHabitantes, List<string> pLosServicios, decimal pMt2Terreno, bool pFondo)
         {
             try
             {
                 EnsureChildControls();
           
- 
-
-
                 lblPadron.Text = pPadron.ToString();
                 lblDireccion.Text = pDireccion;
                 lblPrecio.Text = pPrecio.ToString();
@@ -80,32 +72,27 @@ namespace ControlesWeb
                 lblNombre.Text = pZonaNombre;
                 lblCantHabitantes.Text = pCantHabitantes.ToString();
 
-
-             //   lbServicios.DataSource = listaServicioszona;
-               // lbServicios.DataBind();
+                lbServicios.DataSource = pLosServicios;
+                lbServicios.DataBind();
 
                 //Datos que no pertenecen a este tipo de propiedad
                 lblPiso.Text = "NO CORRESPONDE";
                 lblAscensor.Text = "NO CORRESPONDE";
 
                 lblHabilitado.Text = "NO CORRESPONDE";
-                
-              
-
-
-
 
             }
-            catch { }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
-        public void DatosComercio(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBanio, int pHabitaciones, decimal pMt2Const, string pTipoPropiedad, string pLetraDpto, string pAbreviacion, string pZonaNombre, int pCantHabitantes, /* TODO agregar lista de servicios ,*/  bool pHabilitado)
+
+        public void DatosComercio(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBanio, int pHabitaciones, decimal pMt2Const, string pTipoPropiedad, string pLetraDpto, string pAbreviacion, string pZonaNombre, int pCantHabitantes, List<string> pLosServicios,  bool pHabilitado)
         {
             try
             {
                 EnsureChildControls();
-
-
-
 
                 lblPadron.Text = pPadron.ToString();
                 lblDireccion.Text = pDireccion;
@@ -129,9 +116,8 @@ namespace ControlesWeb
                 lblNombre.Text = pZonaNombre;
                 lblCantHabitantes.Text = pCantHabitantes.ToString();
 
-
-                //   lbServicios.DataSource = listaServicioszona;
-                // lbServicios.DataBind();
+                lbServicios.DataSource = pLosServicios;
+                lbServicios.DataBind();
 
                 //Datos que no pertenecen a este tipo de propiedad
                 lblPiso.Text = "NO CORRESPONDE";
@@ -140,22 +126,19 @@ namespace ControlesWeb
                 lblMt2Terreno.Text = "NO CORRESPONDE";
                 lblFondo.Text = "NO CORRESPONDE";
 
-
-
-
-
             }
-            catch { }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
-        public void DatosApto(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBanio, int pHabitaciones, decimal pMt2Const, string pTipoPropiedad, string pLetraDpto, string pAbreviacion, string pZonaNombre, int pCantHabitantes, /* TODO agregar lista de servicios ,*/ int pPiso, bool pAscensor)
+
+
+        public void DatosApto(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBanio, int pHabitaciones, decimal pMt2Const, string pTipoPropiedad, string pLetraDpto, string pAbreviacion, string pZonaNombre, int pCantHabitantes, List<string> pLosServicios, int pPiso, bool pAscensor)
         {
             try
             {
                 EnsureChildControls();
-
-
-
-
                 lblPadron.Text = pPadron.ToString();
                 lblDireccion.Text = pDireccion;
                 lblPrecio.Text = pPrecio.ToString();
@@ -180,23 +163,21 @@ namespace ControlesWeb
                 lblCantHabitantes.Text = pCantHabitantes.ToString();
 
 
-                //   lbServicios.DataSource = listaServicioszona;
-                // lbServicios.DataBind();
+                lbServicios.DataSource = pLosServicios;
+                lbServicios.DataBind();
 
                 //Datos que no pertenecen a este tipo de propiedad
                 lblMt2Terreno.Text = "NO CORRESPONDE";
                 lblFondo.Text = "NO CORRESPONDE";
 
                 lblHabilitado.Text = "NO CORRESPONDE";
-
-
-
-
-
-
             }
-            catch { }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
+
         protected override void CreateChildControls()
         {
             base.CreateChildControls();
@@ -284,8 +265,6 @@ namespace ControlesWeb
             UnPanel.Controls.Add(new LiteralControl("</td></tr>"));
 
             UnPanel.Controls.Add(new LiteralControl("</table>"));
-
-        
 
             this.Controls.Add(UnPanel);
         }

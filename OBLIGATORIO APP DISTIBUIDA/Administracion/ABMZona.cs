@@ -77,8 +77,7 @@ namespace Administracion
                 // Creo el objeto que me permita trabajar con el WebService
                 MiServicio serv = new MiServicio();
 
-                List<Servicio> Servicios = new List<Servicio>();
-                Servicio elServicio = new Servicio();
+                List<string> Servicios = new List<string>();
 
                 // Utilizo la operación del WS
                 string codigo = codigoDpto1.Codigo.ToString().ToUpper();
@@ -94,8 +93,7 @@ namespace Administracion
   
                 foreach (string s in lbServicios.Items)
                 {
-                    elServicio.Servicios = s.ToString();
-                    Servicios.Add(elServicio);
+                    Servicios.Add(s.ToString());
                 }
 
                 unaZona.LosServicios = Servicios.ToArray();
@@ -170,9 +168,9 @@ namespace Administracion
                     zona = z;
                     txtHabitantes.Text = zona.CantHabitantes.ToString();
                     txtNombre.Text = zona.Nombre;
-                    foreach (Servicio servicio in zona.LosServicios)
+                    foreach (string servicio in zona.LosServicios)
                     {                      
-                        lbServicios.Items.Add(servicio.Servicios.ToString());
+                        lbServicios.Items.Add(servicio.ToString());
                     }
                     MenuItemIngresar.Enabled = false;
                     MenuItemEliminar.Enabled = true;

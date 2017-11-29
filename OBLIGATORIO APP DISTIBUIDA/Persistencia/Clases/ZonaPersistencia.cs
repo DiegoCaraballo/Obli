@@ -74,7 +74,7 @@ namespace Persistencia
                 //si llego hasta aca es xq pude dar de alta la Zona
 
                 //genero alta para los servicios
-                foreach (Servicio unServ in unaZona.LosServicios)
+                foreach (string unServ in unaZona.LosServicios)
                 {
                     ServicioPersistencia.AgregarServicio(unServ, unaZona.LetraDpto, unaZona.Abreviacion, _miTransaccion);
                 }
@@ -144,7 +144,7 @@ namespace Persistencia
                 ServicioPersistencia.EliminarServiciosZona(unaZona, _miTransaccion);
 
                 //genero alta para los servicios
-                foreach (Servicio unServ in unaZona.LosServicios)
+                foreach (string unServ in unaZona.LosServicios)
                 {
                     ServicioPersistencia.AgregarServicio(unServ, unaZona.LetraDpto, unaZona.Abreviacion, _miTransaccion);
                 }

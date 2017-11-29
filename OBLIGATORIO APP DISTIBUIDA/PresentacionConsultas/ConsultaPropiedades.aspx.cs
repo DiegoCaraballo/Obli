@@ -17,10 +17,6 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
             MiServicio serv = new MiServicio();
             Propiedad p = ((Propiedad)Session["Propiedad"]);
 
-
-
-
-
             //Datos usados por todos los tipos de propiedad
             int padron = p.Padron;
             string direccion = p.Direccion;
@@ -34,16 +30,8 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
             string abreviacion = p.Zona.Abreviacion;
             string nombre = p.Zona.Nombre;
             int cantHabitantes = p.Zona.CantHabitantes;
-            //   List<Servicio> listaServicioszona = p.Zona.LosServicios;
-
-
-
-
-
-
-
-
-
+            // TODO - Al parecer es lo unico que queda de Servicios
+            List<string> listaServiciosZona = new List<string>();//p.Zona.LosServicios.ToArray();
 
             if (p == null)
             {
@@ -61,7 +49,7 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
                         decimal mt2Terreno = ((Casa)p).Mt2Terreno;
                         bool fondo = ((Casa)p).Fondo;
                         string tipoPropiedad = ((Casa)p).TipoPropiedad;
-                        DatosPropiedad.DatosCasa(padron, direccion, precio, accion, banio, habitaciones, mt2Const, tipoPropiedad, letraDpto, abreviacion, nombre, cantHabitantes, mt2Terreno, fondo);
+                        DatosPropiedad.DatosCasa(padron, direccion, precio, accion, banio, habitaciones, mt2Const, tipoPropiedad, letraDpto, abreviacion, nombre, cantHabitantes, listaServiciosZona, mt2Terreno, fondo);
 
                     }
                     else if (p is ServicioWeb.Comercio)
@@ -69,7 +57,7 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
 
                         bool habilitado = ((Comercio)p).Habilitado;
                         string tipoPropiedad = ((Comercio)p).TipoPropiedad;
-                        DatosPropiedad.DatosComercio(padron, direccion, precio, accion, banio, habitaciones, mt2Const, tipoPropiedad, letraDpto, abreviacion, nombre, cantHabitantes,habilitado);
+                        DatosPropiedad.DatosComercio(padron, direccion, precio, accion, banio, habitaciones, mt2Const, tipoPropiedad, letraDpto, abreviacion, nombre, cantHabitantes, listaServiciosZona, habilitado);
 
 
                     }
@@ -78,7 +66,7 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
                         int piso = ((Apto)p).Piso;
                         bool ascensor = ((Apto)p).Ascensor;
                         string tipoPropiedad = ((Apto)p).TipoPropiedad;
-                        DatosPropiedad.DatosApto(padron, direccion, precio, accion, banio, habitaciones, mt2Const, tipoPropiedad, letraDpto, abreviacion, nombre, cantHabitantes,piso,ascensor);
+                        DatosPropiedad.DatosApto(padron, direccion, precio, accion, banio, habitaciones, mt2Const, tipoPropiedad, letraDpto, abreviacion, nombre, cantHabitantes, listaServiciosZona, piso, ascensor);
 
                     }
                 }

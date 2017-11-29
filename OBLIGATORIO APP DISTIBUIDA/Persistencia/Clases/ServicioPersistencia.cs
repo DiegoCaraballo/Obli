@@ -10,13 +10,13 @@ namespace Persistencia
 {
     internal class ServicioPersistencia
     {
-        internal static void AgregarServicio(Entidades_Compartidas.Servicio unServicio, string pLetraDpto, string pAbreviacion, SqlTransaction pTransaccion)
+        internal static void AgregarServicio(string unServicio, string pLetraDpto, string pAbreviacion, SqlTransaction pTransaccion)
         {
             SqlCommand comando = new SqlCommand("AgregarServicio", pTransaccion.Connection);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@LetraDpto", pLetraDpto);
             comando.Parameters.AddWithValue("@Abreviacion", pAbreviacion);
-            comando.Parameters.AddWithValue("@Servicio", unServicio.Servicios);
+            comando.Parameters.AddWithValue("@Servicio", unServicio);
             SqlParameter ParmRetorno = new SqlParameter("@Retorno", SqlDbType.Int);
             ParmRetorno.Direction = ParameterDirection.ReturnValue;
             comando.Parameters.Add(ParmRetorno);
