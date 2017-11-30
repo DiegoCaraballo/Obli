@@ -16,5 +16,7 @@ namespace Logica
             List<Zona> Listo();
             List<Zona> ListoPorDpto(string _letraDpto);
             Zona BuscarZona(string pLetra, string pAbrev);
+            Zona BuscoTodas(string letraDpto, string abreviacion);
+
         }
 }

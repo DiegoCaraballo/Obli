@@ -30,8 +30,8 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
             string abreviacion = p.Zona.Abreviacion;
             string nombre = p.Zona.Nombre;
             int cantHabitantes = p.Zona.CantHabitantes;
-            // TODO - Al parecer es lo unico que queda de Servicios
-            List<string> listaServiciosZona = new List<string>();//p.Zona.LosServicios.ToArray();
+ 
+            List<string> listaServiciosZona = p.Zona.LosServicios.ToList();
 
             if (p == null)
             {

@@ -237,7 +237,7 @@ namespace Administracion
                 apto.Baño = Convert.ToInt32(txtBanio.Text);
                 apto.Habitaciones = Convert.ToInt32(txtHabitaciones.Text);
                 apto.Mt2Const = Convert.ToInt32(txtMt2Const.Text);
-                apto.Zona = serv.BuscarZona(ccZona.LetraDepto, ccZona.Codigo);
+                apto.Zona = serv.BuscarTodasZonas(ccZona.LetraDepto, ccZona.Codigo);
                 apto.UltimoEmp = emp;
 
                 apto.Piso = Convert.ToInt32(txtPiso.Text);

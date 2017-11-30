@@ -14,5 +14,6 @@ namespace Persistencia
         List<Zona> ListoPorDpto(string _letraDpto);
         List<Zona> Listo();
         Zona Busco(string pLetra, string pAbrev);
+        Zona BuscoTodas(string letraDpto, string abreviacion);
     }
 }

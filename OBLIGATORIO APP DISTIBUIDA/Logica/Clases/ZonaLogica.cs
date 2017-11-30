@@ -7,9 +7,9 @@ using Persistencia;
 
 namespace Logica
 {
-   internal class ZonaLogica : IZonaLogica
+    internal class ZonaLogica : IZonaLogica
     {
-       
+
         private static ZonaLogica instancia = null;
         private ZonaLogica() { }
         public static ZonaLogica GetInstancia()
@@ -44,9 +44,14 @@ namespace Logica
             return FabricaPersistencia.getPersistenciaZona().ListoPorDpto(_letraDpto);
         }
 
-       public Zona BuscarZona(string pLetra, string pAbrev)
-       {
-           return FabricaPersistencia.getPersistenciaZona().Busco(pLetra, pAbrev);
-       }
+        public Zona BuscarZona(string pLetra, string pAbrev)
+        {
+            return FabricaPersistencia.getPersistenciaZona().Busco(pLetra, pAbrev);
+        }
+
+        public Zona BuscoTodas(string pLetraDpto, string pAbreviacion)
+        {
+            return FabricaPersistencia.getPersistenciaZona().BuscoTodas(pLetraDpto, pAbreviacion);
+        }
     }
 }

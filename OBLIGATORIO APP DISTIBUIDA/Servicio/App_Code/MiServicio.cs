@@ -172,6 +172,21 @@ public class MiServicio : System.Web.Services.WebService
     }
 
     [WebMethod]
+    public Zona BuscarTodasZonas(string pLetra, string pAbrev)
+    {
+        Zona unaZona = null;
+        try
+        {
+            unaZona = FabricaLogica.getZonaLogica().BuscoTodas(pLetra, pAbrev);
+        }
+        catch (Exception ex)
+        {
+            this.GeneroSoapException(ex);
+        }
+        return unaZona;
+    }
+
+    [WebMethod]
     public List<Zona> Listo()
     {
         List<Zona> lista = null;

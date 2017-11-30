@@ -24,11 +24,8 @@ create table Empleado
 go
 create table Zona
 (
-	--letraDpto char(1)not null check (len(letraDpto) = 1 AND letraDpto LIKE '%[A-S]%'),
-	--abreviacion varchar(3)not null check (len(abreviacion) = 3 and abreviacion LIKE '%[A-Z]%'),
 	letraDpto char(1)not null check (letraDpto Like '[A-S]'),
 	abreviacion varchar(3)not null check (abreviacion LIKE '[A-Z][A-Z][A-Z]'),
-	
 	nombre varchar(30)not null,
 	habitantes int not null check(habitantes >=0),
 	activa bit default (1),
@@ -138,6 +135,10 @@ Begin
 
 If exists (Select padron from Propiedad where padron = @padron)
    return -2;
+    if exists(select * from Empleado where nomUsu= @nomUsu and activo = 0)
+ return -4;
+ if exists (select * from Zona where Zona.abreviacion=@abreviacion and letraDpto = @letraDpto and activa = 0)
+ return -5;
  declare @error int
  begin tran
 
@@ -181,6 +182,8 @@ If not exists (Select padron from Propiedad where padron = @padron)
      Delete from Propiedad where padron =@padron
      set @error=@@ERROR+@error;
  
+	 Delete from Visita where padron = @padron
+	 set @error =@@Error+@error;
 		if(@@ERROR = 0)
 		begin
 			commit tran;
@@ -263,6 +266,10 @@ Begin
 
 If exists (select padron from Propiedad where padron = @padron)
    return -2;
+    if exists(select * from Empleado where nomUsu= @nomUsu and activo = 0)
+ return -4;
+ if exists (select * from Zona where Zona.abreviacion=@abreviacion and letraDpto = @letraDpto and activa = 0)
+ return -5;
  declare @error int
  begin tran
     insert into Propiedad(padron,letraDpto,abreviacion,habitaciones,direccion,precio,accion,banios,mt2const,nomUsu)
@@ -302,7 +309,9 @@ If not exists (Select padron from Propiedad where padron = @padron)
  
      Delete from Propiedad where padron =@padron
      set @error=@@ERROR+@error;
- 
+  
+	 Delete from Visita where padron = @padron
+	 set @error =@@Error+@error;
 		if(@@ERROR = 0)
 		begin
 			commit tran;
@@ -368,6 +377,8 @@ CREATE  PROCEDURE BuscarApto @padron int AS
 BEGIN 
 select a.piso,a.ascensor,p.* from Apto a join Propiedad p on a.padron= p.padron where a.padron=@padron
 
+select a.piso,a.ascensor,p.* from Apto a join Propiedad p on a.padron= p.padron where a.padron=115511
+
 END
 go
 
@@ -382,7 +393,15 @@ Begin
 
 If exists (select padron from Propiedad where padron = @padron)
    return -2;
+ if exists(select * from Empleado where nomUsu= @nomUsu and activo = 0)
+ return -4;
+ if exists (select * from Zona where Zona.abreviacion=@abreviacion and letraDpto = @letraDpto and activa = 0)
+ return -5;
+ 
  declare @error int
+ 
+ 
+ 
  begin tran
 
     insert into Propiedad(padron,letraDpto,abreviacion,habitaciones,direccion,precio,accion,banios,mt2const,nomUsu)
@@ -422,7 +441,9 @@ If not exists (Select padron from Propiedad where padron = @padron)
  
      Delete from Propiedad where padron =@padron
      set @error=@@ERROR+@error;
- 
+  
+	 Delete from Visita where padron = @padron
+	 set @error =@@Error+@error;
 		if(@@ERROR = 0)
 		begin
 			commit tran;
@@ -603,8 +624,6 @@ BEGIN
 	SELECT * FROM Zona where  letraDpto = @LetraDpto AND abreviacion = @Abreviacion AND activa = 1
 END
 go
-
-
 --BUSCAR TODAS LAS ZONAS--
 CREATE PROCEDURE BuscarZonas @LetraDpto char(1), @Abreviacion varchar(3) AS
 BEGIN 
@@ -722,7 +741,6 @@ go
 ----------------------------------------------------------------------------
 --------------------------- ABM VISITAS ------------------------------------
 ----------------------------------------------------------------------------
-
 
 --AGREGAR VISITA
 
@@ -883,20 +901,19 @@ exec AltaComercio 987987, 'S','MVD',2,'DR.PENA 7458',9500,'ALQUILER',1,200,'NICO
 
 GO
 
-select * from Visita
-go
-exec ListadoVisitas
-go
+delete from Visita
 
-exec AltaVisita 111119,'nico', '30-11-2018 15:00:00.000', 123123;
-exec AltaVisita 312321,'nadia', '01-12-2018 13:00:00.000', 789789;
-exec AltaVisita 325721,'diego', '01-12-2018 18:00:00.000', 789789;
+exec AltaVisita 111119,'nico', '03-11-2018 15:00:00.000', 123123;
 exec AltaVisita 111119,'sergio', '01-12-2018 14:00:00.000', 123123;
 exec AltaVisita 321721,'pepe', '01-12-2018 13:00:00.000', 123123;
-exec AltaVisita 654654,'ahri', '01-12-2018 16:00:00.000', 111112;
 exec AltaVisita 987987,'naty', '01-12-2018 17:00:00.000', 123123;
+exec AltaVisita 325721,'juan', '06-12-2018 14:00:00.000', 123123;
+
+exec AltaVisita 312321,'nadia', '01-12-2018 13:00:00.000', 789789;
+exec AltaVisita 325721,'diego', '01-12-2018 18:00:00.000', 789789;
+
+exec AltaVisita 654654,'ahri', '01-12-2018 16:00:00.000', 111112;
 exec AltaVisita 321721,'maria', '01-12-2018 15:00:00.000', 111112;
-exec AltaVisita 325721,'juan', '01-12-2018 14:00:00.000', 123123;
 exec AltaVisita 111119,'jose', '01-12-2018 13:00:00.000', 111130;
 
 select padron,count(padron) as 'asd' from Visita group by padron

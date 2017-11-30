@@ -304,11 +304,56 @@ namespace Persistencia
             return _Lista;
         }
 
-        //Buscar Zonas
+        //Buscar Zonas Activas
         public Zona Busco(string letraDpto, string abreviacion)
         {
             SqlConnection _cnn = new SqlConnection(Conexion.Cnn);
             SqlCommand comando = new SqlCommand("BuscarZonaActiva", _cnn);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@letraDpto", letraDpto);
+            comando.Parameters.AddWithValue("@abreviacion", abreviacion);
+            Zona unaZona = null;
+
+            try
+            {
+                //me conecto
+                _cnn.Open();
+
+                //ejecuto consulta
+                SqlDataReader _lector = comando.ExecuteReader();
+
+                //verifico si hay servicios
+                if (_lector.HasRows)
+                {
+                    _lector.Read();
+                    string _letraDpto = (string)_lector["letraDpto"];
+                    string _abreviacion = (string)_lector["abreviacion"];
+                    string nombre = (string)_lector["nombre"];
+                    int cantHabitantes = (int)_lector["habitantes"];
+                    unaZona = new Zona(letraDpto, abreviacion, nombre, cantHabitantes);
+                    ServicioPersistencia.CargoServicio(unaZona);
+                    //TODO 
+                }
+                _lector.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                _cnn.Close();
+            }
+
+            //retorno la zona
+            return unaZona;
+        }
+
+        // Busca toda las Zonas incluyendo las inactivas para mostrar las propiedades
+        public Zona BuscoTodas(string letraDpto, string abreviacion)
+        {
+            SqlConnection _cnn = new SqlConnection(Conexion.Cnn);
+            SqlCommand comando = new SqlCommand("BuscarZonas", _cnn);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@letraDpto", letraDpto);
             comando.Parameters.AddWithValue("@abreviacion", abreviacion);

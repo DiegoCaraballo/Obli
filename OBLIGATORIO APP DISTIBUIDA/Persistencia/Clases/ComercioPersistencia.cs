@@ -70,11 +70,20 @@ namespace Persistencia
 
             try
             {
+
                 conexion.Open();
                 comando.ExecuteNonQuery();
                 afectados = (int)comando.Parameters["@Retorno"].Value;
                 if (afectados == -1)
-                    throw new Exception("");
+                    throw new Exception("El Comercio ya existe");
+                else if (afectados == -2)
+                    throw new Exception("El padron pertenece a otra propiedad");
+                else if (afectados == -4)
+                    throw new Exception("El empleado no esta activo");
+                else if (afectados == -5)
+                    throw new Exception("La zona no esta Activa");
+                else
+                    throw new Exception("Error en dar de alta");
             }
             catch (Exception ex)
             {
@@ -217,7 +226,7 @@ namespace Persistencia
 
                     habilitado = (bool)oReader["habilitado"];
                     co = new Comercio(padron, direccion, precio, accion, banio, habitaciones, mt2C,
-                 (ZonaPersistencia.GetInstancia().Busco(letraDpto, abreviacion)),
+                 (ZonaPersistencia.GetInstancia().BuscoTodas(letraDpto, abreviacion)),
                  (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)), habilitado);
 
                 }
@@ -274,7 +283,7 @@ namespace Persistencia
 
                     habilitado = Convert.ToBoolean(oReader["habilitado"]);
 
-                    Comercio c = new Comercio(padron, direccion, precio, accion, banio, habitaciones, mt2C, ((ZonaPersistencia.GetInstancia().Busco(letraDpto, abreviacion))),
+                    Comercio c = new Comercio(padron, direccion, precio, accion, banio, habitaciones, mt2C, ((ZonaPersistencia.GetInstancia().BuscoTodas(letraDpto, abreviacion))),
                    (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)),habilitado);
                     lista.Add(c);
                 }

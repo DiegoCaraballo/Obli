@@ -18,7 +18,8 @@ namespace Administracion
             //Application.Run(new Login());
            //Application.Run(new ConsultaVisita());
 
-           Application.Run(new Default());
+           Application.Run(new 
+               Login());
 
            // Application.Run(new ABMApto());
 

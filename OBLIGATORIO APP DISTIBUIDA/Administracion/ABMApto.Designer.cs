@@ -215,7 +215,7 @@
             this.txtPadron.Location = new System.Drawing.Point(103, 39);
             this.txtPadron.Name = "txtPadron";
             this.txtPadron.Size = new System.Drawing.Size(100, 20);
-            this.txtPadron.TabIndex = 13;
+            this.txtPadron.TabIndex = 1;
             this.txtPadron.Validating += new System.ComponentModel.CancelEventHandler(this.txtPadron_Validating);
             // 
             // txtDireccion

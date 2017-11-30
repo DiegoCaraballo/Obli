@@ -74,7 +74,15 @@ namespace Persistencia
                 comando.ExecuteNonQuery();
                 afectados = (int)comando.Parameters["@Retorno"].Value;
                 if (afectados == -1)
-                    throw new Exception("");
+                    throw new Exception("El apartamento ya existe");
+                else if (afectados == -2)
+                    throw new Exception("El padron pertenece a otra propiedad");
+                else if (afectados == -4)
+                    throw new Exception("El empleado no esta activo");
+                else if (afectados == -5)
+                    throw new Exception("La zona no esta Activa");
+                else
+                    throw new Exception("Error en dar de alta");
             }
             catch (Exception ex)
             {
@@ -231,7 +239,7 @@ namespace Persistencia
 
                     piso = (int)oReader["piso"];
                     ascensor = (bool)oReader["ascensor"];
-                    a = new Apto(padron, direccion, precio, accion, banio, habitaciones, mt2C, ((ZonaPersistencia.GetInstancia().Busco(letraDpto, abreviacion))),
+                    a = new Apto(padron, direccion, precio, accion, banio, habitaciones, mt2C, ((ZonaPersistencia.GetInstancia().BuscoTodas(letraDpto, abreviacion))),
                  (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)), piso, ascensor);
 
                 }
@@ -290,7 +298,7 @@ namespace Persistencia
                     piso = (int)oReader["piso"];
                     ascensor = (bool)oReader["ascensor"];
 
-                    Apto a = new Apto(padron, direccion, precio, accion, banio, habitaciones, mt2C, ((ZonaPersistencia.GetInstancia().Busco(letraDpto, abreviacion))),
+                    Apto a = new Apto(padron, direccion, precio, accion, banio, habitaciones, mt2C, ((ZonaPersistencia.GetInstancia().BuscoTodas(letraDpto, abreviacion))),
                    (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)),piso,ascensor);
                     lista.Add(a);
                 }

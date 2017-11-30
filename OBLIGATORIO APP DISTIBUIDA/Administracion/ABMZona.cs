@@ -205,7 +205,28 @@ namespace Administracion
         // Eliminar una Zona
         private void MenuItemEliminar_Click(object sender, EventArgs e)
         {
+            try {
+                MiServicio serv = new MiServicio();
+                serv.EliminarZona(zona);
 
+                lblMensaje.Text = "Zona dada de Baja con Exito";
+            
+                EstadoInicial();
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Length > 40)
+                    lblMensaje.Text = ex.Message.Substring(0, 40);
+                else
+                    lblMensaje.Text = ex.Message;
+            }
         }
 
         // Mensaje de ayuda

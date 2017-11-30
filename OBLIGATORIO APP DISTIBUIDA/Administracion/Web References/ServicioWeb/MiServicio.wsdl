@@ -212,6 +212,21 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="BuscarTodasZonas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pLetra" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAbrev" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarTodasZonasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarTodasZonasResult" type="tns:Zona" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="Listo">
         <s:complexType />
       </s:element>
@@ -400,6 +415,12 @@
   <wsdl:message name="BuscarZonaSoapOut">
     <wsdl:part name="parameters" element="tns:BuscarZonaResponse" />
   </wsdl:message>
+  <wsdl:message name="BuscarTodasZonasSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarTodasZonas" />
+  </wsdl:message>
+  <wsdl:message name="BuscarTodasZonasSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarTodasZonasResponse" />
+  </wsdl:message>
   <wsdl:message name="ListoSoapIn">
     <wsdl:part name="parameters" element="tns:Listo" />
   </wsdl:message>
@@ -500,6 +521,10 @@
     <wsdl:operation name="BuscarZona">
       <wsdl:input message="tns:BuscarZonaSoapIn" />
       <wsdl:output message="tns:BuscarZonaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTodasZonas">
+      <wsdl:input message="tns:BuscarTodasZonasSoapIn" />
+      <wsdl:output message="tns:BuscarTodasZonasSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="Listo">
       <wsdl:input message="tns:ListoSoapIn" />
@@ -646,6 +671,15 @@
     </wsdl:operation>
     <wsdl:operation name="BuscarZona">
       <soap:operation soapAction="http://tempuri.org/BuscarZona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTodasZonas">
+      <soap:operation soapAction="http://tempuri.org/BuscarTodasZonas" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -838,6 +872,15 @@
     </wsdl:operation>
     <wsdl:operation name="BuscarZona">
       <soap12:operation soapAction="http://tempuri.org/BuscarZona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTodasZonas">
+      <soap12:operation soapAction="http://tempuri.org/BuscarTodasZonas" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
