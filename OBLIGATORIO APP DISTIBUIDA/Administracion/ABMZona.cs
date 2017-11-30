@@ -32,6 +32,7 @@ namespace Administracion
             MenuItemCancelar.ShortcutKeys = Keys.F6;
         }
 
+        //Ayuda para el usuario
         private void MenuItemAyuda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Puede utilizar las siguientes teclas para facil acceso a los Items del Menu:\nF1= Ayuda\nF2= Buscar\nF3= Ingresar\nF4= Modificar\nF5= Eliminar\nF6= Cancelar");
@@ -59,13 +60,14 @@ namespace Administracion
             txtServicio.Enabled = false;
             txtHabitantes.Enabled = false;
             btnAgregar.Enabled = false;
-            btnEliminar.Enabled = false;        
+            btnEliminar.Enabled = false;
         }
 
         // Botón que cancela y deja en estado inicial
         private void MenuItemCancelar_Click(object sender, EventArgs e)
         {
             EstadoInicial();
+            lblMensaje.Text = "";
             zona = null;
         }
 
@@ -79,18 +81,17 @@ namespace Administracion
 
                 List<string> Servicios = new List<string>();
 
-                // Utilizo la operación del WS
                 string codigo = codigoDpto1.Codigo.ToString().ToUpper();
                 string letraDpto = codigoDpto1.LetraDepto.ToString();
                 string nombre = txtNombre.Text.Trim().ToUpper();
                 int cantHabitantes = Convert.ToInt32(txtHabitantes.Text);
 
-                Zona unaZona = new Zona();            
+                Zona unaZona = new Zona();
                 unaZona.Abreviacion = codigo;
                 unaZona.LetraDpto = letraDpto;
                 unaZona.Nombre = nombre;
                 unaZona.CantHabitantes = cantHabitantes;
-  
+
                 foreach (string s in lbServicios.Items)
                 {
                     Servicios.Add(s.ToString());
@@ -107,15 +108,15 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
-                if (ex.Message.Length > 40)
-                    lblMensaje.Text = ex.Message.Substring(0, 40);
+                if (ex.Message.Length > 80)
+                    lblMensaje.Text = ex.Message.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Message;
             }
@@ -154,22 +155,26 @@ namespace Administracion
                     // no existe la zona, es un alta, limpio campos y habilito para ingresar
                     MenuItemIngresar.Enabled = true;
                     MenuItemEliminar.Enabled = false;
-                    MenuItemModificar.Enabled = false;  
+                    MenuItemModificar.Enabled = false;
                     txtHabitantes.Enabled = true;
                     txtNombre.Enabled = true;
                     txtServicio.Enabled = true;
                     lbServicios.Enabled = true;
                     btnEliminar.Enabled = true;
                     btnAgregar.Enabled = true;
+                    lblMensaje.Text = "";
                 }
                 else
                 {
                     //existe, cargo y permito eliminar o modificar
+                    txtNombre.Enabled = true;
+                    txtHabitantes.Enabled = true;
+
                     zona = z;
                     txtHabitantes.Text = zona.CantHabitantes.ToString();
                     txtNombre.Text = zona.Nombre;
                     foreach (string servicio in zona.LosServicios)
-                    {                      
+                    {
                         lbServicios.Items.Add(servicio.ToString());
                     }
                     MenuItemIngresar.Enabled = false;
@@ -178,19 +183,20 @@ namespace Administracion
                     btnAgregar.Enabled = true;
                     btnEliminar.Enabled = true;
                     txtServicio.Enabled = true;
+                    lblMensaje.Text = "";
                 }
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
-                if (ex.Message.Length > 40)
-                    lblMensaje.Text = ex.Message.Substring(0, 40);
+                if (ex.Message.Length > 80)
+                    lblMensaje.Text = ex.Message.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Message;
             }
@@ -199,31 +205,69 @@ namespace Administracion
         // Modificar una Zona
         private void MenuItemModificar_Click(object sender, EventArgs e)
         {
+            try
+            {
 
-        }
-
-        // Eliminar una Zona
-        private void MenuItemEliminar_Click(object sender, EventArgs e)
-        {
-            try {
                 MiServicio serv = new MiServicio();
-                serv.EliminarZona(zona);
 
-                lblMensaje.Text = "Zona dada de Baja con Exito";
-            
+                List<string> Servicios = new List<string>();
+                zona.Abreviacion = codigoDpto1.Codigo.ToString().ToUpper();
+                zona.LetraDpto = codigoDpto1.LetraDepto.ToString();
+                zona.Nombre = txtNombre.Text.Trim().ToUpper();
+                zona.CantHabitantes = Convert.ToInt32(txtHabitantes.Text);
+
+                foreach (string s in lbServicios.Items)
+                {
+                    Servicios.Add(s.ToString());
+                }
+
+                zona.LosServicios = Servicios.ToArray();
+
+                //Modifico la zona
+                serv.ModificarZona(zona);
+                lblMensaje.Text = "Se modifico la zona";
+
                 EstadoInicial();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
-                if (ex.Message.Length > 40)
-                    lblMensaje.Text = ex.Message.Substring(0, 40);
+                if (ex.Message.Length > 80)
+                    lblMensaje.Text = ex.Message.Substring(0, 80);
+                else
+                    lblMensaje.Text = ex.Message;
+            }
+        }
+
+        // Eliminar una Zona
+        private void MenuItemEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MiServicio serv = new MiServicio();
+                serv.EliminarZona(zona);
+
+                lblMensaje.Text = "Zona dada de Baja con Exito";
+
+                EstadoInicial();
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Length > 80)
+                    lblMensaje.Text = ex.Message.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Message;
             }

@@ -95,7 +95,6 @@ namespace Controles
             set
             {
                 string letraDpto = value;
-                //char letraDpto = Convert.ToChar(cboDepartamento.SelectedValue);
 
                 switch (letraDpto)
                 {

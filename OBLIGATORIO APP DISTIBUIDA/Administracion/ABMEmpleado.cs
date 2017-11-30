@@ -71,6 +71,7 @@ namespace Administracion
                     MenuItemIngresar.Enabled = true;
                     MenuItemEliminar.Enabled = false;
                     MenuItemModificar.Enabled = false;
+                    lblMensaje.Text = "";
                 }
                 else
                 {
@@ -80,19 +81,20 @@ namespace Administracion
                     MenuItemIngresar.Enabled = false;
                     MenuItemModificar.Enabled = true;
                     MenuItemEliminar.Enabled = true;
+                    lblMensaje.Text = "";
                 }
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
-                if (ex.Message.Length > 40)
-                    lblMensaje.Text = ex.Message.Substring(0, 40);
+                if (ex.Message.Length > 80)
+                    lblMensaje.Text = ex.Message.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Message;
             }
@@ -121,15 +123,15 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
-                if (ex.Message.Length > 40)
-                    lblMensaje.Text = ex.Message.Substring(0, 40);
+                if (ex.Message.Length > 80)
+                    lblMensaje.Text = ex.Message.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Message;
             }
@@ -141,12 +143,12 @@ namespace Administracion
             try
             {
                 //creo el objeto que me permita trabajar con el WS
-                MiServicio LEmpleado = new MiServicio();
+                MiServicio serv = new MiServicio();
 
                 emp.NomUsu = txtUsuario.Text.Trim().ToUpper();
                 emp.Pass = txtPassword.Text;
 
-                LEmpleado.ModificarEmpleado(emp);
+                serv.ModificarEmpleado(emp);
 
                 //si llego acá se modificó el empleado
                 lblMensaje.Text = "Modificación Exitosa";
@@ -155,15 +157,15 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
-                if (ex.Message.Length > 40)
-                    lblMensaje.Text = ex.Message.Substring(0, 40);
+                if (ex.Message.Length > 80)
+                    lblMensaje.Text = ex.Message.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Message;
             }
@@ -172,13 +174,12 @@ namespace Administracion
         //Eliminar Empleado
         private void MenuItemEliminar_Click(object sender, EventArgs e)
         {
-            ServicioWeb.Empleado _unEmpleado = null;
             try
             {
                 //creo el objeto que me permita trabajar con el WS
-                MiServicio LEmpleado = new MiServicio();
+                MiServicio serv = new MiServicio();
 
-                LEmpleado.EliminarEmpleado(emp);
+                serv.EliminarEmpleado(emp);
 
                 //si llego aca elimine el empleado
                 lblMensaje.Text = "Se eliminó correctamente";
@@ -187,15 +188,15 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
-                if (ex.Message.Length > 40)
-                    lblMensaje.Text = ex.Message.Substring(0, 40);
+                if (ex.Message.Length > 80)
+                    lblMensaje.Text = ex.Message.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Message;
             }
