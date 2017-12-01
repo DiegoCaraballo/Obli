@@ -113,8 +113,7 @@ public class MiServicio : System.Web.Services.WebService
         return lista;
 
     }
-    #endregion //listo
-    //servicio de propiedades listo
+    #endregion 
 
     #region Zona
     [WebMethod]
@@ -216,7 +215,6 @@ public class MiServicio : System.Web.Services.WebService
         return lista;
     }
     #endregion
-    //servicio de zonas listo
 
     #region Empleado
 
@@ -275,7 +273,6 @@ public class MiServicio : System.Web.Services.WebService
     }
 
     #endregion
-    //servicio de empleados listo
 
     #region Visita
 
@@ -379,7 +376,7 @@ public class MiServicio : System.Web.Services.WebService
 
         //Eliminar la marca de comentario de la línea siguiente si utiliza los componentes diseñados 
         //InitializeComponent(); 
-    } 
+    }
     #endregion
 
 }

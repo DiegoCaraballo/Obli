@@ -105,7 +105,6 @@
             this.Name = "ConsultaVisita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaVisita";
-            this.Load += new System.EventHandler(this.ConsultaVisita_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvVisitas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EPPadron)).EndInit();
             this.ResumeLayout(false);

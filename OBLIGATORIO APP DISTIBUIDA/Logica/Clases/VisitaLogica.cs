@@ -50,6 +50,5 @@ namespace Logica
             return FabricaPersistencia.getPersistenciaVisita().ListaVisitas();
         }
 
-
     }
 }

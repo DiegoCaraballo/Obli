@@ -11,13 +11,13 @@ namespace Logica
     {
         private static EmpleadoLogica instancia = null;
         private EmpleadoLogica() { }
+
         public static EmpleadoLogica GetInstancia()
         {
             if (instancia == null)
                 instancia = new EmpleadoLogica();
             return instancia;
         }
-
 
         public void AgregarEmpleado(Empleado E)
         {
@@ -46,7 +46,6 @@ namespace Logica
         {
            return FabricaPersistencia.getPersistenciaEmpleado().BuscarEmpleado(pNomUsu);
         }
-
 
     }
 }

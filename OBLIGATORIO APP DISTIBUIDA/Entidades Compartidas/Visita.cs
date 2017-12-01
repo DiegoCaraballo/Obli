@@ -72,9 +72,6 @@ namespace Entidades_Compartidas
         }
         #endregion
 
-
-        
-
         public Visita( DateTime pFecha, string pTelefono, string pNombre, Propiedad pAVisitar)
         {
             Fecha = pFecha;

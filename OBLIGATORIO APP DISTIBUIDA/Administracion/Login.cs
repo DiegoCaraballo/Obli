@@ -54,7 +54,6 @@ namespace Administracion
 
         private void Login_Load(object sender, EventArgs e)
         {
-
             try
             {
                 ccLogin.IniciarSession += new EventHandler(IniciarSession2);

@@ -31,6 +31,7 @@ namespace Entidades_Compartidas
         {
             Habilitado = pHabilitado;
         }
+
         public Comercio() { }
     }
 }

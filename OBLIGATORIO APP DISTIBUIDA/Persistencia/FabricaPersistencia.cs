@@ -29,14 +29,15 @@ public class FabricaPersistencia
         { 
             return (EmpleadoPersistencia.GetInstancia ());
         }
+
         public static IZonaPersistencia getPersistenciaZona()
         {
             return (ZonaPersistencia.GetInstancia());
         }
+
         public static IVisitaPersistencia getPersistenciaVisita()
         {
             return (VisitaPersistencia.GetInstancia());
-        }
-        
+        }       
     }
 }

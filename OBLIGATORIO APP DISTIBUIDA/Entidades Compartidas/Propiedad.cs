@@ -24,29 +24,32 @@ namespace Entidades_Compartidas
         public Empleado UltimoEmp
         {
             get { return ultimoEmp; }
-            set {
-             if (value != null)
-                   ultimoEmp = value;
-               else
-                 throw new Exception("El usuario no puede ser nulo");
-                 }
+            set
+            {
+                if (value != null)
+                    ultimoEmp = value;
+                else
+                    throw new Exception("El usuario no puede ser nulo");
+            }
         }
 
         public Zona Zona
         {
             get { return zona; }
-            set {
+            set
+            {
                 if (value != null)
                     zona = value;
-               else
-                   throw new Exception("La zona no puede ser vacia");
-                }
+                else
+                    throw new Exception("La zona no puede ser vacia");
+            }
         }
 
-         public decimal Mt2Const
+        public decimal Mt2Const
         {
             get { return mt2Const; }
-            set {
+            set
+            {
                 if (value >= 1 && value.ToString().Length < 10)
                     mt2Const = value;
                 else
@@ -57,7 +60,8 @@ namespace Entidades_Compartidas
         public int Habitaciones
         {
             get { return habitaciones; }
-            set {
+            set
+            {
                 if (value >= 1 && value < 100)
                     habitaciones = value;
                 else
@@ -68,7 +72,8 @@ namespace Entidades_Compartidas
         public int Baño
         {
             get { return baño; }
-            set {
+            set
+            {
                 if (value >= 1 && value <= 20)
                     baño = value;
                 else
@@ -79,8 +84,9 @@ namespace Entidades_Compartidas
         public string Accion
         {
             get { return accion; }
-            set {
-                if (value == "VENTA"||value == "PERMUTA"||value =="ALQUILER")
+            set
+            {
+                if (value == "VENTA" || value == "PERMUTA" || value == "ALQUILER")
                     accion = value;
                 else
                     throw new Exception("No existe esa acción");
@@ -90,7 +96,8 @@ namespace Entidades_Compartidas
         public int Precio
         {
             get { return precio; }
-            set {
+            set
+            {
                 if (value > 0 && value.ToString().Length < 10)
                     precio = value;
                 else
@@ -102,7 +109,8 @@ namespace Entidades_Compartidas
         public string Direccion
         {
             get { return direccion; }
-            set {
+            set
+            {
                 if (value.Trim().Length > 8 && value.Trim().Length < 101)
                     direccion = value;
                 else
@@ -114,7 +122,8 @@ namespace Entidades_Compartidas
         public int Padron
         {
             get { return padron; }
-            set {
+            set
+            {
                 if (value > 0 && value.ToString().Length < 10)
                     padron = value;
                 else
@@ -127,19 +136,19 @@ namespace Entidades_Compartidas
         {
             get { return zona.Abreviacion + " - " + zona.LetraDpto; }
             set { }
-            
+
         }
 
         public virtual string TipoPropiedad
         {
             get { return ""; }
             set { }
-         
+
         }
         #endregion
 
         //Constructor
-        public Propiedad(int pPadron,string pDireccion, int pPrecio, string pAccion, int pBaño,int pHab,decimal pMt2,Zona pZona,Empleado pUltimoEmp)
+        public Propiedad(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBaño, int pHab, decimal pMt2, Zona pZona, Empleado pUltimoEmp)
         {
             Padron = pPadron;
             Direccion = pDireccion;
@@ -151,6 +160,7 @@ namespace Entidades_Compartidas
             Zona = pZona;
             UltimoEmp = pUltimoEmp;
         }
-          public Propiedad() { }
+
+        public Propiedad() { }
     }
 }

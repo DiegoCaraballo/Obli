@@ -12,7 +12,5 @@ namespace Logica
         void AgendaVisita(Visita V);
 
         List<Visita> ListaVisitas();
-
-
     }
 }

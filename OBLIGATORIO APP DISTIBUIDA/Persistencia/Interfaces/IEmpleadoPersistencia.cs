@@ -12,6 +12,5 @@ namespace Persistencia
         void EliminarEmpleado(Empleado E);
         void ModificarEmpleado(Empleado E);
         Empleado BuscarEmpleado(string pNomUsu);
-  
     }
 }

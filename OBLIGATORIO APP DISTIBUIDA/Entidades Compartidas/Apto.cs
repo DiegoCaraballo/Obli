@@ -47,6 +47,7 @@ namespace Entidades_Compartidas
             Piso = pPiso;
             Ascensor = pAscensor;
         }
+
         public Apto() { }
     }
 }

@@ -25,11 +25,11 @@ namespace Administracion
 
         }
 
+        // Limpia
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             gvVisitas.DataSource = null;
             XElement doc = documento;
-
 
             var res = (from unNodo in doc.Elements("Propiedad")
                        select new
@@ -43,9 +43,11 @@ namespace Administracion
             gvVisitas.DataSource = res;
         }
 
+        // Cuenta las visitas
         private void btnContarVisitas_Click(object sender, EventArgs e)
         {
             gvVisitas.DataSource = null;
+
             try
             {
                 XElement doc = documento;
@@ -60,11 +62,7 @@ namespace Administracion
                            }
                     ).ToList();
 
-
                 gvVisitas.DataSource = res;
-
-
-
 
             }
             catch (Exception ex)
@@ -72,6 +70,8 @@ namespace Administracion
                 MessageBox.Show(ex.Message);
             }
         }
+
+        // Se carga la lista de visitas
         private void CargoListaVisitas()
         {
             MiServicio serv = new MiServicio();
@@ -92,19 +92,13 @@ namespace Administracion
             gvVisitas.DataSource = res;
         }
 
-        private void btnFiltrar_Click(object sender, EventArgs e)
-        {
-          
-             
-        }
-
+        // Filtra por acción
         private void cboAccion_SelectedIndexChanged(object sender, EventArgs e)
         {
             gvVisitas.DataSource = null;
             try
             {
                 XElement doc = documento;
-
 
                 var res = (from unNodo in doc.Elements("Propiedad")
                            where unNodo.Element("Accion").Value == cboAccion.SelectedItem.ToString()
@@ -118,9 +112,6 @@ namespace Administracion
 
                 gvVisitas.DataSource = res;
 
-
-
-
             }
             catch (Exception ex)
             {
@@ -129,6 +120,7 @@ namespace Administracion
 
         }
 
+        // Filtra por padrón
         private void txtPadron_Validating(object sender, CancelEventArgs e)
         {
             gvVisitas.DataSource = null;
@@ -146,7 +138,6 @@ namespace Administracion
             {
                 XElement doc = documento;
 
-
                 var res = (from unNodo in doc.Elements("Propiedad")
                            where unNodo.Element("Padron").Value == txtPadron.Text
                            select new
@@ -159,9 +150,6 @@ namespace Administracion
 
                 gvVisitas.DataSource = res;
 
-
-
-
             }
             catch (Exception ex)
             {
@@ -169,9 +157,5 @@ namespace Administracion
             }
         }
 
-        private void ConsultaVisita_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

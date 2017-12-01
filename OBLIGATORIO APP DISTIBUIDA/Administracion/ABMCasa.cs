@@ -27,6 +27,7 @@ namespace Administracion
         {
 
         }
+
         public void Accesos()
         {
             MenuItemAyuda.ShortcutKeys = Keys.F1;
@@ -38,17 +39,18 @@ namespace Administracion
 
         }
 
+        // Ayuda para el usuario
         private void MenuItemAyuda_Click(object sender, EventArgs e)
         {
             txtPadron.Text = "";
           //  MessageBox.Show("Puede utilizar las siguientes teclas para facil acceso a los Items del Menu:\nF1= Ayuda\nF2= Buscar\nF3= Ingresar\nF4= Modificar\nF5= Eliminar\nF6= Cancelar");
         }
 
+        // Cancela y vuelve al estado inicial
         private void MenuItemCancelar_Click(object sender, EventArgs e)
         {
         
         }
-
         
     }
 }

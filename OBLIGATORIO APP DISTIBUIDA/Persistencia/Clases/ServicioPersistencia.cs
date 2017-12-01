@@ -69,7 +69,6 @@ namespace Persistencia
 
         //}
 
-
         internal static void CargoServicio(Entidades_Compartidas.Zona unaZona)
         {
             SqlConnection _cnn = new SqlConnection(Conexion.Cnn);

@@ -127,7 +127,6 @@ namespace Persistencia
         public int VecesVisitado(Visita V)
         {
 
-            //TODO - Ver si funciona traer cantidad de visitas
             int visitas = 0;
 
             SqlConnection oConexion = new SqlConnection(Conexion.Cnn);

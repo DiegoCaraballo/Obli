@@ -12,13 +12,13 @@ namespace Logica
 
         private static PropiedadesLogica instancia = null;
         private PropiedadesLogica() { }
+
         public static PropiedadesLogica GetInstancia()
         {
             if (instancia == null)
                 instancia = new PropiedadesLogica();
             return instancia;
         }
-
 
         public void AltaPropiedad(Propiedad unaProp)
         {

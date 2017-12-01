@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using Entidades_Compartidas;
 
-
-
 namespace Logica
 {
      public interface IZonaLogica
@@ -17,6 +15,5 @@ namespace Logica
             List<Zona> ListoPorDpto(string _letraDpto);
             Zona BuscarZona(string pLetra, string pAbrev);
             Zona BuscoTodas(string letraDpto, string abreviacion);
-
         }
 }

@@ -103,7 +103,8 @@ namespace Controles
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             try
-            { //TODO - LO AGREGO PARA CONTROLAR QUE NO INGRESE VACÍO
+            { 
+                // Se controla que ingrese un usuario y una contraseña
                 if (txtUsu.Text.Trim() == "" || txtPass.Text.Trim() == "")
                 {
                     lblMensaje.Text = "Usuario y Contraseña requeridos";

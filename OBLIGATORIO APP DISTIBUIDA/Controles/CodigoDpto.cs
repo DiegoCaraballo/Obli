@@ -91,7 +91,6 @@ namespace Controles
                              
             }
 
-            // TODO - Probar que funcione el set
             set
             {
                 string letraDpto = value;
@@ -260,10 +259,5 @@ namespace Controles
             }
         }
 
-        private void CambioValor()
-        {
-         
-
-        }
     }
 }

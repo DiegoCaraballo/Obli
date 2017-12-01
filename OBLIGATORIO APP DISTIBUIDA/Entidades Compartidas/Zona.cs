@@ -17,10 +17,10 @@ namespace Entidades_Compartidas
 
         //Propiedades
         #region propiedades
-        public List<String> LosServicios 
+        public List<String> LosServicios
         {
             get { return _LosServicios; }
-            set 
+            set
             {
                 _LosServicios = value;
             }
@@ -51,7 +51,6 @@ namespace Entidades_Compartidas
             }
         }
 
-        //TODO - Revisar que funcione
         public string Abreviacion
         {
             get { return abreviacion; }
@@ -112,7 +111,8 @@ namespace Entidades_Compartidas
         {
             _LosServicios.Clear();
         }
-          public Zona() { }
+
+        public Zona() { }
     }
 
 }

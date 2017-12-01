@@ -75,10 +75,7 @@
         }
 
         #endregion
-
-        private Controles.Logueo logueo1;
         private System.Windows.Forms.Label lblMensaje;
-        private Controles.Logueo logueo2;
         private Controles.Logueo ccLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
 

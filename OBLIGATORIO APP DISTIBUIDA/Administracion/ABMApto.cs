@@ -36,7 +36,6 @@ namespace Administracion
 
         }
 
-        //TODO - Definir si dejamos estos accesos o no
         public void Accesos()
         {
             MenuItemAyuda.ShortcutKeys = Keys.F1;
@@ -47,6 +46,7 @@ namespace Administracion
 
         }
 
+        // Deja todo en estado Inicial
         public void EstadoInicial()
         {
 
@@ -69,6 +69,7 @@ namespace Administracion
             lblMensajes.Text = "";
         }
 
+        // Habilita los controles
         public void HabilitarControles()
         {
             MenuItemEliminar.Enabled = true;
@@ -88,6 +89,8 @@ namespace Administracion
             lblMensajes.Text = "";
   
         }
+
+        // Habilita el ingreso
         public void HabilitarIngreso()
         {
 
@@ -107,6 +110,7 @@ namespace Administracion
 
         }
 
+        // Limpia los campos
         public void Limpiar()
         {
             txtPadron.Text = "";
@@ -124,6 +128,7 @@ namespace Administracion
             lblMensajes.Text = "";
         }
 
+        // Ayuda para el usuario
         private void MenuItemAyuda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Puede utilizar las siguientes teclas para facil acceso a los Items del Menu:\nF1= Ayuda\nF3= Ingresar\nF4= Modificar\nF5= Eliminar\nF6= Cancelar");
@@ -136,6 +141,8 @@ namespace Administracion
             p = pPropiedad;
 
         }
+
+        // Validación de un Apto
         private void txtPadron_Validating(object sender, CancelEventArgs e)
         {
             try
@@ -221,6 +228,8 @@ namespace Administracion
 
 
         }
+
+        // Ingreso de un Apto
         private void MenuItemIngresar_Click(object sender, EventArgs e)
         {
             try
@@ -269,14 +278,14 @@ namespace Administracion
 
         }
 
-     
-
+        // Cancelo y vuelvo a estado inicial
         private void MenuItemCancelar_Click(object sender, EventArgs e)
         {
             Limpiar();
             EstadoInicial();
         }
 
+        // Eliminar Apto
         private void MenuItemEliminar_Click(object sender, EventArgs e)
         {
             try
@@ -300,7 +309,8 @@ namespace Administracion
                     lblMensajes.Text = ex.Message;
             }
         }
-        //prueba git
+
+        // Modificar Apto
         private void MenuItemModificar_Click(object sender, EventArgs e)
         {
 

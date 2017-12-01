@@ -133,7 +133,6 @@ namespace ControlesWeb
             }
         }
 
-
         public void DatosApto(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBanio, int pHabitaciones, decimal pMt2Const, string pTipoPropiedad, string pLetraDpto, string pAbreviacion, string pZonaNombre, int pCantHabitantes, List<string> pLosServicios, int pPiso, bool pAscensor)
         {
             try
@@ -272,7 +271,7 @@ namespace ControlesWeb
         //Metodo que carga la lista de servicios de la zona
         private void ListaServiciosZona(Propiedad p)
         {
-            // TODO - REVISAR QUE FUNCIONE
+
             if (p.Zona.LosServicios.ToList().Count != 0)
             {
                 foreach (Servicio s in p.Zona.LosServicios)

@@ -46,6 +46,7 @@ namespace Entidades_Compartidas
             Mt2Terreno = pMt2;
             Fondo = pFondo;
         }
+
         public Casa()
         { }
     }

@@ -78,7 +78,6 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
         }
     }
 
-
     #region Control de Fechas
     private void VerificoBisiesto()
     {
