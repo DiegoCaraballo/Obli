@@ -239,7 +239,7 @@ namespace Controles
 
         // Valido que seleccione un Departamento
         private void cboDepartamento_Validating(object sender, CancelEventArgs e)
-        {
+            {
             try
             {
                 if (cboDepartamento.SelectedIndex >= 0)

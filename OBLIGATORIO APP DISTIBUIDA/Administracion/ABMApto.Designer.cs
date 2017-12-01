@@ -212,7 +212,7 @@
             // 
             // txtPadron
             // 
-            this.txtPadron.Location = new System.Drawing.Point(103, 39);
+            this.txtPadron.Location = new System.Drawing.Point(103, 38);
             this.txtPadron.Name = "txtPadron";
             this.txtPadron.Size = new System.Drawing.Size(100, 20);
             this.txtPadron.TabIndex = 1;
@@ -223,49 +223,49 @@
             this.txtDireccion.Location = new System.Drawing.Point(103, 65);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(100, 20);
-            this.txtDireccion.TabIndex = 14;
+            this.txtDireccion.TabIndex = 2;
             // 
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(103, 91);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
-            this.txtPrecio.TabIndex = 15;
+            this.txtPrecio.TabIndex = 3;
             // 
             // txtBanio
             // 
             this.txtBanio.Location = new System.Drawing.Point(103, 145);
             this.txtBanio.Name = "txtBanio";
             this.txtBanio.Size = new System.Drawing.Size(100, 20);
-            this.txtBanio.TabIndex = 17;
+            this.txtBanio.TabIndex = 5;
             // 
             // txtHabitaciones
             // 
             this.txtHabitaciones.Location = new System.Drawing.Point(103, 171);
             this.txtHabitaciones.Name = "txtHabitaciones";
             this.txtHabitaciones.Size = new System.Drawing.Size(100, 20);
-            this.txtHabitaciones.TabIndex = 18;
+            this.txtHabitaciones.TabIndex = 6;
             // 
             // txtMt2Const
             // 
             this.txtMt2Const.Location = new System.Drawing.Point(103, 197);
             this.txtMt2Const.Name = "txtMt2Const";
             this.txtMt2Const.Size = new System.Drawing.Size(100, 20);
-            this.txtMt2Const.TabIndex = 19;
+            this.txtMt2Const.TabIndex = 7;
             // 
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(103, 223);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(100, 20);
-            this.txtUser.TabIndex = 22;
+            this.txtUser.TabIndex = 8;
             // 
             // txtPiso
             // 
             this.txtPiso.Location = new System.Drawing.Point(103, 249);
             this.txtPiso.Name = "txtPiso";
             this.txtPiso.Size = new System.Drawing.Size(100, 20);
-            this.txtPiso.TabIndex = 23;
+            this.txtPiso.TabIndex = 9;
             // 
             // cboAccion
             // 
@@ -277,7 +277,7 @@
             this.cboAccion.Location = new System.Drawing.Point(103, 118);
             this.cboAccion.Name = "cboAccion";
             this.cboAccion.Size = new System.Drawing.Size(100, 21);
-            this.cboAccion.TabIndex = 24;
+            this.cboAccion.TabIndex = 4;
             // 
             // cboAscensor
             // 
@@ -288,7 +288,7 @@
             this.cboAscensor.Location = new System.Drawing.Point(103, 275);
             this.cboAscensor.Name = "cboAscensor";
             this.cboAscensor.Size = new System.Drawing.Size(100, 21);
-            this.cboAscensor.TabIndex = 25;
+            this.cboAscensor.TabIndex = 10;
             // 
             // EPPadron
             // 
@@ -321,7 +321,7 @@
             this.ccZona.Location = new System.Drawing.Point(22, 302);
             this.ccZona.Name = "ccZona";
             this.ccZona.Size = new System.Drawing.Size(189, 52);
-            this.ccZona.TabIndex = 27;
+            this.ccZona.TabIndex = 11;
             // 
             // ABMApto
             // 
@@ -356,7 +356,6 @@
             this.Name = "ABMApto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMApto";
-            this.Load += new System.EventHandler(this.ABMApto_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EPPadron)).EndInit();

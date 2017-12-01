@@ -29,12 +29,7 @@ namespace Administracion
             emp = e;
         }
 
-        public ABMApto()
-        {
-            InitializeComponent();
-            EstadoInicial();
-
-        }
+     
 
         public void Accesos()
         {
@@ -53,39 +48,17 @@ namespace Administracion
             MenuItemIngresar.Enabled = false;
             MenuItemEliminar.Enabled = false;
             MenuItemModificar.Enabled = false;
-            
-            txtPadron.Enabled = true;
-            txtDireccion.Enabled = true;
-            txtPrecio.Enabled = false;
-            cboAccion.Enabled = false;
-            txtBanio.Enabled = false;
-            txtHabitaciones.Enabled = false;
-            txtMt2Const.Enabled = false;
             txtUser.Enabled = false;
-            txtPiso.Enabled = false;
-            cboAscensor.Enabled = false;
-            ccZona.Enabled = false;
-
-            lblMensajes.Text = "";
+            Limpiar();
         }
 
         // Habilita los controles
-        public void HabilitarControles()
+        public void HabilitarBM()
         {
             MenuItemEliminar.Enabled = true;
             MenuItemModificar.Enabled = true;
-
+            MenuItemIngresar.Enabled = false;
             txtPadron.Enabled = false;
-            txtDireccion.Enabled = true;
-            txtPrecio.Enabled = true;
-            cboAccion.Enabled = true;
-            txtBanio.Enabled = true;
-            txtHabitaciones.Enabled = true;
-            txtMt2Const.Enabled = true;
-            txtPiso.Enabled = true;
-            cboAscensor.Enabled = true;
-            ccZona.Enabled = true;
-
             lblMensajes.Text = "";
   
         }
@@ -93,18 +66,9 @@ namespace Administracion
         // Habilita el ingreso
         public void HabilitarIngreso()
         {
-
+            MenuItemEliminar.Enabled = false;
+            MenuItemModificar.Enabled = false;
             MenuItemIngresar.Enabled = true;
-            
-            txtDireccion.Enabled = true;
-            txtPrecio.Enabled = true;
-            cboAccion.Enabled = true;
-            txtBanio.Enabled = true;
-            txtHabitaciones.Enabled = true;
-            txtMt2Const.Enabled = true;
-            txtPiso.Enabled = true;
-            cboAscensor.Enabled = true;
-            ccZona.Enabled = true;
 
             lblMensajes.Text = "";
 
@@ -158,12 +122,7 @@ namespace Administracion
             }
             try
             {
-                if (Convert.ToInt32(txtPadron.Text) == 0)
-                {
-                    HabilitarIngreso();
-                }
-                else
-                {
+                
                     ServicioWeb.Propiedad propiedad = null;
 
                     MiServicio serv = new MiServicio();
@@ -172,12 +131,13 @@ namespace Administracion
 
                     if (propiedad == null)
                     {
-                        HabilitarControles();
+                        HabilitarIngreso();
                         return;
                     }
                     if (propiedad is Apto)
                     {
                         prop = propiedad;
+
                         txtDireccion.Text = propiedad.Direccion;
                         txtPrecio.Text = propiedad.Precio.ToString();
                         cboAccion.SelectedItem = propiedad.Accion.ToString();
@@ -201,14 +161,14 @@ namespace Administracion
                             cboAscensor.SelectedItem = "NO";
                         }
 
-                        HabilitarControles();
+                        HabilitarBM();
 
                     }
                     else
                     {
                         lblMensajes.Text = "El padron ingresado no pertence a una propiedad de tipo Aparatamento";
                     }
-                }
+                
 
             }
             catch (System.Web.Services.Protocols.SoapException ex)
@@ -234,8 +194,8 @@ namespace Administracion
         {
             try
             {
-                MiServicio serv = new MiServicio();
-                bool ascensor;
+               // MiServicio serv = new MiServicio();
+                bool ascensor=false;
                 ServicioWeb.Apto apto = new ServicioWeb.Apto();
 
 
@@ -246,7 +206,7 @@ namespace Administracion
                 apto.Baño = Convert.ToInt32(txtBanio.Text);
                 apto.Habitaciones = Convert.ToInt32(txtHabitaciones.Text);
                 apto.Mt2Const = Convert.ToInt32(txtMt2Const.Text);
-                apto.Zona = serv.BuscarTodasZonas(ccZona.LetraDepto, ccZona.Codigo);
+                apto.Zona = new ServicioWeb.MiServicio().BuscarTodasZonas(ccZona.LetraDepto, ccZona.Codigo);
                 apto.UltimoEmp = emp;
 
                 apto.Piso = Convert.ToInt32(txtPiso.Text);
@@ -258,20 +218,23 @@ namespace Administracion
 
                 apto.Ascensor = ascensor;
 
-                serv.AltaPropiedad(apto);
+              new ServicioWeb.MiServicio().AltaPropiedad(apto);
+
+                EstadoInicial();
+                lblMensajes.Text = "PROPIEDAD INGRESADA CON EXITO";
 
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 40);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
                 else
                     lblMensajes.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
-                if (ex.Message.Length > 40)
-                    lblMensajes.Text = ex.Message.Substring(0, 40);
+                if (ex.Message.Length > 80)
+                    lblMensajes.Text = ex.Message.Substring(0, 80);
                 else
                     lblMensajes.Text = ex.Message;
             }
@@ -281,7 +244,6 @@ namespace Administracion
         // Cancelo y vuelvo a estado inicial
         private void MenuItemCancelar_Click(object sender, EventArgs e)
         {
-            Limpiar();
             EstadoInicial();
         }
 
@@ -296,15 +258,15 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 40);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
                 else
                     lblMensajes.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
-                if (ex.Message.Length > 40)
-                    lblMensajes.Text = ex.Message.Substring(0, 40);
+                if (ex.Message.Length > 80)
+                    lblMensajes.Text = ex.Message.Substring(0, 80);
                 else
                     lblMensajes.Text = ex.Message;
             }
@@ -341,25 +303,23 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 40);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
                 else
                     lblMensajes.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
-                if (ex.Message.Length > 40)
-                    lblMensajes.Text = ex.Message.Substring(0, 40);
+                if (ex.Message.Length > 80)
+                    lblMensajes.Text = ex.Message.Substring(0, 80);
                 else
                     lblMensajes.Text = ex.Message;
             }
 
         }
 
-        private void ABMApto_Load(object sender, EventArgs e)
-        {
 
-        }
+    
 
   
 
