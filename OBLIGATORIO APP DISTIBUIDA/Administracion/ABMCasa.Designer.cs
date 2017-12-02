@@ -28,233 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ABMCasa));
-            this.cboFondo = new System.Windows.Forms.ComboBox();
-            this.cboAccion = new System.Windows.Forms.ComboBox();
-            this.txtPiso = new System.Windows.Forms.TextBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.txtAbrev = new System.Windows.Forms.TextBox();
-            this.txtLetraDpto = new System.Windows.Forms.TextBox();
-            this.txtMt2Const = new System.Windows.Forms.TextBox();
-            this.txtHabitaciones = new System.Windows.Forms.TextBox();
-            this.txtBanio = new System.Windows.Forms.TextBox();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.txtPadron = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MenuItemIngresar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemCancelar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemAyuda = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ccZona = new Controles.CodigoDpto();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cboFondo = new System.Windows.Forms.ComboBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPadron = new System.Windows.Forms.TextBox();
+            this.cboAccion = new System.Windows.Forms.ComboBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtFondo = new System.Windows.Forms.Label();
+            this.txtMt2Terreno = new System.Windows.Forms.TextBox();
+            this.txtBanio = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtHabitaciones = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtMt2Const = new System.Windows.Forms.TextBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblMensajes = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.EPPadron = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EPPadron)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cboFondo
-            // 
-            this.cboFondo.FormattingEnabled = true;
-            this.cboFondo.Location = new System.Drawing.Point(104, 343);
-            this.cboFondo.Name = "cboFondo";
-            this.cboFondo.Size = new System.Drawing.Size(100, 21);
-            this.cboFondo.TabIndex = 49;
-            // 
-            // cboAccion
-            // 
-            this.cboAccion.FormattingEnabled = true;
-            this.cboAccion.Location = new System.Drawing.Point(104, 125);
-            this.cboAccion.Name = "cboAccion";
-            this.cboAccion.Size = new System.Drawing.Size(100, 21);
-            this.cboAccion.TabIndex = 48;
-            // 
-            // txtPiso
-            // 
-            this.txtPiso.Location = new System.Drawing.Point(104, 312);
-            this.txtPiso.Name = "txtPiso";
-            this.txtPiso.Size = new System.Drawing.Size(100, 20);
-            this.txtPiso.TabIndex = 47;
-            // 
-            // txtUser
-            // 
-            this.txtUser.Location = new System.Drawing.Point(104, 286);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(100, 20);
-            this.txtUser.TabIndex = 46;
-            // 
-            // txtAbrev
-            // 
-            this.txtAbrev.Location = new System.Drawing.Point(104, 260);
-            this.txtAbrev.Name = "txtAbrev";
-            this.txtAbrev.Size = new System.Drawing.Size(100, 20);
-            this.txtAbrev.TabIndex = 45;
-            // 
-            // txtLetraDpto
-            // 
-            this.txtLetraDpto.Location = new System.Drawing.Point(104, 233);
-            this.txtLetraDpto.Name = "txtLetraDpto";
-            this.txtLetraDpto.Size = new System.Drawing.Size(100, 20);
-            this.txtLetraDpto.TabIndex = 44;
-            // 
-            // txtMt2Const
-            // 
-            this.txtMt2Const.Location = new System.Drawing.Point(104, 206);
-            this.txtMt2Const.Name = "txtMt2Const";
-            this.txtMt2Const.Size = new System.Drawing.Size(100, 20);
-            this.txtMt2Const.TabIndex = 43;
-            // 
-            // txtHabitaciones
-            // 
-            this.txtHabitaciones.Location = new System.Drawing.Point(104, 179);
-            this.txtHabitaciones.Name = "txtHabitaciones";
-            this.txtHabitaciones.Size = new System.Drawing.Size(100, 20);
-            this.txtHabitaciones.TabIndex = 42;
-            // 
-            // txtBanio
-            // 
-            this.txtBanio.Location = new System.Drawing.Point(104, 152);
-            this.txtBanio.Name = "txtBanio";
-            this.txtBanio.Size = new System.Drawing.Size(100, 20);
-            this.txtBanio.TabIndex = 41;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(104, 98);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
-            this.txtPrecio.TabIndex = 40;
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(104, 72);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(100, 20);
-            this.txtDireccion.TabIndex = 39;
-            // 
-            // txtPadron
-            // 
-            this.txtPadron.Location = new System.Drawing.Point(104, 46);
-            this.txtPadron.Name = "txtPadron";
-            this.txtPadron.Size = new System.Drawing.Size(100, 20);
-            this.txtPadron.TabIndex = 38;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(43, 343);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(37, 13);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Fondo";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(26, 312);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 13);
-            this.label11.TabIndex = 36;
-            this.label11.Text = "Mt2(Terreno)";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 286);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 13);
-            this.label10.TabIndex = 35;
-            this.label10.Text = "Modificado Por";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(4, 260);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 13);
-            this.label9.TabIndex = 34;
-            this.label9.Text = "Zona(Abreviacion)";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 233);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 13);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "Zona(LetraDpto)";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 206);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 13);
-            this.label7.TabIndex = 32;
-            this.label7.Text = "Mt2(Construccion)";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 179);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "Habitaciones";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(54, 152);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Baños";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 125);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Accion";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Precio";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 72);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Direccion";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Padron";
             // 
             // menuStrip1
             // 
@@ -306,41 +116,244 @@
             this.MenuItemAyuda.Size = new System.Drawing.Size(69, 20);
             this.MenuItemAyuda.Text = "Ayuda";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(55, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "Padron";
+            // 
+            // ccZona
+            // 
+            this.ccZona.Codigo = "";
+            this.ccZona.LetraDepto = "";
+            this.ccZona.Location = new System.Drawing.Point(25, 306);
+            this.ccZona.Name = "ccZona";
+            this.ccZona.Size = new System.Drawing.Size(189, 52);
+            this.ccZona.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(44, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "Direccion";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(59, 102);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 54;
+            this.label3.Text = "Precio";
+            // 
+            // cboFondo
+            // 
+            this.cboFondo.FormattingEnabled = true;
+            this.cboFondo.Items.AddRange(new object[] {
+            "SI",
+            "NO"});
+            this.cboFondo.Location = new System.Drawing.Point(106, 279);
+            this.cboFondo.Name = "cboFondo";
+            this.cboFondo.Size = new System.Drawing.Size(100, 21);
+            this.cboFondo.TabIndex = 10;
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(106, 69);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(100, 20);
+            this.txtDireccion.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(56, 125);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "Accion";
+            // 
+            // txtPadron
+            // 
+            this.txtPadron.Location = new System.Drawing.Point(106, 42);
+            this.txtPadron.Name = "txtPadron";
+            this.txtPadron.Size = new System.Drawing.Size(100, 20);
+            this.txtPadron.TabIndex = 1;
+            // 
+            // cboAccion
+            // 
+            this.cboAccion.FormattingEnabled = true;
+            this.cboAccion.Items.AddRange(new object[] {
+            "ALQUILER",
+            "VENTA",
+            "PERMUTA"});
+            this.cboAccion.Location = new System.Drawing.Point(106, 122);
+            this.cboAccion.Name = "cboAccion";
+            this.cboAccion.Size = new System.Drawing.Size(100, 21);
+            this.cboAccion.TabIndex = 4;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(106, 95);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecio.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(59, 152);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 58;
+            this.label5.Text = "Baños";
+            // 
+            // txtFondo
+            // 
+            this.txtFondo.AutoSize = true;
+            this.txtFondo.Location = new System.Drawing.Point(45, 279);
+            this.txtFondo.Name = "txtFondo";
+            this.txtFondo.Size = new System.Drawing.Size(37, 13);
+            this.txtFondo.TabIndex = 70;
+            this.txtFondo.Text = "Fondo";
+            // 
+            // txtMt2Terreno
+            // 
+            this.txtMt2Terreno.Location = new System.Drawing.Point(106, 253);
+            this.txtMt2Terreno.Name = "txtMt2Terreno";
+            this.txtMt2Terreno.Size = new System.Drawing.Size(100, 20);
+            this.txtMt2Terreno.TabIndex = 9;
+            // 
+            // txtBanio
+            // 
+            this.txtBanio.Location = new System.Drawing.Point(106, 149);
+            this.txtBanio.Name = "txtBanio";
+            this.txtBanio.Size = new System.Drawing.Size(100, 20);
+            this.txtBanio.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(31, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.TabIndex = 61;
+            this.label6.Text = "Habitaciones";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(32, 256);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(68, 13);
+            this.label11.TabIndex = 69;
+            this.label11.Text = "Mt2(Terreno)";
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(106, 227);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(100, 20);
+            this.txtUser.TabIndex = 8;
+            // 
+            // txtHabitaciones
+            // 
+            this.txtHabitaciones.Location = new System.Drawing.Point(106, 175);
+            this.txtHabitaciones.Name = "txtHabitaciones";
+            this.txtHabitaciones.Size = new System.Drawing.Size(100, 20);
+            this.txtHabitaciones.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 208);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(93, 13);
+            this.label7.TabIndex = 63;
+            this.label7.Text = "Mt2(Construccion)";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(22, 227);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 13);
+            this.label10.TabIndex = 67;
+            this.label10.Text = "Modificado Por";
+            // 
+            // txtMt2Const
+            // 
+            this.txtMt2Const.Location = new System.Drawing.Point(106, 201);
+            this.txtMt2Const.Name = "txtMt2Const";
+            this.txtMt2Const.Size = new System.Drawing.Size(100, 20);
+            this.txtMt2Const.TabIndex = 8;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblMensajes,
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 448);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(604, 22);
+            this.statusStrip1.TabIndex = 71;
+            // 
+            // lblMensajes
+            // 
+            this.lblMensajes.Name = "lblMensajes";
+            this.lblMensajes.Size = new System.Drawing.Size(0, 17);
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            // 
+            // EPPadron
+            // 
+            this.EPPadron.ContainerControl = this;
+            // 
             // ABMCasa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 470);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.cboFondo);
-            this.Controls.Add(this.cboAccion);
-            this.Controls.Add(this.txtPiso);
-            this.Controls.Add(this.txtUser);
-            this.Controls.Add(this.txtAbrev);
-            this.Controls.Add(this.txtLetraDpto);
-            this.Controls.Add(this.txtMt2Const);
-            this.Controls.Add(this.txtHabitaciones);
-            this.Controls.Add(this.txtBanio);
-            this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.txtPadron);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.ccZona);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cboFondo);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtPadron);
+            this.Controls.Add(this.cboAccion);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtFondo);
+            this.Controls.Add(this.txtMt2Terreno);
+            this.Controls.Add(this.txtBanio);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.txtHabitaciones);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtMt2Const);
+            this.Controls.Add(this.menuStrip1);
             this.Name = "ABMCasa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMCasa";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EPPadron)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,35 +361,36 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cboFondo;
-        private System.Windows.Forms.ComboBox cboAccion;
-        private System.Windows.Forms.TextBox txtPiso;
-        private System.Windows.Forms.TextBox txtUser;
-        private System.Windows.Forms.TextBox txtAbrev;
-        private System.Windows.Forms.TextBox txtLetraDpto;
-        private System.Windows.Forms.TextBox txtMt2Const;
-        private System.Windows.Forms.TextBox txtHabitaciones;
-        private System.Windows.Forms.TextBox txtBanio;
-        private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtPadron;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem MenuItemIngresar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemModificar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemEliminar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemCancelar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemAyuda;
+        private System.Windows.Forms.Label label1;
+        private Controles.CodigoDpto ccZona;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cboFondo;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtPadron;
+        private System.Windows.Forms.ComboBox cboAccion;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label txtFondo;
+        private System.Windows.Forms.TextBox txtMt2Terreno;
+        private System.Windows.Forms.TextBox txtBanio;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtHabitaciones;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtMt2Const;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblMensajes;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ErrorProvider EPPadron;
     }
 }
