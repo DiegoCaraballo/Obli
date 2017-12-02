@@ -8,7 +8,7 @@ using Entidades_Compartidas;
 
 namespace Persistencia
 {
-public class FabricaPersistencia
+    public class FabricaPersistencia
     {
         public static ICasaPersistencia getPersistenciaCasa()
         {
@@ -26,8 +26,8 @@ public class FabricaPersistencia
         }
 
         public static IEmpleadoPersistencia getPersistenciaEmpleado()
-        { 
-            return (EmpleadoPersistencia.GetInstancia ());
+        {
+            return (EmpleadoPersistencia.GetInstancia());
         }
 
         public static IZonaPersistencia getPersistenciaZona()
@@ -38,6 +38,6 @@ public class FabricaPersistencia
         public static IVisitaPersistencia getPersistenciaVisita()
         {
             return (VisitaPersistencia.GetInstancia());
-        }       
+        }
     }
 }

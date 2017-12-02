@@ -273,12 +273,6 @@ namespace Administracion
             }
         }
 
-        // Mensaje de ayuda
-        private void MenuItemAyuda_Click_1(object sender, EventArgs e)
-        {
-            MessageBox.Show("Puede utilizar las siguientes teclas para facil acceso a los Items del Menu:\nF1= Ayuda\nF3= Ingresar\nF4= Modificar\nF5= Eliminar\nF6= Cancelar");
-        }
-
         // Agrega servicios al ListBox
         private void btnAgregar_Click(object sender, EventArgs e)
         {

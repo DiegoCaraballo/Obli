@@ -10,9 +10,9 @@ namespace Persistencia
     public interface ICasaPersistencia
     {
         Casa BuscarCasa(int pPadron);
+        void EliminarCasa(Casa C);
         void AgregarCasa(Casa C);
         void ModificarCasa(Casa C);
-        void EliminarCasa(Casa C);
         List<Casa> ListaCasa();
     }
 }

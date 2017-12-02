@@ -11,8 +11,8 @@ namespace Persistencia
         void AgregarZona(Zona Zo);
         void ModificarZona(Zona Zo);
         void EliminarZona(Zona Zo);
-        List<Zona> ListoPorDpto(string _letraDpto);
         List<Zona> Listo();
+        List<Zona> ListoPorDpto(string _letraDpto);
         Zona Busco(string pLetra, string pAbrev);
         Zona BuscoTodas(string letraDpto, string abreviacion);
     }

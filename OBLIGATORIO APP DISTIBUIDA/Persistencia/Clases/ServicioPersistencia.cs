@@ -42,8 +42,29 @@ namespace Persistencia
                 throw ex;
             }
         }
-  
+        internal static void EliminarServiciosZona(Entidades_Compartidas.Zona unaZona, SqlTransaction _pTransaccion)
+        {
+            SqlCommand comando = new SqlCommand("EliminarServicio", _pTransaccion.Connection);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@LetraDpto", unaZona.LetraDpto);
+            comando.Parameters.AddWithValue("@Abreviacion", unaZona.Abreviacion);
+            SqlParameter _ParmRetorno = new SqlParameter("@Retorno", SqlDbType.Int);
+            _ParmRetorno.Direction = ParameterDirection.ReturnValue;
+            comando.Parameters.Add(_ParmRetorno);
 
+            try
+            {
+                //determino que debo trabajar con la misma transaccion
+                comando.Transaction = _pTransaccion;
+
+                //ejecuto comando
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         internal static List<string> CargoServicio(string letraDpto, string abreviacion)
         {
             SqlConnection _cnn = new SqlConnection(Conexion.Cnn);
@@ -81,30 +102,6 @@ namespace Persistencia
 
             return _ListaServicios;
         }
-
-        internal static void EliminarServiciosZona(Entidades_Compartidas.Zona unaZona, SqlTransaction _pTransaccion)
-        {
-            SqlCommand comando = new SqlCommand("EliminarServicio", _pTransaccion.Connection);
-            comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@LetraDpto", unaZona.LetraDpto);
-            comando.Parameters.AddWithValue("@Abreviacion", unaZona.Abreviacion);
-            SqlParameter _ParmRetorno = new SqlParameter("@Retorno", SqlDbType.Int);
-            _ParmRetorno.Direction = ParameterDirection.ReturnValue;
-            comando.Parameters.Add(_ParmRetorno);
-
-            try
-            {
-                //determino que debo trabajar con la misma transaccion
-                comando.Transaction = _pTransaccion;
-
-                //ejecuto comando
-                comando.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-    }
+       }
 
 }

@@ -10,9 +10,9 @@ namespace Persistencia
     public interface IAptoPersistencia
     {
         Apto BuscarApto(int pPadron);
+        void EliminarApto(Apto A);
         void AgregarApto(Apto A);
         void ModificarApto(Apto A);
-        void EliminarApto(Apto A);
         List<Apto> ListaApto();
     }
 }

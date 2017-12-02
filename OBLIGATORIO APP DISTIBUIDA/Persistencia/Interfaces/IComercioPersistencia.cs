@@ -10,9 +10,9 @@ namespace Persistencia
     public interface IComercioPersistencia
     {
         Comercio BuscarComercio(int pPadron);
+        void EliminarComercio(Comercio Co);
         void AgregarComercio(Comercio Co);
         void ModificarComercio(Comercio Co);
-        void EliminarComercio(Comercio Co);
         List<Comercio> ListaComercio();       
     }
 }

@@ -27,8 +27,96 @@ namespace Persistencia
         #endregion
 
         #region Operaciones
+        public Comercio BuscarComercio(int pPadron)
+        {
+            Comercio co = null;
+            int padron;
+            string direccion;
+            int precio;
+            string accion;
+            int banio;
+            int habitaciones;
+            decimal mt2C;
+            string nomUsu;
+            string letraDpto;
+            string abreviacion;
 
+            bool habilitado;
 
+            SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
+            SqlCommand oComando = new SqlCommand("BuscarComercio " + pPadron, oConexion);
+
+            SqlDataReader oReader;
+
+            try
+            {
+                oConexion.Open();
+                oReader = oComando.ExecuteReader();
+                if (oReader.Read())
+                {
+                    padron = (int)oReader["padron"];
+                    direccion = (string)oReader["direccion"];
+                    precio = (int)oReader["precio"];
+                    accion = (string)oReader["accion"];
+                    banio = (int)oReader["banios"];
+                    habitaciones = (int)oReader["habitaciones"];
+                    mt2C = (decimal)oReader["mt2const"];
+                    nomUsu = (string)oReader["nomUsu"];
+                    letraDpto = (string)oReader["letraDpto"];
+                    abreviacion = (string)oReader["abreviacion"];
+
+                    habilitado = (bool)oReader["habilitado"];
+                    co = new Comercio(padron, direccion, precio, accion, banio, habitaciones, mt2C,
+                 (ZonaPersistencia.GetInstancia().BuscoTodas(letraDpto, abreviacion)),
+                 (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)), habilitado);
+
+                }
+                oReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Problemas con la base de datos: " + ex.Message);
+            }
+            finally
+            {
+                oConexion.Close();
+            }
+
+            return co;
+        }
+        public void EliminarComercio(Comercio Co)
+        {
+            SqlConnection coonexion = new SqlConnection(Conexion.Cnn);
+            SqlCommand comando = new SqlCommand("EliminaComercio", coonexion);
+            comando.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter padron = new SqlParameter("@padron", Co.Padron);
+
+            SqlParameter retorno = new SqlParameter("@Retorno", SqlDbType.Int);
+            retorno.Direction = ParameterDirection.ReturnValue;
+
+            int oAfectados = -1;
+
+            comando.Parameters.Add(padron);
+            comando.Parameters.Add(retorno);
+
+            try
+            {
+                coonexion.Open();
+                comando.ExecuteNonQuery();
+                oAfectados = (int)comando.Parameters["@Retorno"].Value;
+                if (oAfectados == -1)
+                    throw new Exception("");
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error en la BD:" + ex.Message);
+            }
+            finally
+            {
+                coonexion.Close();
+            }
+        }
         public void AgregarComercio(Comercio pComercio)
         {
             SqlConnection conexion = new SqlConnection(Conexion.Cnn);
@@ -94,41 +182,6 @@ namespace Persistencia
                 conexion.Close();
             }
         }
-
-        public void EliminarComercio(Comercio Co)
-        {
-            SqlConnection coonexion = new SqlConnection(Conexion.Cnn);
-            SqlCommand comando = new SqlCommand("EliminaComercio", coonexion);
-            comando.CommandType = CommandType.StoredProcedure;
-
-            SqlParameter padron = new SqlParameter("@padron", Co.Padron);
-
-            SqlParameter retorno = new SqlParameter("@Retorno", SqlDbType.Int);
-            retorno.Direction = ParameterDirection.ReturnValue;
-
-            int oAfectados = -1;
-
-            comando.Parameters.Add(padron);
-            comando.Parameters.Add(retorno);
-
-            try
-            {
-                coonexion.Open();
-                comando.ExecuteNonQuery();
-                oAfectados = (int)comando.Parameters["@Retorno"].Value;
-                if (oAfectados == -1)
-                    throw new Exception("");
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException("Error en la BD:" + ex.Message);
-            }
-            finally
-            {
-                coonexion.Close();
-            }
-        }
-
         public void ModificarComercio(Comercio Co)
         {
             SqlConnection conexion = new SqlConnection(Conexion.Cnn);
@@ -192,65 +245,6 @@ namespace Persistencia
                 conexion.Close();
             }
         }
-
-        public Comercio BuscarComercio(int pPadron)
-        {
-            Comercio co = null;
-            int padron;
-            string direccion;
-            int precio;
-            string accion;
-            int banio;
-            int habitaciones;
-            decimal mt2C;
-            string nomUsu;
-            string letraDpto;
-            string abreviacion;
-
-            bool habilitado;
-
-            SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
-            SqlCommand oComando = new SqlCommand("BuscarComercio " + pPadron, oConexion);
-
-            SqlDataReader oReader;
-
-            try
-            {
-                oConexion.Open();
-                oReader = oComando.ExecuteReader();
-                if (oReader.Read())
-                {
-                    padron = (int)oReader["padron"];
-                    direccion = (string)oReader["direccion"];
-                    precio = (int)oReader["precio"];
-                    accion = (string)oReader["accion"];
-                    banio = (int)oReader["banios"];
-                    habitaciones = (int)oReader["habitaciones"];
-                    mt2C = (decimal)oReader["mt2const"];
-                    nomUsu = (string)oReader["nomUsu"];
-                    letraDpto = (string)oReader["letraDpto"];
-                    abreviacion = (string)oReader["abreviacion"];
-
-                    habilitado = (bool)oReader["habilitado"];
-                    co = new Comercio(padron, direccion, precio, accion, banio, habitaciones, mt2C,
-                 (ZonaPersistencia.GetInstancia().BuscoTodas(letraDpto, abreviacion)),
-                 (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)), habilitado);
-
-                }
-                oReader.Close();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Problemas con la base de datos: " + ex.Message);
-            }
-            finally
-            {
-                oConexion.Close();
-            }
-
-            return co;
-        }
-
         public List<Comercio> ListaComercio()
         {
             List<Comercio> lista = new List<Comercio>();

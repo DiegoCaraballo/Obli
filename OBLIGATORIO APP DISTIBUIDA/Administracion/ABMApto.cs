@@ -29,7 +29,7 @@ namespace Administracion
             emp = e;
         }
 
-     
+
 
         public void Accesos()
         {
@@ -61,7 +61,7 @@ namespace Administracion
             MenuItemIngresar.Enabled = false;
             txtPadron.Enabled = false;
             lblMensajes.Text = "";
-  
+
         }
 
         // Habilita el ingreso
@@ -70,7 +70,7 @@ namespace Administracion
             MenuItemEliminar.Enabled = false;
             MenuItemModificar.Enabled = false;
             MenuItemIngresar.Enabled = true;
-            txtPadron.Enabled=true;
+            txtPadron.Enabled = true;
             lblMensajes.Text = "";
 
         }
@@ -81,7 +81,7 @@ namespace Administracion
             txtPadron.Text = "";
             txtDireccion.Text = "";
             txtPrecio.Text = "";
-            cboAccion.SelectedIndex =0;
+            cboAccion.SelectedIndex = 0;
             txtBanio.Text = "";
             txtHabitaciones.Text = "";
             txtMt2Const.Text = "";
@@ -100,8 +100,6 @@ namespace Administracion
 
         }
 
-      
-
         // Validación de un Apto
         private void txtPadron_Validating(object sender, CancelEventArgs e)
         {
@@ -118,53 +116,53 @@ namespace Administracion
             }
             try
             {
-                
-                    ServicioWeb.Propiedad propiedad = null;
 
-                    MiServicio serv = new MiServicio();
+                ServicioWeb.Propiedad propiedad = null;
 
-                    propiedad = serv.BuscarPropiedad(Convert.ToInt32(txtPadron.Text));
+                MiServicio serv = new MiServicio();
 
-                    if (propiedad == null)
+                propiedad = serv.BuscarPropiedad(Convert.ToInt32(txtPadron.Text));
+
+                if (propiedad == null)
+                {
+                    HabilitarIngreso();
+                    return;
+                }
+                if (propiedad is Apto)
+                {
+                    prop = propiedad;
+
+                    txtDireccion.Text = propiedad.Direccion;
+                    txtPrecio.Text = propiedad.Precio.ToString();
+                    cboAccion.SelectedItem = propiedad.Accion.ToString();
+                    txtBanio.Text = propiedad.Baño.ToString();
+                    txtHabitaciones.Text = propiedad.Habitaciones.ToString();
+                    txtMt2Const.Text = propiedad.Mt2Const.ToString();
+
+                    ccZona.LetraDepto = propiedad.Zona.LetraDpto.ToString();
+                    ccZona.Codigo = propiedad.Zona.Abreviacion;
+                    zona = propiedad.Zona;
+
+
+                    txtUser.Text = propiedad.UltimoEmp.NomUsu;
+                    txtPiso.Text = ((ServicioWeb.Apto)propiedad).Piso.ToString();
+                    if (((ServicioWeb.Apto)propiedad).Ascensor == true)
                     {
-                        HabilitarIngreso();
-                        return;
-                    }
-                    if (propiedad is Apto)
-                    {
-                        prop = propiedad;
-
-                        txtDireccion.Text = propiedad.Direccion;
-                        txtPrecio.Text = propiedad.Precio.ToString();
-                        cboAccion.SelectedItem = propiedad.Accion.ToString();
-                        txtBanio.Text = propiedad.Baño.ToString();
-                        txtHabitaciones.Text = propiedad.Habitaciones.ToString();
-                        txtMt2Const.Text = propiedad.Mt2Const.ToString();
-
-                        ccZona.LetraDepto = propiedad.Zona.LetraDpto.ToString();
-                        ccZona.Codigo = propiedad.Zona.Abreviacion;
-                        zona = propiedad.Zona;
-
-
-                        txtUser.Text = propiedad.UltimoEmp.NomUsu;
-                        txtPiso.Text = ((ServicioWeb.Apto)propiedad).Piso.ToString();
-                        if (((ServicioWeb.Apto)propiedad).Ascensor == true)
-                        {
-                            cboAscensor.SelectedItem = "SI";
-                        }
-                        else
-                        {
-                            cboAscensor.SelectedItem = "NO";
-                        }
-
-                        HabilitarBM();
-
+                        cboAscensor.SelectedItem = "SI";
                     }
                     else
                     {
-                        lblMensajes.Text = "El padron ingresado no pertence a una propiedad de tipo Aparatamento";
+                        cboAscensor.SelectedItem = "NO";
                     }
-                
+
+                    HabilitarBM();
+
+                }
+                else
+                {
+                    lblMensajes.Text = "El padron ingresado no pertence a una propiedad de tipo Aparatamento";
+                }
+
 
             }
             catch (System.Web.Services.Protocols.SoapException ex)
@@ -190,8 +188,8 @@ namespace Administracion
         {
             try
             {
-               // MiServicio serv = new MiServicio();
-                bool ascensor=false;
+                // MiServicio serv = new MiServicio();
+                bool ascensor = false;
                 ServicioWeb.Apto apto = new ServicioWeb.Apto();
 
 
@@ -214,7 +212,7 @@ namespace Administracion
 
                 apto.Ascensor = ascensor;
 
-              new ServicioWeb.MiServicio().AltaPropiedad(apto);
+                new ServicioWeb.MiServicio().AltaPropiedad(apto);
 
                 EstadoInicial();
                 lblMensajes.Text = "PROPIEDAD INGRESADA CON EXITO";
@@ -224,9 +222,9 @@ namespace Administracion
             {
                 MessageBox.Show(ex.Detail.InnerText);
                 //if (ex.Detail.InnerText.Length > 80)
-                  //  lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
+                //  lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
                 //else
-                  //  lblMensajes.Text = ex.Detail.InnerText;
+                //  lblMensajes.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
@@ -316,17 +314,17 @@ namespace Administracion
         }
 
 
-    
-
-  
 
 
- 
-
-  
 
 
-       
+
+
+
+
+
+
+
 
     }
 }

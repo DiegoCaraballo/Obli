@@ -140,7 +140,7 @@
             this.MenuItemAyuda.Name = "MenuItemAyuda";
             this.MenuItemAyuda.Size = new System.Drawing.Size(69, 20);
             this.MenuItemAyuda.Text = "Ayuda";
-            this.MenuItemAyuda.Click += new System.EventHandler(this.MenuItemAyuda_Click_1);
+           
             // 
             // statusStrip1
             // 

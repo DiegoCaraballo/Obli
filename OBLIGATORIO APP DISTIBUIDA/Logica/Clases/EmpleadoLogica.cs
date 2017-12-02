@@ -44,7 +44,7 @@ namespace Logica
 
         public Empleado BuscarEmpleado(string pNomUsu)
         {
-           return FabricaPersistencia.getPersistenciaEmpleado().BuscarEmpleado(pNomUsu);
+            return FabricaPersistencia.getPersistenciaEmpleado().BuscarEmpleado(pNomUsu);
         }
 
     }

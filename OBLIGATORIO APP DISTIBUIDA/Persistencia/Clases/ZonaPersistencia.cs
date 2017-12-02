@@ -28,6 +28,7 @@ namespace Persistencia
 
         #region OPERACIONES
 
+        //Agregar una Zona
         public void AgregarZona(Zona unaZona)
         {
             SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
@@ -162,6 +163,7 @@ namespace Persistencia
             }
         }
 
+        //Elimina una Zona
         public void EliminarZona(Zona unaZona)
         {
             SqlConnection _cnn = new SqlConnection(Conexion.Cnn);
@@ -186,10 +188,10 @@ namespace Persistencia
                     throw new Exception("La Zona no existe");
                 else if ((int)_retorno.Value == -2)
                     throw new Exception("Problema al Eliminar la Zona");
-                else if((int)_retorno.Value == -3)
+                else if ((int)_retorno.Value == -3)
                     throw new Exception("Problema al Eliminar la Zona");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }

@@ -27,8 +27,99 @@ namespace Persistencia
         #endregion
 
         #region Operaciones
+        public Casa BuscarCasa(int pPadron)
+        {
+            Casa c = null;
+            int padron;
+            string direccion;
+            int precio;
+            string accion;
+            int banio;
+            int habitaciones;
+            decimal mt2C;
+            string nomUsu;
+            string letraDpto;
+            string abreviacion;
 
+            decimal mt2Terreno;
+            bool fondo;
 
+            SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
+            SqlCommand oComando = new SqlCommand("BuscarCasa " + pPadron, oConexion);
+            SqlDataReader oReader;
+
+            try
+            {
+                oConexion.Open();
+                oReader = oComando.ExecuteReader();
+                if (oReader.Read())
+                {
+                    padron = (int)oReader["padron"];
+                    direccion = (string)oReader["direccion"];
+                    precio = (int)oReader["precio"];
+                    accion = (string)oReader["accion"];
+                    banio = (int)oReader["banios"];
+                    habitaciones = (int)oReader["habitaciones"];
+                    mt2C = (decimal)oReader["mt2const"];
+                    nomUsu = (string)oReader["nomUsu"];
+                    letraDpto = (string)oReader["letraDpto"];
+                    abreviacion = (string)oReader["abreviacion"];
+
+                    mt2Terreno = (decimal)oReader["mt2Terreno"];
+                    fondo = Convert.ToBoolean(oReader["fondo"]);
+
+                    c = new Casa(padron, direccion, precio, accion, banio, habitaciones, mt2C,
+                 (ZonaPersistencia.GetInstancia().BuscoTodas(letraDpto, abreviacion)),
+                 (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)), mt2Terreno, fondo);
+
+                }
+                oReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                oConexion.Close();
+            }
+
+            return c;
+        }
+        public void EliminarCasa(Casa C)
+        {
+            SqlConnection coonexion = new SqlConnection(Conexion.Cnn);
+            SqlCommand comando = new SqlCommand("EliminaCasa", coonexion);
+            comando.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter padron = new SqlParameter("@padron", C.Padron);
+
+            SqlParameter retorno = new SqlParameter("@Retorno", SqlDbType.Int);
+            retorno.Direction = ParameterDirection.ReturnValue;
+
+            int oAfectados = -1;
+
+            comando.Parameters.Add(padron);
+            comando.Parameters.Add(retorno);
+
+            try
+            {
+                coonexion.Open();
+                comando.ExecuteNonQuery();
+                oAfectados = (int)comando.Parameters["@Retorno"].Value;
+                if (oAfectados == -1)
+                    throw new Exception("");
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error en la BD:" + ex.Message);
+            }
+            finally
+            {
+                coonexion.Close();
+            }
+
+        }
         public void AgregarCasa(Casa C)
         {
             SqlConnection conexion = new SqlConnection(Conexion.Cnn);
@@ -97,42 +188,6 @@ namespace Persistencia
             }
 
         }
-
-        public void EliminarCasa(Casa C)
-        {
-            SqlConnection coonexion = new SqlConnection(Conexion.Cnn);
-            SqlCommand comando = new SqlCommand("EliminaCasa", coonexion);
-            comando.CommandType = CommandType.StoredProcedure;
-
-            SqlParameter padron = new SqlParameter("@padron", C.Padron);
-
-            SqlParameter retorno = new SqlParameter("@Retorno", SqlDbType.Int);
-            retorno.Direction = ParameterDirection.ReturnValue;
-
-            int oAfectados = -1;
-
-            comando.Parameters.Add(padron);
-            comando.Parameters.Add(retorno);
-
-            try
-            {
-                coonexion.Open();
-                comando.ExecuteNonQuery();
-                oAfectados = (int)comando.Parameters["@Retorno"].Value;
-                if (oAfectados == -1)
-                    throw new Exception("");
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException("Error en la BD:" + ex.Message);
-            }
-            finally
-            {
-                coonexion.Close();
-            }
-
-        }
-
         public void ModificarCasa(Casa C)
         {
             SqlConnection conexion = new SqlConnection(Conexion.Cnn);
@@ -187,7 +242,7 @@ namespace Persistencia
                     throw new Exception("El empleado no esta activo");
                 else if (oAfectados == -4)
                     throw new Exception("La Zona no esta activa");
-                
+
             }
             catch (Exception ex)
             {
@@ -199,67 +254,6 @@ namespace Persistencia
             }
 
         }
-
-        public Casa BuscarCasa(int pPadron)
-        {
-            Casa c = null;
-            int padron;
-            string direccion;
-            int precio;
-            string accion;
-            int banio;
-            int habitaciones;
-            decimal mt2C;
-            string nomUsu;
-            string letraDpto;
-            string abreviacion;
-
-            decimal mt2Terreno;
-            bool fondo;
-
-            SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
-            SqlCommand oComando = new SqlCommand("BuscarCasa " + pPadron, oConexion);
-            SqlDataReader oReader;
-
-            try
-            {
-                oConexion.Open();
-                oReader = oComando.ExecuteReader();
-                if (oReader.Read())
-                {
-                    padron = (int)oReader["padron"];
-                    direccion = (string)oReader["direccion"];
-                    precio = (int)oReader["precio"];
-                    accion = (string)oReader["accion"];
-                    banio = (int)oReader["banios"];
-                    habitaciones = (int)oReader["habitaciones"];
-                    mt2C = (decimal)oReader["mt2const"];
-                    nomUsu = (string)oReader["nomUsu"];
-                    letraDpto = (string)oReader["letraDpto"];
-                    abreviacion = (string)oReader["abreviacion"];
-
-                    mt2Terreno = (decimal)oReader["mt2Terreno"];
-                    fondo = Convert.ToBoolean(oReader["fondo"]);
-          
-                    c = new Casa(padron, direccion, precio, accion, banio, habitaciones, mt2C,
-                 (ZonaPersistencia.GetInstancia().BuscoTodas(letraDpto, abreviacion)),
-                 (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)), mt2Terreno, fondo);
-
-                }
-                oReader.Close();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            finally
-            {
-                oConexion.Close();
-            }
-
-            return c;
-        }
-          
         public List<Casa> ListaCasa()
         {
             List<Casa> lista = new List<Casa>();
@@ -303,7 +297,7 @@ namespace Persistencia
                     fondo = Convert.ToBoolean(oReader["fondo"]);
 
                     Casa c = new Casa(padron, direccion, precio, accion, banio, habitaciones, mt2C, ((ZonaPersistencia.GetInstancia().BuscoTodas(letraDpto, abreviacion))),
-                   (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)),mt2Terreno,fondo);
+                   (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)), mt2Terreno, fondo);
                     lista.Add(c);
                 }
                 oReader.Close();
@@ -319,7 +313,7 @@ namespace Persistencia
 
             return lista;
         }
-       
+
         #endregion
     }
 }

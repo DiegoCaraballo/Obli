@@ -27,6 +27,105 @@ namespace Persistencia
         #endregion
 
         #region Operaciones
+        public Apto BuscarApto(int pPadron)
+        {
+
+            SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
+
+            Apto a = null;
+
+            SqlCommand oComando = new SqlCommand("BuscarApto", oConexion);
+            oComando.CommandType = CommandType.StoredProcedure;
+            oComando.Parameters.AddWithValue("@padron", pPadron);
+
+            int padron;
+            string direccion;
+            int precio;
+            string accion;
+            int banio;
+            int habitaciones;
+            decimal mt2C;
+            string nomUsu;
+            string letraDpto;
+            string abreviacion;
+
+            int piso;
+            bool ascensor;
+
+            try
+            {
+                oConexion.Open();
+
+                SqlDataReader oReader = oComando.ExecuteReader();
+
+                if (oReader.HasRows)
+                {
+                    oReader.Read();
+
+                    padron = (int)oReader["padron"];
+                    direccion = (string)oReader["direccion"];
+                    precio = (int)oReader["precio"];
+                    accion = (string)oReader["accion"];
+                    banio = (int)oReader["banios"];
+                    habitaciones = (int)oReader["habitaciones"];
+                    mt2C = (decimal)oReader["mt2const"];
+                    nomUsu = (string)oReader["nomUsu"];
+                    letraDpto = (string)oReader["letraDpto"];
+                    abreviacion = (string)oReader["abreviacion"];
+
+                    piso = (int)oReader["piso"];
+                    ascensor = (bool)oReader["ascensor"];
+                    a = new Apto(padron, direccion, precio, accion, banio, habitaciones, mt2C, ((ZonaPersistencia.GetInstancia().BuscoTodas(letraDpto, abreviacion))),
+                 (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)), piso, ascensor);
+
+                }
+                oReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Problemas con la base de datos: " + ex.Message);
+            }
+            finally
+            {
+                oConexion.Close();
+            }
+
+            return a;
+        }
+        public void EliminarApto(Apto A)
+        {
+            SqlConnection coonexion = new SqlConnection(Conexion.Cnn);
+            SqlCommand comando = new SqlCommand("EliminaApto", coonexion);
+            comando.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter padron = new SqlParameter("@padron", A.Padron);
+
+            SqlParameter retorno = new SqlParameter("@Retorno", SqlDbType.Int);
+            retorno.Direction = ParameterDirection.ReturnValue;
+
+            int oAfectados = -1;
+
+            comando.Parameters.Add(padron);
+            comando.Parameters.Add(retorno);
+
+            try
+            {
+                coonexion.Open();
+                comando.ExecuteNonQuery();
+                oAfectados = (int)comando.Parameters["@Retorno"].Value;
+                if (oAfectados == -1)
+                    throw new Exception("");
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error en la BD:" + ex.Message);
+            }
+            finally
+            {
+                coonexion.Close();
+            }
+
+        }
         public void AgregarApto(Apto A)
         {
             SqlConnection conexion = new SqlConnection(Conexion.Cnn);
@@ -94,42 +193,6 @@ namespace Persistencia
             }
 
         }
-
-        public void EliminarApto(Apto A)
-        {
-            SqlConnection coonexion = new SqlConnection(Conexion.Cnn);
-            SqlCommand comando = new SqlCommand("EliminaApto", coonexion);
-            comando.CommandType = CommandType.StoredProcedure;
-
-            SqlParameter padron = new SqlParameter("@padron", A.Padron);
-
-            SqlParameter retorno = new SqlParameter("@Retorno", SqlDbType.Int);
-            retorno.Direction = ParameterDirection.ReturnValue;
-
-            int oAfectados = -1;
-
-            comando.Parameters.Add(padron);
-            comando.Parameters.Add(retorno);
-
-            try
-            {
-                coonexion.Open();
-                comando.ExecuteNonQuery();
-                oAfectados = (int)comando.Parameters["@Retorno"].Value;
-                if (oAfectados == -1)
-                    throw new Exception("");
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException("Error en la BD:" + ex.Message);
-            }
-            finally
-            {
-                coonexion.Close();
-            }
-
-        }
-
         public void ModificarApto(Apto A)
         {
             SqlConnection conexion = new SqlConnection(Conexion.Cnn);
@@ -196,74 +259,6 @@ namespace Persistencia
             }
 
         }
-
-
-        public Apto BuscarApto(int pPadron)
-        {
-
-            SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
-
-            Apto a = null;
-
-            SqlCommand oComando = new SqlCommand("BuscarApto", oConexion);
-            oComando.CommandType = CommandType.StoredProcedure;
-            oComando.Parameters.AddWithValue("@padron", pPadron);
-                  
-            int padron;
-            string direccion;
-            int precio;
-            string accion;
-            int banio;
-            int habitaciones;
-            decimal mt2C;
-            string nomUsu;
-            string letraDpto;
-            string abreviacion;
-
-            int piso;
-            bool ascensor;
-           
-            try
-            {
-                oConexion.Open();
-
-                SqlDataReader oReader = oComando.ExecuteReader();
-
-                if (oReader.HasRows)
-                {
-                    oReader.Read();
-
-                    padron = (int)oReader["padron"];
-                    direccion = (string)oReader["direccion"];
-                    precio = (int)oReader["precio"];
-                    accion = (string)oReader["accion"];
-                    banio = (int)oReader["banios"];
-                    habitaciones = (int)oReader["habitaciones"];
-                    mt2C = (decimal)oReader["mt2const"];
-                    nomUsu = (string)oReader["nomUsu"];
-                    letraDpto = (string )oReader["letraDpto"];
-                    abreviacion = (string)oReader["abreviacion"];
-
-                    piso = (int)oReader["piso"];
-                    ascensor = (bool)oReader["ascensor"];
-                    a = new Apto(padron, direccion, precio, accion, banio, habitaciones, mt2C, ((ZonaPersistencia.GetInstancia().BuscoTodas(letraDpto, abreviacion))),
-                 (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)), piso, ascensor);
-
-                }
-                oReader.Close();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Problemas con la base de datos: " + ex.Message);
-            }
-            finally
-            {
-                oConexion.Close();
-            }
-
-            return a;
-        }
-
         public List<Apto> ListaApto()
         {
             List<Apto> lista = new List<Apto>();
