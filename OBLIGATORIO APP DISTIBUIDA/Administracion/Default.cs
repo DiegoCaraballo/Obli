@@ -29,7 +29,7 @@ namespace Administracion
         // Form de ABM Empleados
         private void aBMEmleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ABMEmpleado _unForm = new ABMEmpleado();
+            ABMEmpleado _unForm = new ABMEmpleado(EmpLogueado);
             _unForm.ShowDialog();
         }
 

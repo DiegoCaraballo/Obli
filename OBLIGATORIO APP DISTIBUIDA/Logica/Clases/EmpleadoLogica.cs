@@ -47,5 +47,9 @@ namespace Logica
             return FabricaPersistencia.getPersistenciaEmpleado().BuscarEmpleado(pNomUsu);
         }
 
+        public Empleado BuscarEmpleadoActivo(string pNomUsu)
+        {
+            return FabricaPersistencia.getPersistenciaEmpleado().BuscarEmpleadoActivo(pNomUsu);
+        }
     }
 }

@@ -13,5 +13,6 @@ namespace Logica
         void EliminarEmpleado(Empleado E);
         void ModificarEmpleado(Empleado E);
         Empleado BuscarEmpleado(string pNomUsu);
+        Empleado BuscarEmpleadoActivo(string pNomUsu);
     }
 }

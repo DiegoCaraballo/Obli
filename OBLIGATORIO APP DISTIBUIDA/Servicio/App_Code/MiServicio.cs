@@ -272,6 +272,20 @@ public class MiServicio : System.Web.Services.WebService
         return unEmpleado;
     }
 
+    [WebMethod]
+    public Empleado BuscarEmpleadoActivo(string pNomUsu)
+    {
+        Empleado unEmpleado = null;
+        try
+        {
+            unEmpleado = FabricaLogica.getEmpleadoLogica().BuscarEmpleadoActivo(pNomUsu);
+        }
+        catch (Exception ex)
+        {
+            this.GeneroSoapException(ex);
+        }
+        return unEmpleado;
+    }
     #endregion
 
     #region Visita

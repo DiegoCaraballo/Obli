@@ -136,6 +136,41 @@ namespace Persistencia
             }
         }
 
+
+        public Empleado BuscarEmpleadoActivo(string pNomUsu)
+        {
+            Empleado e = null;
+            string _nomUsu;
+            string _pass;
+
+            SqlConnection oConexion = new SqlConnection(Conexion.Cnn);
+            SqlCommand oComando = new SqlCommand("BuscarEmpleadoActivo " + pNomUsu, oConexion);
+            SqlDataReader oReader;
+
+            try
+            {
+                oConexion.Open();
+                oReader = oComando.ExecuteReader();
+                if (oReader.Read())
+                {
+                    _nomUsu = (string)oReader["NomUsu"];
+                    _pass = (string)oReader["Pass"];
+                    e = new Empleado(_nomUsu, _pass);
+                }
+                oReader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Problemas con la base de datos: " + ex.Message);
+            }
+            finally
+            {
+                oConexion.Close();
+            }
+
+            return e;
+        }
+
         public Empleado BuscarEmpleado(string pNomUsu)
         {
             Empleado e = null;

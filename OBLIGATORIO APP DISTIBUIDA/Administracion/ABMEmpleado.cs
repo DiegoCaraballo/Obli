@@ -13,13 +13,15 @@ namespace Administracion
     public partial class ABMEmpleado : Form
     {
         private Empleado emp;
+        private Empleado empLogueado;
 
-        public ABMEmpleado()
+        public ABMEmpleado(Empleado e)
         {
             InitializeComponent();
             Accesos();
             LimpioControles();
             DesActivoBotones();
+            empLogueado =e;
         }
 
         public void Accesos()
@@ -63,7 +65,7 @@ namespace Administracion
             {
                 ServicioWeb.Empleado empleado = null;
                 MiServicio serv = new MiServicio();
-                empleado = serv.BuscarEmpleado(txtUsuario.Text.Trim());
+                empleado = serv.BuscarEmpleadoActivo(txtUsuario.Text.Trim());
 
                 if (empleado == null)
                 //no existe empleado, es un alta, limpio campos y habilito para ingresar
@@ -82,6 +84,7 @@ namespace Administracion
                     MenuItemModificar.Enabled = true;
                     MenuItemEliminar.Enabled = true;
                     lblMensaje.Text = "";
+                    txtUsuario.Enabled = false;
                 }
             }
             catch (System.Web.Services.Protocols.SoapException ex)
@@ -176,6 +179,10 @@ namespace Administracion
         {
             try
             {
+                if (emp == empLogueado)
+                {
+                    throw new Exception("No se puede eliminar al empleado logueado");
+                }
                 //creo el objeto que me permita trabajar con el WS
                 MiServicio serv = new MiServicio();
 
@@ -217,7 +224,7 @@ namespace Administracion
             MenuItemIngresar.Enabled = false;
             MenuItemEliminar.Enabled = false;
             MenuItemModificar.Enabled = false;
-            //txtPassword.Enabled = false;
+            txtUsuario.Enabled = true ;
         }
 
         //Limpia los controles
