@@ -42,41 +42,18 @@ namespace Persistencia
                 throw ex;
             }
         }
-        //TODO - revisar si no se usa, eliminarla
-        //internal static void EliminarServicio(Entidades_Compartidas.Zona unaZona, SqlTransaction _pTransaction)
-        //{
-        //    SqlCommand comando = new SqlCommand("EliminarServicio", _pTransaction.Connection);
-        //    comando.CommandType = CommandType.StoredProcedure;
-        //    comando.Parameters.AddWithValue("@LetraDpto", SqlDbType.Char);
-        //    comando.Parameters.AddWithValue("@Abreviacion", SqlDbType.VarChar);
-        //    comando.Parameters.AddWithValue("@Servicio", SqlDbType.VarChar);
-        //    SqlParameter _ParamRetorno = new SqlParameter("@Retorno", SqlDbType.Int);
-        //    _ParamRetorno.Direction = ParameterDirection.ReturnValue;
-        //    comando.Parameters.Add(_ParamRetorno);
+  
 
-        //    try
-        //    {
-        //        Determino que debo trabajar con la misma transaccion
-        //        comando.Transaction = _pTransaction;
-
-        //        ejecuto comando
-        //        comando.ExecuteNonQuery();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-
-        //}
-
-        internal static void CargoServicio(Entidades_Compartidas.Zona unaZona)
+        internal static List<string> CargoServicio(string letraDpto, string abreviacion)
         {
             SqlConnection _cnn = new SqlConnection(Conexion.Cnn);
 
             SqlCommand comando = new SqlCommand("ServiciosDeUnaZona", _cnn);
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@LetraDpto", unaZona.LetraDpto);
-            comando.Parameters.AddWithValue("@Abreviacion", unaZona.Abreviacion);
+            comando.Parameters.AddWithValue("@LetraDpto", letraDpto);
+            comando.Parameters.AddWithValue("@Abreviacion", abreviacion);
+
+            List<string> _ListaServicios = new List<string>();
 
             try
             {
@@ -88,7 +65,7 @@ namespace Persistencia
                 {
                     while (_lector.Read())
                     {
-                        unaZona.AgregarServicio((string)_lector["servicio"]);
+                        _ListaServicios.Add((string)_lector["servicio"]);
                     }
                 }
                 _lector.Close();
@@ -101,6 +78,8 @@ namespace Persistencia
             {
                 _cnn.Close();
             }
+
+            return _ListaServicios;
         }
 
         internal static void EliminarServiciosZona(Entidades_Compartidas.Zona unaZona, SqlTransaction _pTransaccion)

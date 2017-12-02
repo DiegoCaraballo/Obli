@@ -354,6 +354,7 @@ public class MiServicio : System.Web.Services.WebService
     #endregion
 
     #region SoapException
+
     private void GeneroSoapException(Exception ex)
     {
 

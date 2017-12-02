@@ -148,7 +148,7 @@ namespace Administracion
                 // Si la validación es correcta, busco la Zona
                 ServicioWeb.Zona z = null;
                 MiServicio serv = new MiServicio();
-                z = serv.BuscarZona(codigoDpto1.LetraDepto, codigoDpto1.Codigo);
+                z = serv.BuscarZona(codigoDpto1.LetraDepto, codigoDpto1.Codigo.ToUpper());
 
                 if (z == null)
                 {

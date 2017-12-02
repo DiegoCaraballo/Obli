@@ -82,16 +82,7 @@ namespace Entidades_Compartidas
 
         #endregion
 
-        //Constructor
-        public Zona(string pLetraDpto, string pAbrev, string pNombre, int pCantHab)
-        {
-            LetraDpto = pLetraDpto;
-            Abreviacion = pAbrev;
-            Nombre = pNombre;
-            CantHabitantes = pCantHab;
-            _LosServicios = new List<String>();
-        }
-
+     
         public Zona(string pLetraDpto, string pAbrev, string pNombre, int pCantHab, List<string> pServicios)
         {
             LetraDpto = pLetraDpto;

@@ -41,6 +41,7 @@ public partial class _Default : System.Web.UI.Page
             List<Propiedad> listaCompleta = (List<Propiedad>)Session["ListaPropiedades"];
             rpPropiedades.DataSource = listaCompleta;
             rpPropiedades.DataBind();
+            lblCount.Text = "Mostrando " + rpPropiedades.Items.Count + " resultados";
         }
         catch (Exception)
         {

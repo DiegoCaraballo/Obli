@@ -226,8 +226,8 @@ namespace Persistencia
                         string abreviacion = (string)_lector["abreviacion"];
                         string nombre = (string)_lector["nombre"];
                         int cantHabitantes = (int)_lector["habitantes"];
-                        unaZona = new Zona(letraDpto, abreviacion, nombre, cantHabitantes);
-                        ServicioPersistencia.CargoServicio(unaZona);
+                        unaZona = new Zona(letraDpto, abreviacion, nombre, cantHabitantes, ServicioPersistencia.CargoServicio(letraDpto, abreviacion));
+                        //ServicioPersistencia.CargoServicio(unaZona);
 
                         _Lista.Add(unaZona);
                     }
@@ -282,8 +282,7 @@ namespace Persistencia
                         string abreviacion = (string)_lector["abreviacion"];
                         string nombre = (string)_lector["nombre"];
                         int cantHabitantes = (int)_lector["habitantes"];
-                        unaZona = new Zona(letraDpto, abreviacion, nombre, cantHabitantes);
-                        ServicioPersistencia.CargoServicio(unaZona);
+                        unaZona = new Zona(letraDpto, abreviacion, nombre, cantHabitantes, ServicioPersistencia.CargoServicio(letraDpto, abreviacion));
 
                         _Lista.Add(unaZona);
                     }
@@ -329,8 +328,7 @@ namespace Persistencia
                     string _abreviacion = (string)_lector["abreviacion"];
                     string nombre = (string)_lector["nombre"];
                     int cantHabitantes = (int)_lector["habitantes"];
-                    unaZona = new Zona(letraDpto, abreviacion, nombre, cantHabitantes);
-                    ServicioPersistencia.CargoServicio(unaZona);
+                    unaZona = new Zona(letraDpto, abreviacion, nombre, cantHabitantes, ServicioPersistencia.CargoServicio(letraDpto, abreviacion));
                 }
                 _lector.Close();
             }
@@ -373,8 +371,7 @@ namespace Persistencia
                     string _abreviacion = (string)_lector["abreviacion"];
                     string nombre = (string)_lector["nombre"];
                     int cantHabitantes = (int)_lector["habitantes"];
-                    unaZona = new Zona(letraDpto, abreviacion, nombre, cantHabitantes);
-                    ServicioPersistencia.CargoServicio(unaZona);
+                    unaZona = new Zona(letraDpto, abreviacion, nombre, cantHabitantes, ServicioPersistencia.CargoServicio(letraDpto, abreviacion));
                 }
                 _lector.Close();
             }

@@ -49,6 +49,7 @@ namespace Administracion
             MenuItemEliminar.Enabled = false;
             MenuItemModificar.Enabled = false;
             txtUser.Enabled = false;
+            txtPadron.Enabled = true;
             Limpiar();
         }
 
@@ -69,7 +70,7 @@ namespace Administracion
             MenuItemEliminar.Enabled = false;
             MenuItemModificar.Enabled = false;
             MenuItemIngresar.Enabled = true;
-
+            txtPadron.Enabled=true;
             lblMensajes.Text = "";
 
         }
@@ -99,12 +100,7 @@ namespace Administracion
 
         }
 
-        Propiedad p = null;
-        public ABMApto(Propiedad pPropiedad)
-        {
-            p = pPropiedad;
-
-        }
+      
 
         // Validación de un Apto
         private void txtPadron_Validating(object sender, CancelEventArgs e)
@@ -226,10 +222,11 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 80)
-                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
-                else
-                    lblMensajes.Text = ex.Detail.InnerText;
+                MessageBox.Show(ex.Detail.InnerText);
+                //if (ex.Detail.InnerText.Length > 80)
+                  //  lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
+                //else
+                  //  lblMensajes.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
@@ -253,7 +250,7 @@ namespace Administracion
             try
             {
                 new Administracion.ServicioWeb.MiServicio().BajaPropiedad(prop);
-
+                EstadoInicial();
                 lblMensajes.Text = "Baja con Exito";
             }
             catch (System.Web.Services.Protocols.SoapException ex)
@@ -286,7 +283,7 @@ namespace Administracion
                 prop.Mt2Const = Convert.ToInt32(txtMt2Const.Text);
                 prop.Zona.Abreviacion = zona.Abreviacion;
                 prop.Zona.LetraDpto = zona.LetraDpto;
-                prop.UltimoEmp.NomUsu = txtUser.Text;
+                prop.UltimoEmp.NomUsu = emp.NomUsu;
                 ((ServicioWeb.Apto)prop).Piso = Convert.ToInt32(txtPiso.Text);
 
                 if (cboAscensor.SelectedItem.ToString() == "SI")
@@ -299,7 +296,7 @@ namespace Administracion
                 }
 
                 new Administracion.ServicioWeb.MiServicio().ModificaPropiedad(prop);
-                Limpiar();
+                EstadoInicial();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {

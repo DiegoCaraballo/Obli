@@ -207,7 +207,12 @@ Begin
  
 if (not exists(select * from Propiedad where padron=@padron))
 return -1;
- 
+if (not exists(select * from Casa where padron=@padron))
+return -2;
+if exists(select * from Empleado where nomUsu= @nomUsu and activo = 0)
+ return -3;
+ if exists (select * from Zona where Zona.abreviacion=@abreviacion and letraDpto = @letraDpto and activa = 0)
+ return -4;
 Declare @error int
  
 Begin Tran
@@ -215,11 +220,11 @@ Begin Tran
 Update Propiedad set letraDpto = @letraDpto, abreviacion= @abreviacion,habitaciones= @habitaciones,direccion= @direccion, 
                      precio = @precio ,accion= @accion, banios= @banios,mt2const= @mt2const,nomUsu= @nomUsu
 					 where padron =@padron;
- 
+ set @error = @@ERROR;
 Update Casa set  fondo = @fondo, mt2Terreno = @mt2Terreno
                  where padron =@padron;
 			 
-set @Error=@@ERROR;
+set @Error=@@ERROR+@error;
  
 	if(@Error=0)
 	begin
@@ -331,10 +336,14 @@ create proc ModificoComercio
 @precio int , @accion varchar(10), @banios int , @mt2const decimal, @nomUsu varchar(20),@habilitado bit as
  
 Begin
- 
-if (not exists(select * from Propiedad where padron=@padron))
+ if (not exists(select * from Propiedad where padron=@padron))
 return -1;
- 
+if (not exists(select * from Comercio where padron=@padron))
+return -2;
+if exists(select * from Empleado where nomUsu= @nomUsu and activo = 0)
+ return -3;
+ if exists (select * from Zona where Zona.abreviacion=@abreviacion and letraDpto = @letraDpto and activa = 0)
+ return -4;
 Declare @error int
  
 Begin Tran
@@ -342,11 +351,11 @@ Begin Tran
 Update Propiedad set padron = @padron, letraDpto = @letraDpto, abreviacion= @abreviacion,habitaciones= @habitaciones,direccion= @direccion, 
                      precio = @precio ,accion= @accion, banios= @banios,mt2const= @mt2const,nomUsu= @nomUsu
 					 where padron =@padron;
- 
-Update Comercio set  habilitado =@habilitado
+set @error=@@ERROR;
+ Update Comercio set  habilitado =@habilitado
                  where padron =@padron;
 			 
-set @Error=@@ERROR;
+set @Error=@@ERROR + @error;
  
 	if(@Error=0)
 	begin
@@ -468,7 +477,12 @@ Begin
  
 if (not exists(select * from Propiedad where padron=@padron))
 return -1;
- 
+if (not exists(select * from Apto where padron=@padron))
+return -2;
+if exists(select * from Empleado where nomUsu= @nomUsu and activo = 0)
+ return -3;
+ if exists (select * from Zona where Zona.abreviacion=@abreviacion and letraDpto = @letraDpto and activa = 0)
+ return -4;
 Declare @error int
  
 Begin Tran
@@ -476,11 +490,11 @@ Begin Tran
 Update Propiedad set letraDpto = @letraDpto, abreviacion= @abreviacion,habitaciones= @habitaciones,direccion= @direccion, 
                      precio = @precio ,accion= @accion, banios= @banios,mt2const= @mt2const,nomUsu= @nomUsu
 					 where padron =@padron;
- 
+ set @error=@@ERROR;
 Update Apto set  piso= @piso , ascensor =@ascensor 
                  where padron =@padron;
 			 
-set @Error=@@ERROR;
+set @Error=@@ERROR+@error;
  
 	if(@Error=0)
 	begin
@@ -918,9 +932,12 @@ exec AltaVisita 111119,'jose', '01-12-2018 13:00:00.000', 111130;
 
 select padron,count(padron) as 'asd' from Visita group by padron
 
+
 select * from Visita order by padron asc
 
+select padron,count(padron) from Visita group by padron
 
+select * from Zona
 
 use BiosRealState;
 select * from Propiedad where padron = 135321

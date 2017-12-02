@@ -175,6 +175,13 @@ namespace Persistencia
                 oAfectados = (int)comando.Parameters["@Retorno"].Value;
                 if (oAfectados == -1)
                     throw new Exception("La propiedad no existe");
+                else if (oAfectados == -2)
+                    throw new Exception("El padron no pertenece a un Comercio");
+                else if (oAfectados == -3)
+                    throw new Exception("El empleado no esta activo");
+                else if (oAfectados == -4)
+                    throw new Exception("La Zona no esta activa");
+                
             }
             catch (Exception ex)
             {

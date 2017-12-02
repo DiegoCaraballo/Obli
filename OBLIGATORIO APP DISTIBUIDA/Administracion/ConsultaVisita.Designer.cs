@@ -51,6 +51,7 @@
             // 
             this.cboAccion.FormattingEnabled = true;
             this.cboAccion.Items.AddRange(new object[] {
+            "--Seleccione Opcion--",
             "ALQUILER",
             "VENTA",
             "PERMUTA"});

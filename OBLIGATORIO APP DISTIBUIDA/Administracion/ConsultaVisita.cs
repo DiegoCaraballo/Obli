@@ -22,6 +22,7 @@ namespace Administracion
             InitializeComponent();
             CargoListaVisitas();
 
+            cboAccion.DropDownStyle = ComboBoxStyle.DropDownList;
 
         }
 
@@ -30,7 +31,8 @@ namespace Administracion
         {
             gvVisitas.DataSource = null;
             XElement doc = documento;
-
+            txtPadron.Text = "";
+            cboAccion.SelectedIndex = 0;
             var res = (from unNodo in doc.Elements("Propiedad")
                        select new
                        {
@@ -41,6 +43,8 @@ namespace Administracion
                        }).ToList();
 
             gvVisitas.DataSource = res;
+            
+
         }
 
         // Cuenta las visitas
@@ -98,19 +102,21 @@ namespace Administracion
             gvVisitas.DataSource = null;
             try
             {
-                XElement doc = documento;
+               
+                    XElement doc = documento;
 
-                var res = (from unNodo in doc.Elements("Propiedad")
-                           where unNodo.Element("Accion").Value == cboAccion.SelectedItem.ToString()
-                           select new
-                           {
-                               Padron = unNodo.Element("Padron").Value,
-                               Fecha = unNodo.Element("Fecha").Value,
-                               Precio = unNodo.Element("Precio").Value,
-                               Accion = unNodo.Element("Accion").Value
-                           }).ToList();
+                    var res = (from unNodo in doc.Elements("Propiedad")
+                               where unNodo.Element("Accion").Value == cboAccion.SelectedItem.ToString()
+                               select new
+                               {
+                                   Padron = unNodo.Element("Padron").Value,
+                                   Fecha = unNodo.Element("Fecha").Value,
+                                   Precio = unNodo.Element("Precio").Value,
+                                   Accion = unNodo.Element("Accion").Value
+                               }).ToList();
 
-                gvVisitas.DataSource = res;
+                    gvVisitas.DataSource = res;
+          
 
             }
             catch (Exception ex)
