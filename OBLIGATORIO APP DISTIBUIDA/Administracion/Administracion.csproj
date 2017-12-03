@@ -179,7 +179,7 @@
     <None Include="Web References\ServicioWeb\Empleado.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServicioWeb\miservicio.wsdl" />
+    <None Include="Web References\ServicioWeb\MiServicio.wsdl" />
     <None Include="Web References\ServicioWeb\Propiedad.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -202,7 +202,7 @@
     <Content Include="Imagenes\Buscar.png" />
     <Content Include="Imagenes\Cancelar.png" />
     <Content Include="Imagenes\Icono.ico" />
-    <None Include="Web References\ServicioWeb\miservicio.disco" />
+    <None Include="Web References\ServicioWeb\MiServicio.disco" />
     <None Include="Imagenes\Login.png" />
     <Content Include="Imagenes\Logo.png" />
     <Content Include="Imagenes\Mas.png" />
@@ -238,10 +238,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://bios1-pc/WebService/miservicio.asmx">
+    <WebReferenceUrl Include="http://localhost:10828/Servicio/MiServicio.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\ServicioWeb\</RelPath>
-      <UpdateFromURL>http://bios1-pc/WebService/miservicio.asmx</UpdateFromURL>
+      <UpdateFromURL>http://localhost:10828/Servicio/MiServicio.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

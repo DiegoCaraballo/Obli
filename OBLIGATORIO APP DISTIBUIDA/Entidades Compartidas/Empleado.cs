@@ -34,7 +34,7 @@ namespace Entidades_Compartidas
                 if (value.Trim().Length > 3 && value.Trim().Length<21)
                     nomUsu = value;
                 else
-                    throw new Exception("Debe contener al menos una letra y menos de 21 caracteres");
+                    throw new Exception("El usuario debe contener al menos una letra y menos de 21 caracteres");
             }
         }
         #endregion

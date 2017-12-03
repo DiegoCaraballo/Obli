@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="Administracion_ServicioWeb_MiServicio" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://bios1-pc/WebService/miservicio.asmx</Value>
+      <Value Profile="(Default)">http://localhost:10828/Servicio/MiServicio.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>

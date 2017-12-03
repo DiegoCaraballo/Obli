@@ -201,6 +201,10 @@ namespace Administracion
                 apto.Habitaciones = Convert.ToInt32(txtHabitaciones.Text);
                 apto.Mt2Const = Convert.ToInt32(txtMt2Const.Text);
                 apto.Zona = new ServicioWeb.MiServicio().BuscarTodasZonas(ccZona.LetraDepto, ccZona.Codigo);
+                if (apto.Zona == null)
+                {
+                    throw new Exception("Zona no encontrada");
+                }
                 apto.UltimoEmp = emp;
 
                 apto.Piso = Convert.ToInt32(txtPiso.Text);
@@ -220,7 +224,15 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                MessageBox.Show(ex.Detail.InnerText);
+                string p = ex.Message;
+                string[] mensaje = ex.Message.Split('>');
+                int count = -1;
+                foreach (string texto in mensaje)
+                {
+                    count += 1;
+                }
+
+                lblMensajes.Text = (mensaje[count]);
                 //if (ex.Detail.InnerText.Length > 80)
                 //  lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
                 //else
@@ -279,8 +291,7 @@ namespace Administracion
                 prop.Baño = Convert.ToInt32(txtBanio.Text);
                 prop.Habitaciones = Convert.ToInt32(txtHabitaciones.Text);
                 prop.Mt2Const = Convert.ToInt32(txtMt2Const.Text);
-                prop.Zona.Abreviacion = zona.Abreviacion;
-                prop.Zona.LetraDpto = zona.LetraDpto;
+                prop.Zona = new ServicioWeb.MiServicio().BuscarZona(ccZona.LetraDepto, ccZona.Codigo);
                 prop.UltimoEmp.NomUsu = emp.NomUsu;
                 ((ServicioWeb.Apto)prop).Piso = Convert.ToInt32(txtPiso.Text);
 

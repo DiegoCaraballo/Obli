@@ -69,6 +69,8 @@ namespace Administracion.ServicioWeb {
         
         private System.Threading.SendOrPostCallback BuscarEmpleadoOperationCompleted;
         
+        private System.Threading.SendOrPostCallback BuscarEmpleadoActivoOperationCompleted;
+        
         private System.Threading.SendOrPostCallback ListarVisitasOperationCompleted;
         
         private System.Threading.SendOrPostCallback AltaVisitaOperationCompleted;
@@ -170,6 +172,9 @@ namespace Administracion.ServicioWeb {
         
         /// <remarks/>
         public event BuscarEmpleadoCompletedEventHandler BuscarEmpleadoCompleted;
+        
+        /// <remarks/>
+        public event BuscarEmpleadoActivoCompletedEventHandler BuscarEmpleadoActivoCompleted;
         
         /// <remarks/>
         public event ListarVisitasCompletedEventHandler ListarVisitasCompleted;
@@ -742,6 +747,35 @@ namespace Administracion.ServicioWeb {
             if ((this.BuscarEmpleadoCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.BuscarEmpleadoCompleted(this, new BuscarEmpleadoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/BuscarEmpleadoActivo", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Empleado BuscarEmpleadoActivo(string pNomUsu) {
+            object[] results = this.Invoke("BuscarEmpleadoActivo", new object[] {
+                        pNomUsu});
+            return ((Empleado)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void BuscarEmpleadoActivoAsync(string pNomUsu) {
+            this.BuscarEmpleadoActivoAsync(pNomUsu, null);
+        }
+        
+        /// <remarks/>
+        public void BuscarEmpleadoActivoAsync(string pNomUsu, object userState) {
+            if ((this.BuscarEmpleadoActivoOperationCompleted == null)) {
+                this.BuscarEmpleadoActivoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnBuscarEmpleadoActivoOperationCompleted);
+            }
+            this.InvokeAsync("BuscarEmpleadoActivo", new object[] {
+                        pNomUsu}, this.BuscarEmpleadoActivoOperationCompleted, userState);
+        }
+        
+        private void OnBuscarEmpleadoActivoOperationCompleted(object arg) {
+            if ((this.BuscarEmpleadoActivoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.BuscarEmpleadoActivoCompleted(this, new BuscarEmpleadoActivoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1508,6 +1542,32 @@ namespace Administracion.ServicioWeb {
         private object[] results;
         
         internal BuscarEmpleadoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Empleado Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Empleado)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void BuscarEmpleadoActivoCompletedEventHandler(object sender, BuscarEmpleadoActivoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class BuscarEmpleadoActivoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal BuscarEmpleadoActivoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

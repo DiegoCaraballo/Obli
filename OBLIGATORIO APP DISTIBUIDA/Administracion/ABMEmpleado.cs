@@ -126,10 +126,19 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 80)
-                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
-                else
-                    lblMensaje.Text = ex.Detail.InnerText;
+                string p = ex.Message;
+                string[] mensaje = ex.Message.Split('>');
+                int count = -1;
+                foreach (string texto in mensaje)
+                {
+                    count += 1;
+                }
+
+                lblMensaje.Text = (mensaje[count]);
+                //if (ex.Detail.InnerText.Length > 80)
+                //    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
+                //else
+                //    lblMensaje.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
@@ -179,7 +188,7 @@ namespace Administracion
         {
             try
             {
-                if (emp == empLogueado)
+                if (emp.NomUsu == empLogueado.NomUsu)
                 {
                     throw new Exception("No se puede eliminar al empleado logueado");
                 }

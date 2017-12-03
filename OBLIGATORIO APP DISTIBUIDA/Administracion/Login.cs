@@ -27,7 +27,7 @@ namespace Administracion
             {
                 ServicioWeb.Empleado empleado = null;
                 MiServicio serv = new MiServicio();
-                empleado = serv.BuscarEmpleado(ccLogin.Usuario);
+                empleado = serv.BuscarEmpleadoActivo(ccLogin.Usuario);
                 if (empleado == null)
                 {
                     lblMensaje.Text = "No existe el empleado";
@@ -64,6 +64,8 @@ namespace Administracion
                 lblMensaje.Text = ex.Message;
             }
         }
+
+       
 
     }
 }

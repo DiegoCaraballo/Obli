@@ -170,8 +170,7 @@ namespace Persistencia
                     throw new Exception("El empleado no esta activo");
                 else if (afectados == -5)
                     throw new Exception("La zona no esta Activa");
-                else
-                    throw new Exception("Error en dar de alta");
+         
             }
             catch (Exception ex)
             {
