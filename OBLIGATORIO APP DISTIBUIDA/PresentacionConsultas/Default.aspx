@@ -92,9 +92,9 @@ Precio:
    
                    
     <article>
-    <table>
+    <table class="products">
                          <tr bgcolor ="#8C8D88">
-                        <td class="style1">
+                        <td  class="style1">
                             PADRON                                                                   
                         </td>
                         <td class="style1">
@@ -114,7 +114,7 @@ Precio:
             onitemcommand="rpPropiedades_ItemCommand">
             <ItemTEmplate>                                                               
                 </table>
-                <table>
+                <table class="products">
                 <tr bgcolor ="##2d81ad">
                    
                         <td>
@@ -139,7 +139,7 @@ Precio:
      </table>
             </ItemTEmplate>
               <AlternatingItemTEmplate>
-                     <table>
+                     <table class="products">
                          <tr bgcolor ="#2F64A0">
                         <td>
                             <asp:Label ID="lblPadron" runat="server" Text= '<%# Bind("Padron") %>' ></asp:Label>                                                                     

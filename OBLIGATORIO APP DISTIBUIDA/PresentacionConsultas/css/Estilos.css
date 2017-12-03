@@ -3,7 +3,7 @@
 
 div.container {
     display: table; 
-    width: 100%;
+   width: 100%;
     height: 100%;
     border: 1px solid grey; 
     background-color: #d3f8ff;  
@@ -23,7 +23,7 @@ td
     text-align: center;
     width: 30%;  
     height:60px;
-    border: 1px solid #ccc;
+   border: 1px solid #ccc;
     width: 20em; 
     max-width: 20em; 
     height: 2em; 
@@ -93,3 +93,29 @@ visita
     text-align: center;    
 }
 
+/*  Propabndo css*/
+ .container
+    {
+        width:600px;
+        border:solid 1px black;
+        background-color:white;
+    }
+    .products
+    {
+        border-collapse:collapse;
+        table-layout:fixed;
+        width:150px;
+       
+    }
+    .products th,.products td
+    {
+        padding:10px;
+        border-bottom:1px solid black;
+        width:150px;
+        
+    }
+    .alternating
+    {
+        background-color:#eeeeee;
+        width:50px;
+    }
