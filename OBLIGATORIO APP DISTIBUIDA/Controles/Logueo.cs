@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Entidades_Compartidas;
 using System.Windows.Forms;
 using System.Drawing;
 using System.ComponentModel;
 
+//TODO - ver por que usa entidades compartidas
 
 namespace Controles
 {
@@ -103,7 +103,7 @@ namespace Controles
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             try
-            { 
+            {
                 // Se controla que ingrese un usuario y una contraseña
                 if (txtUsu.Text.Trim() == "" || txtPass.Text.Trim() == "")
                 {

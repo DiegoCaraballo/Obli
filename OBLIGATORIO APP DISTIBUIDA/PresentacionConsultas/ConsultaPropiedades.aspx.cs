@@ -30,7 +30,7 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
             string abreviacion = p.Zona.Abreviacion;
             string nombre = p.Zona.Nombre;
             int cantHabitantes = p.Zona.CantHabitantes;
- 
+
             List<string> listaServiciosZona = p.Zona.LosServicios.ToList();
 
             if (p == null)

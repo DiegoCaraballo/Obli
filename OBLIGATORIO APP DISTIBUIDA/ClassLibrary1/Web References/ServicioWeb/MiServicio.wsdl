@@ -21,7 +21,7 @@
           </s:extension>
         </s:complexContent>
       </s:complexType>
-      <s:complexType name="Propiedad" abstract="true">
+      <s:complexType name="Propiedad">
         <s:sequence>
           <s:element minOccurs="0" maxOccurs="1" name="UltimoEmp" type="tns:Empleado" />
           <s:element minOccurs="0" maxOccurs="1" name="Zona" type="tns:Zona" />
@@ -44,21 +44,16 @@
       </s:complexType>
       <s:complexType name="Zona">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="LosServicios" type="tns:ArrayOfServicio" />
+          <s:element minOccurs="0" maxOccurs="1" name="LosServicios" type="tns:ArrayOfString" />
           <s:element minOccurs="1" maxOccurs="1" name="CantHabitantes" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Abreviacion" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="LetraDpto" type="s:string" />
         </s:sequence>
       </s:complexType>
-      <s:complexType name="ArrayOfServicio">
+      <s:complexType name="ArrayOfString">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="Servicio" nillable="true" type="tns:Servicio" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="Servicio">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="Servicios" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="Comercio">
@@ -217,6 +212,21 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="BuscarTodasZonas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pLetra" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAbrev" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarTodasZonasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarTodasZonasResult" type="tns:Zona" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="Listo">
         <s:complexType />
       </s:element>
@@ -287,6 +297,20 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="BuscarEmpleadoResult" type="tns:Empleado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarEmpleadoActivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pNomUsu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarEmpleadoActivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarEmpleadoActivoResult" type="tns:Empleado" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -405,6 +429,12 @@
   <wsdl:message name="BuscarZonaSoapOut">
     <wsdl:part name="parameters" element="tns:BuscarZonaResponse" />
   </wsdl:message>
+  <wsdl:message name="BuscarTodasZonasSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarTodasZonas" />
+  </wsdl:message>
+  <wsdl:message name="BuscarTodasZonasSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarTodasZonasResponse" />
+  </wsdl:message>
   <wsdl:message name="ListoSoapIn">
     <wsdl:part name="parameters" element="tns:Listo" />
   </wsdl:message>
@@ -440,6 +470,12 @@
   </wsdl:message>
   <wsdl:message name="BuscarEmpleadoSoapOut">
     <wsdl:part name="parameters" element="tns:BuscarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEmpleadoActivoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarEmpleadoActivo" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEmpleadoActivoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarEmpleadoActivoResponse" />
   </wsdl:message>
   <wsdl:message name="ListarVisitasSoapIn">
     <wsdl:part name="parameters" element="tns:ListarVisitas" />
@@ -506,6 +542,10 @@
       <wsdl:input message="tns:BuscarZonaSoapIn" />
       <wsdl:output message="tns:BuscarZonaSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="BuscarTodasZonas">
+      <wsdl:input message="tns:BuscarTodasZonasSoapIn" />
+      <wsdl:output message="tns:BuscarTodasZonasSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="Listo">
       <wsdl:input message="tns:ListoSoapIn" />
       <wsdl:output message="tns:ListoSoapOut" />
@@ -529,6 +569,10 @@
     <wsdl:operation name="BuscarEmpleado">
       <wsdl:input message="tns:BuscarEmpleadoSoapIn" />
       <wsdl:output message="tns:BuscarEmpleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEmpleadoActivo">
+      <wsdl:input message="tns:BuscarEmpleadoActivoSoapIn" />
+      <wsdl:output message="tns:BuscarEmpleadoActivoSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="ListarVisitas">
       <wsdl:input message="tns:ListarVisitasSoapIn" />
@@ -658,6 +702,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="BuscarTodasZonas">
+      <soap:operation soapAction="http://tempuri.org/BuscarTodasZonas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Listo">
       <soap:operation soapAction="http://tempuri.org/Listo" style="document" />
       <wsdl:input>
@@ -705,6 +758,15 @@
     </wsdl:operation>
     <wsdl:operation name="BuscarEmpleado">
       <soap:operation soapAction="http://tempuri.org/BuscarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEmpleadoActivo">
+      <soap:operation soapAction="http://tempuri.org/BuscarEmpleadoActivo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -850,6 +912,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="BuscarTodasZonas">
+      <soap12:operation soapAction="http://tempuri.org/BuscarTodasZonas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Listo">
       <soap12:operation soapAction="http://tempuri.org/Listo" style="document" />
       <wsdl:input>
@@ -897,6 +968,15 @@
     </wsdl:operation>
     <wsdl:operation name="BuscarEmpleado">
       <soap12:operation soapAction="http://tempuri.org/BuscarEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEmpleadoActivo">
+      <soap12:operation soapAction="http://tempuri.org/BuscarEmpleadoActivo" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

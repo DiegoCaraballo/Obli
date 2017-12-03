@@ -300,6 +300,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="BuscarEmpleadoActivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pNomUsu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarEmpleadoActivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarEmpleadoActivoResult" type="tns:Empleado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="ListarVisitas">
         <s:complexType />
       </s:element>
@@ -457,6 +471,12 @@
   <wsdl:message name="BuscarEmpleadoSoapOut">
     <wsdl:part name="parameters" element="tns:BuscarEmpleadoResponse" />
   </wsdl:message>
+  <wsdl:message name="BuscarEmpleadoActivoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarEmpleadoActivo" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEmpleadoActivoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarEmpleadoActivoResponse" />
+  </wsdl:message>
   <wsdl:message name="ListarVisitasSoapIn">
     <wsdl:part name="parameters" element="tns:ListarVisitas" />
   </wsdl:message>
@@ -549,6 +569,10 @@
     <wsdl:operation name="BuscarEmpleado">
       <wsdl:input message="tns:BuscarEmpleadoSoapIn" />
       <wsdl:output message="tns:BuscarEmpleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEmpleadoActivo">
+      <wsdl:input message="tns:BuscarEmpleadoActivoSoapIn" />
+      <wsdl:output message="tns:BuscarEmpleadoActivoSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="ListarVisitas">
       <wsdl:input message="tns:ListarVisitasSoapIn" />
@@ -734,6 +758,15 @@
     </wsdl:operation>
     <wsdl:operation name="BuscarEmpleado">
       <soap:operation soapAction="http://tempuri.org/BuscarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEmpleadoActivo">
+      <soap:operation soapAction="http://tempuri.org/BuscarEmpleadoActivo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -935,6 +968,15 @@
     </wsdl:operation>
     <wsdl:operation name="BuscarEmpleado">
       <soap12:operation soapAction="http://tempuri.org/BuscarEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEmpleadoActivo">
+      <soap12:operation soapAction="http://tempuri.org/BuscarEmpleadoActivo" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

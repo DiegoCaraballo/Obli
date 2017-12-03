@@ -6,7 +6,7 @@ using System.Text;
 namespace Entidades_Compartidas
 {
     [Serializable]
-    public class Apto:Propiedad 
+    public class Apto : Propiedad
     {
         //Atributos
         private int piso;
@@ -20,14 +20,15 @@ namespace Entidades_Compartidas
             set { ascensor = value; }
         }
 
-        public int Piso 
+        public int Piso
         {
             get { return piso; }
-            set {
+            set
+            {
                 if (value > -1 && value <= 100)
                     piso = value;
                 else
-                    throw new Exception("El piso no debe ser menor a 0 ni mayor a 100");            
+                    throw new Exception("El piso no debe ser menor a 0 ni mayor a 100");
             }
         }
 
@@ -40,9 +41,10 @@ namespace Entidades_Compartidas
         #endregion
 
         //Constructor
-        public Apto(int pPadron,string pDireccion, int pPrecio, string pAccion,
-           int pBaño,int pHab,decimal pMt2,Zona pZona,Empleado pUltimoEmp,
-           int pPiso,bool pAscensor) : base(pPadron,pDireccion,pPrecio,pAccion,pBaño,pHab,pMt2,pZona,pUltimoEmp)
+        public Apto(int pPadron, string pDireccion, int pPrecio, string pAccion,
+           int pBaño, int pHab, decimal pMt2, Zona pZona, Empleado pUltimoEmp,
+           int pPiso, bool pAscensor)
+            : base(pPadron, pDireccion, pPrecio, pAccion, pBaño, pHab, pMt2, pZona, pUltimoEmp)
         {
             Piso = pPiso;
             Ascensor = pAscensor;

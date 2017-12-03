@@ -48,7 +48,7 @@ public partial class _Default : System.Web.UI.Page
             throw new Exception();
         }
     }
-    
+
     //Funcionalidad Mostrar dentro del Repeater
     protected void rpPropiedades_ItemCommand(object source, RepeaterCommandEventArgs e)
     {
@@ -58,11 +58,11 @@ public partial class _Default : System.Web.UI.Page
             {
                 try
                 {
-                    
+
                     MiServicio serv = new MiServicio();
-               
+
                     int padron = Convert.ToInt32(((Label)e.Item.FindControl("lblPadron")).Text);
-                    Propiedad p = serv.BuscarPropiedad(padron); 
+                    Propiedad p = serv.BuscarPropiedad(padron);
                     Session["Propiedad"] = p;
                     Response.Redirect("ConsultaPropiedades.aspx", false);
 
@@ -105,16 +105,16 @@ public partial class _Default : System.Web.UI.Page
                 {
                     //TODO
                     List<Propiedad> listaFiltroPropiedad = (from p in listaFiltrada
-                                                        where  
-                                                          p.TipoPropiedad == ddlProp.SelectedItem.Value.ToString()
+                                                            where
+                                                              p.TipoPropiedad == ddlProp.SelectedItem.Value.ToString()
                                                             select p).ToList<Propiedad>();
 
                     listaFiltrada = listaFiltroPropiedad.ToList();
-                    
+
                 }
-                
+
                 //Ingresa si seleccionó un Departamento
-                if (ddlDepartamento.SelectedIndex != 0 )
+                if (ddlDepartamento.SelectedIndex != 0)
                 {
 
                     List<Propiedad> listaFiltroZona = (from p in listaFiltrada
@@ -186,7 +186,7 @@ public partial class _Default : System.Web.UI.Page
             else
             {
                 lblError.Text = "Debe seleccionar una acción";
-            }            
+            }
         }
         catch (Exception ex)
         {
@@ -199,9 +199,9 @@ public partial class _Default : System.Web.UI.Page
     {
         try
         {
-            
+
             MiServicio serv = new MiServicio();
-          
+
             Session["ListaPropiedades"] = (List<Propiedad>)serv.ListarPropiedades().ToList();
             rpPropiedades.DataSource = Session["ListaPropiedades"];
             rpPropiedades.DataBind();
@@ -229,7 +229,7 @@ public partial class _Default : System.Web.UI.Page
             ddlZona.Items.Clear();
 
             MiServicio serv = new MiServicio();
-            
+
             string _letraDpto = ddlDepartamento.SelectedItem.Value;
             List<Zona> zonas = serv.ListoPorDpto(_letraDpto).ToList(); //FabricaLogica.getZonaLogica().ListoPorDpto(_letraDpto);
             int c = 0;

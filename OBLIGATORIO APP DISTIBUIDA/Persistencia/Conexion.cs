@@ -8,9 +8,7 @@ namespace Persistencia
 {
     internal class Conexion
     {
-        //Nadia
-        //private static string _cnn = "Data Source=DESKTOP-6PHCMHQ\\SQLEXPRESS; Initial Catalog = BiosRealState; Integrated Security = true";
-
+      
         //Diego 
        // private static string _cnn = "Data Source=.; Initial Catalog = BiosRealState; Integrated Security = true";
 

@@ -13,6 +13,6 @@ namespace Persistencia
         void EliminarComercio(Comercio Co);
         void AgregarComercio(Comercio Co);
         void ModificarComercio(Comercio Co);
-        List<Comercio> ListaComercio();       
+        List<Comercio> ListaComercio();
     }
 }

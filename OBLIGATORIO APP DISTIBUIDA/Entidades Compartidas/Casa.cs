@@ -6,7 +6,7 @@ using System.Text;
 namespace Entidades_Compartidas
 {
     [Serializable]
-    public class Casa: Propiedad 
+    public class Casa : Propiedad
     {
         //Atributos
         private decimal mt2Terreno;
@@ -23,11 +23,12 @@ namespace Entidades_Compartidas
         public decimal Mt2Terreno
         {
             get { return mt2Terreno; }
-            set {
+            set
+            {
                 if (value > 1 || value >= Mt2Const)
                     mt2Terreno = value;
                 else
-                    throw new Exception("El terreno debe ser mayor a 1mt2 y no puede ser menor a los mt2 de la Construccion en el terreno");
+                    throw new Exception("El terreno debe ser mayor a 1 mt2 y no puede ser menor a los mt2 de la Construccion en el terreno");
             }
         }
 
@@ -40,8 +41,8 @@ namespace Entidades_Compartidas
         #endregion
 
         //Contructor
-        public Casa(int pPadron,string pDireccion, int pPrecio, string pAccion, int pBaño,int pHab,decimal pMt2,Zona pZona,Empleado pUltimoEmp, decimal pMt2Terreno,bool pFondo):
-            base(pPadron,pDireccion,pPrecio,pAccion,pBaño,pHab,pMt2,pZona,pUltimoEmp)
+        public Casa(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBaño, int pHab, decimal pMt2, Zona pZona, Empleado pUltimoEmp, decimal pMt2Terreno, bool pFondo) :
+            base(pPadron, pDireccion, pPrecio, pAccion, pBaño, pHab, pMt2, pZona, pUltimoEmp)
         {
             Mt2Terreno = pMt2;
             Fondo = pFondo;

@@ -31,7 +31,7 @@ namespace Entidades_Compartidas
             get { return nomUsu; }
             set
             {
-                if (value.Trim().Length > 3 && value.Trim().Length<21)
+                if (value.Trim().Length > 3 && value.Trim().Length < 21)
                     nomUsu = value;
                 else
                     throw new Exception("El usuario debe contener al menos una letra y menos de 21 caracteres");
@@ -43,7 +43,7 @@ namespace Entidades_Compartidas
         public Empleado(string pNom, string pPass)
         {
             NomUsu = pNom;
-            Pass= pPass;
+            Pass = pPass;
         }
 
         public Empleado() { }

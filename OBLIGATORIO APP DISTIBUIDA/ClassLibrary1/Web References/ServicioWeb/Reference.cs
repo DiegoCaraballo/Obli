@@ -55,6 +55,8 @@ namespace ControlesWeb.ServicioWeb {
         
         private System.Threading.SendOrPostCallback BuscarZonaOperationCompleted;
         
+        private System.Threading.SendOrPostCallback BuscarTodasZonasOperationCompleted;
+        
         private System.Threading.SendOrPostCallback ListoOperationCompleted;
         
         private System.Threading.SendOrPostCallback ListoPorDptoOperationCompleted;
@@ -66,6 +68,8 @@ namespace ControlesWeb.ServicioWeb {
         private System.Threading.SendOrPostCallback ModificarEmpleadoOperationCompleted;
         
         private System.Threading.SendOrPostCallback BuscarEmpleadoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback BuscarEmpleadoActivoOperationCompleted;
         
         private System.Threading.SendOrPostCallback ListarVisitasOperationCompleted;
         
@@ -149,6 +153,9 @@ namespace ControlesWeb.ServicioWeb {
         public event BuscarZonaCompletedEventHandler BuscarZonaCompleted;
         
         /// <remarks/>
+        public event BuscarTodasZonasCompletedEventHandler BuscarTodasZonasCompleted;
+        
+        /// <remarks/>
         public event ListoCompletedEventHandler ListoCompleted;
         
         /// <remarks/>
@@ -165,6 +172,9 @@ namespace ControlesWeb.ServicioWeb {
         
         /// <remarks/>
         public event BuscarEmpleadoCompletedEventHandler BuscarEmpleadoCompleted;
+        
+        /// <remarks/>
+        public event BuscarEmpleadoActivoCompletedEventHandler BuscarEmpleadoActivoCompleted;
         
         /// <remarks/>
         public event ListarVisitasCompletedEventHandler ListarVisitasCompleted;
@@ -541,6 +551,37 @@ namespace ControlesWeb.ServicioWeb {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/BuscarTodasZonas", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Zona BuscarTodasZonas(string pLetra, string pAbrev) {
+            object[] results = this.Invoke("BuscarTodasZonas", new object[] {
+                        pLetra,
+                        pAbrev});
+            return ((Zona)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void BuscarTodasZonasAsync(string pLetra, string pAbrev) {
+            this.BuscarTodasZonasAsync(pLetra, pAbrev, null);
+        }
+        
+        /// <remarks/>
+        public void BuscarTodasZonasAsync(string pLetra, string pAbrev, object userState) {
+            if ((this.BuscarTodasZonasOperationCompleted == null)) {
+                this.BuscarTodasZonasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnBuscarTodasZonasOperationCompleted);
+            }
+            this.InvokeAsync("BuscarTodasZonas", new object[] {
+                        pLetra,
+                        pAbrev}, this.BuscarTodasZonasOperationCompleted, userState);
+        }
+        
+        private void OnBuscarTodasZonasOperationCompleted(object arg) {
+            if ((this.BuscarTodasZonasCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.BuscarTodasZonasCompleted(this, new BuscarTodasZonasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Listo", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public Zona[] Listo() {
             object[] results = this.Invoke("Listo", new object[0]);
@@ -710,6 +751,35 @@ namespace ControlesWeb.ServicioWeb {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/BuscarEmpleadoActivo", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Empleado BuscarEmpleadoActivo(string pNomUsu) {
+            object[] results = this.Invoke("BuscarEmpleadoActivo", new object[] {
+                        pNomUsu});
+            return ((Empleado)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void BuscarEmpleadoActivoAsync(string pNomUsu) {
+            this.BuscarEmpleadoActivoAsync(pNomUsu, null);
+        }
+        
+        /// <remarks/>
+        public void BuscarEmpleadoActivoAsync(string pNomUsu, object userState) {
+            if ((this.BuscarEmpleadoActivoOperationCompleted == null)) {
+                this.BuscarEmpleadoActivoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnBuscarEmpleadoActivoOperationCompleted);
+            }
+            this.InvokeAsync("BuscarEmpleadoActivo", new object[] {
+                        pNomUsu}, this.BuscarEmpleadoActivoOperationCompleted, userState);
+        }
+        
+        private void OnBuscarEmpleadoActivoOperationCompleted(object arg) {
+            if ((this.BuscarEmpleadoActivoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.BuscarEmpleadoActivoCompleted(this, new BuscarEmpleadoActivoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarVisitas", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode ListarVisitas() {
             object[] results = this.Invoke("ListarVisitas", new object[0]);
@@ -825,7 +895,7 @@ namespace ControlesWeb.ServicioWeb {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class Propiedad {
+    public partial class Propiedad {
         
         private Empleado ultimoEmpField;
         
@@ -1068,30 +1138,9 @@ namespace ControlesWeb.ServicioWeb {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class Servicio {
-        
-        private string serviciosField;
-        
-        /// <comentarios/>
-        public string Servicios {
-            get {
-                return this.serviciosField;
-            }
-            set {
-                this.serviciosField = value;
-            }
-        }
-    }
-    
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class Zona {
         
-        private Servicio[] losServiciosField;
+        private string[] losServiciosField;
         
         private int cantHabitantesField;
         
@@ -1102,7 +1151,7 @@ namespace ControlesWeb.ServicioWeb {
         private string letraDptoField;
         
         /// <comentarios/>
-        public Servicio[] LosServicios {
+        public string[] LosServicios {
             get {
                 return this.losServiciosField;
             }
@@ -1392,6 +1441,32 @@ namespace ControlesWeb.ServicioWeb {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void BuscarTodasZonasCompletedEventHandler(object sender, BuscarTodasZonasCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class BuscarTodasZonasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal BuscarTodasZonasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Zona Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Zona)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void ListoCompletedEventHandler(object sender, ListoCompletedEventArgs e);
     
     /// <remarks/>
@@ -1467,6 +1542,32 @@ namespace ControlesWeb.ServicioWeb {
         private object[] results;
         
         internal BuscarEmpleadoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Empleado Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Empleado)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void BuscarEmpleadoActivoCompletedEventHandler(object sender, BuscarEmpleadoActivoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class BuscarEmpleadoActivoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal BuscarEmpleadoActivoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

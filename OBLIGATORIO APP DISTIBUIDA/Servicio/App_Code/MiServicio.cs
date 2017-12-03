@@ -14,11 +14,12 @@ using System.Web.Services.Protocols;
 /// </summary>
 [WebService(Namespace = "http://tempuri.org/")]
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
+
 // Para permitir que se llame a este servicio Web desde un script, usando ASP.NET AJAX, quite la marca de comentario de la línea siguiente. 
 // [System.Web.Script.Services.ScriptService]
 public class MiServicio : System.Web.Services.WebService
 {
-
+    //TODO - ver de sacar referencia a persistencia
     #region Propiedad
     [WebMethod]
     public void ParaPoderSerializar(Casa unaCasa, Apto unApto, Comercio unComercio)

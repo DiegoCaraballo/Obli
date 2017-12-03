@@ -27,6 +27,7 @@ namespace Persistencia
         #endregion
 
         #region Operaciones
+        
         public Casa BuscarCasa(int pPadron)
         {
             Casa c = null;
@@ -86,6 +87,7 @@ namespace Persistencia
 
             return c;
         }
+        
         public void EliminarCasa(Casa C)
         {
             SqlConnection coonexion = new SqlConnection(Conexion.Cnn);
@@ -120,6 +122,7 @@ namespace Persistencia
             }
 
         }
+        
         public void AgregarCasa(Casa C)
         {
             SqlConnection conexion = new SqlConnection(Conexion.Cnn);
@@ -175,7 +178,7 @@ namespace Persistencia
                     throw new Exception("El empleado no esta activo");
                 else if (afectados == -5)
                     throw new Exception("La zona no esta Activa");
-        
+
             }
             catch (Exception ex)
             {
@@ -187,6 +190,7 @@ namespace Persistencia
             }
 
         }
+        
         public void ModificarCasa(Casa C)
         {
             SqlConnection conexion = new SqlConnection(Conexion.Cnn);
@@ -253,6 +257,7 @@ namespace Persistencia
             }
 
         }
+        
         public List<Casa> ListaCasa()
         {
             List<Casa> lista = new List<Casa>();

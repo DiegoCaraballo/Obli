@@ -21,19 +21,21 @@ namespace Entidades_Compartidas
         public Propiedad AVisitar
         {
             get { return aVisitar; }
-            set {
-               if (value != null)
+            set
+            {
+                if (value != null)
                     aVisitar = value;
-             else
-               throw new Exception("Debe seleccionar una propiedad");
-            
+                else
+                    throw new Exception("Debe seleccionar una propiedad");
+
             }
         }
 
         public string Nombre
         {
             get { return nombre; }
-            set {
+            set
+            {
                 if (value.Trim().Length > 0 && value.Trim().Length < 21)
                     nombre = value;
                 else
@@ -44,27 +46,29 @@ namespace Entidades_Compartidas
         public string Telefono
         {
             get { return telefono; }
-            set {
+            set
+            {
                 if (value.Trim().Length >= 4 && value.Trim().Length < 21)
                     telefono = value;
                 else
                     throw new Exception("Ingrese un número de telefono de entre 4 y 20 digitos");
-                }
+            }
         }
 
 
         public DateTime Fecha
         {
-            get { return fecha;  }
-            set {
-                if (value.Date !=null )
+            get { return fecha; }
+            set
+            {
+                if (value.Date != null)
                     fecha = value;
                 else
                     throw new Exception("Debe ingresar una fecha");
             }
         }
 
-      
+
         public int Id
         {
             get { return id; }
@@ -72,14 +76,14 @@ namespace Entidades_Compartidas
         }
         #endregion
 
-        public Visita( DateTime pFecha, string pTelefono, string pNombre, Propiedad pAVisitar)
+        public Visita(DateTime pFecha, string pTelefono, string pNombre, Propiedad pAVisitar)
         {
             Fecha = pFecha;
             Telefono = pTelefono;
             Nombre = pNombre;
             AVisitar = pAVisitar;
         }
-       
+
         public Visita()
         { }
     }

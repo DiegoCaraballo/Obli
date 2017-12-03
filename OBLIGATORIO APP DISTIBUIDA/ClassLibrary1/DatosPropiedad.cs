@@ -38,17 +38,18 @@ namespace ControlesWeb
         private Label lblAbreviacion;
         private Label lblNombre;
         private Label lblCantHabitantes;
-        private List<string> listaServicios;
+        //private List<string> listaServicios;
         private ListBox lbServicios;
 
         private Panel UnPanel;
 
+        //operacion que recibe los datos de una Casa y carga sus valores en los diferentes controles
         public void DatosCasa(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBanio, int pHabitaciones, decimal pMt2Const, string pTipoPropiedad, string pLetraDpto, string pAbreviacion, string pZonaNombre, int pCantHabitantes, List<string> pLosServicios, decimal pMt2Terreno, bool pFondo)
         {
             try
             {
                 EnsureChildControls();
-          
+
                 lblPadron.Text = pPadron.ToString();
                 lblDireccion.Text = pDireccion;
                 lblPrecio.Text = pPrecio.ToString();
@@ -88,7 +89,8 @@ namespace ControlesWeb
             }
         }
 
-        public void DatosComercio(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBanio, int pHabitaciones, decimal pMt2Const, string pTipoPropiedad, string pLetraDpto, string pAbreviacion, string pZonaNombre, int pCantHabitantes, List<string> pLosServicios,  bool pHabilitado)
+        //operacion que recibe los datos de un Comercio y carga sus valores en los diferentes controles
+        public void DatosComercio(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBanio, int pHabitaciones, decimal pMt2Const, string pTipoPropiedad, string pLetraDpto, string pAbreviacion, string pZonaNombre, int pCantHabitantes, List<string> pLosServicios, bool pHabilitado)
         {
             try
             {
@@ -133,6 +135,7 @@ namespace ControlesWeb
             }
         }
 
+        //operacion que recibe los datos de un Apto y carga sus valores en los diferentes controles
         public void DatosApto(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBanio, int pHabitaciones, decimal pMt2Const, string pTipoPropiedad, string pLetraDpto, string pAbreviacion, string pZonaNombre, int pCantHabitantes, List<string> pLosServicios, int pPiso, bool pAscensor)
         {
             try
@@ -269,22 +272,23 @@ namespace ControlesWeb
         }
 
         //Metodo que carga la lista de servicios de la zona
-        private void ListaServiciosZona(Propiedad p)
-        {
+        //TODO - ver si sacamos esto por que usa la clase servicio ???
+        //private void ListaServiciosZona(Propiedad p)
+        //{
 
-            if (p.Zona.LosServicios.ToList().Count != 0)
-            {
-                foreach (Servicio s in p.Zona.LosServicios)
-                {
-                    lbServicios.Items.Add(s.Servicios.ToString());
-                }
-            }
-            else
-            {
-                lbServicios.Items.Add("La zona no cuenta con servicios a destacar");
-            }
+        //    if (p.Zona.LosServicios.ToList().Count != 0)
+        //    {
+        //        foreach (Servicio s in p.Zona.LosServicios)
+        //        {
+        //            lbServicios.Items.Add(s.Servicios.ToString());
+        //        }
+        //    }
+        //    else
+        //    {
+        //        lbServicios.Items.Add("La zona no cuenta con servicios a destacar");
+        //    }
 
-        }
+        //}
     }
 
 }

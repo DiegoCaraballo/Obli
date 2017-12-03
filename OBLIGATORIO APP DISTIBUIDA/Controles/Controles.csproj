@@ -54,12 +54,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entidades Compartidas\Entidades Compartidas.csproj">
-      <Project>{FC82E514-A3FD-4E8D-BD43-30FCF04CCA1B}</Project>
-      <Name>Entidades Compartidas</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="CodigoDpto.resx">
       <DependentUpon>CodigoDpto.cs</DependentUpon>
     </EmbeddedResource>

@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace Controles
 {
+
     public partial class CodigoDpto : UserControl
     {
         public CodigoDpto()
@@ -86,9 +87,9 @@ namespace Controles
                         return letraDpto;
                     default:
                         letraDpto = "";
-                        return letraDpto;                     
+                        return letraDpto;
                 }
-                             
+
             }
 
             set
@@ -124,11 +125,11 @@ namespace Controles
                     case "B":
                         cboDepartamento.SelectedIndex = 8;
                         break;
-                    case 
+                    case
                     "S":
                         cboDepartamento.SelectedIndex = 9;
                         break;
-                    case 
+                    case
                     "I":
                         cboDepartamento.SelectedIndex = 10;
                         break;
@@ -163,7 +164,7 @@ namespace Controles
         // Código
         public string Codigo
         {
-            get {return txtCodigo.Text.Trim();}
+            get { return txtCodigo.Text.Trim(); }
             set { txtCodigo.Text = value; }
         }
 
@@ -239,7 +240,7 @@ namespace Controles
 
         // Valido que seleccione un Departamento
         private void cboDepartamento_Validating(object sender, CancelEventArgs e)
-            {
+        {
             try
             {
                 if (cboDepartamento.SelectedIndex >= 0)
@@ -251,7 +252,7 @@ namespace Controles
                     throw new Exception("Debe seleccionar un Departamento");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 EPDpto.SetError(cboDepartamento, ex.Message);
                 e.Cancel = true;

@@ -42,6 +42,7 @@ namespace Persistencia
                 throw ex;
             }
         }
+
         internal static void EliminarServiciosZona(Entidades_Compartidas.Zona unaZona, SqlTransaction _pTransaccion)
         {
             SqlCommand comando = new SqlCommand("EliminarServicio", _pTransaccion.Connection);
@@ -65,6 +66,7 @@ namespace Persistencia
                 throw ex;
             }
         }
+
         internal static List<string> CargoServicio(string letraDpto, string abreviacion)
         {
             SqlConnection _cnn = new SqlConnection(Conexion.Cnn);
@@ -102,6 +104,6 @@ namespace Persistencia
 
             return _ListaServicios;
         }
-       }
+    }
 
 }

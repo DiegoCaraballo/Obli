@@ -84,6 +84,7 @@
             this.MenuItemIngresar.Name = "MenuItemIngresar";
             this.MenuItemIngresar.Size = new System.Drawing.Size(77, 20);
             this.MenuItemIngresar.Text = "Ingresar";
+            this.MenuItemIngresar.Click += new System.EventHandler(this.MenuItemIngresar_Click);
             // 
             // MenuItemModificar
             // 
@@ -91,6 +92,7 @@
             this.MenuItemModificar.Name = "MenuItemModificar";
             this.MenuItemModificar.Size = new System.Drawing.Size(86, 20);
             this.MenuItemModificar.Text = "Modificar";
+            this.MenuItemModificar.Click += new System.EventHandler(this.MenuItemModificar_Click);
             // 
             // MenuItemEliminar
             // 
@@ -98,6 +100,7 @@
             this.MenuItemEliminar.Name = "MenuItemEliminar";
             this.MenuItemEliminar.Size = new System.Drawing.Size(78, 20);
             this.MenuItemEliminar.Text = "Eliminar";
+            this.MenuItemEliminar.Click += new System.EventHandler(this.MenuItemEliminar_Click);
             // 
             // MenuItemCancelar
             // 
@@ -105,6 +108,7 @@
             this.MenuItemCancelar.Name = "MenuItemCancelar";
             this.MenuItemCancelar.Size = new System.Drawing.Size(81, 20);
             this.MenuItemCancelar.Text = "Cancelar";
+            this.MenuItemCancelar.Click += new System.EventHandler(this.MenuItemCancelar_Click);
             // 
             // MenuItemAyuda
             // 
@@ -112,6 +116,7 @@
             this.MenuItemAyuda.Name = "MenuItemAyuda";
             this.MenuItemAyuda.Size = new System.Drawing.Size(69, 20);
             this.MenuItemAyuda.Text = "Ayuda";
+            this.MenuItemAyuda.Click += new System.EventHandler(this.MenuItemAyuda_Click);
             // 
             // label1
             // 
@@ -182,6 +187,7 @@
             this.txtPadron.Name = "txtPadron";
             this.txtPadron.Size = new System.Drawing.Size(100, 20);
             this.txtPadron.TabIndex = 1;
+            this.txtPadron.Validating += new System.ComponentModel.CancelEventHandler(this.txtPadron_Validating);
             // 
             // cboAccion
             // 

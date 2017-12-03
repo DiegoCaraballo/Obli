@@ -43,7 +43,7 @@ namespace Administracion
         // Deja todo en estado Inicial
         public void EstadoInicial()
         {
-
+            
             MenuItemIngresar.Enabled = false;
             MenuItemEliminar.Enabled = false;
             MenuItemModificar.Enabled = false;
@@ -140,13 +140,13 @@ namespace Administracion
                     txtHabitaciones.Text = propiedad.Habitaciones.ToString();
                     txtMt2Const.Text = propiedad.Mt2Const.ToString();
 
-                    ccZona.LetraDepto = propiedad.Zona.LetraDpto.ToString();
-                    ccZona.Codigo = propiedad.Zona.Abreviacion;
+                    ccZona.LetraDepto = propiedad.Zona.LetraDpto.Trim().ToUpper();
+                    ccZona.Codigo = propiedad.Zona.Abreviacion.Trim().ToUpper();
                     zona = propiedad.Zona;
 
 
                     txtUser.Text = propiedad.UltimoEmp.NomUsu;
-                    txtMt2Terreno.Text = ((ServicioWeb.Casa)propiedad).Fondo.ToString();
+                    txtMt2Terreno.Text = ((ServicioWeb.Casa)propiedad).Mt2Terreno.ToString();
                     if (((ServicioWeb.Casa)propiedad).Fondo == true)
                     {
                         cboFondo.SelectedItem = "SI";
@@ -168,10 +168,15 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 40);
-                else
-                    lblMensajes.Text = ex.Detail.InnerText;
+                string p = ex.Message;
+                string[] mensaje = ex.Message.Split('>');
+                int count = -1;
+                foreach (string texto in mensaje)
+                {
+                    count += 1;
+                }
+
+                lblMensajes.Text = (mensaje[count]);
             }
             catch (Exception ex)
             {
@@ -201,7 +206,7 @@ namespace Administracion
                 casa.Baño = Convert.ToInt32(txtBanio.Text);
                 casa.Habitaciones = Convert.ToInt32(txtHabitaciones.Text);
                 casa.Mt2Const = Convert.ToInt32(txtMt2Const.Text);
-                casa.Zona = new ServicioWeb.MiServicio().BuscarTodasZonas(ccZona.LetraDepto, ccZona.Codigo);
+                casa.Zona = new ServicioWeb.MiServicio().BuscarTodasZonas(ccZona.LetraDepto.Trim().ToUpper(), ccZona.Codigo.Trim().ToUpper());
                 casa.UltimoEmp = emp;
 
                 casa.Mt2Terreno = Convert.ToInt32(txtMt2Terreno.Text);
@@ -221,11 +226,15 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                MessageBox.Show(ex.Detail.InnerText);
-                //if (ex.Detail.InnerText.Length > 80)
-                //  lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
-                //else
-                //  lblMensajes.Text = ex.Detail.InnerText;
+                string p = ex.Message;
+                string[] mensaje = ex.Message.Split('>');
+                int count = -1;
+                foreach (string texto in mensaje)
+                {
+                    count += 1;
+                }
+
+                lblMensajes.Text = (mensaje[count]);
             }
             catch (Exception ex)
             {
@@ -254,10 +263,15 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 80)
-                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
-                else
-                    lblMensajes.Text = ex.Detail.InnerText;
+                string p = ex.Message;
+                string[] mensaje = ex.Message.Split('>');
+                int count = -1;
+                foreach (string texto in mensaje)
+                {
+                    count += 1;
+                }
+
+                lblMensajes.Text = (mensaje[count]);
             }
             catch (Exception ex)
             {
@@ -280,8 +294,7 @@ namespace Administracion
                 prop.Baño = Convert.ToInt32(txtBanio.Text);
                 prop.Habitaciones = Convert.ToInt32(txtHabitaciones.Text);
                 prop.Mt2Const = Convert.ToInt32(txtMt2Const.Text);
-                prop.Zona.Abreviacion = zona.Abreviacion;
-                prop.Zona.LetraDpto = zona.LetraDpto;
+                prop.Zona = new ServicioWeb.MiServicio().BuscarZona(ccZona.LetraDepto.Trim().ToUpper(), ccZona.Codigo.Trim().ToUpper());
                 prop.UltimoEmp.NomUsu = emp.NomUsu;
                 ((ServicioWeb.Casa)prop).Mt2Terreno = Convert.ToInt32(txtMt2Terreno.Text);
 
@@ -299,10 +312,15 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 80)
-                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
-                else
-                    lblMensajes.Text = ex.Detail.InnerText;
+                string p = ex.Message;
+                string[] mensaje = ex.Message.Split('>');
+                int count = -1;
+                foreach (string texto in mensaje)
+                {
+                    count += 1;
+                }
+
+                lblMensajes.Text = (mensaje[count]);
             }
             catch (Exception ex)
             {
@@ -314,11 +332,13 @@ namespace Administracion
 
         }
 
-
-    
-
+     
        
-        
-        
+
+
+
+
+
+
     }
 }

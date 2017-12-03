@@ -16,7 +16,7 @@ namespace Administracion
         private Propiedad prop = null;
         private Empleado emp = null;
         private Zona zona = null;
-        
+
         public ABMComercio(Empleado e)
         {
             InitializeComponent();
@@ -167,10 +167,15 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 40);
-                else
-                    lblMensajes.Text = ex.Detail.InnerText;
+                string p = ex.Message;
+                string[] mensaje = ex.Message.Split('>');
+                int count = -1;
+                foreach (string texto in mensaje)
+                {
+                    count += 1;
+                }
+
+                lblMensajes.Text = (mensaje[count]);
             }
             catch (Exception ex)
             {
@@ -219,11 +224,15 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                MessageBox.Show(ex.Detail.InnerText);
-                //if (ex.Detail.InnerText.Length > 80)
-                //  lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
-                //else
-                //  lblMensajes.Text = ex.Detail.InnerText;
+                string p = ex.Message;
+                string[] mensaje = ex.Message.Split('>');
+                int count = -1;
+                foreach (string texto in mensaje)
+                {
+                    count += 1;
+                }
+
+                lblMensajes.Text = (mensaje[count]);
             }
             catch (Exception ex)
             {
@@ -253,10 +262,15 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 80)
-                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
-                else
-                    lblMensajes.Text = ex.Detail.InnerText;
+                string p = ex.Message;
+                string[] mensaje = ex.Message.Split('>');
+                int count = -1;
+                foreach (string texto in mensaje)
+                {
+                    count += 1;
+                }
+
+                lblMensajes.Text = (mensaje[count]);
             }
             catch (Exception ex)
             {
@@ -279,10 +293,9 @@ namespace Administracion
                 prop.Baño = Convert.ToInt32(txtBanio.Text);
                 prop.Habitaciones = Convert.ToInt32(txtHabitaciones.Text);
                 prop.Mt2Const = Convert.ToInt32(txtMt2Const.Text);
-                prop.Zona.Abreviacion = zona.Abreviacion;
-                prop.Zona.LetraDpto = zona.LetraDpto;
+                prop.Zona = new ServicioWeb.MiServicio().BuscarZona(ccZona.LetraDepto, ccZona.Codigo);
                 prop.UltimoEmp.NomUsu = emp.NomUsu;
-                
+
                 if (cboHabilitado.SelectedItem.ToString() == "SI")
                 {
                     ((ServicioWeb.Comercio)prop).Habilitado = true;
@@ -297,10 +310,15 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 80)
-                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
-                else
-                    lblMensajes.Text = ex.Detail.InnerText;
+                string p = ex.Message;
+                string[] mensaje = ex.Message.Split('>');
+                int count = -1;
+                foreach (string texto in mensaje)
+                {
+                    count += 1;
+                }
+
+                lblMensajes.Text = (mensaje[count]);
             }
             catch (Exception ex)
             {

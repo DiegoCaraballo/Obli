@@ -216,6 +216,7 @@
             this.txtPadron.Name = "txtPadron";
             this.txtPadron.Size = new System.Drawing.Size(100, 20);
             this.txtPadron.TabIndex = 1;
+            
             this.txtPadron.Validating += new System.ComponentModel.CancelEventHandler(this.txtPadron_Validating);
             // 
             // txtDireccion

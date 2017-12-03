@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Entidades_Compartidas;
-using System.Data.SqlClient ;
-using System.Data ;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Persistencia
 {
-    internal class EmpleadoPersistencia:IEmpleadoPersistencia
+    internal class EmpleadoPersistencia : IEmpleadoPersistencia
     {
         #region Singleton
         private static EmpleadoPersistencia instancia = null;

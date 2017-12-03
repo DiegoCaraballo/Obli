@@ -26,7 +26,7 @@ namespace Administracion.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:10828/Servicio/MiServicio.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://bios1-pc/Webservice/miservicio.asmx")]
         public string Administracion_ServicioWeb_MiServicio {
             get {
                 return ((string)(this["Administracion_ServicioWeb_MiServicio"]));

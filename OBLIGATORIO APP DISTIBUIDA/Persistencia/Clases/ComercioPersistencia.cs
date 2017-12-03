@@ -27,6 +27,7 @@ namespace Persistencia
         #endregion
 
         #region Operaciones
+
         public Comercio BuscarComercio(int pPadron)
         {
             Comercio co = null;
@@ -84,6 +85,7 @@ namespace Persistencia
 
             return co;
         }
+        
         public void EliminarComercio(Comercio Co)
         {
             SqlConnection coonexion = new SqlConnection(Conexion.Cnn);
@@ -117,6 +119,7 @@ namespace Persistencia
                 coonexion.Close();
             }
         }
+        
         public void AgregarComercio(Comercio pComercio)
         {
             SqlConnection conexion = new SqlConnection(Conexion.Cnn);
@@ -170,7 +173,7 @@ namespace Persistencia
                     throw new Exception("El empleado no esta activo");
                 else if (afectados == -5)
                     throw new Exception("La zona no esta Activa");
-         
+
             }
             catch (Exception ex)
             {
@@ -181,6 +184,7 @@ namespace Persistencia
                 conexion.Close();
             }
         }
+        
         public void ModificarComercio(Comercio Co)
         {
             SqlConnection conexion = new SqlConnection(Conexion.Cnn);
@@ -233,7 +237,7 @@ namespace Persistencia
                     throw new Exception("El empleado no esta activo");
                 else if (oAfectados == -4)
                     throw new Exception("La Zona no esta activa");
-                
+
             }
             catch (Exception ex)
             {
@@ -244,6 +248,7 @@ namespace Persistencia
                 conexion.Close();
             }
         }
+        
         public List<Comercio> ListaComercio()
         {
             List<Comercio> lista = new List<Comercio>();
@@ -284,7 +289,7 @@ namespace Persistencia
                     habilitado = Convert.ToBoolean(oReader["habilitado"]);
 
                     Comercio c = new Comercio(padron, direccion, precio, accion, banio, habitaciones, mt2C, ((ZonaPersistencia.GetInstancia().BuscoTodas(letraDpto, abreviacion))),
-                   (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)),habilitado);
+                   (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)), habilitado);
                     lista.Add(c);
                 }
                 oReader.Close();
@@ -300,6 +305,7 @@ namespace Persistencia
 
             return lista;
         }
+        
         #endregion
     }
 }

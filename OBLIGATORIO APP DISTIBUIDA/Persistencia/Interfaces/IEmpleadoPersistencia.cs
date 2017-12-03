@@ -6,7 +6,7 @@ using Entidades_Compartidas;
 
 namespace Persistencia
 {
-     public interface IEmpleadoPersistencia
+    public interface IEmpleadoPersistencia
     {
         void AgregarEmpleado(Empleado E);
         void EliminarEmpleado(Empleado E);

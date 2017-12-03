@@ -28,7 +28,7 @@ namespace Logica
             // Se controla que el usuario no pueda visitar + de 2 veces la misma propiedad
             if (numero >= 2)
             {
-                throw new Exception("Usted ya visito dos veces esta propiedad");               
+                throw new Exception("Usted ya visito dos veces esta propiedad");
             }
 
             IVisitaPersistencia visita2 = FabricaPersistencia.getPersistenciaVisita();
@@ -40,7 +40,7 @@ namespace Logica
                 throw new Exception("La propiedad ya tiene una vista agendada para la misma Fecha-Hora");
             }
             IVisitaPersistencia visitar = FabricaPersistencia.getPersistenciaVisita();
- 
+
             visitar.AgendaVisita(V);
 
         }

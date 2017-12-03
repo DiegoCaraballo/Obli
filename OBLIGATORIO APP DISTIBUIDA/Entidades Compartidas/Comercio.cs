@@ -6,7 +6,7 @@ using System.Text;
 namespace Entidades_Compartidas
 {
     [Serializable]
-    public class Comercio:Propiedad 
+    public class Comercio : Propiedad
     {
         //Atributos
         private bool habilitado;
@@ -26,7 +26,7 @@ namespace Entidades_Compartidas
         }
 
         //Constructor
-        public Comercio(int pPadron,string pDireccion, int pPrecio, string pAccion, int pBaño,int pHab,decimal pMt2,Zona pZona,Empleado pUltimoEmp,bool pHabilitado):
+        public Comercio(int pPadron, string pDireccion, int pPrecio, string pAccion, int pBaño, int pHab, decimal pMt2, Zona pZona, Empleado pUltimoEmp, bool pHabilitado) :
             base(pPadron, pDireccion, pPrecio, pAccion, pBaño, pHab, pMt2, pZona, pUltimoEmp)
         {
             Habilitado = pHabilitado;

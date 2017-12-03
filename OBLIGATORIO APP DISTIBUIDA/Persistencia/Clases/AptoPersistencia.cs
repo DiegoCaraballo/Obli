@@ -27,6 +27,7 @@ namespace Persistencia
         #endregion
 
         #region Operaciones
+        
         public Apto BuscarApto(int pPadron)
         {
 
@@ -92,6 +93,7 @@ namespace Persistencia
 
             return a;
         }
+        
         public void EliminarApto(Apto A)
         {
             SqlConnection coonexion = new SqlConnection(Conexion.Cnn);
@@ -126,6 +128,7 @@ namespace Persistencia
             }
 
         }
+        
         public void AgregarApto(Apto A)
         {
             SqlConnection conexion = new SqlConnection(Conexion.Cnn);
@@ -180,7 +183,7 @@ namespace Persistencia
                     throw new Exception("El empleado no esta activo");
                 else if (afectados == -5)
                     throw new Exception("La zona no esta Activa");
-              
+
             }
             catch (Exception ex)
             {
@@ -192,6 +195,7 @@ namespace Persistencia
             }
 
         }
+        
         public void ModificarApto(Apto A)
         {
             SqlConnection conexion = new SqlConnection(Conexion.Cnn);
@@ -246,7 +250,7 @@ namespace Persistencia
                     throw new Exception("El empleado no esta activo");
                 else if (oAfectados == -4)
                     throw new Exception("La Zona no esta activa");
-                
+
             }
             catch (Exception ex)
             {
@@ -258,6 +262,7 @@ namespace Persistencia
             }
 
         }
+        
         public List<Apto> ListaApto()
         {
             List<Apto> lista = new List<Apto>();
@@ -300,7 +305,7 @@ namespace Persistencia
                     ascensor = (bool)oReader["ascensor"];
 
                     Apto a = new Apto(padron, direccion, precio, accion, banio, habitaciones, mt2C, ((ZonaPersistencia.GetInstancia().BuscoTodas(letraDpto, abreviacion))),
-                   (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)),piso,ascensor);
+                   (EmpleadoPersistencia.GetInstancia().BuscarEmpleado(nomUsu)), piso, ascensor);
                     lista.Add(a);
                 }
                 oReader.Close();
@@ -315,7 +320,7 @@ namespace Persistencia
             }
 
             return lista;
-        }       
+        }
 
         #endregion
     }
