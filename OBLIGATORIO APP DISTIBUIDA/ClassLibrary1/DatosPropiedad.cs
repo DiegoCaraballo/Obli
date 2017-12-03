@@ -193,7 +193,7 @@ namespace ControlesWeb
             lblTipoPropiedad = new Label();
             UnPanel.Controls.Add(lblTipoPropiedad);
 
-            UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>PADRON:</b> "));
+            UnPanel.Controls.Add(new LiteralControl("<td><b>PADRON:</b> "));
             lblPadron = new Label();
             UnPanel.Controls.Add(lblPadron);
 
@@ -201,7 +201,7 @@ namespace ControlesWeb
             lblDireccion = new Label();
             UnPanel.Controls.Add(lblDireccion);
 
-            UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>PRECIO:</b> "));
+            UnPanel.Controls.Add(new LiteralControl("<td><b>PRECIO:</b> "));
             lblPrecio = new Label();
             UnPanel.Controls.Add(lblPrecio);
 
@@ -209,7 +209,7 @@ namespace ControlesWeb
             lblAccion = new Label();
             UnPanel.Controls.Add(lblAccion);
 
-            UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>BAÑOS:</b> "));
+            UnPanel.Controls.Add(new LiteralControl("<td><b>BAÑOS:</b> "));
             lblBaño = new Label();
             UnPanel.Controls.Add(lblBaño);
 
@@ -217,7 +217,7 @@ namespace ControlesWeb
             lblHabitaciones = new Label();
             UnPanel.Controls.Add(lblHabitaciones);
 
-            UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>MT2(CONST):</b> "));
+            UnPanel.Controls.Add(new LiteralControl("<td><b>MT2(CONST):</b> "));
             lblMt2Const = new Label();
             UnPanel.Controls.Add(lblMt2Const);
 
@@ -225,7 +225,7 @@ namespace ControlesWeb
             lblPiso = new Label();
             UnPanel.Controls.Add(lblPiso);
 
-            UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>ASCENSOR:</b> "));
+            UnPanel.Controls.Add(new LiteralControl("<td><b>ASCENSOR:</b> "));
             lblAscensor = new Label();
             UnPanel.Controls.Add(lblAscensor);
 
@@ -233,7 +233,7 @@ namespace ControlesWeb
             lblMt2Terreno = new Label();
             UnPanel.Controls.Add(lblMt2Terreno);
 
-            UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>FONDO:</b> "));
+            UnPanel.Controls.Add(new LiteralControl("<td><b>FONDO:</b> "));
             lblFondo = new Label();
             UnPanel.Controls.Add(lblFondo);
 
@@ -241,7 +241,7 @@ namespace ControlesWeb
             lblHabilitado = new Label();
             UnPanel.Controls.Add(lblHabilitado);
 
-            UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>DPTO:</b> "));
+            UnPanel.Controls.Add(new LiteralControl("<td><b>DPTO:</b> "));
             lblLetraDpto = new Label();
             UnPanel.Controls.Add(lblLetraDpto);
 
@@ -251,7 +251,7 @@ namespace ControlesWeb
             UnPanel.Controls.Add(lblAbreviacion);
 
 
-            UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>NOMBRE ZONA:</b> "));
+            UnPanel.Controls.Add(new LiteralControl("<td><b>NOMBRE ZONA:</b> "));
             lblNombre = new Label();
             UnPanel.Controls.Add(lblNombre);
 
@@ -261,7 +261,7 @@ namespace ControlesWeb
             UnPanel.Controls.Add(lblCantHabitantes);
 
 
-            UnPanel.Controls.Add(new LiteralControl("</tr><tr><td><b>SERVICIOS:</b> "));
+            UnPanel.Controls.Add(new LiteralControl("<td><b>SERVICIOS:</b> "));
             lbServicios = new ListBox();
             UnPanel.Controls.Add(lbServicios);
             UnPanel.Controls.Add(new LiteralControl("</td></tr>"));

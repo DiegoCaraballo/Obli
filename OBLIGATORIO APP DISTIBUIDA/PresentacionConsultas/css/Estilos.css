@@ -93,21 +93,21 @@ visita
     text-align: center;    
 }
 
-/*  Propabndo css*/
+/* css para el repeater*/
  .container
     {
         width:600px;
         border:solid 1px black;
         background-color:white;
     }
-    .products
+    .propiedades
     {
         border-collapse:collapse;
         table-layout:fixed;
         width:150px;
        
     }
-    .products th,.products td
+    .propiedades th,.propiedades td
     {
         padding:10px;
         border-bottom:1px solid black;
