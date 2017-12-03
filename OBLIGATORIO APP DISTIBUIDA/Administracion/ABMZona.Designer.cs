@@ -58,38 +58,45 @@
             // 
             // txtHabitantes
             // 
-            this.txtHabitantes.Location = new System.Drawing.Point(102, 124);
+            this.txtHabitantes.Location = new System.Drawing.Point(317, 125);
+            this.txtHabitantes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtHabitantes.Name = "txtHabitantes";
-            this.txtHabitantes.Size = new System.Drawing.Size(100, 20);
+            this.txtHabitantes.Size = new System.Drawing.Size(132, 25);
             this.txtHabitantes.TabIndex = 3;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(102, 98);
+            this.txtNombre.Location = new System.Drawing.Point(317, 89);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(132, 25);
             this.txtNombre.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 127);
+            this.label3.Location = new System.Drawing.Point(235, 132);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(74, 18);
             this.label3.TabIndex = 28;
             this.label3.Text = "Habitantes";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(37, 98);
+            this.lblNombre.Location = new System.Drawing.Point(250, 96);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(58, 18);
             this.lblNombre.TabIndex = 27;
             this.lblNombre.Text = "Nombre";
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.LightBlue;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe Print", 10F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuItemIngresar,
             this.MenuItemModificar,
@@ -98,7 +105,8 @@
             this.MenuItemAyuda});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(605, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(111, 515);
             this.menuStrip1.TabIndex = 50;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -106,7 +114,7 @@
             // 
             this.MenuItemIngresar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemIngresar.Image")));
             this.MenuItemIngresar.Name = "MenuItemIngresar";
-            this.MenuItemIngresar.Size = new System.Drawing.Size(77, 20);
+            this.MenuItemIngresar.Size = new System.Drawing.Size(94, 28);
             this.MenuItemIngresar.Text = "Ingresar";
             this.MenuItemIngresar.Click += new System.EventHandler(this.MenuItemIngresar_Click);
             // 
@@ -114,7 +122,7 @@
             // 
             this.MenuItemModificar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemModificar.Image")));
             this.MenuItemModificar.Name = "MenuItemModificar";
-            this.MenuItemModificar.Size = new System.Drawing.Size(86, 20);
+            this.MenuItemModificar.Size = new System.Drawing.Size(96, 28);
             this.MenuItemModificar.Text = "Modificar";
             this.MenuItemModificar.Click += new System.EventHandler(this.MenuItemModificar_Click);
             // 
@@ -122,7 +130,7 @@
             // 
             this.MenuItemEliminar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemEliminar.Image")));
             this.MenuItemEliminar.Name = "MenuItemEliminar";
-            this.MenuItemEliminar.Size = new System.Drawing.Size(78, 20);
+            this.MenuItemEliminar.Size = new System.Drawing.Size(96, 28);
             this.MenuItemEliminar.Text = "Eliminar";
             this.MenuItemEliminar.Click += new System.EventHandler(this.MenuItemEliminar_Click);
             // 
@@ -130,7 +138,7 @@
             // 
             this.MenuItemCancelar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemCancelar.Image")));
             this.MenuItemCancelar.Name = "MenuItemCancelar";
-            this.MenuItemCancelar.Size = new System.Drawing.Size(81, 20);
+            this.MenuItemCancelar.Size = new System.Drawing.Size(96, 28);
             this.MenuItemCancelar.Text = "Cancelar";
             this.MenuItemCancelar.Click += new System.EventHandler(this.MenuItemCancelar_Click);
             // 
@@ -138,17 +146,17 @@
             // 
             this.MenuItemAyuda.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemAyuda.Image")));
             this.MenuItemAyuda.Name = "MenuItemAyuda";
-            this.MenuItemAyuda.Size = new System.Drawing.Size(69, 20);
+            this.MenuItemAyuda.Size = new System.Drawing.Size(96, 28);
             this.MenuItemAyuda.Text = "Ayuda";
-           
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblMensaje});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 350);
+            this.statusStrip1.Location = new System.Drawing.Point(111, 493);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(605, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(555, 22);
             this.statusStrip1.TabIndex = 54;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -169,41 +177,48 @@
             // 
             this.codigoDpto1.Codigo = "";
             this.codigoDpto1.LetraDepto = "";
-            this.codigoDpto1.Location = new System.Drawing.Point(20, 41);
+            this.codigoDpto1.Location = new System.Drawing.Point(208, 13);
+            this.codigoDpto1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.codigoDpto1.Name = "codigoDpto1";
-            this.codigoDpto1.Size = new System.Drawing.Size(271, 49);
+            this.codigoDpto1.Size = new System.Drawing.Size(361, 68);
             this.codigoDpto1.TabIndex = 0;
             this.codigoDpto1.Validating += new System.ComponentModel.CancelEventHandler(this.codigoDpto1_Validating);
             // 
             // txtServicio
             // 
-            this.txtServicio.Location = new System.Drawing.Point(102, 154);
+            this.txtServicio.Location = new System.Drawing.Point(317, 166);
+            this.txtServicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtServicio.Name = "txtServicio";
-            this.txtServicio.Size = new System.Drawing.Size(100, 20);
+            this.txtServicio.Size = new System.Drawing.Size(132, 25);
             this.txtServicio.TabIndex = 55;
             // 
             // lbServicios
             // 
             this.lbServicios.FormattingEnabled = true;
-            this.lbServicios.Location = new System.Drawing.Point(102, 180);
+            this.lbServicios.ItemHeight = 18;
+            this.lbServicios.Location = new System.Drawing.Point(317, 199);
+            this.lbServicios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbServicios.Name = "lbServicios";
-            this.lbServicios.Size = new System.Drawing.Size(120, 95);
+            this.lbServicios.Size = new System.Drawing.Size(175, 166);
             this.lbServicios.TabIndex = 56;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 160);
+            this.label1.Location = new System.Drawing.Point(250, 173);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.Size = new System.Drawing.Size(56, 18);
             this.label1.TabIndex = 57;
             this.label1.Text = "Servicio";
+           
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(21, 209);
+            this.btnAgregar.Location = new System.Drawing.Point(209, 199);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(100, 32);
             this.btnAgregar.TabIndex = 58;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -211,9 +226,10 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(21, 238);
+            this.btnEliminar.Location = new System.Drawing.Point(209, 239);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(100, 32);
             this.btnEliminar.TabIndex = 59;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -221,9 +237,10 @@
             // 
             // ABMZona
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 372);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(666, 515);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label1);
@@ -236,6 +253,9 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblNombre);
+            this.Font = new System.Drawing.Font("Palatino Linotype", 9.75F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ABMZona";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMZona";

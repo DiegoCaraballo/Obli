@@ -67,5 +67,9 @@ namespace Administracion
             ConsultaVisita _unForm = new ConsultaVisita();
             _unForm.ShowDialog();
         }
+
+    
+
+       
     }
 }

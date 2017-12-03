@@ -53,6 +53,10 @@
     <StartupObject>
     </StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -199,6 +203,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Imagenes\Ayuda.png" />
+    <Content Include="Imagenes\brslogo.ico" />
     <Content Include="Imagenes\Buscar.png" />
     <Content Include="Imagenes\Cancelar.png" />
     <Content Include="Imagenes\Icono.ico" />

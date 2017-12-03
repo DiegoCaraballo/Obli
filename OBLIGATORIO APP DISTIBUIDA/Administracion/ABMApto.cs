@@ -326,7 +326,7 @@ namespace Administracion
                 {
                     count += 1;
                 }
-
+              
                 lblMensajes.Text = (mensaje[count]);
             }
             catch (Exception ex)
@@ -339,14 +339,7 @@ namespace Administracion
 
         }
 
-
-
-
-
-
-
-
-
+     
 
 
 

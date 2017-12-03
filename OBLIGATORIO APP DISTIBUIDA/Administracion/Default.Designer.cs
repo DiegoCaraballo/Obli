@@ -50,21 +50,26 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(241, 9);
+            this.lblTitulo.BackColor = System.Drawing.Color.LightBlue;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.Location = new System.Drawing.Point(396, 4);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(252, 17);
+            this.lblTitulo.Size = new System.Drawing.Size(244, 24);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Bienvenido al Sistema de Gestion";
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.LightBlue;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe Print", 10F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mantenimientoToolStripMenuItem,
             this.visitasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(702, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(892, 34);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,41 +82,41 @@
             this.aBMApartamentoToolStripMenuItem,
             this.aBMLocalComercialToolStripMenuItem});
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
-            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(128, 28);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
             // 
             // aBMEmleadosToolStripMenuItem
             // 
             this.aBMEmleadosToolStripMenuItem.Name = "aBMEmleadosToolStripMenuItem";
-            this.aBMEmleadosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.aBMEmleadosToolStripMenuItem.Size = new System.Drawing.Size(231, 28);
             this.aBMEmleadosToolStripMenuItem.Text = "ABM Emleado";
             this.aBMEmleadosToolStripMenuItem.Click += new System.EventHandler(this.aBMEmleadosToolStripMenuItem_Click);
             // 
             // aBMZonasToolStripMenuItem
             // 
             this.aBMZonasToolStripMenuItem.Name = "aBMZonasToolStripMenuItem";
-            this.aBMZonasToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.aBMZonasToolStripMenuItem.Size = new System.Drawing.Size(231, 28);
             this.aBMZonasToolStripMenuItem.Text = "ABM Zonas";
             this.aBMZonasToolStripMenuItem.Click += new System.EventHandler(this.aBMZonasToolStripMenuItem_Click_1);
             // 
             // aBMCasasToolStripMenuItem
             // 
             this.aBMCasasToolStripMenuItem.Name = "aBMCasasToolStripMenuItem";
-            this.aBMCasasToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.aBMCasasToolStripMenuItem.Size = new System.Drawing.Size(231, 28);
             this.aBMCasasToolStripMenuItem.Text = "ABM Casas";
             this.aBMCasasToolStripMenuItem.Click += new System.EventHandler(this.aBMCasasToolStripMenuItem_Click);
             // 
             // aBMApartamentoToolStripMenuItem
             // 
             this.aBMApartamentoToolStripMenuItem.Name = "aBMApartamentoToolStripMenuItem";
-            this.aBMApartamentoToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.aBMApartamentoToolStripMenuItem.Size = new System.Drawing.Size(231, 28);
             this.aBMApartamentoToolStripMenuItem.Text = "ABM Apartamento";
             this.aBMApartamentoToolStripMenuItem.Click += new System.EventHandler(this.aBMApartamentoToolStripMenuItem_Click);
             // 
             // aBMLocalComercialToolStripMenuItem
             // 
             this.aBMLocalComercialToolStripMenuItem.Name = "aBMLocalComercialToolStripMenuItem";
-            this.aBMLocalComercialToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.aBMLocalComercialToolStripMenuItem.Size = new System.Drawing.Size(231, 28);
             this.aBMLocalComercialToolStripMenuItem.Text = "ABM Local Comercial";
             this.aBMLocalComercialToolStripMenuItem.Click += new System.EventHandler(this.aBMLocalComercialToolStripMenuItem_Click);
             // 
@@ -120,33 +125,38 @@
             this.visitasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultaDeVisitasToolStripMenuItem});
             this.visitasToolStripMenuItem.Name = "visitasToolStripMenuItem";
-            this.visitasToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.visitasToolStripMenuItem.Size = new System.Drawing.Size(67, 28);
             this.visitasToolStripMenuItem.Text = "Visitas";
             // 
             // consultaDeVisitasToolStripMenuItem
             // 
             this.consultaDeVisitasToolStripMenuItem.Name = "consultaDeVisitasToolStripMenuItem";
-            this.consultaDeVisitasToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.consultaDeVisitasToolStripMenuItem.Size = new System.Drawing.Size(214, 28);
             this.consultaDeVisitasToolStripMenuItem.Text = "Consulta de Visitas";
             this.consultaDeVisitasToolStripMenuItem.Click += new System.EventHandler(this.consultaDeVisitasToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 52);
+            this.pictureBox1.Location = new System.Drawing.Point(-5, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(678, 401);
+            this.pictureBox1.Size = new System.Drawing.Size(901, 504);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+          
             // 
             // ssmensajes
             // 
+            this.ssmensajes.BackColor = System.Drawing.Color.LightBlue;
+            this.ssmensajes.Font = new System.Drawing.Font("Segoe Print", 10F);
             this.ssmensajes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblUSU});
-            this.ssmensajes.Location = new System.Drawing.Point(0, 443);
+            this.ssmensajes.Location = new System.Drawing.Point(0, 524);
             this.ssmensajes.Name = "ssmensajes";
-            this.ssmensajes.Size = new System.Drawing.Size(702, 22);
+            this.ssmensajes.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.ssmensajes.Size = new System.Drawing.Size(892, 22);
             this.ssmensajes.TabIndex = 3;
             // 
             // lblUSU
@@ -156,13 +166,16 @@
             // 
             // Default
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 465);
+            this.ClientSize = new System.Drawing.Size(892, 546);
             this.Controls.Add(this.ssmensajes);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Palatino Linotype", 9.75F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Default";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Default";
