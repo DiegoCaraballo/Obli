@@ -271,24 +271,7 @@ namespace ControlesWeb
             this.Controls.Add(UnPanel);
         }
 
-        //Metodo que carga la lista de servicios de la zona
-        //TODO - ver si sacamos esto por que usa la clase servicio ???
-        //private void ListaServiciosZona(Propiedad p)
-        //{
-
-        //    if (p.Zona.LosServicios.ToList().Count != 0)
-        //    {
-        //        foreach (Servicio s in p.Zona.LosServicios)
-        //        {
-        //            lbServicios.Items.Add(s.Servicios.ToString());
-        //        }
-        //    }
-        //    else
-        //    {
-        //        lbServicios.Items.Add("La zona no cuenta con servicios a destacar");
-        //    }
-
-        //}
+      
     }
 
 }

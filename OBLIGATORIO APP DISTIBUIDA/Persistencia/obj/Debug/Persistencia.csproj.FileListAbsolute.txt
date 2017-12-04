@@ -222,10 +222,10 @@ C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Persistencia\bin\Debug\Entid
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Persistencia\obj\Debug\Persistencia.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Persistencia\bin\Debug\Persistencia.dll
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Persistencia\bin\Debug\Persistencia.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Persistencia\bin\Debug\Entidades Compartidas.dll
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Persistencia\bin\Debug\Entidades Compartidas.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Persistencia\obj\Debug\Persistencia.dll
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Persistencia\obj\Debug\Persistencia.pdb
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Persistencia\bin\Debug\Persistencia.dll
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Persistencia\bin\Debug\Persistencia.pdb
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Persistencia\bin\Debug\Entidades Compartidas.dll
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Persistencia\bin\Debug\Entidades Compartidas.pdb
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Persistencia\obj\Debug\Persistencia.dll
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Persistencia\obj\Debug\Persistencia.pdb

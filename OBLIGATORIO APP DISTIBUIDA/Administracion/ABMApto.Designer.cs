@@ -347,7 +347,7 @@
             this.ccZona.Location = new System.Drawing.Point(183, 334);
             this.ccZona.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.ccZona.Name = "ccZona";
-            this.ccZona.Size = new System.Drawing.Size(299, 81);
+            this.ccZona.Size = new System.Drawing.Size(264, 81);
             this.ccZona.TabIndex = 11;
             // 
             // ABMApto

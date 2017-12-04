@@ -36,6 +36,7 @@
             this.btnContarVisitas = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.EPPadron = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblMensaje = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gvVisitas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EPPadron)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +45,7 @@
             // 
             this.gvVisitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvVisitas.Location = new System.Drawing.Point(16, 158);
-            this.gvVisitas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gvVisitas.Margin = new System.Windows.Forms.Padding(4);
             this.gvVisitas.Name = "gvVisitas";
             this.gvVisitas.Size = new System.Drawing.Size(745, 508);
             this.gvVisitas.TabIndex = 0;
@@ -58,7 +59,7 @@
             "VENTA",
             "PERMUTA"});
             this.cboAccion.Location = new System.Drawing.Point(65, 61);
-            this.cboAccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboAccion.Margin = new System.Windows.Forms.Padding(4);
             this.cboAccion.Name = "cboAccion";
             this.cboAccion.Size = new System.Drawing.Size(160, 26);
             this.cboAccion.TabIndex = 1;
@@ -67,7 +68,7 @@
             // txtPadron
             // 
             this.txtPadron.Location = new System.Drawing.Point(256, 61);
-            this.txtPadron.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPadron.Margin = new System.Windows.Forms.Padding(4);
             this.txtPadron.Name = "txtPadron";
             this.txtPadron.Size = new System.Drawing.Size(132, 25);
             this.txtPadron.TabIndex = 2;
@@ -76,7 +77,7 @@
             // btnContarVisitas
             // 
             this.btnContarVisitas.Location = new System.Drawing.Point(421, 58);
-            this.btnContarVisitas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnContarVisitas.Margin = new System.Windows.Forms.Padding(4);
             this.btnContarVisitas.Name = "btnContarVisitas";
             this.btnContarVisitas.Size = new System.Drawing.Size(100, 32);
             this.btnContarVisitas.TabIndex = 3;
@@ -87,7 +88,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(529, 58);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(124, 32);
             this.btnLimpiar.TabIndex = 4;
@@ -99,12 +100,21 @@
             // 
             this.EPPadron.ContainerControl = this;
             // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Location = new System.Drawing.Point(256, 121);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(0, 18);
+            this.lblMensaje.TabIndex = 5;
+            // 
             // ConsultaVisita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(783, 720);
+            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnContarVisitas);
             this.Controls.Add(this.txtPadron);
@@ -112,7 +122,7 @@
             this.Controls.Add(this.gvVisitas);
             this.Font = new System.Drawing.Font("Palatino Linotype", 9.75F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConsultaVisita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaVisita";
@@ -131,5 +141,6 @@
         private System.Windows.Forms.Button btnContarVisitas;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.ErrorProvider EPPadron;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }

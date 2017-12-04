@@ -1005,10 +1005,10 @@
   </wsdl:binding>
   <wsdl:service name="MiServicio">
     <wsdl:port name="MiServicioSoap" binding="tns:MiServicioSoap">
-      <soap:address location="http://bios1-pc/Webservice/Miservicio.asmx" />
+      <soap:address location="http://bios1-pc/servicio/miservicio.asmx" />
     </wsdl:port>
     <wsdl:port name="MiServicioSoap12" binding="tns:MiServicioSoap12">
-      <soap12:address location="http://bios1-pc/Webservice/Miservicio.asmx" />
+      <soap12:address location="http://bios1-pc/servicio/miservicio.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

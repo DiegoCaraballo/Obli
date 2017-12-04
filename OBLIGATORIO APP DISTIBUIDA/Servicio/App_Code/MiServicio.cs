@@ -19,7 +19,6 @@ using System.Web.Services.Protocols;
 // [System.Web.Script.Services.ScriptService]
 public class MiServicio : System.Web.Services.WebService
 {
-    //TODO - ver de sacar referencia a persistencia
     #region Propiedad
     [WebMethod]
     public void ParaPoderSerializar(Casa unaCasa, Apto unApto, Comercio unComercio)
@@ -384,9 +383,10 @@ public class MiServicio : System.Web.Services.WebService
         _NodoError.AppendChild(_NodoDetalle);
 
         //Creacion manual y lanzamiento de la exception SOAP
-        SoapException _MiEx = new SoapException("Error WS", SoapException.ClientFaultCode, Context.Request.Url.AbsoluteUri, _NodoError);
+        SoapException _MiEx = new SoapException("Error WebService", SoapException.ClientFaultCode, Context.Request.Url.AbsoluteUri, _NodoError);
         throw _MiEx;
     }
+
     public MiServicio()
     {
 

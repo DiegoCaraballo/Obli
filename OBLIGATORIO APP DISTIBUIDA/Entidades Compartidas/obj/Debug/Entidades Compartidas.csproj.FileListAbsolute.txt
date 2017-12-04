@@ -148,8 +148,8 @@ C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\bin\De
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\bin\Debug\Entidades Compartidas.dll
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\bin\Debug\Entidades Compartidas.pdb
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\obj\Debug\Entidades Compartidas.dll
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\obj\Debug\Entidades Compartidas.pdb
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Entidades Compartidas\obj\Debug\Entidades Compartidas.csprojResolveAssemblyReference.cache

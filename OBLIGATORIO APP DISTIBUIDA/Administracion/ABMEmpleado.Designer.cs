@@ -59,7 +59,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(141, 140);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(132, 25);
@@ -68,7 +68,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(141, 104);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(132, 25);
             this.txtUsuario.TabIndex = 0;
@@ -141,6 +141,7 @@
             this.MenuItemAyuda.Name = "MenuItemAyuda";
             this.MenuItemAyuda.Size = new System.Drawing.Size(83, 28);
             this.MenuItemAyuda.Text = "Ayuda";
+            this.MenuItemAyuda.Click += new System.EventHandler(this.MenuItemAyuda_Click);
             // 
             // EPUsuario
             // 
@@ -176,7 +177,7 @@
             this.Controls.Add(this.lblNombre);
             this.Font = new System.Drawing.Font("Palatino Linotype", 9.75F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ABMEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMEmpleado";

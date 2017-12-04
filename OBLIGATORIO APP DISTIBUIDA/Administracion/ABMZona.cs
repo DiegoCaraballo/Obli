@@ -35,7 +35,7 @@ namespace Administracion
         //Ayuda para el usuario
         private void MenuItemAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Puede utilizar las siguientes teclas para facil acceso a los Items del Menu:\nF1= Ayuda\nF2= Buscar\nF3= Ingresar\nF4= Modificar\nF5= Eliminar\nF6= Cancelar");
+            MessageBox.Show("Puede utilizar las siguientes teclas para facil acceso a los Items del Menu:\nF1= Ayuda\nF3= Ingresar\nF4= Modificar\nF5= Eliminar\nF6= Cancelar");
         }
 
         //Limpio campos
@@ -112,6 +112,10 @@ namespace Administracion
                     lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Detail.InnerText;
+            }
+            catch (FormatException)
+            {
+                lblMensaje.Text = "Debe ingresar la cantidad de habitantes";
             }
             catch (Exception ex)
             {
@@ -235,6 +239,10 @@ namespace Administracion
                     lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
                 else
                     lblMensaje.Text = ex.Detail.InnerText;
+            }
+            catch (FormatException)
+            {
+                lblMensaje.Text = "Debe ingresar la cantidad de habitantes";
             }
             catch (Exception ex)
             {

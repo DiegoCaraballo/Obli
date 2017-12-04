@@ -45,6 +45,13 @@ namespace Administracion
                 }
 
             }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
+            }
             catch (Exception ex)
             {
                 lblMensaje.Text = ex.Message;
@@ -64,8 +71,6 @@ namespace Administracion
                 lblMensaje.Text = ex.Message;
             }
         }
-
-       
-
+     
     }
 }

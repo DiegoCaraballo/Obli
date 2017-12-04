@@ -43,7 +43,8 @@ namespace Administracion
                        }).ToList();
 
             gvVisitas.DataSource = res;
-            
+
+            lblMensaje.Text = "";
 
         }
 
@@ -71,29 +72,46 @@ namespace Administracion
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                lblMensaje.Text = ex.Message;
             }
         }
 
         // Se carga la lista de visitas
         private void CargoListaVisitas()
         {
-            MiServicio serv = new MiServicio();
-     
-            XmlNode lista = serv.ListarVisitas();
-     
-            documento = XElement.Parse(lista.OuterXml);
-            var res = (from unNodo in documento.Elements("Propiedad")
-                     
-                       select new
-                       {
-                           Padron = unNodo.Element("Padron").Value,
-                           Fecha = unNodo.Element("Fecha").Value,
-                           Precio = unNodo.Element("Precio").Value,
-                           Accion = unNodo.Element("Accion").Value
-                       }).ToList();
+            try
+            {
+                MiServicio serv = new MiServicio();
 
-            gvVisitas.DataSource = res;
+                XmlNode lista = serv.ListarVisitas();
+
+                documento = XElement.Parse(lista.OuterXml);
+                var res = (from unNodo in documento.Elements("Propiedad")
+
+                           select new
+                           {
+                               Padron = unNodo.Element("Padron").Value,
+                               Fecha = unNodo.Element("Fecha").Value,
+                               Precio = unNodo.Element("Precio").Value,
+                               Accion = unNodo.Element("Accion").Value
+                           }).ToList();
+
+                gvVisitas.DataSource = res;
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Length > 80)
+                    lblMensaje.Text = ex.Message.Substring(0, 80);
+                else
+                    lblMensaje.Text = ex.Message;
+            }
         }
 
         // Filtra por acción
@@ -121,7 +139,7 @@ namespace Administracion
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                lblMensaje.Text = ex.Message;
             }
 
         }
@@ -132,14 +150,23 @@ namespace Administracion
             gvVisitas.DataSource = null;
             try
             {
-                Convert.ToInt32(txtPadron.Text);
+                if (txtPadron.Text != "")
+                {
+                    Convert.ToInt32(txtPadron.Text);
+                    EPPadron.Clear();
+                }
                 EPPadron.Clear();
+            }
+            catch (OverflowException)
+            {
+                EPPadron.SetError(txtPadron, "El padron debe tener entre 1 y 9 digitos");
             }
             catch
             {
                 EPPadron.SetError(txtPadron, "Solo se pueden ingresar numeros");
                 e.Cancel = true;
             }
+            
             try
             {
                 XElement doc = documento;
@@ -159,7 +186,7 @@ namespace Administracion
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                lblMensaje.Text = ex.Message;
             }
         }
 

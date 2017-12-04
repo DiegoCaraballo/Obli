@@ -109,10 +109,17 @@ namespace Administracion
                 Convert.ToInt32(txtPadron.Text);
                 EPPadron.Clear();
             }
+            catch (OverflowException)
+            {
+                EPPadron.SetError(txtPadron, "El padron debe tenere entre 1 y 9 digitos");
+                e.Cancel = true;
+                return;
+            }
             catch
             {
                 EPPadron.SetError(txtPadron, "Solo se pueden ingresar numeros");
                 e.Cancel = true;
+                return;
             }
             try
             {
@@ -167,15 +174,10 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                string p = ex.Message;
-                string[] mensaje = ex.Message.Split('>');
-                int count = -1;
-                foreach (string texto in mensaje)
-                {
-                    count += 1;
-                }
-
-                lblMensajes.Text = (mensaje[count]);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
+                else
+                    lblMensajes.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
@@ -205,7 +207,11 @@ namespace Administracion
                 apto.Baño = Convert.ToInt32(txtBanio.Text);
                 apto.Habitaciones = Convert.ToInt32(txtHabitaciones.Text);
                 apto.Mt2Const = Convert.ToInt32(txtMt2Const.Text);
-                apto.Zona = new ServicioWeb.MiServicio().BuscarTodasZonas(ccZona.LetraDepto.Trim().ToUpper(), ccZona.Codigo.Trim().ToUpper());
+                if (ccZona.LetraDepto == "" || ccZona.Codigo == "")
+                {
+                    EPPadron.SetError(ccZona, "Verificar datos de Zona");
+                }
+                apto.Zona = new ServicioWeb.MiServicio().BuscarZona(ccZona.LetraDepto.Trim().ToUpper(), ccZona.Codigo.Trim().ToUpper());
                 if (apto.Zona == null)
                 {
                     throw new Exception("Zona no encontrada");
@@ -229,19 +235,18 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                string p = ex.Message;
-                string[] mensaje = ex.Message.Split('>');
-                int count = -1;
-                foreach (string texto in mensaje)
-                {
-                    count += 1;
-                }
-
-                lblMensajes.Text = (mensaje[count]);
-                //if (ex.Detail.InnerText.Length > 80)
-                //  lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
-                //else
-                //  lblMensajes.Text = ex.Detail.InnerText;
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
+                else
+                    lblMensajes.Text = ex.Detail.InnerText;
+            }
+                  catch (FormatException)
+            {
+                lblMensajes.Text = "Revisar que el valor de los campos numericos sean correctos";
+            }
+            catch (OverflowException)
+            {
+                lblMensajes.Text = "Revisar que los campos numericos no tengan mas de 9 digitos";
             }
             catch (Exception ex)
             {
@@ -270,15 +275,10 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                string p = ex.Message;
-                string[] mensaje = ex.Message.Split('>');
-                int count = -1;
-                foreach (string texto in mensaje)
-                {
-                    count += 1;
-                }
-
-                lblMensajes.Text = (mensaje[count]);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
+                else
+                    lblMensajes.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
@@ -301,7 +301,15 @@ namespace Administracion
                 prop.Baño = Convert.ToInt32(txtBanio.Text);
                 prop.Habitaciones = Convert.ToInt32(txtHabitaciones.Text);
                 prop.Mt2Const = Convert.ToInt32(txtMt2Const.Text);
+                if (ccZona.LetraDepto == "" || ccZona.Codigo == "")
+                {
+                    EPPadron.SetError(ccZona, "Verificar datos de Zona");
+                }
                 prop.Zona = new ServicioWeb.MiServicio().BuscarZona(ccZona.LetraDepto.Trim().ToUpper(), ccZona.Codigo.Trim().ToUpper());
+                if (prop.Zona == null)
+                {
+                    throw new Exception("Zona no encontrada");
+                }
                 prop.UltimoEmp.NomUsu = emp.NomUsu;
                 ((ServicioWeb.Apto)prop).Piso = Convert.ToInt32(txtPiso.Text);
 
@@ -316,18 +324,22 @@ namespace Administracion
 
                 new Administracion.ServicioWeb.MiServicio().ModificaPropiedad(prop);
                 EstadoInicial();
+                lblMensajes.Text = "PROPIEDAD MODIFICADA CON EXITO";
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                string p = ex.Message;
-                string[] mensaje = ex.Message.Split('>');
-                int count = -1;
-                foreach (string texto in mensaje)
-                {
-                    count += 1;
-                }
-              
-                lblMensajes.Text = (mensaje[count]);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensajes.Text = ex.Detail.InnerText.Substring(0, 80);
+                else
+                    lblMensajes.Text = ex.Detail.InnerText;
+            }
+            catch (FormatException)
+            {
+                lblMensajes.Text = "Revisar que el valor de los campos numericos sean correctos";
+            }
+            catch (OverflowException)
+            {
+                lblMensajes.Text = "Revisar que los campos numericos no tengan mas de 9 digitos";
             }
             catch (Exception ex)
             {
@@ -338,6 +350,9 @@ namespace Administracion
             }
 
         }
+
+      
+      
 
      
 

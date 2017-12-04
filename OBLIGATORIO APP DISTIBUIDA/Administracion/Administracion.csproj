@@ -243,10 +243,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://bios1-pc/Webservice/miservicio.asmx">
+    <WebReferenceUrl Include="http://bios1-pc/servicio/miservicio.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\ServicioWeb\</RelPath>
-      <UpdateFromURL>http://bios1-pc/Webservice/miservicio.asmx</UpdateFromURL>
+      <UpdateFromURL>http://bios1-pc/servicio/miservicio.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

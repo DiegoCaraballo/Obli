@@ -283,12 +283,12 @@ C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Logica\bin\Debug\Persistenci
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Logica\obj\Debug\Logica.dll
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Logica\obj\Debug\Logica.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\bin\Debug\Logica.dll
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\bin\Debug\Logica.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\bin\Debug\Entidades Compartidas.dll
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\bin\Debug\Persistencia.dll
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\bin\Debug\Entidades Compartidas.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\bin\Debug\Persistencia.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\obj\Debug\Logica.dll
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\obj\Debug\Logica.pdb
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\bin\Debug\Logica.dll
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\bin\Debug\Logica.pdb
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\bin\Debug\Entidades Compartidas.dll
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\bin\Debug\Persistencia.dll
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\bin\Debug\Entidades Compartidas.pdb
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\bin\Debug\Persistencia.pdb
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\obj\Debug\Logica.dll
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Logica\obj\Debug\Logica.pdb

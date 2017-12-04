@@ -111,7 +111,7 @@ namespace Entidades_Compartidas
             get { return direccion; }
             set
             {
-                if (value.Trim().Length > 8 && value.Trim().Length < 101)
+                if (value.Trim().Length >= 8 && value.Trim().Length < 101)
                     direccion = value;
                 else
                     throw new Exception("La direccion no debe contener menos de 8 caracteres y mas de 100");

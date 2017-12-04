@@ -139,7 +139,7 @@
             this.ccZona.Location = new System.Drawing.Point(205, 299);
             this.ccZona.Margin = new System.Windows.Forms.Padding(4);
             this.ccZona.Name = "ccZona";
-            this.ccZona.Size = new System.Drawing.Size(252, 72);
+            this.ccZona.Size = new System.Drawing.Size(263, 72);
             this.ccZona.TabIndex = 10;
             // 
             // label2
@@ -362,7 +362,6 @@
             this.Name = "ABMComercio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMComercio";
-            
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

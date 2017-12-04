@@ -141,7 +141,7 @@
             this.ccZona.Location = new System.Drawing.Point(182, 333);
             this.ccZona.Margin = new System.Windows.Forms.Padding(4);
             this.ccZona.Name = "ccZona";
-            this.ccZona.Size = new System.Drawing.Size(252, 72);
+            this.ccZona.Size = new System.Drawing.Size(260, 72);
             this.ccZona.TabIndex = 11;
             // 
             // label2
@@ -384,7 +384,6 @@
             this.Name = "ABMCasa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMCasa";
-          
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

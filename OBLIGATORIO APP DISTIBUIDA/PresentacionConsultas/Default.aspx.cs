@@ -67,6 +67,13 @@ public partial class _Default : System.Web.UI.Page
                     Response.Redirect("ConsultaPropiedades.aspx", false);
 
                 }
+                catch (System.Web.Services.Protocols.SoapException ex)
+                {
+                    if (ex.Detail.InnerText.Length > 80)
+                        lblError.Text = ex.Detail.InnerText.Substring(0, 80);
+                    else
+                        lblError.Text = ex.Detail.InnerText;
+                }
                 catch (Exception ex)
                 {
                     lblError.Text = ex.Message;
@@ -214,6 +221,13 @@ public partial class _Default : System.Web.UI.Page
                 lblCount.Text = "Mostrando " + rpPropiedades.Items.Count + " resultados";
             }
         }
+        catch (System.Web.Services.Protocols.SoapException ex)
+        {
+            if (ex.Detail.InnerText.Length > 80)
+                lblError.Text = ex.Detail.InnerText.Substring(0, 80);
+            else
+                lblError.Text = ex.Detail.InnerText;
+        }
         catch (Exception ex)
         {
             lblError.Text = ex.Message;
@@ -231,7 +245,7 @@ public partial class _Default : System.Web.UI.Page
             MiServicio serv = new MiServicio();
 
             string _letraDpto = ddlDepartamento.SelectedItem.Value;
-            List<Zona> zonas = serv.ListoPorDpto(_letraDpto).ToList(); //FabricaLogica.getZonaLogica().ListoPorDpto(_letraDpto);
+            List<Zona> zonas = serv.ListoPorDpto(_letraDpto).ToList(); 
             int c = 0;
             foreach (Zona z in zonas)
             {
@@ -241,6 +255,13 @@ public partial class _Default : System.Web.UI.Page
                 ddlZona.SelectedIndex = c - 1;
                 ddlZona.SelectedItem.Value = (z.Abreviacion.ToString());
             }
+        }
+        catch (System.Web.Services.Protocols.SoapException ex)
+        {
+            if (ex.Detail.InnerText.Length > 80)
+                lblError.Text = ex.Detail.InnerText.Substring(0, 80);
+            else
+                lblError.Text = ex.Detail.InnerText;
         }
         catch (Exception ex)
         {

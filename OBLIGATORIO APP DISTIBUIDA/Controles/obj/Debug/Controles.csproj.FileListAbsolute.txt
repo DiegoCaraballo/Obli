@@ -5,10 +5,9 @@ C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Entidade
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Entidades Compartidas.pdb
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.dll
 C:\Users\PC-Nico\Desktop\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Controles.dll
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Controles.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.csprojResolveAssemblyReference.cache
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.dll
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.pdb
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.CodigoDpto.resources
-C:\Desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.csproj.GenerateResource.Cache
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Controles.dll
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\bin\Debug\Controles.pdb
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.CodigoDpto.resources
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.csproj.GenerateResource.Cache
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.dll
+C:\desarrollo\Obli\OBLIGATORIO APP DISTIBUIDA\Controles\obj\Debug\Controles.pdb

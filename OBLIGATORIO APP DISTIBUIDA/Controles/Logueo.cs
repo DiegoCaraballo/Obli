@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.ComponentModel;
 
-//TODO - ver por que usa entidades compartidas
+
 
 namespace Controles
 {

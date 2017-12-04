@@ -91,7 +91,7 @@ create table Comercio
 	habilitado bit default(1)
 )
 go
- select * from Apto
+ 
  
 create table Visita
 (
@@ -803,7 +803,6 @@ begin
 end 
 go
 
-select * from Visita order by tel
 
 --creacion de usuario IIS para que el webservice pueda acceder a la bd------------------------
 USE master
@@ -915,7 +914,7 @@ exec AltaComercio 987987, 'S','MVD',2,'DR.PENA 7458',9500,'ALQUILER',1,200,'NICO
 
 GO
 
-delete from Visita
+
 
 exec AltaVisita 111119,'nico', '03-11-2018 15:00:00.000', 123123;
 exec AltaVisita 111119,'sergio', '01-12-2018 14:00:00.000', 123123;
@@ -929,22 +928,6 @@ exec AltaVisita 325721,'diego', '01-12-2018 18:00:00.000', 789789;
 exec AltaVisita 654654,'ahri', '01-12-2018 16:00:00.000', 111112;
 exec AltaVisita 321721,'maria', '01-12-2018 15:00:00.000', 111112;
 exec AltaVisita 111119,'jose', '01-12-2018 13:00:00.000', 111130;
-
-select padron,count(padron) as 'asd' from Visita group by padron
-
-
-select * from Visita order by padron asc
-
-select padron,count(padron) from Visita group by padron
-
-select * from Zona
-
-use BiosRealState;
-select * from Propiedad where padron = 135321
-
-select * from Apto where padron = 135321
-
-
 
 
 

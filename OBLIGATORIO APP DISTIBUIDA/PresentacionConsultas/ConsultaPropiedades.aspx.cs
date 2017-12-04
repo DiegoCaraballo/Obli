@@ -14,7 +14,7 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
     {
         try
         {
-            MiServicio serv = new MiServicio();
+            
             Propiedad p = ((Propiedad)Session["Propiedad"]);
 
             //Datos usados por todos los tipos de propiedad
@@ -207,15 +207,13 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
             v.AVisitar = p;
             serv.AltaVisita(v);
 
-            //Si llego acá la visita se agendó
-            //  lblError.BackColor = Color.LightGreen;
             lblError.Text = "Visita agendada con éxito";
             limpiarVisita();
         }
         catch (System.Web.Services.Protocols.SoapException ex)
         {
-            if (ex.Detail.InnerText.Length > 40)
-                lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+            if (ex.Detail.InnerText.Length > 80)
+                lblError.Text = ex.Detail.InnerText.Substring(0, 80);
             else
                 lblError.Text = ex.Detail.InnerText;
         }
@@ -223,9 +221,12 @@ public partial class ConsultaPropiedades : System.Web.UI.Page
         {
             lblError.Text = "El telefono debe tener formato numérico";
         }
+        catch (OverflowException)
+        {
+            lblError.Text = "El teléfono no puede tener más de 20 caracteres";
+        }
         catch (Exception ex)
         {
-            // lblError.BackColor = Color.Red;
             lblError.Text = ex.Message;
         }
     }

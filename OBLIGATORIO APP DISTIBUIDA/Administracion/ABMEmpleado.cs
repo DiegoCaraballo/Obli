@@ -36,7 +36,7 @@ namespace Administracion
         //Ayuda para el usuario
         private void MenuItemAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Puede utilizar las siguientes teclas para facil acceso a los Items del Menu:\nF1= Ayuda\nF2= Buscar\nF3= Ingresar\nF4= Modificar\nF5= Eliminar\nF6= Cancelar");
+            MessageBox.Show("Puede utilizar las siguientes teclas para facil acceso a los Items del Menu:\nF1= Ayuda\nF3= Ingresar\nF4= Modificar\nF5= Eliminar\nF6= Cancelar");
         }
 
         //Validar usuario al buscar
@@ -89,15 +89,10 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                string p = ex.Message;
-                string[] mensaje = ex.Message.Split('>');
-                int count = -1;
-                foreach (string texto in mensaje)
-                {
-                    count += 1;
-                }
-
-                lblMensaje.Text = (mensaje[count]);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
@@ -131,19 +126,10 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                string p = ex.Message;
-                string[] mensaje = ex.Message.Split('>');
-                int count = -1;
-                foreach (string texto in mensaje)
-                {
-                    count += 1;
-                }
-
-                lblMensaje.Text = (mensaje[count]);
-                //if (ex.Detail.InnerText.Length > 80)
-                //    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
-                //else
-                //    lblMensaje.Text = ex.Detail.InnerText;
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
@@ -174,15 +160,10 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                string p = ex.Message;
-                string[] mensaje = ex.Message.Split('>');
-                int count = -1;
-                foreach (string texto in mensaje)
-                {
-                    count += 1;
-                }
-
-                lblMensaje.Text = (mensaje[count]);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
@@ -214,15 +195,10 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                string p = ex.Message;
-                string[] mensaje = ex.Message.Split('>');
-                int count = -1;
-                foreach (string texto in mensaje)
-                {
-                    count += 1;
-                }
-
-                lblMensaje.Text = (mensaje[count]);
+                if (ex.Detail.InnerText.Length > 80)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 80);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {

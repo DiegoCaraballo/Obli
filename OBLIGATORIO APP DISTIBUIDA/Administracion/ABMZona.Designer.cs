@@ -59,7 +59,7 @@
             // txtHabitantes
             // 
             this.txtHabitantes.Location = new System.Drawing.Point(317, 125);
-            this.txtHabitantes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHabitantes.Margin = new System.Windows.Forms.Padding(4);
             this.txtHabitantes.Name = "txtHabitantes";
             this.txtHabitantes.Size = new System.Drawing.Size(132, 25);
             this.txtHabitantes.TabIndex = 3;
@@ -67,7 +67,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(317, 89);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 25);
             this.txtNombre.TabIndex = 2;
@@ -122,7 +122,7 @@
             // 
             this.MenuItemModificar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemModificar.Image")));
             this.MenuItemModificar.Name = "MenuItemModificar";
-            this.MenuItemModificar.Size = new System.Drawing.Size(96, 28);
+            this.MenuItemModificar.Size = new System.Drawing.Size(94, 28);
             this.MenuItemModificar.Text = "Modificar";
             this.MenuItemModificar.Click += new System.EventHandler(this.MenuItemModificar_Click);
             // 
@@ -130,7 +130,7 @@
             // 
             this.MenuItemEliminar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemEliminar.Image")));
             this.MenuItemEliminar.Name = "MenuItemEliminar";
-            this.MenuItemEliminar.Size = new System.Drawing.Size(96, 28);
+            this.MenuItemEliminar.Size = new System.Drawing.Size(94, 28);
             this.MenuItemEliminar.Text = "Eliminar";
             this.MenuItemEliminar.Click += new System.EventHandler(this.MenuItemEliminar_Click);
             // 
@@ -138,7 +138,7 @@
             // 
             this.MenuItemCancelar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemCancelar.Image")));
             this.MenuItemCancelar.Name = "MenuItemCancelar";
-            this.MenuItemCancelar.Size = new System.Drawing.Size(96, 28);
+            this.MenuItemCancelar.Size = new System.Drawing.Size(94, 28);
             this.MenuItemCancelar.Text = "Cancelar";
             this.MenuItemCancelar.Click += new System.EventHandler(this.MenuItemCancelar_Click);
             // 
@@ -146,8 +146,9 @@
             // 
             this.MenuItemAyuda.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemAyuda.Image")));
             this.MenuItemAyuda.Name = "MenuItemAyuda";
-            this.MenuItemAyuda.Size = new System.Drawing.Size(96, 28);
+            this.MenuItemAyuda.Size = new System.Drawing.Size(94, 28);
             this.MenuItemAyuda.Text = "Ayuda";
+            this.MenuItemAyuda.Click += new System.EventHandler(this.MenuItemAyuda_Click);
             // 
             // statusStrip1
             // 
@@ -178,7 +179,7 @@
             this.codigoDpto1.Codigo = "";
             this.codigoDpto1.LetraDepto = "";
             this.codigoDpto1.Location = new System.Drawing.Point(208, 13);
-            this.codigoDpto1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.codigoDpto1.Margin = new System.Windows.Forms.Padding(4);
             this.codigoDpto1.Name = "codigoDpto1";
             this.codigoDpto1.Size = new System.Drawing.Size(361, 68);
             this.codigoDpto1.TabIndex = 0;
@@ -187,7 +188,7 @@
             // txtServicio
             // 
             this.txtServicio.Location = new System.Drawing.Point(317, 166);
-            this.txtServicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtServicio.Margin = new System.Windows.Forms.Padding(4);
             this.txtServicio.Name = "txtServicio";
             this.txtServicio.Size = new System.Drawing.Size(132, 25);
             this.txtServicio.TabIndex = 55;
@@ -197,7 +198,7 @@
             this.lbServicios.FormattingEnabled = true;
             this.lbServicios.ItemHeight = 18;
             this.lbServicios.Location = new System.Drawing.Point(317, 199);
-            this.lbServicios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbServicios.Margin = new System.Windows.Forms.Padding(4);
             this.lbServicios.Name = "lbServicios";
             this.lbServicios.Size = new System.Drawing.Size(175, 166);
             this.lbServicios.TabIndex = 56;
@@ -211,12 +212,11 @@
             this.label1.Size = new System.Drawing.Size(56, 18);
             this.label1.TabIndex = 57;
             this.label1.Text = "Servicio";
-           
             // 
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(209, 199);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(100, 32);
             this.btnAgregar.TabIndex = 58;
@@ -227,7 +227,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(209, 239);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 32);
             this.btnEliminar.TabIndex = 59;
@@ -255,7 +255,7 @@
             this.Controls.Add(this.lblNombre);
             this.Font = new System.Drawing.Font("Palatino Linotype", 9.75F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ABMZona";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMZona";
